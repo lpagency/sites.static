@@ -1,0 +1,224 @@
+body{
+    padding: 0px;
+}
+
+h1 {
+    font-size: 48px;
+    margin-top: 12px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+p {
+    font-size: 23px;
+}
+
+hr
+{
+    width: 100%;
+    height: 30px;
+    border: none;
+    display: block;
+    background: linear-gradient(to right,#005A96 ,#F3CD69 100%);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.checkbox label, .radio label {
+    font-weight: 800;
+    font-size: 18px;
+}
+
+input[type=radio] {
+    width: 17px;
+    height: 17px
+}
+
+.light-background-color {
+    background-color: #9AB7EB;
+}
+.color-active{
+    color: #F3CD69;
+}
+
+a.navbar-brand {
+    display: block;
+    height: 100px;
+    padding: 0px;
+}
+
+.navbar-default .navbar-nav>li>a
+{
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 19px;
+    font-family: josefin-sans, sans-serif;
+    font-weight: 700;
+
+    padding-top: 19px;
+    padding-left: 19px;
+    padding-right: 1px;
+}
+
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+    margin-left: 96px;
+}
+
+.navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover
+{
+    color: #F3CD69;
+    background: transparent;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover
+{
+    background: transparent;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover
+{
+    color: #005A96;
+}
+
+.navbar-nav>li>.dropdown-menu {
+    background-color: #005A96;
+    padding: 0px;
+    border: 0px;
+}
+
+.dropdown-menu>li
+{
+    border: solid #fff 1px;
+}
+
+.dropdown-menu>li>a
+{
+    color: #fff;
+    font-size: 11px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.navbar-social
+{
+    margin-left: 16px;
+}
+
+.navbar-social>li {
+    margin-left: 0px;
+    margin-right: 26px;
+}
+
+.navbar-resp {
+    margin-left: 18px;
+}
+.navbar-resp>li:nth-child(1) {
+    background-color: #F3CD69;
+}
+.navbar-resp>li {
+    border-radius: 2px;
+    background: white;
+    height: 40px;
+    margin-right: 53px;
+    width: 141px;
+    margin-top: 22px;
+    height: 34px;
+}
+.navbar-default .navbar-resp>li>a {
+    color: #005A96;
+    text-transform: uppercase;
+    padding-top: 9px;
+    font-size: 13px;
+    text-align: center;
+    padding-left: 0px;
+    font-weight: 800;
+    font-family: comfortaa, sans-serif;
+}
+
+.navbar-default .navbar-resp>li:hover {
+    background-color: #9AB7EB
+}
+
+.box-donation 
+{
+    text-align: center;
+    color: #005A96;
+    margin-bottom: 20px;
+}
+
+.box-donation p
+{
+    text-align: justify;
+}
+
+.box-donation input[type=number]
+{
+    margin-left: 10px;
+    width: 310px;
+}
+.box-donation input[type=number],
+.box-donation input[type=text]
+{
+    border: gray solid 2px;
+    height: 33px;
+    text-transform: uppercase;
+    padding-left: 10px;
+    border-radius: 0px;
+}
+.btn-payment-section
+{
+    width: 100%;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #005A96;
+}
+.payment-selection
+{
+    text-align: left;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.payment-selection p 
+{
+    text-align: justify;
+}
+
+.footer
+{
+    background-color: #9AB7EB;
+    width: 100%;
+    height: 55px;
+    color: #fff;
+    text-align: center;
+    padding-top: 10px
+}
+
+.background-header
+{
+    background: url(../images/header-backgroun.png);
+    background-repeat-y: no-repeat;
+    background-size: 6.8px;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    margin: 0px;
+}
+
+.content 
+{
+    margin-top: 150px;
+}
+
+.form-group
+{
+    text-align: left;
+}
+
