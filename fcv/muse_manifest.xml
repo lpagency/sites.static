@@ -1,68 +1,68 @@
-<manifest alg="2" build="2017.0.4.363" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="www.fundacioncristovive.cl" resolutions="1x" timestamp="1506524496331">
+<manifest alg="2" build="2017.0.4.363" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="www.fundacioncristovive.cl" resolutions="1x" timestamp="1508983719810">
   <folder name="css">
     <file name="site_global.css" crc="443350757"/>
-    <file name="master_a-p_g_-maestra.css" crc="4228655760" ref="noticias:fcv-inauguro-reconstruccion:index:rehabilitacion-de-adicciones:jardin-infantil-naciente:hna.-karoline-mayer-participa-en:quienes-somos:paginas-amigas:fundacion-cristo-vive-participo-en:fcv-transparente:personas-en-situacion-de-calle:formacion-laboral:fcv-recibe-donación:educacion-inicial:trabajadores-de-kaufmann-visitaron:salud-familiar:que-hacemos:discapacidad-adultos:como-colaborar:contacto"/>
-    <file name="nomq_preview_master_a-p_g_-maestra.css" crc="471170077" ref="noticias:fcv-inauguro-reconstruccion:index:rehabilitacion-de-adicciones:jardin-infantil-naciente:hna.-karoline-mayer-participa-en:quienes-somos:paginas-amigas:fundacion-cristo-vive-participo-en:fcv-transparente:personas-en-situacion-de-calle:formacion-laboral:fcv-recibe-donación:educacion-inicial:trabajadores-de-kaufmann-visitaron:salud-familiar:que-hacemos:discapacidad-adultos:como-colaborar:contacto"/>
-    <file name="noticias.css" crc="515248623" ref="noticias"/>
-    <file name="nomq_noticias.css" crc="199145488" ref="noticias"/>
-    <file name="iefonts_noticias.css" crc="3824530138" ref="noticias"/>
-    <file name="fcv-inauguro-reconstruccion.css" crc="4253347942" ref="fcv-inauguro-reconstruccion"/>
-    <file name="nomq_fcv-inauguro-reconstruccion.css" crc="223987393" ref="fcv-inauguro-reconstruccion"/>
-    <file name="iefonts_fcv-inauguro-reconstruccion.css" crc="3824530138" ref="fcv-inauguro-reconstruccion"/>
-    <file name="index.css" crc="3777914668" ref="index"/>
-    <file name="nomq_index.css" crc="310120810" ref="index"/>
-    <file name="iefonts_index.css" crc="3824530138" ref="index"/>
-    <file name="rehabilitacion-de-adicciones.css" crc="342573780" ref="rehabilitacion-de-adicciones"/>
-    <file name="nomq_rehabilitacion-de-adicciones.css" crc="266918877" ref="rehabilitacion-de-adicciones"/>
-    <file name="iefonts_rehabilitacion-de-adicciones.css" crc="3824530138" ref="rehabilitacion-de-adicciones"/>
-    <file name="jardin-infantil-naciente.css" crc="4057157565" ref="jardin-infantil-naciente"/>
-    <file name="nomq_jardin-infantil-naciente.css" crc="4198429968" ref="jardin-infantil-naciente"/>
+    <file name="master_a-p_g_-maestra.css" crc="3835731388" ref="jardin-infantil-naciente:rehabilitacion-de-adicciones:fundacion-cristo-vive-participo-en:personas-en-situacion-de-calle:index:fcv-recibe-donación:discapacidad-adultos:quienes-somos:trabajadores-de-kaufmann-visitaron:fcv-transparente:contacto:educacion-inicial:que-hacemos:fcv-inauguro-reconstruccion:como-colaborar:paginas-amigas:hna.-karoline-mayer-participa-en:noticias:formacion-laboral:salud-familiar"/>
+    <file name="nomq_preview_master_a-p_g_-maestra.css" crc="204465423" ref="jardin-infantil-naciente:rehabilitacion-de-adicciones:fundacion-cristo-vive-participo-en:personas-en-situacion-de-calle:index:fcv-recibe-donación:discapacidad-adultos:quienes-somos:trabajadores-de-kaufmann-visitaron:fcv-transparente:contacto:educacion-inicial:que-hacemos:fcv-inauguro-reconstruccion:como-colaborar:paginas-amigas:hna.-karoline-mayer-participa-en:noticias:formacion-laboral:salud-familiar"/>
+    <file name="jardin-infantil-naciente.css" crc="373112153" ref="jardin-infantil-naciente"/>
+    <file name="nomq_jardin-infantil-naciente.css" crc="3886024600" ref="jardin-infantil-naciente"/>
     <file name="iefonts_jardin-infantil-naciente.css" crc="3824530138" ref="jardin-infantil-naciente"/>
-    <file name="hna_-karoline-mayer-participa-en.css" crc="169503705" ref="hna.-karoline-mayer-participa-en"/>
-    <file name="nomq_hna_-karoline-mayer-participa-en.css" crc="259372605" ref="hna.-karoline-mayer-participa-en"/>
-    <file name="iefonts_hna_-karoline-mayer-participa-en.css" crc="3824530138" ref="hna.-karoline-mayer-participa-en"/>
-    <file name="quienes-somos.css" crc="341018225" ref="quienes-somos"/>
-    <file name="nomq_quienes-somos.css" crc="243052490" ref="quienes-somos"/>
-    <file name="iefonts_quienes-somos.css" crc="3824530138" ref="quienes-somos"/>
-    <file name="paginas-amigas.css" crc="126455123" ref="paginas-amigas"/>
-    <file name="nomq_paginas-amigas.css" crc="317009658" ref="paginas-amigas"/>
-    <file name="iefonts_paginas-amigas.css" crc="3824530138" ref="paginas-amigas"/>
-    <file name="fundacion-cristo-vive-participo-en.css" crc="3960459477" ref="fundacion-cristo-vive-participo-en"/>
-    <file name="nomq_fundacion-cristo-vive-participo-en.css" crc="3759832557" ref="fundacion-cristo-vive-participo-en"/>
+    <file name="rehabilitacion-de-adicciones.css" crc="62430102" ref="rehabilitacion-de-adicciones"/>
+    <file name="nomq_rehabilitacion-de-adicciones.css" crc="4133433947" ref="rehabilitacion-de-adicciones"/>
+    <file name="iefonts_rehabilitacion-de-adicciones.css" crc="3824530138" ref="rehabilitacion-de-adicciones"/>
+    <file name="fundacion-cristo-vive-participo-en.css" crc="380651529" ref="fundacion-cristo-vive-participo-en"/>
+    <file name="nomq_fundacion-cristo-vive-participo-en.css" crc="3997605688" ref="fundacion-cristo-vive-participo-en"/>
     <file name="iefonts_fundacion-cristo-vive-participo-en.css" crc="3824530138" ref="fundacion-cristo-vive-participo-en"/>
-    <file name="fcv-transparente.css" crc="3998153246" ref="fcv-transparente"/>
-    <file name="nomq_fcv-transparente.css" crc="4259709901" ref="fcv-transparente"/>
-    <file name="iefonts_fcv-transparente.css" crc="3824530138" ref="fcv-transparente"/>
-    <file name="personas-en-situacion-de-calle.css" crc="480066658" ref="personas-en-situacion-de-calle"/>
-    <file name="nomq_personas-en-situacion-de-calle.css" crc="6296049" ref="personas-en-situacion-de-calle"/>
+    <file name="personas-en-situacion-de-calle.css" crc="4059997450" ref="personas-en-situacion-de-calle"/>
+    <file name="nomq_personas-en-situacion-de-calle.css" crc="405601449" ref="personas-en-situacion-de-calle"/>
     <file name="iefonts_personas-en-situacion-de-calle.css" crc="3824530138" ref="personas-en-situacion-de-calle"/>
-    <file name="formacion-laboral.css" crc="3880932820" ref="formacion-laboral"/>
-    <file name="nomq_formacion-laboral.css" crc="18949323" ref="formacion-laboral"/>
-    <file name="iefonts_formacion-laboral.css" crc="3824530138" ref="formacion-laboral"/>
-    <file name="fcv-recibe-donaci_n.css" crc="4038098871" ref="fcv-recibe-donación"/>
-    <file name="nomq_fcv-recibe-donaci_n.css" crc="4228290268" ref="fcv-recibe-donación"/>
+    <file name="index.css" crc="3914537629" ref="index"/>
+    <file name="nomq_index.css" crc="4161623259" ref="index"/>
+    <file name="iefonts_index.css" crc="3824530138" ref="index"/>
+    <file name="fcv-recibe-donaci_n.css" crc="198791601" ref="fcv-recibe-donación"/>
+    <file name="nomq_fcv-recibe-donaci_n.css" crc="3997733727" ref="fcv-recibe-donación"/>
     <file name="iefonts_fcv-recibe-donaci_n.css" crc="3824530138" ref="fcv-recibe-donación"/>
-    <file name="educacion-inicial.css" crc="3871868327" ref="educacion-inicial"/>
-    <file name="nomq_educacion-inicial.css" crc="460277969" ref="educacion-inicial"/>
-    <file name="iefonts_educacion-inicial.css" crc="3824530138" ref="educacion-inicial"/>
-    <file name="trabajadores-de-kaufmann-visitaron.css" crc="460810157" ref="trabajadores-de-kaufmann-visitaron"/>
-    <file name="nomq_trabajadores-de-kaufmann-visitaron.css" crc="120805420" ref="trabajadores-de-kaufmann-visitaron"/>
-    <file name="iefonts_trabajadores-de-kaufmann-visitaron.css" crc="3824530138" ref="trabajadores-de-kaufmann-visitaron"/>
-    <file name="salud-familiar.css" crc="3948809701" ref="salud-familiar"/>
-    <file name="nomq_salud-familiar.css" crc="227413012" ref="salud-familiar"/>
-    <file name="iefonts_salud-familiar.css" crc="3824530138" ref="salud-familiar"/>
-    <file name="que-hacemos.css" crc="8981606" ref="que-hacemos"/>
-    <file name="nomq_que-hacemos.css" crc="392656029" ref="que-hacemos"/>
-    <file name="iefonts_que-hacemos.css" crc="3824530138" ref="que-hacemos"/>
-    <file name="discapacidad-adultos.css" crc="3799349067" ref="discapacidad-adultos"/>
-    <file name="nomq_discapacidad-adultos.css" crc="534615718" ref="discapacidad-adultos"/>
+    <file name="discapacidad-adultos.css" crc="4024673358" ref="discapacidad-adultos"/>
+    <file name="nomq_discapacidad-adultos.css" crc="4229668897" ref="discapacidad-adultos"/>
     <file name="iefonts_discapacidad-adultos.css" crc="3824530138" ref="discapacidad-adultos"/>
-    <file name="como-colaborar.css" crc="176842803" ref="como-colaborar"/>
-    <file name="nomq_como-colaborar.css" crc="4015946724" ref="como-colaborar"/>
-    <file name="iefonts_como-colaborar.css" crc="3824530138" ref="como-colaborar"/>
-    <file name="contacto.css" crc="4165742576" ref="contacto"/>
-    <file name="nomq_contacto.css" crc="532520117" ref="contacto"/>
+    <file name="quienes-somos.css" crc="337499959" ref="quienes-somos"/>
+    <file name="nomq_quienes-somos.css" crc="3940016878" ref="quienes-somos"/>
+    <file name="iefonts_quienes-somos.css" crc="3824530138" ref="quienes-somos"/>
+    <file name="trabajadores-de-kaufmann-visitaron.css" crc="219988033" ref="trabajadores-de-kaufmann-visitaron"/>
+    <file name="nomq_trabajadores-de-kaufmann-visitaron.css" crc="283183534" ref="trabajadores-de-kaufmann-visitaron"/>
+    <file name="iefonts_trabajadores-de-kaufmann-visitaron.css" crc="3824530138" ref="trabajadores-de-kaufmann-visitaron"/>
+    <file name="fcv-transparente.css" crc="184645816" ref="fcv-transparente"/>
+    <file name="nomq_fcv-transparente.css" crc="440802887" ref="fcv-transparente"/>
+    <file name="iefonts_fcv-transparente.css" crc="3824530138" ref="fcv-transparente"/>
+    <file name="contacto.css" crc="4001076412" ref="contacto"/>
+    <file name="nomq_contacto.css" crc="4004689490" ref="contacto"/>
     <file name="iefonts_contacto.css" crc="3824530138" ref="contacto"/>
+    <file name="educacion-inicial.css" crc="3844550180" ref="educacion-inicial"/>
+    <file name="nomq_educacion-inicial.css" crc="27888393" ref="educacion-inicial"/>
+    <file name="iefonts_educacion-inicial.css" crc="3824530138" ref="educacion-inicial"/>
+    <file name="que-hacemos.css" crc="238580021" ref="que-hacemos"/>
+    <file name="nomq_que-hacemos.css" crc="358732018" ref="que-hacemos"/>
+    <file name="iefonts_que-hacemos.css" crc="3824530138" ref="que-hacemos"/>
+    <file name="fcv-inauguro-reconstruccion.css" crc="356121090" ref="fcv-inauguro-reconstruccion"/>
+    <file name="nomq_fcv-inauguro-reconstruccion.css" crc="98828005" ref="fcv-inauguro-reconstruccion"/>
+    <file name="iefonts_fcv-inauguro-reconstruccion.css" crc="3824530138" ref="fcv-inauguro-reconstruccion"/>
+    <file name="como-colaborar.css" crc="3762828317" ref="como-colaborar"/>
+    <file name="nomq_como-colaborar.css" crc="239387331" ref="como-colaborar"/>
+    <file name="iefonts_como-colaborar.css" crc="3824530138" ref="como-colaborar"/>
+    <file name="paginas-amigas.css" crc="4242752307" ref="paginas-amigas"/>
+    <file name="nomq_paginas-amigas.css" crc="187045121" ref="paginas-amigas"/>
+    <file name="iefonts_paginas-amigas.css" crc="3824530138" ref="paginas-amigas"/>
+    <file name="hna_-karoline-mayer-participa-en.css" crc="4079574229" ref="hna.-karoline-mayer-participa-en"/>
+    <file name="nomq_hna_-karoline-mayer-participa-en.css" crc="131042841" ref="hna.-karoline-mayer-participa-en"/>
+    <file name="iefonts_hna_-karoline-mayer-participa-en.css" crc="3824530138" ref="hna.-karoline-mayer-participa-en"/>
+    <file name="noticias.css" crc="10369054" ref="noticias"/>
+    <file name="nomq_noticias.css" crc="506956570" ref="noticias"/>
+    <file name="iefonts_noticias.css" crc="3824530138" ref="noticias"/>
+    <file name="formacion-laboral.css" crc="4231627136" ref="formacion-laboral"/>
+    <file name="nomq_formacion-laboral.css" crc="14776331" ref="formacion-laboral"/>
+    <file name="iefonts_formacion-laboral.css" crc="3824530138" ref="formacion-laboral"/>
+    <file name="salud-familiar.css" crc="3917267922" ref="salud-familiar"/>
+    <file name="nomq_salud-familiar.css" crc="4086876283" ref="salud-familiar"/>
+    <file name="iefonts_salud-familiar.css" crc="3824530138" ref="salud-familiar"/>
   </folder>
   <folder name="assets">
     <file name="fecu-social-2015-fundación-cristo-vive.pdf" crc="250882817" seo="true" mt="1471898373000"/>
@@ -94,8 +94,8 @@
     <file name="form-u65267.php" crc="218166057" ref="contacto"/>
     <file name="form-u64137.php" crc="338033084" ref="contacto"/>
     <file name="form-u64450.php" crc="252812173" ref="contacto"/>
-    <file name="form-u70049.php" crc="392913097" ref="como-colaborar"/>
-    <file name="form-u70983.php" crc="245779674" ref="como-colaborar"/>
+    <file name="form-u70049.php" crc="416181596" ref="como-colaborar"/>
+    <file name="form-u70983.php" crc="3921272344" ref="como-colaborar"/>
     <file name="form-u71465.php" crc="3972825635" ref="como-colaborar"/>
   </folder>
   <folder name="images">
@@ -168,10 +168,13 @@
       <caption webpage="index" alt=""/>
       <caption webpage="index" alt=""/>
     </file>
-    <file name="banner-1280x500-01.jpg" crc="4030119702" ref="index">
+    <file name="banner-generico-1280x500.jpg" crc="3875384749" ref="index">
       <caption webpage="index" alt=""/>
     </file>
-    <file name="banner-late-1280x500.jpg" crc="181665553" ref="index">
+    <file name="banner-1280x500.jpg" crc="3900046143" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="banner-late-1280x500.jpg" crc="396763627" ref="index">
       <caption webpage="index" alt=""/>
     </file>
     <file name="educacion-inicial-u5222-fr.jpg" crc="410514504" ref="index:que-hacemos"/>
@@ -199,7 +202,7 @@
     <file name="semana-del-clima-chica.gif" crc="516792521" ref="index:noticias:fundacion-cristo-vive-participo-en">
       <caption webpage="index" alt=""/>
     </file>
-    <file name="donación-late-chica.gif" crc="486839069" ref="index:noticias:fcv-recibe-donación">
+    <file name="donación-late-chica.gif" crc="486839069" ref="index">
       <caption webpage="index" alt=""/>
     </file>
     <file name="kaufmann-chica.gif" crc="3969074671" ref="index:noticias:trabajadores-de-kaufmann-visitaron">
@@ -238,10 +241,13 @@
       <caption webpage="contacto" alt=""/>
       <caption webpage="contacto" alt=""/>
     </file>
-    <file name="banner-768x300-02.jpg" crc="4287455820" ref="index">
+    <file name="banner-generico-768x300.jpg" crc="4202592873" ref="index">
       <caption webpage="index" alt=""/>
     </file>
-    <file name="banner-late-768x300.jpg" crc="152257952" ref="index">
+    <file name="banner-768x300.jpg" crc="28860433" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="banner-late-768x300.jpg" crc="4175544459" ref="index">
       <caption webpage="index" alt=""/>
     </file>
     <file name="banner-u7488-fr.jpg" crc="389534890" ref="index"/>
@@ -252,20 +258,26 @@
     <file name="menu-cruz-blanco.png" crc="347475708" ref="index">
       <caption webpage="index" alt=""/>
     </file>
-    <file name="banner-dejatuhuella-500x200.jpg" crc="4081871082" ref="index">
+    <file name="banner-generico-500x200.jpg" crc="3996891639" ref="index">
       <caption webpage="index" alt=""/>
     </file>
-    <file name="banner-late-500x200.jpg" crc="480898041" ref="index">
+    <file name="banner-500x200.jpg" crc="289527937" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="banner-late-500x200.jpg" crc="27250115" ref="index">
       <caption webpage="index" alt=""/>
     </file>
     <file name="educacion-inicial-u9393-fr.jpg" crc="16568884" ref="index:que-hacemos"/>
     <file name="formacionlaboral-u9423-fr.jpg" crc="4236811648" ref="index:que-hacemos"/>
     <file name="banner-u7488-fr2.jpg" crc="4193293248" ref="index"/>
     <file name="banner-u5664-fr.jpg" crc="262055691" ref="index"/>
-    <file name="banner-dejatuhuella-320x200.jpg" crc="4169554401" ref="index">
+    <file name="banner-generico-320x200.jpg" crc="100598247" ref="index">
       <caption webpage="index" alt=""/>
     </file>
-    <file name="banner-late-320x200.jpg" crc="290967512" ref="index">
+    <file name="banner-320x200.jpg" crc="161599441" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="banner-late-320x200.jpg" crc="255322359" ref="index">
       <caption webpage="index" alt=""/>
     </file>
     <file name="banner-u7488-fr3.jpg" crc="166243836" ref="index"/>
@@ -530,21 +542,21 @@
       <caption webpage="educacion-inicial" alt=""/>
     </file>
     <file name="salud-familiar-favicon.ico" crc="364952068" ref="salud-familiar"/>
-    <file name="img_9359.jpg" crc="101628174" ref="salud-familiar">
+    <file name="saludfamiliar.jpg" crc="4277584334" ref="salud-familiar">
       <caption webpage="salud-familiar" alt=""/>
     </file>
     <file name="salud y reahb adicciones - logo servicio metropolitano norte.jpg" crc="301804995" ref="salud-familiar:rehabilitacion-de-adicciones">
-      <caption webpage="salud-familiar" alt=""/>
-      <caption webpage="salud-familiar" alt=""/>
-      <caption webpage="salud-familiar" alt=""/>
-      <caption webpage="salud-familiar" alt=""/>
       <caption webpage="rehabilitacion-de-adicciones" alt=""/>
       <caption webpage="rehabilitacion-de-adicciones" alt=""/>
       <caption webpage="rehabilitacion-de-adicciones" alt=""/>
       <caption webpage="rehabilitacion-de-adicciones" alt=""/>
+      <caption webpage="salud-familiar" alt=""/>
+      <caption webpage="salud-familiar" alt=""/>
+      <caption webpage="salud-familiar" alt=""/>
+      <caption webpage="salud-familiar" alt=""/>
     </file>
-    <file name="img_9359-u47690-fr.jpg" crc="4094427248" ref="salud-familiar"/>
-    <file name="img_9359-u47690-fr2.jpg" crc="249330609" ref="salud-familiar"/>
+    <file name="saludfamiliar-u47690-fr.jpg" crc="445408406" ref="salud-familiar"/>
+    <file name="saludfamiliar-u47690-fr2.jpg" crc="158239556" ref="salud-familiar"/>
     <file name="rehabilitacion-de-adicciones-favicon.ico" crc="364952068" ref="rehabilitacion-de-adicciones"/>
     <file name="4 rehabilitación de adicciones.jpg" crc="3889325633" ref="rehabilitacion-de-adicciones">
       <caption webpage="rehabilitacion-de-adicciones" alt=""/>
@@ -595,14 +607,11 @@
     <file name="radiobuttoncheckedmousedown.png" crc="4280357799" ref="como-colaborar">
       <caption webpage="como-colaborar" alt=""/>
     </file>
-    <file name="web pay.jpg" crc="324276429" ref="como-colaborar">
-      <caption webpage="como-colaborar" alt=""/>
-      <caption webpage="como-colaborar" alt=""/>
-      <caption webpage="como-colaborar" alt=""/>
-      <caption webpage="como-colaborar" alt=""/>
-    </file>
     <file name="noticias-favicon.ico" crc="364952068" ref="noticias"/>
     <file name="parquechica.gif" crc="3875175006" ref="noticias:jardin-infantil-naciente">
+      <caption webpage="noticias" alt=""/>
+    </file>
+    <file name="donacion-late-chica.gif" crc="486839069" ref="noticias:fcv-recibe-donación">
       <caption webpage="noticias" alt=""/>
     </file>
     <file name="poli-chica.gif" crc="3922977993" ref="noticias:fcv-inauguro-reconstruccion">
@@ -660,24 +669,24 @@
     <file name="formacionlaboral-u118659-fr2.jpg" crc="3925451566" ref="formacion-laboral"/>
     <file name="formacionlaboral-u118659-fr3.jpg" crc="344183375" ref="formacion-laboral"/>
   </folder>
-  <file name="index.html" crc="531846223" seo="true" mt="1506523966144" redirect="true"/>
-  <file name="quienes-somos.html" crc="4210731618" seo="true" mt="1506523504717" redirect="true"/>
-  <file name="que-hacemos.html" crc="37536479" seo="true" mt="1506524398998" redirect="true"/>
-  <file name="educacion-inicial.html" crc="113580" seo="true" mt="1506395750773" redirect="true"/>
-  <file name="salud-familiar.html" crc="196473232" seo="true" mt="1506394875532" redirect="true"/>
-  <file name="rehabilitacion-de-adicciones.html" crc="3814465402" seo="true" mt="1506394875532" redirect="true"/>
-  <file name="personas-en-situacion-de-calle.html" crc="4193358130" seo="true" mt="1506394875532" redirect="true"/>
-  <file name="discapacidad-adultos.html" crc="179914862" seo="true" mt="1506394875532" redirect="true"/>
-  <file name="contacto.html" crc="4278527593" seo="true" mt="1506394875532" redirect="true"/>
-  <file name="como-colaborar.html" crc="4027159591" seo="true" mt="1506523453614" redirect="true"/>
-  <file name="noticias.html" crc="124476256" seo="true" mt="1506395729911" redirect="true"/>
-  <file name="jardin-infantil-naciente.html" crc="3806113704" seo="true" mt="1506394875532" redirect="true"/>
-  <file name="fundacion-cristo-vive-participo-en.html" crc="298460669" seo="true" mt="1506394875532" redirect="true"/>
-  <file name="fcv-recibe-donación.html" crc="3886589879" seo="true" mt="1506394875532" redirect="true"/>
-  <file name="trabajadores-de-kaufmann-visitaron.html" crc="338465861" seo="true" mt="1506394875532" redirect="true"/>
-  <file name="fcv-inauguro-reconstruccion.html" crc="376213912" seo="true" mt="1506394875532" redirect="true"/>
-  <file name="hna.-karoline-mayer-participa-en.html" crc="370181529" seo="true" mt="1506394875532" redirect="true"/>
-  <file name="fcv-transparente.html" crc="3930589030" seo="true" mt="1506394875532" redirect="true"/>
-  <file name="paginas-amigas.html" crc="277671759" seo="true" mt="1506394875532" redirect="true"/>
-  <file name="formacion-laboral.html" crc="3891746864" seo="true" mt="1506523276056" redirect="true"/>
+  <file name="index.html" crc="4019169803" seo="true" mt="1508981658495" redirect="true"/>
+  <file name="quienes-somos.html" crc="4077091940" seo="true" mt="1506523504717" redirect="true"/>
+  <file name="que-hacemos.html" crc="3922232420" seo="true" mt="1506524398998" redirect="true"/>
+  <file name="educacion-inicial.html" crc="3999345789" seo="true" mt="1508982647493" redirect="true"/>
+  <file name="salud-familiar.html" crc="4069728173" seo="true" mt="1508982916900" redirect="true"/>
+  <file name="rehabilitacion-de-adicciones.html" crc="201624135" seo="true" mt="1508983001408" redirect="true"/>
+  <file name="personas-en-situacion-de-calle.html" crc="366567563" seo="true" mt="1508983065079" redirect="true"/>
+  <file name="discapacidad-adultos.html" crc="218319851" seo="true" mt="1508983116299" redirect="true"/>
+  <file name="contacto.html" crc="3880919660" seo="true" mt="1506394875532" redirect="true"/>
+  <file name="como-colaborar.html" crc="116046449" seo="true" mt="1508982517024" redirect="true"/>
+  <file name="noticias.html" crc="173776512" seo="true" mt="1508983267916" redirect="true"/>
+  <file name="jardin-infantil-naciente.html" crc="3952158388" seo="true" mt="1506394875532" redirect="true"/>
+  <file name="fundacion-cristo-vive-participo-en.html" crc="341836307" seo="true" mt="1506394875532" redirect="true"/>
+  <file name="fcv-recibe-donación.html" crc="4259076849" seo="true" mt="1508983328434" redirect="true"/>
+  <file name="trabajadores-de-kaufmann-visitaron.html" crc="4143984358" seo="true" mt="1506394875532" redirect="true"/>
+  <file name="fcv-inauguro-reconstruccion.html" crc="4062138013" seo="true" mt="1506394875532" redirect="true"/>
+  <file name="hna.-karoline-mayer-participa-en.html" crc="249344550" seo="true" mt="1506394875532" redirect="true"/>
+  <file name="fcv-transparente.html" crc="3910946913" seo="true" mt="1506394875532" redirect="true"/>
+  <file name="paginas-amigas.html" crc="4287509595" seo="true" mt="1506394875532" redirect="true"/>
+  <file name="formacion-laboral.html" crc="333297659" seo="true" mt="1508982733459" redirect="true"/>
 </manifest>

@@ -31,54 +31,8 @@ $form = array(
 		'to' => 'donaciones@fundacioncristovive.cl'
 	),
 	'fields' => array(
-		'custom_U70081' => array(
-			'order' => 1,
-			'type' => 'string',
-			'label' => 'Nombres',
-			'required' => true,
-			'errors' => array(
-				'required' => 'El campo \'Nombres\' es obligatorio.'
-			)
-		),
-		'Email' => array(
-			'order' => 4,
-			'type' => 'email',
-			'label' => 'Correo electrónico',
-			'required' => true,
-			'errors' => array(
-				'required' => 'El campo \'Correo electrónico\' es obligatorio.',
-				'format' => 'El campo \'Correo electrónico\' contiene un correo electrónico no válido.'
-			)
-		),
-		'custom_U70069' => array(
-			'order' => 3,
-			'type' => 'string',
-			'label' => 'Rut',
-			'required' => true,
-			'errors' => array(
-				'required' => 'El campo \'Rut\' es obligatorio.'
-			)
-		),
-		'custom_U70086' => array(
-			'order' => 5,
-			'type' => 'string',
-			'label' => 'Teléfono',
-			'required' => true,
-			'errors' => array(
-				'required' => 'El campo \'Teléfono\' es obligatorio.'
-			)
-		),
-		'custom_U70073' => array(
-			'order' => 2,
-			'type' => 'string',
-			'label' => 'Apellidos',
-			'required' => true,
-			'errors' => array(
-				'required' => 'El campo \'Apellidos\' es obligatorio.'
-			)
-		),
 		'custom_U115321' => array(
-			'order' => 7,
+			'order' => 2,
 			'type' => 'string',
 			'label' => 'Otro monto',
 			'required' => true,
@@ -86,28 +40,8 @@ $form = array(
 				'required' => 'El campo \'Otro monto\' es obligatorio.'
 			)
 		),
-		'custom_U70769' => array(
-			'order' => 8,
-			'type' => 'radiogroup',
-			'label' => 'Formas de pago',
-			'required' => true,
-			'optionItems' => array(
-				'Etiqueta de botón de opción',
-				'Transferencia 
-
-Nombre: Fundación Cristo Vive
-Banco: Banco de Chile
-Cuenta corriente: Nº01133-09
-Rut: 71.735.400-1
-E-mail: donaciones@fundacioncristovive.cl'
-			),
-			'errors' => array(
-				'required' => 'El campo \'Formas de pago\' es obligatorio.',
-				'format' => 'El campo \'Formas de pago\' contiene un valor no válido.'
-			)
-		),
 		'custom_U70301' => array(
-			'order' => 6,
+			'order' => 1,
 			'type' => 'radiogroup',
 			'label' => 'Monto',
 			'required' => true,

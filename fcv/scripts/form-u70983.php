@@ -86,6 +86,20 @@ $form = array(
 				'required' => 'El campo \'Mensaje\' es obligatorio.'
 			)
 		),
+		'custom_U70989' => array(
+			'order' => 8,
+			'type' => 'radiogroup',
+			'label' => 'Formas de pago',
+			'required' => true,
+			'optionItems' => array(
+				'PAC',
+				'PAT'
+			),
+			'errors' => array(
+				'required' => 'El campo \'Formas de pago\' es obligatorio.',
+				'format' => 'El campo \'Formas de pago\' contiene un valor no válido.'
+			)
+		),
 		'custom_U71017' => array(
 			'order' => 6,
 			'type' => 'radiogroup',
@@ -101,20 +115,6 @@ $form = array(
 			'errors' => array(
 				'required' => 'El campo \'Donación mensual\' es obligatorio.',
 				'format' => 'El campo \'Donación mensual\' contiene un valor no válido.'
-			)
-		),
-		'custom_U70989' => array(
-			'order' => 8,
-			'type' => 'radiogroup',
-			'label' => 'Formas de pago',
-			'required' => true,
-			'optionItems' => array(
-				'PAC',
-				'PAT'
-			),
-			'errors' => array(
-				'required' => 'El campo \'Formas de pago\' es obligatorio.',
-				'format' => 'El campo \'Formas de pago\' contiene un valor no válido.'
 			)
 		)
 	)

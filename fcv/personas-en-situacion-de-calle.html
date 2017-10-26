@@ -18,20 +18,20 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
   <title>FUNDACIÓN CRISTO VIVE | Abramos oportunidades para todos / Residencia de Acogida</title>
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/site_global.css?crc=443350757"/>
-  <link rel="stylesheet" type="text/css" href="css/master_a-p_g_-maestra.css?crc=4228655760"/>
-  <link rel="stylesheet" type="text/css" href="css/personas-en-situacion-de-calle.css?crc=480066658" id="pagesheet"/>
+  <link rel="stylesheet" type="text/css" href="css/master_a-p_g_-maestra.css?crc=3835731388"/>
+  <link rel="stylesheet" type="text/css" href="css/personas-en-situacion-de-calle.css?crc=4059997450" id="pagesheet"/>
   <!-- IE-only CSS -->
   <!--[if lt IE 9]>
   <link rel="stylesheet" type="text/css" href="css/iefonts_personas-en-situacion-de-calle.css?crc=3824530138"/>
-  <link rel="stylesheet" type="text/css" href="css/nomq_preview_master_a-p_g_-maestra.css?crc=471170077"/>
-  <link rel="stylesheet" type="text/css" href="css/nomq_personas-en-situacion-de-calle.css?crc=6296049" id="nomq_pagesheet"/>
+  <link rel="stylesheet" type="text/css" href="css/nomq_preview_master_a-p_g_-maestra.css?crc=204465423"/>
+  <link rel="stylesheet" type="text/css" href="css/nomq_personas-en-situacion-de-calle.css?crc=405601449" id="nomq_pagesheet"/>
   <![endif]-->
   <!-- Other scripts -->
   <script type="text/javascript">
    var __adobewebfontsappname__ = "muse";
 </script>
   <!-- JS includes -->
-  <script src="https://webfonts.creativecloud.com/comfortaa:n7,n4:default;josefin-sans:n6,n7,i6,n4:default.js" type="text/javascript"></script>
+  <script src="https://webfonts.creativecloud.com/josefin-sans:n6,n7,i6,n4:default;comfortaa:n7,n4:default.js" type="text/javascript"></script>
   <!--[if lt IE 9]>
   <script src="scripts/html5shiv.js?crc=4241844378" type="text/javascript"></script>
   <![endif]-->
@@ -120,7 +120,7 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
      <div class="browser_width colelem" id="u57375-bw">
       <div id="u57375"><!-- column -->
        <div class="clearfix" id="u57375_align_to_page">
-        <div class="clearfix ose_pre_init colelem shared_content" id="u57364-4" data-content-guid="u57364-4_content"><!-- content -->
+        <div class="clearfix colelem shared_content" id="u57364-4" data-content-guid="u57364-4_content"><!-- content -->
          <p id="u57364-2">Movilizando todos los recursos materiales y espirituales a nuestro alcance, asistimos a personas sin hogar durante todo el año. Con el apoyo del Ministerio de Desarrollo Social, implementamos programas de intervención directa en calle, albergue nocturno en invierno y hospedería durante los meses restantes, y una residencia para la superación (Centro de Referencia Cristo Vive).</p>
         </div>
         <div class="clearfix colelem" id="u57366"><!-- group -->
@@ -414,11 +414,10 @@ Muse.Utils.initWidget('#accordionu57358', ['#bp_infinity', '#bp_768', '#bp_500',
 Muse.Utils.initWidget('#accordionu57378', ['#bp_infinity', '#bp_768', '#bp_500', '#bp_320'], function(elem) { return new WebPro.Widget.Accordion(elem, {canCloseAll:true,defaultIndex:-1}); });/* #accordionu57378 */
 Muse.Utils.initWidget('#accordionu103311', ['#bp_500', '#bp_320'], function(elem) { return new WebPro.Widget.Accordion(elem, {canCloseAll:true,defaultIndex:-1}); });/* #accordionu103311 */
 $('#bp_768').one('muse_this_bp_activate', function(){
-$('#u57363-bw').registerPositionScrollEffect([{"speed":[null,0.01],"in":[-Infinity,0]},{"speed":[null,-0.01],"in":[0,Infinity]}], $(this)); /* scroll effect */
+$('#u57363-bw').registerPositionScrollEffect([{"in":[-Infinity,0],"speed":[null,0.01]},{"in":[0,Infinity],"speed":[null,-0.01]}], $(this)); /* scroll effect */
 });/* scroll effects for one breakpoint */
 $('#bp_infinity').one('muse_this_bp_activate', function(){
-$('#u57363-bw').registerPositionScrollEffect([{"speed":[null,0.01],"in":[-Infinity,0]},{"speed":[null,-0.01],"in":[0,Infinity]}], $(this)); /* scroll effect */
-$('#u57364-4').registerOpacityScrollEffect([{"opacity":0,"fade":50,"in":[-Infinity,455]},{"opacity":100,"in":[455,455]},{"opacity":100,"fade":50,"in":[455,Infinity]}], $(this)); /* scroll effect */
+$('#u57363-bw').registerPositionScrollEffect([{"in":[-Infinity,0],"speed":[null,0.01]},{"in":[0,Infinity],"speed":[null,-0.01]}], $(this)); /* scroll effect */
 });/* scroll effects for one breakpoint */
 $( '.breakpoint' ).registerBreakpoint();/* Register breakpoints */
 Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
