@@ -225,26 +225,6 @@
             <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
           </li>
           <li>
-            <a href="#config" class="toc-h1 toc-link" data-title="Config">Config</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#get-all-products" class="toc-h2 toc-link" data-title="Config">Get all Products</a>
-                  </li>
-                  <li>
-                    <a href="#get-a-specific-product" class="toc-h2 toc-link" data-title="Config">Get a Specific Product</a>
-                  </li>
-                  <li>
-                    <a href="#create-a-product" class="toc-h2 toc-link" data-title="Config">Create a Product</a>
-                  </li>
-                  <li>
-                    <a href="#edit-a-product" class="toc-h2 toc-link" data-title="Config">Edit a Product</a>
-                  </li>
-                  <li>
-                    <a href="#edit-a-product-2" class="toc-h2 toc-link" data-title="Config">Edit a Product</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
             <a href="#products" class="toc-h1 toc-link" data-title="Products">Products</a>
               <ul class="toc-list-h2">
                   <li>
@@ -265,7 +245,58 @@
               </ul>
           </li>
           <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+            <a href="#orders" class="toc-h1 toc-link" data-title="Orders">Orders</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-a-order" class="toc-h2 toc-link" data-title="Orders">Get a Order</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#variants" class="toc-h1 toc-link" data-title="Variants">Variants</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-variants-for-a-product" class="toc-h2 toc-link" data-title="Variants">Get variants for a product</a>
+                  </li>
+                  <li>
+                    <a href="#create-a-variant" class="toc-h2 toc-link" data-title="Variants">Create a Variant</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-variant" class="toc-h2 toc-link" data-title="Variants">Delete a Variant</a>
+                  </li>
+                  <li>
+                    <a href="#create-a-value-for-a-variant" class="toc-h2 toc-link" data-title="Variants">Create a Value for a variant</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-value-for-a-variant" class="toc-h2 toc-link" data-title="Variants">Delete a Value for a Variant</a>
+                  </li>
+                  <li>
+                    <a href="#get-value-list" class="toc-h2 toc-link" data-title="Variants">Get Value list</a>
+                  </li>
+                  <li>
+                    <a href="#get-combination-list" class="toc-h2 toc-link" data-title="Variants">Get Combination list</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#shopping-cart" class="toc-h1 toc-link" data-title="Shopping cart">Shopping cart</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#create-an-empty-shopping-cart" class="toc-h2 toc-link" data-title="Shopping cart">Create an empty shopping cart</a>
+                  </li>
+                  <li>
+                    <a href="#create-a-new-shopping-cart-with-an-externally-generated-guuid" class="toc-h2 toc-link" data-title="Shopping cart">Create a new shopping cart with an externally generated GUUID</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-cart" class="toc-h2 toc-link" data-title="Shopping cart">Get a Specific Cart</a>
+                  </li>
+                  <li>
+                    <a href="#add-some-extra-data-to-a-shopping-cart" class="toc-h2 toc-link" data-title="Shopping cart"> Add some extra data to a shopping cart</a>
+                  </li>
+                  <li>
+                    <a href="#get-extrainfo-from-a-shopping-cart" class="toc-h2 toc-link" data-title="Shopping cart">Get extrainfo from a shopping cart</a>
+                  </li>
+              </ul>
           </li>
       </div>
         <ul class="toc-footer">
@@ -299,7 +330,7 @@ curl <span class="s2">"api_endpoint_here"</span>
 <aside class="notice">
 You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 </aside>
-<h1 id='config'>Config</h1><h2 id='get-all-products'>Get all Products</h2><pre class="highlight shell tab-shell"><code>curl -XGET https://apibodegas.loadingplay.com/v1/product/list <span class="se">\</span>
+<h1 id='products'>Products</h1><h2 id='get-all-products'>Get all Products</h2><pre class="highlight shell tab-shell"><code>curl -XGET https://apibodegas.loadingplay.com/v1/product/list <span class="se">\</span>
     -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span> <span class="se">\</span>
     -d <span class="s2">"site_name=fm"</span>
 </code></pre>
@@ -545,56 +576,22 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 <td>unique identifier for product it can be a comma separated list, and return a comma separated list of products</td>
 </tr>
 </tbody></table>
-<h2 id='edit-a-product-2'>Edit a Product</h2><h1 id='products'>Products</h1><h2 id='get-all-products'>Get all Products</h2><pre class="highlight shell tab-shell"><code>curl -XGET https://apibodegas.loadingplay.com/v1/product/list <span class="se">\</span>
+<h2 id='edit-a-product-2'>Edit a Product</h2><h1 id='orders'>Orders</h1><h2 id='get-a-order'>Get a Order</h2><pre class="highlight shell tab-shell"><code>curl -XGET https://apibodegas.loadingplay.com/order <span class="se">\</span>
     -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span> <span class="se">\</span>
-    -d <span class="s2">"site_name=fm"</span>
+    -d <span class="s2">"id=PORBUSCAR"</span> <span class="se">\</span>
+    -d <span class="s2">"site_name=PORBUSCAR"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"total_records"</span><span class="p">:</span><span class="w"> </span><span class="mi">169</span><span class="p">,</span><span class="w"> </span><span class="s2">"records_filtered"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="p">},</span><span class="w">  </span><span class="err">//</span><span class="w"> </span><span class="err">only</span><span class="w"> </span><span class="err">if</span><span class="w"> </span><span class="err">enabled</span><span class="w">
-    </span><span class="s2">"products"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"balance_units"</span><span class="p">:</span><span class="w"> </span><span class="mi">44</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CAT CHOW"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"bulk_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"bullet_1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Alimento para gato adulto, Pescado y Mariscos"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"bullet_2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15k"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"bullet_3"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"cost_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">29277</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"critical_stock"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"product description"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"for_sale"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1237</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-                </span><span class="s2">"https://7static.loadingplay.com/static/images/4799bd4dd9fdc1599355e6743ed9580c_PESCADO2.png.png"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"https://84static.loadingplay.com/static/images/1_4799bd4dd9fdc1599355e6743ed9580c_PESCADO2.png.png"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"https://7static.loadingplay.com/static/images/200_4799bd4dd9fdc1599355e6743ed9580c_PESCADO2.png.png"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"https://7static.loadingplay.com/static/images/500_4799bd4dd9fdc1599355e6743ed9580c_PESCADO2.png.png"</span><span class="w">
-            </span><span class="p">],</span><span class="w">
-            </span><span class="s2">"main_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">29277</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"manufacturer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nestle"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cat Chow Adultos"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"profit_margin"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"promotion_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2212110"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gato"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"upp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="err">....</span><span class="w">
-    </span><span class="p">]</span><span class="w">
+    </span><span class="err">TO</span><span class="w"> </span><span class="err">DO</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves a Products list.</p>
+<p>This endpoint retrieves a Order.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET https://apibodegas.loadingplay.com/v1/product/list</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
+<p><code>GET https://apibodegas.loadingplay.com/order</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -603,90 +600,33 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 </tr>
 </thead><tbody>
 <tr>
+<td>id</td>
+<td>(required)</td>
+<td>unique identifier for order</td>
+</tr>
+<tr>
 <td>site_name</td>
 <td>(required)</td>
 <td>filter by site</td>
 </tr>
-<tr>
-<td>page</td>
-<td>1</td>
-<td>startig page</td>
-</tr>
-<tr>
-<td>items</td>
-<td>10</td>
-<td>items to show per page</td>
-</tr>
-<tr>
-<td>metadata</td>
-<td>false</td>
-<td>true if you need to return total rows</td>
-</tr>
-<tr>
-<td>search</td>
-<td>&#39;&#39;</td>
-<td>perform a search in products</td>
-</tr>
-<tr>
-<td>column</td>
-<td>&#39;main_price&#39;</td>
-<td>column for sorting items</td>
-</tr>
-<tr>
-<td>order</td>
-<td>&#39;ASC&#39;</td>
-<td>type of orden DESC</td>
-</tr>
 </tbody></table>
-<h2 id='get-a-specific-product'>Get a Specific Product</h2><pre class="highlight shell tab-shell"><code>curl -XGET <span class="s2">"https://apibodegas.loadingplay.com/v1/product"</span> <span class="se">\</span>
-  -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
-  -d <span class="s2">"site_name=fm"</span> <span class="se">\</span>
-  -d <span class="s2">"sku=2212110"</span>
+<h1 id='variants'>Variants</h1><h2 id='get-variants-for-a-product'>Get variants for a product</h2><pre class="highlight shell tab-shell"><code>curl -XGET <span class="s2">"https://apibodegas.loadingplay.com/v1/variant/list"</span> <span class="se">\</span>
+  -d <span class="s2">"namespace=[site_name]_[product_sku]"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"product"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"balance_units"</span><span class="p">:</span><span class="w"> </span><span class="mi">44</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CAT CHOW"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"bulk_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"bullet_1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Alimento para gato adulto, Pescado y Mariscos"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"bullet_2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15k"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"bullet_3"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"cost_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">29277</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"critical_stock"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"product description"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"for_sale"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1237</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-                </span><span class="s2">"https://7static.loadingplay.com/static/images/4799bd4dd9fdc1599355e6743ed9580c_PESCADO2.png.png"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"https://84static.loadingplay.com/static/images/1_4799bd4dd9fdc1599355e6743ed9580c_PESCADO2.png.png"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"https://7static.loadingplay.com/static/images/200_4799bd4dd9fdc1599355e6743ed9580c_PESCADO2.png.png"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"https://7static.loadingplay.com/static/images/500_4799bd4dd9fdc1599355e6743ed9580c_PESCADO2.png.png"</span><span class="w">
-            </span><span class="p">],</span><span class="w">
-            </span><span class="s2">"main_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">29277</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"manufacturer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nestle"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cat Chow Adultos"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"profit_margin"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"promotion_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2212110"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gato"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"upp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
-        </span><span class="p">},</span><span class="w">
+    </span><span class="err">'status'</span><span class="p">:</span><span class="w"> </span><span class="err">'success'</span><span class="p">,</span><span class="w"> 
+    </span><span class="err">'variants'</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="err">'id'</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="err">'name'</span><span class="p">:</span><span class="w"> </span><span class="err">'talla'</span><span class="p">},</span><span class="w">
         </span><span class="err">...</span><span class="w">
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves a specific product.</p>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET https://apibodegas.loadingplay.com/v1/product</code></p>
+<p>This endpoint retrieves a list of variants for a specific namespace([site_name]_[product_sku]).</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://apibodegas.loadingplay.com/v1/variant/list</code></p>
 <h3 id='url-parameters'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -695,42 +635,24 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 </tr>
 </thead><tbody>
 <tr>
-<td>site_name</td>
-<td>(required) filter by site</td>
-</tr>
-<tr>
-<td>sku</td>
-<td>unique identifier for product it can be a comma separated list, and return a comma separated list of products</td>
+<td>namespace</td>
+<td>(required) string identifier of the variant group</td>
 </tr>
 </tbody></table>
-<h2 id='create-a-product'>Create a Product</h2><pre class="highlight shell tab-shell"><code>curl -XPOST <span class="s2">"https://apibodegas.loadingplay.com/v1/product"</span> <span class="se">\</span>
+<h2 id='create-a-variant'>Create a Variant</h2><pre class="highlight shell tab-shell"><code>curl -XPOST <span class="s2">"https://apibodegas.loadingplay.com/v1/variant"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
-    -d <span class="s2">"sku=2212110"</span> <span class="se">\</span>
-    -d <span class="s2">"site_name=fm"</span> <span class="se">\</span>
-    -d <span class="s2">"name="</span> <span class="se">\</span>
-    -d <span class="s2">"description="</span> <span class="se">\</span>
-    -d <span class="s2">"main_price="</span> <span class="se">\</span>
-    -d <span class="s2">"cost_price="</span> <span class="se">\</span>
-    -d <span class="s2">"promotion_price="</span> <span class="se">\</span>
-    -d <span class="s2">"bulk_price="</span> <span class="se">\</span>
-    -d <span class="s2">"brand="</span> <span class="se">\</span>
-    -d <span class="s2">"manufacturer="</span> <span class="se">\</span>
-    -d <span class="s2">"bullet_1="</span> <span class="se">\</span>
-    -d <span class="s2">"bullet_2="</span> <span class="se">\</span>
-    -d <span class="s2">"bullet_3="</span>
+    -d <span class="s2">"namespace=[site_name]_[product_sku]"</span> <span class="se">\</span>
+    -d <span class="s2">"name=talla"</span>
 </code></pre>
 <blockquote>
-<p>The above command returns json with product info, including id:</p>
+<p>The above command returns json with variant info, including id:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"statuts"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"product"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">product_id</span><span class="p">],</span><span class="w">
-        </span><span class="s2">"sku"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">product_sku</span><span class="p">]</span><span class="w">
-    </span><span class="p">}</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"variant"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">variant_id</span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='http-request-3'>HTTP Request</h3>
-<p><code>POST https://apibodegas.loadingplay.com/v1/product</code></p>
+</span></code></pre><h3 id='http-request-2'>HTTP Request</h3>
+<p><code>POST https://apibodegas.loadingplay.com/v1/variant</code></p>
 <h3 id='url-parameters-2'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -739,42 +661,27 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 </tr>
 </thead><tbody>
 <tr>
-<td>site_name</td>
-<td>(required) filter by site</td>
+<td>namespace</td>
+<td>a namespace should be compound by [site_name]_[product_sku]</td>
 </tr>
 <tr>
-<td>sku</td>
-<td>unique identifier for product it can be a comma separated list, and return a comma separated list of products</td>
+<td>name</td>
+<td>name of the variant i.e: size, color</td>
 </tr>
 </tbody></table>
-<h2 id='edit-a-product'>Edit a Product</h2><pre class="highlight shell tab-shell"><code>curl -XPUT <span class="s2">"https://apibodegas.loadingplay.com/v1/product"</span> <span class="se">\</span>
+<h2 id='delete-a-variant'>Delete a Variant</h2><pre class="highlight shell tab-shell"><code>curl -XDELETE <span class="s2">"https://apibodegas.loadingplay.com/v1/variant"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
-    -d <span class="s2">"sku=2212110"</span> <span class="se">\</span>
-    -d <span class="s2">"site_name=fm"</span> <span class="se">\</span>
-    -d <span class="s2">"name="</span> <span class="se">\</span>
-    -d <span class="s2">"description="</span> <span class="se">\</span>
-    -d <span class="s2">"main_price="</span> <span class="se">\</span>
-    -d <span class="s2">"cost_price="</span> <span class="se">\</span>
-    -d <span class="s2">"promotion_price="</span> <span class="se">\</span>
-    -d <span class="s2">"bulk_price="</span> <span class="se">\</span>
-    -d <span class="s2">"brand="</span> <span class="se">\</span>
-    -d <span class="s2">"manufacturer="</span> <span class="se">\</span>
-    -d <span class="s2">"bullet_1="</span> <span class="se">\</span>
-    -d <span class="s2">"bullet_2="</span> <span class="se">\</span>
-    -d <span class="s2">"bullet_3="</span>
+    -d <span class="s2">"namespace=[site_name]_[product_sku]"</span> <span class="se">\</span>
+    -d <span class="s2">"variant=[variant_name]"</span>
 </code></pre>
 <blockquote>
-<p>The above command returns json with product info, including id:</p>
+<p>The above command returns json:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"statuts"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"product"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">product_id</span><span class="p">],</span><span class="w">
-        </span><span class="s2">"sku"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">product_sku</span><span class="p">]</span><span class="w">
-    </span><span class="p">}</span><span class="w">
+    </span><span class="s2">"statuts"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='http-request-4'>HTTP Request</h3>
-<p><code>PUT https://apibodegas.loadingplay.com/v1/product</code></p>
+</span></code></pre><h3 id='http-request-3'>HTTP Request</h3>
+<p><code>DELETE https://apibodegas.loadingplay.com/v1/variant</code></p>
 <h3 id='url-parameters-3'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -783,68 +690,341 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 </tr>
 </thead><tbody>
 <tr>
-<td>site_name</td>
-<td>(required) filter by site</td>
+<td>namespace</td>
+<td>[site_name]_[product_sku]</td>
 </tr>
 <tr>
-<td>sku</td>
-<td>unique identifier for product it can be a comma separated list, and return a comma separated list of products</td>
+<td>variant</td>
+<td>variant name</td>
 </tr>
 </tbody></table>
-<h2 id='edit-a-product-2'>Edit a Product</h2><h1 id='errors'>Errors</h1>
-<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter. Files are included in the order listed.</aside>
-
-<p>The Kittn API uses the following error codes:</p>
-
+<h2 id='create-a-value-for-a-variant'>Create a Value for a variant</h2><pre class="highlight shell tab-shell"><code>curl -XPOST <span class="s2">"https://apibodegas.loadingplay.com/v1/variant/value"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
+    -d <span class="s2">"namespace=[site_name]_[product_sku]"</span> <span class="se">\</span>
+    -d <span class="s2">"variant=[variant_name]"</span> <span class="se">\</span>
+    -d <span class="s2">"value=[new_value]"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns json with variant info, including id:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">id</span><span class="p">],</span><span class="w">
+        </span><span class="s2">"value"</span><span class="p">:</span><span class="w">  </span><span class="p">[</span><span class="err">value</span><span class="p">],</span><span class="w">
+        </span><span class="s2">"variant_name"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">variant</span><span class="p">],</span><span class="w">
+        </span><span class="s2">"namespace"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">namespace</span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-4'>HTTP Request</h3>
+<p><code>POST https://apibodegas.loadingplay.com/v1/variant/value</code></p>
+<h3 id='url-parameters-4'>URL Parameters</h3>
 <table><thead>
 <tr>
-<th>Error Code</th>
-<th>Meaning</th>
+<th>Parameter</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>400</td>
-<td>Bad Request -- Your request sucks.</td>
+<td>namespace</td>
+<td>a namespace should be compound by [site_name]_[product_sku]</td>
 </tr>
 <tr>
-<td>401</td>
-<td>Unauthorized -- Your API key is wrong.</td>
+<td>variant</td>
+<td>name of the variant i.e: size, color</td>
 </tr>
 <tr>
-<td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
+<td>value</td>
+<td>value name i.e (s, m, l)</td>
+</tr>
+</tbody></table>
+<h2 id='delete-a-value-for-a-variant'>Delete a Value for a Variant</h2><pre class="highlight shell tab-shell"><code>curl -XDELETE <span class="s2">"https://apibodegas.loadingplay.com/v1/variant/value"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
+    -d <span class="s2">"namespace=[site_name]_[product_sku]"</span> <span class="se">\</span>
+    -d <span class="s2">"variant=[variant_name]"</span> <span class="se">\</span>
+    -d <span class="s2">"value=[new_value]"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns json:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"statuts"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-5'>HTTP Request</h3>
+<p><code>DELETE https://apibodegas.loadingplay.com/v1/variant/value</code></p>
+<h3 id='url-parameters-5'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>namespace</td>
+<td>[site_name]_[product_sku]</td>
 </tr>
 <tr>
-<td>404</td>
-<td>Not Found -- The specified kitten could not be found.</td>
+<td>variant</td>
+<td>variant name</td>
 </tr>
 <tr>
-<td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
+<td>value</td>
+<td>value name</td>
+</tr>
+</tbody></table>
+<h2 id='get-value-list'>Get Value list</h2><pre class="highlight shell tab-shell"><code>curl -XGET <span class="s2">"https://apibodegas.loadingplay.com/v1/variant/value/list"</span> <span class="se">\</span>
+  -d <span class="s2">"namespace=[site_name]_[product_sku]"</span> <span class="se">\</span>
+  -d <span class="s2">"variant=[variant_name]"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="err">'variant_name'</span><span class="p">:</span><span class="w"> </span><span class="err">v</span><span class="p">,</span><span class="w">
+        </span><span class="err">'values'</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+            </span><span class="s2">"site_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"me_NBK-SACO-NEGRA-C168"</span><span class="p">,</span><span class="w"> 
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> 
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w"> 
+            </span><span class="s2">"variant_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"talla"</span><span class="w">
+        </span><span class="p">}]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a list of values for a specific namespace([site_name]_[product_sku]).</p>
+<h3 id='http-request-6'>HTTP Request</h3>
+<p><code>GET https://apibodegas.loadingplay.com/v1/variant/value/list</code></p>
+<h3 id='url-parameters-6'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>namespace</td>
+<td>[site_name]_[product_sku]</td>
 </tr>
 <tr>
-<td>406</td>
-<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
+<td>variant</td>
+<td>variant name</td>
+</tr>
+</tbody></table>
+<h2 id='get-combination-list'>Get Combination list</h2><pre class="highlight shell tab-shell"><code>curl -XGET <span class="s2">"https://apibodegas.loadingplay.com/v1/variant/combination"</span> <span class="se">\</span>
+  -d <span class="s2">"namespace=[site_name]_[product_sku]"</span> <span class="se">\</span>
+  -d <span class="s2">"sku=[product_sku]"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"combination"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="err">'sku'</span><span class="p">:</span><span class="w"> </span><span class="err">'test-m-azul'</span><span class="p">,</span><span class="w"> </span><span class="err">'data'</span><span class="p">:</span><span class="w"> </span><span class="err">''</span><span class="p">},</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a list of combinatios for a specific namespace([site_name]_[product_sku]) and product sku.</p>
+<h3 id='http-request-7'>HTTP Request</h3>
+<p><code>GET https://apibodegas.loadingplay.com/v1/variant/combination</code></p>
+<h3 id='url-parameters-7'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>namespace</td>
+<td>[site_name]_[product_sku]</td>
 </tr>
 <tr>
-<td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers.</td>
+<td>sku</td>
+<td>the product sku</td>
 </tr>
+</tbody></table>
+<h1 id='shopping-cart'>Shopping cart</h1>
+<p>endpoints:</p>
+
+<ul>
+<li>/v1/cart</li>
+<li>/v1/cart/[ID]</li>
+<li>/v1/cart/[ID]/extrainfo</li>
+</ul>
+<h2 id='create-an-empty-shopping-cart'>Create an empty shopping cart</h2><pre class="highlight shell tab-shell"><code>curl -XPOST <span class="s2">"https://apibodegas.loadingplay.com/v1/cart"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
+</code></pre>
+<blockquote>
+<p>The above command returns json with cart info, including id:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"statuts"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"cart"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"expired"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unique string id (GUUID)"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request'>HTTP Request</h3>
+<p>you can post to an unexistent cart id, and the api will create it automatically</p>
+
+<p><code>POST https://apibodegas.loadingplay.com/v1/cart</code></p>
+<h2 id='create-a-new-shopping-cart-with-an-externally-generated-guuid'>Create a new shopping cart with an externally generated GUUID</h2><pre class="highlight shell tab-shell"><code>curl -XPOST <span class="s2">"https://apibodegas.loadingplay.com/v1/cart/[GUUID]"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
+    -d <span class="s1">'items=[{
+        "sku": "test",
+        "bullet_1": "",
+        "name": "test",
+        "bullet_3": "",
+        "bullet_2": "",
+        "price": 2000.0,
+        "weight": 0.0,
+        "equate": "different",
+        "images": [
+                [
+                    "https://7static.loadingplay.com/static/images/1_ee40a90852bd0608123f3988fb512888_Captura_de_pantalla_2016-11-19_a_las_18.42.41.png.png",
+                    "https://7static.loadingplay.com/static/images/200_ee40a90852bd0608123f3988fb512888_Captura_de_pantalla_2016-11-19_a_las_18.42.41.png.png",
+                    "https://7static.loadingplay.com/static/images/500_ee40a90852bd0608123f3988fb512888_Captura_de_pantalla_2016-11-19_a_las_18.42.41.png.png"
+                ]
+        ],
+        "quantity": 2,
+        "subtotal": 4000.0,
+        "id": 1,
+        "upp": 1,
+        "not_discount_price": 10.0
+    }]'</span>
+</code></pre>
+<blockquote>
+<p>The above command returns json with cart info, including id:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"cart"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+            </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"bullet_1"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"bullet_3"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"bullet_2"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">2000.0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"equate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"different"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">[</span><span class="s2">"https://7static.loadingplay.com/static/images/1_ee40a90852bd0608123f3988fb512888_Captura_de_pantalla_2016-11-19_a_las_18.42.41.png.png"</span><span class="p">,</span><span class="w"> </span><span class="s2">"https://7static.loadingplay.com/static/images/200_ee40a90852bd0608123f3988fb512888_Captura_de_pantalla_2016-11-19_a_las_18.42.41.png.png"</span><span class="p">,</span><span class="w"> </span><span class="s2">"https://7static.loadingplay.com/static/images/500_ee40a90852bd0608123f3988fb512888_Captura_de_pantalla_2016-11-19_a_las_18.42.41.png.png"</span><span class="p">]</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"subtotal"</span><span class="p">:</span><span class="w"> </span><span class="mf">4000.0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"upp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"not_discount_price"</span><span class="p">:</span><span class="w"> </span><span class="mf">10.0</span><span class="w">
+        </span><span class="p">}],</span><span class="w">
+        </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">4000</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"expired"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GUUID"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-2'>HTTP Request</h3>
+<p><code>POST https://apibodegas.loadingplay.com/v1/cart/[GUUID]</code></p>
+<h2 id='get-a-specific-cart'>Get a Specific Cart</h2><pre class="highlight shell tab-shell"><code>curl -XGET <span class="s2">"https://apibodegas.loadingplay.com/v1/cart/[GUUID]"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"cart"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+            </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"bullet_1"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"bullet_3"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"bullet_2"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">2000.0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"equate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"different"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">[</span><span class="s2">"https://7static.loadingplay.com/static/images/1_ee40a90852bd0608123f3988fb512888_Captura_de_pantalla_2016-11-19_a_las_18.42.41.png.png"</span><span class="p">,</span><span class="w"> </span><span class="s2">"https://7static.loadingplay.com/static/images/200_ee40a90852bd0608123f3988fb512888_Captura_de_pantalla_2016-11-19_a_las_18.42.41.png.png"</span><span class="p">,</span><span class="w"> </span><span class="s2">"https://7static.loadingplay.com/static/images/500_ee40a90852bd0608123f3988fb512888_Captura_de_pantalla_2016-11-19_a_las_18.42.41.png.png"</span><span class="p">]</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"subtotal"</span><span class="p">:</span><span class="w"> </span><span class="mf">4000.0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"upp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"not_discount_price"</span><span class="p">:</span><span class="w"> </span><span class="mf">10.0</span><span class="w">
+        </span><span class="p">}],</span><span class="w">
+        </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">4000</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"expired"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GUUID"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-3'>HTTP Request</h3>
+<p>This endpoint retrieves a specific cart.</p>
+
+<p><code>GET https://apibodegas.loadingplay.com/v1/cart/[GUUID]</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
 <tr>
-<td>418</td>
-<td>I&#39;m a teapot.</td>
+<th>Parameter</th>
+<th>Description</th>
 </tr>
+</thead><tbody>
 <tr>
-<td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
+<td>GUUID</td>
+<td>(required) cart unique global identifier</td>
 </tr>
+</tbody></table>
+<h2 id='add-some-extra-data-to-a-shopping-cart'> Add some extra data to a shopping cart</h2><pre class="highlight shell tab-shell"><code>curl -XPOST <span class="s2">"https://apibodegas.loadingplay.com/v1/cart/[GUUID]/extrainfo"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
+    -d <span class="s1">'data=some arbitrary data'</span>
+</code></pre>
+<blockquote>
+<p>The above command returns json with cart extra info, including id:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"some arbitrary data"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-4'>HTTP Request</h3>
+<p>sometimes you may want to show some extra data in the shopping cart, you can use this field</p>
+
+<p><code>POST https://apibodegas.loadingplay.com/v1/cart/[GUUID]/extrainfo</code></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
+<table><thead>
 <tr>
-<td>500</td>
-<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
+<th>Parameter</th>
+<th>Description</th>
 </tr>
+</thead><tbody>
 <tr>
-<td>503</td>
-<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+<td>GUUID</td>
+<td>(required) cart unique global identifier</td>
+</tr>
+</tbody></table>
+<h2 id='get-extrainfo-from-a-shopping-cart'>Get extrainfo from a shopping cart</h2><pre class="highlight shell tab-shell"><code>curl -XGET <span class="s2">"https://apibodegas.loadingplay.com/v1/cart/[GUUID]/extrainfo"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"some arbitrary data"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-5'>HTTP Request</h3>
+<p><code>GET https://apibodegas.loadingplay.com/v1/cart/[GUUID]/extrainfo</code></p>
+<h3 id='url-parameters-3'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>GUUID</td>
+<td>(required) cart unique global identifier</td>
 </tr>
 </tbody></table>
 
