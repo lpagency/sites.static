@@ -225,6 +225,74 @@
             <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
           </li>
           <li>
+            <a href="#shopping-cart" class="toc-h1 toc-link" data-title="Shopping cart">Shopping cart</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#create-an-empty-shopping-cart" class="toc-h2 toc-link" data-title="Shopping cart">Create an empty shopping cart</a>
+                  </li>
+                  <li>
+                    <a href="#create-a-new-shopping-cart-with-an-externally-generated-guuid" class="toc-h2 toc-link" data-title="Shopping cart">Create a new shopping cart with an externally generated GUUID</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-cart" class="toc-h2 toc-link" data-title="Shopping cart">Get a Specific Cart</a>
+                  </li>
+                  <li>
+                    <a href="#add-some-extra-data-to-a-shopping-cart" class="toc-h2 toc-link" data-title="Shopping cart"> Add some extra data to a shopping cart</a>
+                  </li>
+                  <li>
+                    <a href="#get-extrainfo-from-a-shopping-cart" class="toc-h2 toc-link" data-title="Shopping cart">Get extrainfo from a shopping cart</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#discounts" class="toc-h1 toc-link" data-title="Discounts">Discounts</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-a-discount" class="toc-h2 toc-link" data-title="Discounts">Get a Discount</a>
+                  </li>
+                  <li>
+                    <a href="#add-a-discount" class="toc-h2 toc-link" data-title="Discounts">Add a discount</a>
+                  </li>
+                  <li>
+                    <a href="#edit-a-discount" class="toc-h2 toc-link" data-title="Discounts">Edit a Discount</a>
+                  </li>
+                  <li>
+                    <a href="#remove-a-discount" class="toc-h2 toc-link" data-title="Discounts">Remove a discount</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-discount-list" class="toc-h2 toc-link" data-title="Discounts">Get a discount list</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#hooks" class="toc-h1 toc-link" data-title="Hooks">Hooks</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-a-hook" class="toc-h2 toc-link" data-title="Hooks">Get a Hook</a>
+                  </li>
+                  <li>
+                    <a href="#add-a-hook" class="toc-h2 toc-link" data-title="Hooks">Add a Hook</a>
+                  </li>
+                  <li>
+                    <a href="#edit-a-hook" class="toc-h2 toc-link" data-title="Hooks">Edit a Hook</a>
+                  </li>
+                  <li>
+                    <a href="#remove-a-hook" class="toc-h2 toc-link" data-title="Hooks">Remove a Hook</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-hook-list" class="toc-h2 toc-link" data-title="Hooks">Get a Hook list</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#orders" class="toc-h1 toc-link" data-title="Orders">Orders</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-a-order" class="toc-h2 toc-link" data-title="Orders">Get a Order</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#products" class="toc-h1 toc-link" data-title="Products">Products</a>
               <ul class="toc-list-h2">
                   <li>
@@ -241,14 +309,6 @@
                   </li>
                   <li>
                     <a href="#edit-a-product-2" class="toc-h2 toc-link" data-title="Products">Edit a Product</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#orders" class="toc-h1 toc-link" data-title="Orders">Orders</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#get-a-order" class="toc-h2 toc-link" data-title="Orders">Get a Order</a>
                   </li>
               </ul>
           </li>
@@ -279,24 +339,7 @@
               </ul>
           </li>
           <li>
-            <a href="#shopping-cart" class="toc-h1 toc-link" data-title="Shopping cart">Shopping cart</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#create-an-empty-shopping-cart" class="toc-h2 toc-link" data-title="Shopping cart">Create an empty shopping cart</a>
-                  </li>
-                  <li>
-                    <a href="#create-a-new-shopping-cart-with-an-externally-generated-guuid" class="toc-h2 toc-link" data-title="Shopping cart">Create a new shopping cart with an externally generated GUUID</a>
-                  </li>
-                  <li>
-                    <a href="#get-a-specific-cart" class="toc-h2 toc-link" data-title="Shopping cart">Get a Specific Cart</a>
-                  </li>
-                  <li>
-                    <a href="#add-some-extra-data-to-a-shopping-cart" class="toc-h2 toc-link" data-title="Shopping cart"> Add some extra data to a shopping cart</a>
-                  </li>
-                  <li>
-                    <a href="#get-extrainfo-from-a-shopping-cart" class="toc-h2 toc-link" data-title="Shopping cart">Get extrainfo from a shopping cart</a>
-                  </li>
-              </ul>
+            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
           </li>
       </div>
         <ul class="toc-footer">
@@ -330,6 +373,655 @@ curl <span class="s2">"api_endpoint_here"</span>
 <aside class="notice">
 You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 </aside>
+<h1 id='shopping-cart'>Shopping cart</h1>
+<p>endpoints:</p>
+
+<ul>
+<li>/v1/cart</li>
+<li>/v1/cart/[ID]</li>
+<li>/v1/cart/[ID]/extrainfo</li>
+</ul>
+<h2 id='create-an-empty-shopping-cart'>Create an empty shopping cart</h2><pre class="highlight shell tab-shell"><code>curl -XPOST <span class="s2">"https://apibodegas.loadingplay.com/v1/cart"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
+</code></pre>
+<blockquote>
+<p>The above command returns json with cart info, including id:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"statuts"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"cart"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"expired"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unique string id (GUUID)"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request'>HTTP Request</h3>
+<p>you can post to an unexistent cart id, and the api will create it automatically</p>
+
+<p><code>POST https://apibodegas.loadingplay.com/v1/cart</code></p>
+<h2 id='create-a-new-shopping-cart-with-an-externally-generated-guuid'>Create a new shopping cart with an externally generated GUUID</h2><pre class="highlight shell tab-shell"><code>curl -XPOST <span class="s2">"https://apibodegas.loadingplay.com/v1/cart/[GUUID]"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
+    -d <span class="s1">'items=[{
+        "sku": "test",
+        "bullet_1": "",
+        "name": "test",
+        "bullet_3": "",
+        "bullet_2": "",
+        "price": 2000.0,
+        "weight": 0.0,
+        "equate": "different",
+        "images": [
+                [
+                    "https://7static.loadingplay.com/static/images/1_ee40a90852bd0608123f3988fb512888_Captura_de_pantalla_2016-11-19_a_las_18.42.41.png.png",
+                    "https://7static.loadingplay.com/static/images/200_ee40a90852bd0608123f3988fb512888_Captura_de_pantalla_2016-11-19_a_las_18.42.41.png.png",
+                    "https://7static.loadingplay.com/static/images/500_ee40a90852bd0608123f3988fb512888_Captura_de_pantalla_2016-11-19_a_las_18.42.41.png.png"
+                ]
+        ],
+        "quantity": 2,
+        "subtotal": 4000.0,
+        "id": 1,
+        "upp": 1,
+        "not_discount_price": 10.0
+    }]'</span>
+</code></pre>
+<blockquote>
+<p>The above command returns json with cart info, including id:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"cart"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+            </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"bullet_1"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"bullet_3"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"bullet_2"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">2000.0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"equate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"different"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">[</span><span class="s2">"https://7static.loadingplay.com/static/images/1_ee40a90852bd0608123f3988fb512888_Captura_de_pantalla_2016-11-19_a_las_18.42.41.png.png"</span><span class="p">,</span><span class="w"> </span><span class="s2">"https://7static.loadingplay.com/static/images/200_ee40a90852bd0608123f3988fb512888_Captura_de_pantalla_2016-11-19_a_las_18.42.41.png.png"</span><span class="p">,</span><span class="w"> </span><span class="s2">"https://7static.loadingplay.com/static/images/500_ee40a90852bd0608123f3988fb512888_Captura_de_pantalla_2016-11-19_a_las_18.42.41.png.png"</span><span class="p">]</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"subtotal"</span><span class="p">:</span><span class="w"> </span><span class="mf">4000.0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"upp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"not_discount_price"</span><span class="p">:</span><span class="w"> </span><span class="mf">10.0</span><span class="w">
+        </span><span class="p">}],</span><span class="w">
+        </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">4000</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"expired"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GUUID"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-2'>HTTP Request</h3>
+<p><code>POST https://apibodegas.loadingplay.com/v1/cart/[GUUID]</code></p>
+<h2 id='get-a-specific-cart'>Get a Specific Cart</h2><pre class="highlight shell tab-shell"><code>curl -XGET <span class="s2">"https://apibodegas.loadingplay.com/v1/cart/[GUUID]"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"cart"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+            </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"bullet_1"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"bullet_3"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"bullet_2"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">2000.0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"equate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"different"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">[</span><span class="s2">"https://7static.loadingplay.com/static/images/1_ee40a90852bd0608123f3988fb512888_Captura_de_pantalla_2016-11-19_a_las_18.42.41.png.png"</span><span class="p">,</span><span class="w"> </span><span class="s2">"https://7static.loadingplay.com/static/images/200_ee40a90852bd0608123f3988fb512888_Captura_de_pantalla_2016-11-19_a_las_18.42.41.png.png"</span><span class="p">,</span><span class="w"> </span><span class="s2">"https://7static.loadingplay.com/static/images/500_ee40a90852bd0608123f3988fb512888_Captura_de_pantalla_2016-11-19_a_las_18.42.41.png.png"</span><span class="p">]</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"subtotal"</span><span class="p">:</span><span class="w"> </span><span class="mf">4000.0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"upp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"not_discount_price"</span><span class="p">:</span><span class="w"> </span><span class="mf">10.0</span><span class="w">
+        </span><span class="p">}],</span><span class="w">
+        </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">4000</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"expired"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GUUID"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-3'>HTTP Request</h3>
+<p>This endpoint retrieves a specific cart.</p>
+
+<p><code>GET https://apibodegas.loadingplay.com/v1/cart/[GUUID]</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>GUUID</td>
+<td>(required) cart unique global identifier</td>
+</tr>
+</tbody></table>
+<h2 id='add-some-extra-data-to-a-shopping-cart'> Add some extra data to a shopping cart</h2><pre class="highlight shell tab-shell"><code>curl -XPOST <span class="s2">"https://apibodegas.loadingplay.com/v1/cart/[GUUID]/extrainfo"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
+    -d <span class="s1">'data=some arbitrary data'</span>
+</code></pre>
+<blockquote>
+<p>The above command returns json with cart extra info, including id:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"some arbitrary data"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-4'>HTTP Request</h3>
+<p>sometimes you may want to show some extra data in the shopping cart, you can use this field</p>
+
+<p><code>POST https://apibodegas.loadingplay.com/v1/cart/[GUUID]/extrainfo</code></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>GUUID</td>
+<td>(required) cart unique global identifier</td>
+</tr>
+</tbody></table>
+<h2 id='get-extrainfo-from-a-shopping-cart'>Get extrainfo from a shopping cart</h2><pre class="highlight shell tab-shell"><code>curl -XGET <span class="s2">"https://apibodegas.loadingplay.com/v1/cart/[GUUID]/extrainfo"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"some arbitrary data"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-5'>HTTP Request</h3>
+<p><code>GET https://apibodegas.loadingplay.com/v1/cart/[GUUID]/extrainfo</code></p>
+<h3 id='url-parameters-3'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>GUUID</td>
+<td>(required) cart unique global identifier</td>
+</tr>
+</tbody></table>
+<h1 id='discounts'>Discounts</h1><h2 id='get-a-discount'>Get a Discount</h2><pre class="highlight shell tab-shell"><code>curl -XGET https://apibodegas.loadingplay.com/v1/discount/1 <span class="se">\</span>
+    -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"discounts"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testCode"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"site_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"activate"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a Discount.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://apibodegas.loadingplay.com/v1/discount/DISCOUNT_ID</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>DISCOUNT_ID</td>
+<td>(required)</td>
+<td>identificador unico para discount</td>
+</tr>
+</tbody></table>
+<h2 id='add-a-discount'>Add a discount</h2><pre class="highlight shell tab-shell"><code>curl -XPOST https://apibodegas.loadingplay.com/v1/discount <span class="se">\</span>
+    -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span> <span class="se">\</span>
+    -d <span class="s2">"site_name=test"</span> <span class="se">\</span>
+    -d <span class="s2">"percentage=10"</span> <span class="se">\</span>
+    -d <span class="s2">"code=addTestCode"</span> <span class="se">\</span>
+    -d <span class="s2">"activate=False"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"discounts"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">CRAETED_DISCOUNT_ID</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"addTestCode"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"site_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"activate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint add a Discount.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>POST https://apibodegas.loadingplay.com/v1/discount</code></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>site_name</td>
+<td>(required)</td>
+<td>nombre del sitio del cual pertenece discount</td>
+</tr>
+<tr>
+<td>percentage</td>
+<td>(optional)</td>
+<td>porcentaje de descuento</td>
+</tr>
+<tr>
+<td>code</td>
+<td>(optional)</td>
+<td>codigo con el cual se obtiene descuento</td>
+</tr>
+<tr>
+<td>activate</td>
+<td>(optional)</td>
+<td>valor que indica si el codigo de descuento esta activado</td>
+</tr>
+</tbody></table>
+<h2 id='edit-a-discount'>Edit a Discount</h2><pre class="highlight shell tab-shell"><code>curl -XPUT https://apibodegas.loadingplay.com/v1/discount/DISCOUNT_ID <span class="se">\</span>
+    -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span> <span class="se">\</span>
+    -d <span class="s2">"percentage=20"</span> <span class="se">\</span>
+    -d <span class="s2">"code=editTestCode"</span> <span class="se">\</span>
+    -d <span class="s2">"activate=True"</span>
+
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"discounts"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">DISCOUNT_ID</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"editTestCode"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"activate"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint edit a Discount.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>PUT https://apibodegas.loadingplay.com/v1/discount/DISCOUNT_ID</code></p>
+<h3 id='url-parameters-3'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>DISCOUNT_ID</td>
+<td>(required)</td>
+<td>identificador unico para discount</td>
+</tr>
+<tr>
+<td>percentage</td>
+<td>(optional)</td>
+<td>porcentaje de descuento</td>
+</tr>
+<tr>
+<td>code</td>
+<td>(optional)</td>
+<td>codigo con el cual se obtiene descuento</td>
+</tr>
+<tr>
+<td>activate</td>
+<td>(optional)</td>
+<td>valor que indica si el codigo de descuento esta activado</td>
+</tr>
+</tbody></table>
+<h2 id='remove-a-discount'>Remove a discount</h2><pre class="highlight shell tab-shell"><code>curl -XDELETE https://apibodegas.loadingplay.com/v1/discount/DISCOUNT_ID <span class="se">\</span>
+    -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"discounts"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">DISCOUNT_ID</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"editTestCode"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"site_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"activate"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint delete a discount.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>DELETE https://apibodegas.loadingplay.com/v1/discount/DISCOUNT_ID</code></p>
+<h3 id='url-parameters-4'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>DISCOUNT_ID</td>
+<td>(required)</td>
+<td>identificador unico para discount</td>
+</tr>
+</tbody></table>
+<h2 id='get-a-discount-list'>Get a discount list</h2><pre class="highlight shell tab-shell"><code>curl -XGET https://apibodegas.loadingplay.com/v1/discount <span class="se">\</span>
+    -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span> <span class="se">\</span>
+    -d <span class="s2">"site_name=test"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"discounts"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testCode"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"site_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"activate"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"site_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"activate"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a discount list.</p>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>GET https://apibodegas.loadingplay.com/v1/discount</code></p>
+<h3 id='url-parameters-5'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>site_name</td>
+<td>(required)</td>
+<td>nombre del sitio del cual pertenece discount</td>
+</tr>
+</tbody></table>
+<h1 id='hooks'>Hooks</h1><h2 id='get-a-hook'>Get a Hook</h2><pre class="highlight shell tab-shell"><code>curl -XGET https://apibodegas.loadingplay.com/v1/hook/42 <span class="se">\</span>
+    -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"hooks"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">42</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.test.cl"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"addProduct"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"site_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a Hook.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://apibodegas.loadingplay.com/v1/hook/HOOK_ID</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>HOOK_ID</td>
+<td>(required)</td>
+<td>identificador unico para hook</td>
+</tr>
+</tbody></table>
+<h2 id='add-a-hook'>Add a Hook</h2><pre class="highlight shell tab-shell"><code>curl -XPOST https://apibodegas.loadingplay.com/v1/hook <span class="se">\</span>
+    -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span> <span class="se">\</span>
+    -d <span class="s2">"action=addProducts"</span> <span class="se">\</span>
+    -d <span class="s2">"site_name=test"</span> <span class="se">\</span>
+    -d <span class="s2">"url=www.testaddhook.cl"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"hooks"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="err">CREATED_HOOK_ID</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"www.testaddhook.cl"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"addProduct"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"site_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint add a Hook.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>POST https://apibodegas.loadingplay.com/v1/hook</code></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>action</td>
+<td>(required)</td>
+<td>Accion que dispara el hook</td>
+</tr>
+<tr>
+<td>site_name</td>
+<td>(required)</td>
+<td>nombre del sitio del cual pertenece hook</td>
+</tr>
+<tr>
+<td>url</td>
+<td>(optional)</td>
+<td>url del cual hook realiza la accion</td>
+</tr>
+</tbody></table>
+<h2 id='edit-a-hook'>Edit a Hook</h2><pre class="highlight shell tab-shell"><code>curl -XPUT https://apibodegas.loadingplay.com/v1/hook/HOOK_ID <span class="se">\</span>
+    -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span> <span class="se">\</span>
+    -d <span class="s2">"action=editProduct"</span> <span class="se">\</span>
+    -d <span class="s2">"url=www.testedithook.cl"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"hooks"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="err">HOOK_ID</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"www.testedithook.cl"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"editProduct"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint edit a Hook.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>PUT https://apibodegas.loadingplay.com/v1/hook/HOOK_ID</code></p>
+<h3 id='url-parameters-3'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>HOOK_ID</td>
+<td>(required)</td>
+<td>identificador unico para hook</td>
+</tr>
+<tr>
+<td>action</td>
+<td>(optional)</td>
+<td>Accion que dispara el hook</td>
+</tr>
+<tr>
+<td>url</td>
+<td>(optional)</td>
+<td>url del cual hook realiza la accion</td>
+</tr>
+</tbody></table>
+<h2 id='remove-a-hook'>Remove a Hook</h2><pre class="highlight shell tab-shell"><code>curl -XDELETE https://apibodegas.loadingplay.com/v1/hook/HOOK_ID <span class="se">\</span>
+    -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"hooks"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="err">HOOK_ID</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"www.testedithook.cl"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"editProduct"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"site_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint delete a Hook.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>DELETE https://apibodegas.loadingplay.com/v1/hook/HOOK_ID</code></p>
+<h3 id='url-parameters-4'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>HOOK_ID</td>
+<td>(required)</td>
+<td>identificador unico para hook</td>
+</tr>
+</tbody></table>
+<h2 id='get-a-hook-list'>Get a Hook list</h2><pre class="highlight shell tab-shell"><code>curl -XGET https://apibodegas.loadingplay.com/v1/hook <span class="se">\</span>
+    -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span> <span class="se">\</span>
+    -d <span class="s2">"site_name=test"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"hooks"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">42</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.test.cl"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"addProduct"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"site_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"site_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a Hook list.</p>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>GET https://apibodegas.loadingplay.com/v1/hook</code></p>
+<h3 id='url-parameters-5'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>site_name</td>
+<td>(required)</td>
+<td>nombre del sitio del cual pertenece hook</td>
+</tr>
+</tbody></table>
+<h1 id='orders'>Orders</h1><h2 id='get-a-order'>Get a Order</h2><pre class="highlight shell tab-shell"><code>curl -XGET https://apibodegas.loadingplay.com/order <span class="se">\</span>
+    -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span> <span class="se">\</span>
+    -d <span class="s2">"id=PORBUSCAR"</span> <span class="se">\</span>
+    -d <span class="s2">"site_name=PORBUSCAR"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="err">TO</span><span class="w"> </span><span class="err">DO</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a Order.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://apibodegas.loadingplay.com/order</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>(required)</td>
+<td>unique identifier for order</td>
+</tr>
+<tr>
+<td>site_name</td>
+<td>(required)</td>
+<td>filter by site</td>
+</tr>
+</tbody></table>
 <h1 id='products'>Products</h1><h2 id='get-all-products'>Get all Products</h2><pre class="highlight shell tab-shell"><code>curl -XGET https://apibodegas.loadingplay.com/v1/product/list <span class="se">\</span>
     -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span> <span class="se">\</span>
     -d <span class="s2">"site_name=fm"</span>
@@ -576,41 +1268,7 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 <td>unique identifier for product it can be a comma separated list, and return a comma separated list of products</td>
 </tr>
 </tbody></table>
-<h2 id='edit-a-product-2'>Edit a Product</h2><h1 id='orders'>Orders</h1><h2 id='get-a-order'>Get a Order</h2><pre class="highlight shell tab-shell"><code>curl -XGET https://apibodegas.loadingplay.com/order <span class="se">\</span>
-    -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span> <span class="se">\</span>
-    -d <span class="s2">"id=PORBUSCAR"</span> <span class="se">\</span>
-    -d <span class="s2">"site_name=PORBUSCAR"</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="err">TO</span><span class="w"> </span><span class="err">DO</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves a Order.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET https://apibodegas.loadingplay.com/order</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>id</td>
-<td>(required)</td>
-<td>unique identifier for order</td>
-</tr>
-<tr>
-<td>site_name</td>
-<td>(required)</td>
-<td>filter by site</td>
-</tr>
-</tbody></table>
-<h1 id='variants'>Variants</h1><h2 id='get-variants-for-a-product'>Get variants for a product</h2><pre class="highlight shell tab-shell"><code>curl -XGET <span class="s2">"https://apibodegas.loadingplay.com/v1/variant/list"</span> <span class="se">\</span>
+<h2 id='edit-a-product-2'>Edit a Product</h2><h1 id='variants'>Variants</h1><h2 id='get-variants-for-a-product'>Get variants for a product</h2><pre class="highlight shell tab-shell"><code>curl -XGET <span class="s2">"https://apibodegas.loadingplay.com/v1/variant/list"</span> <span class="se">\</span>
   -d <span class="s2">"namespace=[site_name]_[product_sku]"</span>
 </code></pre>
 <blockquote>
@@ -845,186 +1503,60 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 <td>the product sku</td>
 </tr>
 </tbody></table>
-<h1 id='shopping-cart'>Shopping cart</h1>
-<p>endpoints:</p>
+<h1 id='errors'>Errors</h1>
+<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter. Files are included in the order listed.</aside>
 
-<ul>
-<li>/v1/cart</li>
-<li>/v1/cart/[ID]</li>
-<li>/v1/cart/[ID]/extrainfo</li>
-</ul>
-<h2 id='create-an-empty-shopping-cart'>Create an empty shopping cart</h2><pre class="highlight shell tab-shell"><code>curl -XPOST <span class="s2">"https://apibodegas.loadingplay.com/v1/cart"</span> <span class="se">\</span>
-  -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
-</code></pre>
-<blockquote>
-<p>The above command returns json with cart info, including id:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"statuts"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cart"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
-        </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"expired"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unique string id (GUUID)"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='http-request'>HTTP Request</h3>
-<p>you can post to an unexistent cart id, and the api will create it automatically</p>
+<p>The Kittn API uses the following error codes:</p>
 
-<p><code>POST https://apibodegas.loadingplay.com/v1/cart</code></p>
-<h2 id='create-a-new-shopping-cart-with-an-externally-generated-guuid'>Create a new shopping cart with an externally generated GUUID</h2><pre class="highlight shell tab-shell"><code>curl -XPOST <span class="s2">"https://apibodegas.loadingplay.com/v1/cart/[GUUID]"</span> <span class="se">\</span>
-  -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
-    -d <span class="s1">'items=[{
-        "sku": "test",
-        "bullet_1": "",
-        "name": "test",
-        "bullet_3": "",
-        "bullet_2": "",
-        "price": 2000.0,
-        "weight": 0.0,
-        "equate": "different",
-        "images": [
-                [
-                    "https://7static.loadingplay.com/static/images/1_ee40a90852bd0608123f3988fb512888_Captura_de_pantalla_2016-11-19_a_las_18.42.41.png.png",
-                    "https://7static.loadingplay.com/static/images/200_ee40a90852bd0608123f3988fb512888_Captura_de_pantalla_2016-11-19_a_las_18.42.41.png.png",
-                    "https://7static.loadingplay.com/static/images/500_ee40a90852bd0608123f3988fb512888_Captura_de_pantalla_2016-11-19_a_las_18.42.41.png.png"
-                ]
-        ],
-        "quantity": 2,
-        "subtotal": 4000.0,
-        "id": 1,
-        "upp": 1,
-        "not_discount_price": 10.0
-    }]'</span>
-</code></pre>
-<blockquote>
-<p>The above command returns json with cart info, including id:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cart"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
-            </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"bullet_1"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"bullet_3"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"bullet_2"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">2000.0</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"equate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"different"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-                </span><span class="p">[</span><span class="s2">"https://7static.loadingplay.com/static/images/1_ee40a90852bd0608123f3988fb512888_Captura_de_pantalla_2016-11-19_a_las_18.42.41.png.png"</span><span class="p">,</span><span class="w"> </span><span class="s2">"https://7static.loadingplay.com/static/images/200_ee40a90852bd0608123f3988fb512888_Captura_de_pantalla_2016-11-19_a_las_18.42.41.png.png"</span><span class="p">,</span><span class="w"> </span><span class="s2">"https://7static.loadingplay.com/static/images/500_ee40a90852bd0608123f3988fb512888_Captura_de_pantalla_2016-11-19_a_las_18.42.41.png.png"</span><span class="p">]</span><span class="w">
-            </span><span class="p">],</span><span class="w">
-            </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"subtotal"</span><span class="p">:</span><span class="w"> </span><span class="mf">4000.0</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"upp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"not_discount_price"</span><span class="p">:</span><span class="w"> </span><span class="mf">10.0</span><span class="w">
-        </span><span class="p">}],</span><span class="w">
-        </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">4000</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"expired"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GUUID"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='http-request-2'>HTTP Request</h3>
-<p><code>POST https://apibodegas.loadingplay.com/v1/cart/[GUUID]</code></p>
-<h2 id='get-a-specific-cart'>Get a Specific Cart</h2><pre class="highlight shell tab-shell"><code>curl -XGET <span class="s2">"https://apibodegas.loadingplay.com/v1/cart/[GUUID]"</span> <span class="se">\</span>
-  -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cart"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
-            </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"bullet_1"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"bullet_3"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"bullet_2"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">2000.0</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"equate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"different"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-                </span><span class="p">[</span><span class="s2">"https://7static.loadingplay.com/static/images/1_ee40a90852bd0608123f3988fb512888_Captura_de_pantalla_2016-11-19_a_las_18.42.41.png.png"</span><span class="p">,</span><span class="w"> </span><span class="s2">"https://7static.loadingplay.com/static/images/200_ee40a90852bd0608123f3988fb512888_Captura_de_pantalla_2016-11-19_a_las_18.42.41.png.png"</span><span class="p">,</span><span class="w"> </span><span class="s2">"https://7static.loadingplay.com/static/images/500_ee40a90852bd0608123f3988fb512888_Captura_de_pantalla_2016-11-19_a_las_18.42.41.png.png"</span><span class="p">]</span><span class="w">
-            </span><span class="p">],</span><span class="w">
-            </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"subtotal"</span><span class="p">:</span><span class="w"> </span><span class="mf">4000.0</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"upp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"not_discount_price"</span><span class="p">:</span><span class="w"> </span><span class="mf">10.0</span><span class="w">
-        </span><span class="p">}],</span><span class="w">
-        </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">4000</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"expired"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GUUID"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='http-request-3'>HTTP Request</h3>
-<p>This endpoint retrieves a specific cart.</p>
-
-<p><code>GET https://apibodegas.loadingplay.com/v1/cart/[GUUID]</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Description</th>
+<th>Error Code</th>
+<th>Meaning</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>GUUID</td>
-<td>(required) cart unique global identifier</td>
+<td>400</td>
+<td>Bad Request -- Your request sucks.</td>
 </tr>
-</tbody></table>
-<h2 id='add-some-extra-data-to-a-shopping-cart'> Add some extra data to a shopping cart</h2><pre class="highlight shell tab-shell"><code>curl -XPOST <span class="s2">"https://apibodegas.loadingplay.com/v1/cart/[GUUID]/extrainfo"</span> <span class="se">\</span>
-  -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
-    -d <span class="s1">'data=some arbitrary data'</span>
-</code></pre>
-<blockquote>
-<p>The above command returns json with cart extra info, including id:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"some arbitrary data"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='http-request-4'>HTTP Request</h3>
-<p>sometimes you may want to show some extra data in the shopping cart, you can use this field</p>
-
-<p><code>POST https://apibodegas.loadingplay.com/v1/cart/[GUUID]/extrainfo</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
-<table><thead>
 <tr>
-<th>Parameter</th>
-<th>Description</th>
+<td>401</td>
+<td>Unauthorized -- Your API key is wrong.</td>
 </tr>
-</thead><tbody>
 <tr>
-<td>GUUID</td>
-<td>(required) cart unique global identifier</td>
+<td>403</td>
+<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
 </tr>
-</tbody></table>
-<h2 id='get-extrainfo-from-a-shopping-cart'>Get extrainfo from a shopping cart</h2><pre class="highlight shell tab-shell"><code>curl -XGET <span class="s2">"https://apibodegas.loadingplay.com/v1/cart/[GUUID]/extrainfo"</span> <span class="se">\</span>
-  -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"some arbitrary data"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='http-request-5'>HTTP Request</h3>
-<p><code>GET https://apibodegas.loadingplay.com/v1/cart/[GUUID]/extrainfo</code></p>
-<h3 id='url-parameters-3'>URL Parameters</h3>
-<table><thead>
 <tr>
-<th>Parameter</th>
-<th>Description</th>
+<td>404</td>
+<td>Not Found -- The specified kitten could not be found.</td>
 </tr>
-</thead><tbody>
 <tr>
-<td>GUUID</td>
-<td>(required) cart unique global identifier</td>
+<td>405</td>
+<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
+</tr>
+<tr>
+<td>406</td>
+<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
+</tr>
+<tr>
+<td>410</td>
+<td>Gone -- The kitten requested has been removed from our servers.</td>
+</tr>
+<tr>
+<td>418</td>
+<td>I&#39;m a teapot.</td>
+</tr>
+<tr>
+<td>429</td>
+<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
 </tr>
 </tbody></table>
 
