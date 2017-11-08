@@ -23,7 +23,14 @@ $(document).ready(function()
 				"", // product.bullet1, 
 				"", // product.bullet2, 
 				"", // product.bullet3,
-				"" // product.images, 
+				"", // product.images, 
+				function()
+				{
+					document.location.href = facade.ecommerce.cart.getCheckoutUrl() + 
+						'?' +
+						'site_id=' + facade.ecommerce.cart.getSiteId() +
+						'&cart_id=' + facade.ecommerce.cart.getGUID();
+				}
 			);
 
 			setTimeout(function() {
@@ -40,11 +47,11 @@ $(document).ready(function()
 				// 	'site_id=' + facade.ecommerce.cart.getSiteId() +
 				// 	'&cart_id=' + facade.ecommerce.cart.getGUID() + '" target="_blank" ></a>')
 				// a.click();
-				document.location.href = facade.ecommerce.cart.getCheckoutUrl() + 
-					'?' +
-					'site_id=' + facade.ecommerce.cart.getSiteId() +
-					'&cart_id=' + facade.ecommerce.cart.getGUID();
-			}, 1000);
+				// document.location.href = facade.ecommerce.cart.getCheckoutUrl() + 
+				// 	'?' +
+				// 	'site_id=' + facade.ecommerce.cart.getSiteId() +
+				// 	'&cart_id=' + facade.ecommerce.cart.getGUID();
+			});
 		}, 1000);
 	};
 
