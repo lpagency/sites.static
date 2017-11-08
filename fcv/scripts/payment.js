@@ -8,51 +8,31 @@ $(document).ready(function()
 		var facade = $('.products').data('ecommerce');
 
 		// delete all other products
-		facade.ecommerce.cart.clearCart();
+		// facade.ecommerce.cart.clearCart();
 
-		setTimeout(function() {
-			// add the current product
-			// id, sku, combination, price, name, upp, bullet1, bullet2, bullet3, img, callback
-			facade.ecommerce.cart.addProduct(
-				5688, // product.id, 
-				"DONACION",
-				"",
-				price,// product.price, 
-				"donacion", // product.name, 
-				1, // product.upp, 
-				"", // product.bullet1, 
-				"", // product.bullet2, 
-				"", // product.bullet3,
-				"", // product.images, 
-				function()
-				{
+		// add the current product
+		// id, sku, combination, price, name, upp, bullet1, bullet2, bullet3, img, callback
+		facade.ecommerce.cart.addProduct(
+			5688, // product.id, 
+			"DONACION",
+			"",
+			price,// product.price, 
+			"donacion", // product.name, 
+			1, // product.upp, 
+			"", // product.bullet1, 
+			"", // product.bullet2, 
+			"", // product.bullet3,
+			"", // product.images, 
+			function()
+			{
+				setTimeout(function() {
 					document.location.href = facade.ecommerce.cart.getCheckoutUrl() + 
 						'?' +
 						'site_id=' + facade.ecommerce.cart.getSiteId() +
 						'&cart_id=' + facade.ecommerce.cart.getGUID();
-				}
-			);
-
-			setTimeout(function() {
-				// proceed to checkout
-				// var checkout = facade.ecommerce.cart.view.getCheckoutData();
-				// $("#checkout-iframe").attr('src', facade.ecommerce.cart.getCheckoutUrl() + 
-				// 	'?' +
-				// 	'site_id=' + facade.ecommerce.cart.getSiteId() +
-				// 	'&cart_id=' + facade.ecommerce.cart.getGUID());
-
-				// $('#myModal').modal('show');
-				// var a = $('<a href="'+ facade.ecommerce.cart.getCheckoutUrl() + 
-				// 	'?' +
-				// 	'site_id=' + facade.ecommerce.cart.getSiteId() +
-				// 	'&cart_id=' + facade.ecommerce.cart.getGUID() + '" target="_blank" ></a>')
-				// a.click();
-				// document.location.href = facade.ecommerce.cart.getCheckoutUrl() + 
-				// 	'?' +
-				// 	'site_id=' + facade.ecommerce.cart.getSiteId() +
-				// 	'&cart_id=' + facade.ecommerce.cart.getGUID();
-			});
-		}, 1000);
+				}, 1000);
+			}
+		);
 	};
 
 	var ecommerce = $('.products').ecommerce({
