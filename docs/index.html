@@ -225,6 +225,20 @@
             <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
           </li>
           <li>
+            <a href="#config" class="toc-h1 toc-link" data-title="Config">Config</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-configs-from-a-syte-name" class="toc-h2 toc-link" data-title="Config">Get all Configs from a Syte Name</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-config-from-a-syte-name" class="toc-h2 toc-link" data-title="Config">Get a Specific Config from a Syte Name</a>
+                  </li>
+                  <li>
+                    <a href="#create-a-config-element" class="toc-h2 toc-link" data-title="Config">Create a Config Element</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#shopping-cart" class="toc-h1 toc-link" data-title="Shopping cart">Shopping cart</a>
               <ul class="toc-list-h2">
                   <li>
@@ -382,6 +396,162 @@ curl <span class="s2">"api_endpoint_here"</span>
 <aside class="notice">
 You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 </aside>
+<h1 id='config'>Config</h1><h2 id='get-all-configs-from-a-syte-name'>Get all Configs from a Syte Name</h2><pre class="highlight shell tab-shell"><code>curl -XGET https://apibodegas.loadingplay.com/v1/config <span class="se">\</span>
+            -d <span class="s1">'site_name=fm'</span> <span class="se">\</span>
+            -d <span class="s1">'access_token=Bearer ACCESS_TOKEN'</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"config"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mod_conf_payment_methods"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"on"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mod_users"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"on"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"shipping_id"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bullet_1"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"on"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"instagram"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bullet_3"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bullet_2"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"on"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mod_orders"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"on"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"checkout_upon_delivery"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"on"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pedido_despachado"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"family-market-confirmacion-pedido"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"price"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"on"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"analytics"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UA-69991660-1"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="err">....</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all the config of a syte.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://apibodegas.loadingplay.com/v1/Config</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>site_name</td>
+<td>(required)</td>
+<td>filter by site</td>
+</tr>
+</tbody></table>
+<h2 id='get-a-specific-config-from-a-syte-name'>Get a Specific Config from a Syte Name</h2><pre class="highlight shell tab-shell"><code>curl -XGET https://apibodegas.loadingplay.com/v1/config <span class="se">\</span>
+    -d <span class="s1">'site_name=fm'</span> <span class="se">\</span>
+    -d <span class="s1">'access_token=Bearer ACCESS_TOKEN'</span> <span class="se">\</span>
+    -d <span class="s1">'name=CONFIG_NAME'</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"config"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mod_users"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"on"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific config.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://apibodegas.loadingplay.com/v1/Config</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>site_name</td>
+<td>(required) filter by site</td>
+</tr>
+<tr>
+<td>name</td>
+<td>unique identifier for the config it can be a comma separated list, and return a comma separated list of configs</td>
+</tr>
+</tbody></table>
+<h2 id='create-a-config-element'>Create a Config Element</h2><pre class="highlight shell tab-shell"><code>
+curl -XPOST https://apibodegas.loadingplay.com/v1/config <span class="se">\</span>
+        -d <span class="s1">'site_name=fm'</span> <span class="se">\</span>
+        -d <span class="s1">'name='</span> <span class="se">\</span>
+        -d <span class="s1">'value='</span> <span class="se">\</span>
+        -d <span class="s1">'access_token=Bearer ACCESS_TOKEN'</span>
+</code></pre>
+<blockquote>
+<p>The above command returns json with the new config info, including id:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"config"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"site_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fm"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">config_name</span><span class="p">],</span><span class="w">
+        </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">value</span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-3'>HTTP Request</h3>
+<p><code>POST https://apibodegas.loadingplay.com/v1/Config</code></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>site_name</td>
+<td>(required) filter by site</td>
+</tr>
+<tr>
+<td>name</td>
+<td>unique identifier for the config</td>
+</tr>
+<tr>
+<td>value</td>
+<td>value of the config, it can be &#39;on&#39;, &#39;&#39; or a String</td>
+</tr>
+</tbody></table>
 <h1 id='shopping-cart'>Shopping cart</h1>
 <p>endpoints:</p>
 
