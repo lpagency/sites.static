@@ -1,0 +1,24 @@
+// Font imports and stacks
+
+@font-face {
+    font-family: "HelveticaNeueCon";
+    src: url("../fonts/HelveticaNeueCon.otf");
+}
+
+$main: "HelveticaNeueCon", "Helvetica", Arial, sans-serif;
+
+
+// Colors
+
+$white: #ffffff;
+$gray: #6d6e71;
+$gray-dark: #58595b;
+$black: #231f20;
+
+$gray-1: #808285;
+$gray-2: #8a8c8e;
+$gray-3: #939598;
+
+$brand: #1d4f90;
+$accent: #00aeef;
+$brand-light: #95a1c6;
