@@ -1,0 +1,28 @@
+.intro {
+    padding: 5rem 15px 0 15px;
+    position: relative;
+    @include atSmall {
+        padding: 3.75rem 15px 0 15px;
+    }
+    &-copy {
+        text-align: center;
+        padding-bottom: 5rem;
+        @include atSmall {
+            padding-bottom: 16.25rem;
+        }
+    }
+    &-img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+    &-text {
+        & + & {
+            margin-top: 3.333rem;
+            @include atSmall {
+                margin-top: 2.5rem;
+            }
+        }
+    }
+}

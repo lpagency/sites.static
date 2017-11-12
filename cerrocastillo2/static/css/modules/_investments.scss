@@ -1,0 +1,66 @@
+.investments {
+    padding: 7.5rem 15px;
+    @include atSmall {
+        padding: 5.625rem 15px;
+    }
+    &-title {
+        text-align: center;
+        margin-bottom: 10.3125rem;
+    }
+    &-item {
+        @include atSmall {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+        & + & {
+            margin-top: 5.625rem;
+        }
+        &-logo {
+            border: 2px solid $gray;
+            padding: 4rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 3.75rem;
+            @include atSmall {
+                margin-right: 2.8125rem;
+                margin-bottom: 0;
+                width: 30%;
+                padding: 0 3rem;
+                height: 15rem;
+            }
+            &-img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        &-copy {
+            @include atSmall {
+                width: 70%;
+            }
+        }
+        &-info {
+            &-item {
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                &:last-child {
+                    margin-top: 2.5rem;
+                }
+                &-key {
+                    width: 40%;
+                    @include atSmall {
+                        width: 30%;
+                    }
+                }
+                &-value {
+                    width: 60%;
+                    @include atSmall {
+                        width: 70%;
+                    }
+                }
+            }
+        }
+    }
+}

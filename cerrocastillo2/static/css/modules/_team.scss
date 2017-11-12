@@ -1,0 +1,50 @@
+.team {
+    padding: 5rem 15px 6.667rem 15px;
+    @include atSmall {
+        padding: 7.5rem 15px 10rem 15px;
+    }
+    &-item {
+        cursor: pointer;
+        position: relative;
+        & + & {
+            margin-top: 3.5rem;
+            @include atSmall {
+                margin-top: 7.0625rem;
+            }
+        }
+        &-bg {
+            width: 100%;
+            height: auto;
+            pointer-events: none;
+        }
+        &-copy {
+            margin-top: 2rem;
+            @include atSmall {
+                margin-top: 0;
+                position: absolute;
+                top: 3rem;
+                right: 2rem;
+            }
+            @include atMedium {
+                top: 4rem;
+                right: 4rem;
+            }
+            @include atLarge {
+                top: 5rem;
+                right: 6rem;
+            }
+        }
+        &-role,
+        &-name {
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+    }
+    &-popup {
+        &-text {
+            & + & {
+                margin-top: 1.333rem;
+            }
+        }
+    }
+}
