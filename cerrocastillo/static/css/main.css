@@ -1058,7 +1058,7 @@ button:focus {
 
 @media screen and (min-width: 1200px) {
   .focus-item {
-    max-height: 550px;
+    max-height: 800px;
   }
 }
 
