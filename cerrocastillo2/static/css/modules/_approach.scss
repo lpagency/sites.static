@@ -1,0 +1,59 @@
+.approach {
+    padding: 9.4167rem 15px 11.4167rem 15px;
+    @include atSmall {
+        padding: 7.0625rem 15px 8.5625rem 15px;
+    }
+    &-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        @include atSmall {
+            flex-direction: row;
+        }
+        & + & {
+            margin-top: 4.5833rem;
+            @include atSmall {
+                margin-top: 3.4375rem;
+            }
+        }
+        &-img {
+            order: 1;
+            width: 70%;
+            margin-bottom: 3rem;
+            @include atSmall {
+                margin-bottom: 0;
+                margin-left: 6.25rem;
+                width: 50%;
+                order: 2;
+                max-width: 425px;
+            }
+        }
+        &-copy {
+            order: 2;
+            width: 100%;
+            @include atSmall {
+                width: 40%;
+                order: 1;
+                text-align: right;
+            }
+        }
+        &:nth-child(even) {
+            .approach-item {
+                &-img {
+                    @include atSmall {
+                        order: 1;
+                        margin-left: 0;
+                        margin-right: 6.25rem;
+                    }
+                }
+                &-copy {
+                    @include atSmall {
+                        order: 2;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}

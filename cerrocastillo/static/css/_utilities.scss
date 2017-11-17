@@ -1,0 +1,143 @@
+/*------------- UTILITY CLASSES -------------*/
+
+@mixin atSmall {
+    @media screen and (min-width: 768px) {
+        @content
+    }
+}
+
+@mixin atMedium {
+    @media screen and (min-width: 992px) {
+        @content
+    }
+}
+
+@mixin atLarge {
+    @media screen and (min-width: 1200px) {
+        @content
+    }
+}
+
+@mixin atExtralarge {
+    @media screen and (min-width: 1400px) {
+        @content
+    }
+}
+
+@mixin linkStates($color, $decoration) {
+    &:link,
+    &:hover,
+    &:focus,
+    &:visited {
+        color: $color;
+        text-decoration: $decoration;
+    }
+}
+
+.container-fluid {
+    &-content {
+        @include atLarge {
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+}
+
+.text {
+    color: $gray;
+    font-family: $main;
+    font-size: 2.5rem;
+    line-height: 3.75rem;
+    @include atSmall {
+        font-size: 1.875rem;
+        line-height: 2.8125rem;
+    }
+    &-link {
+        @include linkStates($gray, none);
+    }
+    &-white {
+        color: $white;
+        &.text-link {
+            @include linkStates($white, none);
+        }
+    }
+    &-justify {
+        text-align: justify;
+    }
+    &-black {
+        color: $black;
+        &.text-link {
+            @include linkStates($black, none);
+        }
+    }
+    &-brand {
+        color: $brand;
+    }
+    &-accent {
+        color: $accent;
+    }
+    &-bold {
+        font-weight: 700;
+    }
+    &-alt {
+        line-height: 3rem;
+        @include atSmall {
+            line-height: 2.25rem;
+        }
+    }
+    &-big {
+        font-size: 3.333rem;
+        line-height: 3.75rem;
+        @include atSmall {
+            font-size: 2.5rem;
+            line-height: 2.8125rem;
+        }
+        &-med {
+            font-size: 2.5rem;
+            line-height: 3.333rem;
+            @include atSmall {
+                font-size: 1.875rem;
+                line-height: 2.5rem;
+            }
+        }
+        &-small {
+            font-size: 2.08333rem;
+            @include atSmall {
+                font-size: 1.5625rem;
+            }
+        }
+    }
+    &-med {
+        font-size: 1.667rem;
+        line-height: 2rem;
+        letter-spacing: 0.03em;
+        @include atSmall {
+            font-size: 1.25rem;
+            line-height: 1.5rem;
+        }
+        &-big {
+            font-size: 2rem;
+            line-height: 2.5rem;
+            @include atSmall {
+                font-size: 1.5rem;
+                line-height: 1.875rem;
+            }
+        }
+        &-small {
+            font-size: 1.5rem;
+            line-height: 1.833rem;
+            @include atSmall {
+                font-size: 1.125rem;
+                line-height: 1.375rem;
+            }
+        }
+    }
+    &-small {
+        font-size: 1rem;
+        line-height: 1.167rem;
+        @include atSmall {
+            font-size: 0.75rem;
+            line-height: 0.875rem;
+        }
+    }
+}

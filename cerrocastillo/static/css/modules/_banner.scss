@@ -1,0 +1,59 @@
+.banner {
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    @include atSmall {
+        height: 455px;
+    }
+    @include atMedium {
+        height: 555px;
+    }
+    @include atLarge {
+        height: 655px;
+    }
+    &-bg {
+        width: 100%;
+        height: auto;
+        min-height: 100%;
+        pointer-events: none;
+    }
+    &-copy {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 70%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include atSmall {
+            width: 50%;
+        }
+        &-left {
+            left: 0;
+        }
+        &-right {
+            right: 0;
+            align-items: flex-end;
+            justify-content: flex-end;
+            .banner-title {
+                text-align: right;
+                margin-bottom: 2rem;
+                margin-right: 2rem;
+                @include atSmall {
+                    margin-right: 6.25rem;
+                    margin-bottom: 11.25rem;
+                }
+            }
+        }
+    }
+    &-title {
+        font-family: $main;
+        font-size: 3.375rem;
+        line-height: 4.25rem;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        text-align: center;
+        color: $white;
+    }
+}

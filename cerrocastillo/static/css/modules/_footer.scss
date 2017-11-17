@@ -1,0 +1,41 @@
+.footer {
+    background-color: $gray;
+    padding: 2.0833rem 15px;
+    @include atSmall {
+        padding: 1.5625rem 15px;
+    }
+    &-content {
+        @include atSmall {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+    }
+    &-logo {
+        display: block;
+        margin: 0 auto 2rem auto;
+        width: 50%;
+        max-width: 180px;
+        @include atSmall {
+            margin: 0;
+        }
+        &-img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    &-copy {
+        text-align: center;
+        @include atSmall {
+            text-align: right;
+        }
+    }
+    &-text {
+        & + & {
+            margin-top: 1.333rem;
+            @include atSmall {
+                margin-top: 1rem;
+            }
+        }
+    }
+}

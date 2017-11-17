@@ -1,0 +1,41 @@
+.focus {
+    padding: 3.333rem 0 12.5rem 0;
+    @include atSmall {
+        padding: 2.5rem 0 9.375rem 0;
+    }
+    &-group {
+        @include atSmall {
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+        }
+        & + & {
+            margin-top: 1.167rem;
+            @include atSmall {
+                margin-top: 0.875rem;
+            }
+        }
+    }
+    &-item {
+        padding: 5rem 2rem;
+        width: 100%;
+        @include atSmall {
+            width: 33.33%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        @include atLarge {
+            max-height: 550px;
+        }
+        &:first-child {
+            background-color: $gray-1;
+        }
+        &:nth-child(2) {
+            background-color: $gray-2;
+        }
+        &:nth-child(3) {
+            background-color: $gray-3;
+        }
+    }
+}
