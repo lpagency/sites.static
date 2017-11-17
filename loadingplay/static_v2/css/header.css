@@ -1,0 +1,44 @@
+.logo {
+    height: 47px;
+    width: 150px;
+    margin-top: 2px;
+    margin-bottom: 0px;
+    object-fit: scale-down;
+    float: left;
+    left: -72px;
+    position: relative;
+}
+
+.caja-logo {
+    height: 51px;
+    width: 150px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.navbar-default {
+    background-color: black;
+    border-color: black;
+}
+
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 15px 18px;
+    color: white !important;
+    font-weight: 300;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #ddd;
+    color: white;
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+    color: #333;
+    background-color: transparent;
+    color: gray !important;
+}
+.navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse{
+    max-height: 360px;
+}
