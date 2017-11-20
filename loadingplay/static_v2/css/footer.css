@@ -1,0 +1,77 @@
+.logo-footer {
+    height: 116px;
+    width: 150px;
+    margin-top: 37px;
+    margin-bottom: 0px;
+    object-fit: scale-down;
+    float: left;
+    left: -8px;
+    position: relative;
+}
+
+.caja-logo-footer {
+    height: 51px;
+    width: 150px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#footer{
+    width: 100%;
+    bottom: 0;
+    position: relative;
+    height: auto;
+    padding: 0;
+    background-color: black;
+
+}
+
+.pas-4 {
+    font-weight: 300;
+    color: white;
+    font-size: 16px;
+    text-align: right;
+    margin-top: 2px;
+    line-height: 17px;
+    position: relative;
+    left: 16%;
+}
+
+li{
+    list-style:none;
+}
+
+
+/*----------------------Responsive------------------*/
+
+@media (max-width: 991px){
+    .caja-logo-footer {
+    height: 51px;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.logo-footer {
+    height: 89px;
+    width: 100%;
+    margin-top: 2px;
+    margin-bottom: 26px;
+    object-fit: scale-down;
+    float: left;
+    left: 0px;
+    position: relative;
+}
+
+.pas-4 {
+    font-weight: 300;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 2px;
+    line-height: 17px;
+    position: relative;
+    left: 0%;
+}
+
+}

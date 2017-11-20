@@ -1,0 +1,2006 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<!-- Mirrored from www.placare.com/botines-hombre by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Nov 2017 23:14:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- head bt inicio -->
+<title>Placare</title>
+<base >
+<meta charset="utf-8">
+<meta name="title" content="">
+<meta name="description" content="">
+<meta name="author" content="loadingplay.com">
+<meta name="google-site-verification" content="TCWFh3WZyUCgzF1hc2WmC56Y0rffAXS4zflVfZju26Y" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="jquery, vertical, scrolling, scroll, smooth"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css?1">
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+<!-- <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet"> -->
+<!-- <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7400796/8002792/css/fonts.css?1" /> -->
+<link rel="stylesheet" type="text/css" href="common/js/bodegas/dist/bodegas.clientc4ca.css?1">
+<link rel="stylesheet" href="common/css/editableimagec4ca.css?1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css?1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css?1">
+<link rel="stylesheet" href="static/css/stylec4ca.css?1">
+<link rel="stylesheet" href="static/css/footerc4ca.css?1">
+<link rel="stylesheet" href="static/css/headerc4ca.css?1">
+<link rel="stylesheet" href="static/css/gallery.hoc4ca.css?1">
+<link rel="stylesheet" href="static/css/listado_articulosc4ca.css?1">
+<link rel="stylesheet" href="static/css/listado_productosc4ca.css?1">
+<link rel="stylesheet" href="static/css/checkoutc4ca.css?1">
+<link rel="stylesheet" href="static/css/simple-sidebarc4ca.css?1">
+<link rel="stylesheet" type="text/css" href="static/fancybox/source/jquery.fancyboxe568.css?1?v=2.1.5" media="screen" />
+<!-- aqui se ponen los demas css -de las paginas -->
+<link rel="stylesheet" href="common/css/editableimagec4ca.css?1">
+<!-- autocomplete
+<link rel="stylesheet" type="text/css" href="/static/js/plugins/selectize/selectize.css?1" />
+<!-autocomplete -->
+<link rel="stylesheet" href="common/js/plugins/loadingplay/fileuploader/dist/fileuploaderc4ca.css?1">
+<link rel="stylesheet" href="static/css/ligthbox-dc4ca.css?1">
+<!-- <link rel="stylesheet" href="/static/js/fancybox/source/jquery.fancybox.css?1?v=2.1.5"> -->
+<link rel="stylesheet" href="common/css/ellipsisc4ca.css?1">
+<!-- Start of placarehelp Zendesk Widget script -->
+<script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(e){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var e=this.createElement("script");n&&(this.domain=n),e.id="js-iframe-async",e.src="https://assets.zendesk.com/embeddable_framework/main.js",this.t=+new Date,this.zendeskHost="placarehelp.zendesk.com",this.zEQueue=a,this.body.appendChild(e)},o.write('<body onload="document._l();">'),o.close()}();
+/*]]>*/</script>
+<!-- End of placarehelp Zendesk Widget script -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-104850079-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-104850079-1');
+</script>
+<!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/s/dt/dt-1.10.10/datatables.min.css?1"/> -->
+
+
+<link rel="stylesheet" type="text/css" href="common/js/bodegas/dist/bodegas.client.css">
+<style type="text/css">
+body , html
+{
+overflow-x:hidden;
+}
+</style>
+
+<script type="text/template" id="product_template" class="hidden">
+<div class="col-md-3 col-sm-3 col-xs-6 ocultar product-box hidden-xs visible-lg visible-sm visible-md" main-price="{{ main_price }}" promotion-price="{{ promotion_price }}" >
+<a class="" href="/sc/product/detail/{{ name|friendly }}/{{ id }}">
+<div class="conti">
+<div class="letrero-nuevo hidden" nuevo="{{tags}}">Nuevo</div>
+<div class="letrero-sale hidden" promotion-price="{{ promotion_price }}">Sale</div>
+<img src="{{ images[0][3] }}" alt="" class="img-responsive image" >
+<div class="up-ex ellipsis multiline">{{ brand }} </div>
+<div class="inf ellipsis multiline">{{ name }}</div>
+<div class="product-price original" promotion-price="{{ promotion_price }}" >{{ main_price|money }} </div>
+<div class="product-price hidden oferta" promotion-price="{{ promotion_price }}">{{ promotion_price|money }}
+</div>
+<div class="product-price hidden original-tachado" promotion-price="{{ promotion_price }}">{{ main_price|money }} </div>
+<div class="product-price hidden descuento-lis" main-price="{{ main_price }}" promotion-price="{{ promotion_price }}"></div>
+<div class="middle">
+<a href="/sc/product/detail/{{ name|friendly }}/{{ id }}" class="text">COMPRAR</a>
+</div>
+</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-3 col-xs-6 ocultar product-box hidden-md hidden-lg hidden-sm visible-xs" main-price="{{ main_price }}" promotion-price="{{ promotion_price }}" >
+<a class="" href="/sc/product/detail/{{ name|friendly }}/{{ id }}">
+<div class="conti">
+<div class="letrero-nuevo hidden" nuevo="{{tags}}">Nuevo</div>
+<div class="letrero-sale hidden" promotion-price="{{ promotion_price }}">Sale</div>
+<img src="{{ images[0][3] }}" alt="" class="img-responsive image" >
+<div class="up-ex ellipsis multiline">{{ brand }} </div>
+<div class="inf ellipsis multiline">{{ name }}</div>
+<div class="product-price original" promotion-price="{{ promotion_price }}" >{{ main_price|money }} </div>
+<div class="product-price hidden oferta" promotion-price="{{ promotion_price }}">{{ promotion_price|money }} </div>
+<div class="product-price hidden original-tachado" promotion-price="{{ promotion_price }}">{{ main_price|money }} </div>
+<div class="product-price hidden descuento-lis" main-price="{{ main_price }}" promotion-price="{{ promotion_price }}"></div>
+<div class="middle">
+</div>
+<a href="/sc/product/detail/{{ name|friendly }}/{{ id }}" class="text">COMPRAR</a>
+</div>
+</a>
+</div>
+</script>
+<script type="text/template" id="product_template_home" class="hidden">
+<div class="col-md-2 col-sm-2 col-xs-6 product-box visible-lg visible-sm visible-md" main-price="{{ main_price }}" promotion-price="{{ promotion_price }}" >
+<a class="" href="/sc/product/detail/{{ name|friendly }}/{{ id }}">
+<div class="conti-de">
+<div class="letrero-nuevo hidden">Nuevo</div>
+<div class="letrero-sale hidden" promotion-price="{{ promotion_price }}">Sale</div>
+<img src="{{ images[0][3] }}" alt="" class="img-responsive detail-prod-img" >
+<div class="up-ex ellipsis multiline">{{ brand }} </div>
+<div class="inf ellipsis multiline">{{ name }}</div>
+<div class="product-price original" promotion-price="{{ promotion_price }}" >{{ main_price|money }} </div>
+<div class="product-price hidden oferta" promotion-price="{{ promotion_price }}">{{ promotion_price|money }}
+</div>
+<div class="product-price hidden original-tachado" promotion-price="{{ promotion_price }}">{{ main_price|money }} </div>
+<div class="product-price hidden descuento-lis" main-price="{{ main_price }}" promotion-price="{{ promotion_price }}"></div>
+<div class="middle">
+<a href="/sc/product/detail/{{ name|friendly }}/{{ id }}" class="text detalle">COMPRAR</a>
+</div>
+</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-3 col-xs-6 product-box two hidden-md hidden-lg hidden-sm visible-xs" main-price="{{ main_price }}" promotion-price="{{ promotion_price }}" >
+<a class="" href="/sc/product/detail/{{ name|friendly }}/{{ id }}">
+<div class="conti-de">
+<div class="letrero-nuevo hidden">Nuevo</div>
+<div class="letrero-sale hidden" promotion-price="{{ promotion_price }}">Sale</div>
+<img src="{{ images[0][3] }}" alt="" class="img-responsive image" >
+<div class="up-ex ellipsis multiline">{{ brand }} </div>
+<div class="product-price hidden oferta" promotion-price="{{ promotion_price }}">{{ promotion_price|money }} </div>
+<div class="product-price hidden original-tachado" promotion-price="{{ promotion_price }}">{{ main_price|money }} </div>
+<div class="product-price hidden descuento-lis" main-price="{{ main_price }}" promotion-price="{{ promotion_price }}"></div>
+<div class="inf ellipsis multiline">{{ name }}</div>
+<div class="product-price original" promotion-price="{{ promotion_price }}" >{{ main_price|money }} </div>
+<div class="middle">
+</div>
+</div>
+<a href="/sc/product/detail/{{ name|friendly }}/{{ id }}" class="text detalle">COMPRAR</a>
+</a>
+</div>
+</script>
+<script type="text/template" id="product_template_home2" class="hidden">
+<a class="" href="/sc/product/detail/{{ name|friendly }}/{{ id }}">
+<div class="swiper-slide hidden-xs">
+<div class="letrero-nuevo hidden">Nuevo</div>
+<div class="letrero-sale hidden" promotion-price="{{ promotion_price }}">Sale</div>
+<img src="{{ images[0][3] }}" alt="" class="img-responsive image-slider" >
+<div class="up-ex-slider ellipsis multiline">{{ brand }} </div>
+<div class="inf-slider ellipsis multiline">{{ name }}</div>
+<div class="product-price original-slider" promotion-price="{{ promotion_price }}" >{{ main_price|money }} </div>
+<div class="product-price hidden oferta" promotion-price="{{ promotion_price }}">{{ promotion_price|money }} </div>
+<div class="product-price hidden original-tachado" promotion-price="{{ promotion_price }}">{{ main_price|money }} </div>
+<div class="product-price hidden descuento-lis" main-price="{{ main_price }}" promotion-price="{{ promotion_price }}"></div>
+<div class="middle">
+<a href="/sc/product/detail/{{ name|friendly }}/{{ id }}" class="text detalle">COMPRAR</a>
+</div>
+</div>
+</a>
+</script>
+
+
+
+</head>
+<body>
+
+
+<!-- ********HEADER DESKTOP*********** -->
+<div class="container-fluid hidden-xs visible-lg visible-md visible-sm" style="border-bottom:1px solid #E9E9ED;">
+<div class="container">
+<div class="col-md-6 col-sm-6 col-xs-12">
+<div class="text-slogan " text-id="placare_productos"> <p> Descubre y Elige! Despachos a todo Chile y Devoluciones GRATIS.</p></div>
+</div>
+<ul class="nav navbar-nav navbar-right dos">
+<li class="slogan"><a href="cambios-y-devoluciones.html">CAMBIOS Y DEVOLUCIONES</a></li>
+<li class=""><a href="#" style="color:#eaeaec;">|</a></li>
+<li class="slogan"><a href="tiempo-de-envios.html">TIEMPOS DE ENVIO</a></li>
+<li class=""><a href="#" style="color:#eaeaec;">|</a></li>
+<li class="slogan"><a href="contact.html">CONTACTANOS</a></li>
+</ul>
+</div>
+</div>
+<div class="container min">
+<!-- Static navbar -->
+<nav class="navbar navbar-default hidden-xs visible-md visible-lg visible-sm">
+<div class="container-fluid">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+<!-- <form id="searchForm" role="search" action="/listado_productos" method="get" class="style-form2"> -->
+<div class="desktop-query hidden-lg hidden-md- hidden-sm visible-xs" data-reactid="457">
+<input placeholder="Buscar" class="desktop-searchBar" value="" data-reactid="458">
+<a class="desktop-submit" data-reactid="459"><span class="myntraweb-sprite desktop-iconSearch sprites-search" data-reactid="460"></span> <i class="fa fa-search" aria-hidden="true"></i></a>
+</div>
+<!-- </form> -->
+<div style="position:relative">
+<div class="col-md-2">
+<div class="caja-logo">
+
+<a href="#">
+<img id="placare_header_logo" src="https://7static.loadingplay.com/static/images/1_53ab82b2132c6c20e70b8ece687b5bd6_logo_placarepng.png" onload="this.onload='';this.src='https://7static.loadingplay.com/static/images/53ab82b2132c6c20e70b8ece687b5bd6_logo_placarepng.png';this.onload=''" class="img-responsive logo" alt="item">
+</a>
+</div>
+</div>
+</div>
+<div id="navbar" class="navbar-collapse collapse">
+<ul class="nav navbar-nav sa">
+<!-- <li class="#"><a href="/listado_productos?tag=mujer,-hombre">MUJERES</a></li> -->
+<div class="dropdown col-md-4">
+<button class="btn btn-primary header dropdown-toggle" type="button" data-toggle="dropdown" tag="" onclick="window.location.href='mujer.html'">MUJERES
+</button>
+<ul class="dropdown-menu hed">
+<li><a href="ballerinas-mujer.html">BALLERINAS</a></li>
+<li><a href="botines-mujer.html">BOTINES</a></li>
+<li><a href="mocasines-mujer.html">MOCASINES</a></li>
+<li><a href="mules-slippers-mujer.html">MULES / SLIPPERS</a></li>
+<li><a href="plataformas-mujer.html">PLATAFORMAS</a></li>
+<li><a href="playeras-mujer.html">PLAYERAS</a></li>
+<li><a href="sandalias-mujer.html">SANDALIAS</a></li>
+<li><a href="zapatos-mujer.html">ZAPATOS</a></li>
+<li><a href="mujer.html">TODOS</a></li>
+</ul>
+</div>
+<div class="dropdown col-md-4" style="right: 9px;">
+<button class="btn btn-primary header dropdown-toggle" type="button" data-toggle="dropdown" tag="" onclick="window.location.href='hombres.html'">HOMBRES
+</button>
+<ul class="dropdown-menu hed">
+<li><a href="botines-hombre.html">BOTINES</a></li>
+<li><a href="formales-hombre.html">FORMALES</a></li>
+<li><a href="sandalias-hombre.html">SANDALIAS</a></li>
+<li><a href="zapatos-hombre.html">ZAPATOS</a></li>
+<li><a href="hombres.html">TODOS</a></li>
+</ul>
+</div>
+<!-- <li><a href="/listado_productos?tag=hombre,-mujer">HOMBRES</a></li> -->
+<!-- <li><a href="/listado_productos?tag=oferta">OFERTA</a></li> -->
+</ul>
+<form id="searchform" role="search" action="http://www.placare.com/listado_productos" method="get" >
+<ul class="nav navbar-nav navbar-right">
+<div class="desktop-query" data-reactid="457">
+<input placeholder="Buscar" name="search_query" class="desktop-searchBar" data-reactid="458" value="">
+<a type="submit" class="desktop-submit" data-reactid="459"><span class="myntraweb-sprite desktop-iconSearch sprites-search" data-reactid="460"></span> <i class="fa fa-search" aria-hidden="true"></i></a>
+</div>
+<!-- <li class="pal">|</li> -->
+<li class="icon" id="open-cart" data-toggle="modal" data-target="#myModal">
+<span> Tu Compra </span> <span class="units-total">0</span>
+</li>
+<li class="bor" id="open-cart" data-toggle="modal" data-target="#myModal">
+<!-- <a href="" class="com"> Comprar </a> -->
+<img class="img-bolsa" src="https://7static.loadingplay.com/static/images/1ce8436ded946db43060507a3b826882_iconoplacare.png">
+</li>
+</ul>
+</form>
+</div>
+</div>
+</nav>
+</div> <!-- /container -->
+<div class="container-fluid" style="border-bottom:1px solid #E9E9ED;"></div>
+<!-- ********HEADER DESKTOP*********** -->
+<!-- ********************************************MENUU MOVIL******************* -->
+<div class="back-menu navbar-fixed-top hidden-lg hidden-md hidden-sm visible-xs">
+<div style="position:relative">
+<div class="caja-logo">
+
+<a href="#">
+<img id="placare_header_logo" src="https://7static.loadingplay.com/static/images/1_53ab82b2132c6c20e70b8ece687b5bd6_logo_placarepng.png" onload="this.onload='';this.src='https://7static.loadingplay.com/static/images/53ab82b2132c6c20e70b8ece687b5bd6_logo_placarepng.png';this.onload=''" class="img-responsive logo" alt="item">
+</a>
+</div>
+</div>
+<li> <img class="lupita" src="https://7static.loadingplay.com/static/images/00b8e08bfc6dc648c60d3fd4811a7b80_lupa.png">
+</li>
+<li class="" id="open-cart" data-toggle="modal" data-target="#myModal">
+<img class="img-bolsa" src="https://7static.loadingplay.com/static/images/1ce8436ded946db43060507a3b826882_iconoplacare.png">
+</li>
+<div align="center" class="hidden-lg hidden-md hidden-sm visible-xs">
+<div class="col-xs-12" style="margin-top: 0px;">
+<div class="input-group movil buscar-movil" style="display: none">
+<input type="text" class="form-control movil" placeholder="Busqueda por productos & marcas">
+<span class="input-group-btn">
+<button class="btn btn-default movil" type="button">Buscar</button>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="container hidden-lg hidden-md hidden-sm visible-xs">
+<div id="wrapper">
+<div id="sidebar-wrapper">
+<ul class="sidebar-nav">
+<li class="sidebar-brand">
+<div class="compi mobile2" href="#">
+COMPRAR POR
+</div>
+</li>
+<li class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+<li class="dropdown-submenu mobile2">
+<div class="">
+<button type="button" class="btn btn-info edu" data-toggle="collapse" data-target="#demo2">Mujer <i class="fa fa-angle-right" aria-hidden="true"></i> </button>
+<div id="demo2" class="collapse" style="margin-top: 0px;">
+<a href="ballerinas-mujer.html" class="den">
+<div class="">BALLERINAS</div>
+</a>
+<a href="botines-mujer.html" class="den">
+<div class="">BOTINES</div>
+</a>
+<a href="mocasines-mujer.html" class="den">
+<div class="s">MOCASINES</div>
+</a>
+<a href="mules-slippers-mujer.html" class="den">
+<div class="">MULES / SLIPPERS</div>
+</a>
+<a href="plataformas-mujer.html" class="den">
+<div class="">PLATAFORMAS</div>
+</a>
+<a href="playeras-mujer.html" class="den">
+<div class="">PLAYERAS</div>
+</a>
+<a href="sandalias-mujer.html" class="den">
+<div class="">SANDALIAS</div>
+</a>
+<a href="zapatos-mujer.html" class="den">
+<div class="">ZAPATOS</div>
+</a>
+<a href="mujer.html" class="den">
+<div class="">TODOS</div>
+</a>
+</div>
+</div>
+<div class="">
+<button type="button" class="btn btn-info edu" data-toggle="collapse" data-target="#demo">Hombre <i class="fa fa-angle-right" aria-hidden="true"></i> </button>
+<div id="demo" class="collapse" style="margin-top: 0px;">
+<a href="botines-hombre.html" class="den">
+<div class="">BOTINES</div>
+</a>
+<a href="formales-hombre.html" class="den">
+<div class="s">FORMALES</div>
+</a>
+<a href="sandalias-hombre.html" class="den">
+<div class="">SANDALIAS</div>
+</a>
+<a href="sandalias-hombre.html" class="den">
+<div class="">ZAPATOS</div>
+</a>
+<a href="hombres.html" class="den">
+<div class="">TODOS</div>
+</a>
+</div>
+</div>
+<!-- <li><a href="/listado_productos?tag=oferta" class="mobile2">Ofertas</a></li> -->
+<li><a href="index.html" class="tri mobile2" >Despachos</a></li>
+<li><a href="tiempo-de-envios.html" class="tri mobile2">Tiempos de envios</a></li>
+<li><a href="cambios-y-devoluciones.html">Cambios y Devoluciones</a></li>
+<li><a href="contact.html" class="fink mobile2">Contacto</a></li>
+</li>
+</li>
+</ul>
+</div>
+<div id="page-content-wrapper">
+<a href="#menu-toggle" id="menu-toggle" class="bars">
+<i class="fa fa-bars"></i>
+</a>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+<!-- *contenido* -->
+<body id="lapimport">
+<section>
+<div class="container min">
+<div class="col-md-6 col-sm-6 col-xs-12">
+<div class="texto-header-pro hidden-xs texto-ruta"> Home </div>
+</div>
+</div>
+</section>
+<section>
+<div class="container min dos">
+<div class="col-md-3 col-sm-3 col-xs-12">
+<section class="h_submenu hidden-xs visible-md visible-sm visible-lg">
+<div class="col-md-12 col-sm-12 col-xs-12 mtl text-center" style="margin-bottom: 50px;border-right: 1px solid #E9E9ED; width: 92%;left: 8%; margin-top: 13px;">
+<div class="text-fil-2"> TIPO DE CALZADO </div>
+<form action="http://www.placare.com/action_page.php" class="chek">
+<div class="filtro-filtros">
+<input type="radio" class="categ c-Categoria3_Botines" name="vehicle" tag="Categoria3_Botines" value="Car" value2="Botines">
+<div class="fil h-Categoria3_Botines" onclick="checkNombre('Categoria3_Botines','Botines')">Botines</div>
+</div>
+</form>
+<div class="clearfix"></div>
+<div class="text-fil"> COLOR PRINCIPAL </div>
+<div>
+<form action="http://www.placare.com/action_page.php" class="chek">
+<div class="filtro-color">
+<input type="radio" name="color" class="categ c-Color_Azul" tag="Color_Azul" value2="Azul">
+<div class="fil h-Color_Azul" onclick="checkNombre('Color_Azul','Azul')">Azul</div>
+</div>
+<div class="filtro-color">
+<input type="radio" name="color" class="categ c-Color_Beige" tag="Color_Beige" value2="Beige">
+<div class="fil h-Color_Beige" onclick="checkNombre('Color_Beige','Beige')">Beige</div>
+</div>
+<div class="filtro-color">
+<input type="radio" name="color" class="categ c-Color_Cafe" value2="Café" tag="Color_Cafe">
+<div class="fil h-Color_Cafe" onclick="checkNombre('Color_Cafe', 'Café')">Cafe</div>
+</div>
+<div class="filtro-color">
+<input type="radio" name="color" class="categ c-Color_Negro" tag="Color_Negro" value2="Negro">
+<div class="fil h-Color_Negro" onclick="checkNombre('Color_Negro','Negro')">Negro</div>
+</div>
+<div class="filtro-color">
+<input type="radio" name="color" class="categ c-Color_Burdeo" tag="Color_Burdeo" value2="Burdeo">
+<div class="fil h-Color_Burdeo" onclick="checkNombre('Color_Burdeo','Burdeo')">Burdeo</div>
+</div>
+<div class="filtro-color">
+<input type="radio" name="color" class="categ c-Color_Verde" tag="Color_Verde" value2="Verde">
+<div class="fil h-Color_Verde" onclick="checkNombre('Color_Verde','Verde')">Verde</div>
+</div>
+</form>
+<div class="clearfix"></div>
+<div class="text-fil"> MATERIAL DEL ZAPATO </div>
+<form action="http://www.placare.com/action_page.php" class="chek">
+<div class="filtro-talla">
+<input type="radio" class="categ c-Mat_Capellada_Cuero" name="material" tag="Mat_Capellada_Cuero" value2="Cuero" value="Bike">
+<div class="fil h-Mat_Capellada_Cuero" onclick="checkNombre('Mat_Capellada_Cuero','Cuero')"> Cuero </div>
+</div>
+<!-- <div class="filtro-talla">
+<input type="radio" class="categ c-Mat_Capellada_Eco_Cuero" name="vehicle2" tag="Mat_Capellada_Eco_Cuero" value="Eco Cuero" value="Cara" onclick="checkNombre('Mat_Capellada_Eco_Cuero','Eco')">
+<div class="fil h-Mat_Capellada_Eco_Cuero" onclick="checkNombre('Mat_Capellada_Eco_Cuero','Eco')"> Eco Cuero </div>
+<i class="fa fa-check-square ch-Mat_Capellada_Eco_Cuero hidden" aria-hidden="true" onclick="uncheck('Mat_Capellada_Eco_Cuero','Eco')"></i>
+</div>-->
+</form>
+<div class="clearfix"></div>
+<div class="text-fil"> MARCA </div>
+<form action="http://www.placare.com/action_page.php" class="chek">
+<!-- <div class="filtro-marca">
+<input type="radio" class="categ c-Belle" name="vehicle2" tag="Belle" value="Car" onclick="checkNombre('Belle')">
+<div class="fil h-Belle" onclick="checkNombre('Belle')">Belle</div>
+<i class="fa fa-check-square ch-Belle hidden" aria-hidden="true" onclick="uncheck('Belle')"></i>
+</div> -->
+<div class="filtro-marca">
+<input type="radio" class="categ c-Marca_Caffeine" name="marca" tag="Marca_Caffeine" value2="Caffeine">
+<div class="fil h-Caffeine" onclick="checkNombre('Caffeine')">Caffeine</div>
+<i class="fa fa-check-square ch-Caffeine hidden" aria-hidden="true" onclick="uncheck('Caffeine')"></i>
+</div>
+<div class="filtro-marca">
+<input type="radio" class="categ c-Marca_Cocomate" name="marca" tag="Marca_Cocomate" value2="Cocomate">
+<div class="fil h-Cocomate" onclick="checkNombre('Cocomate')">Cocomate</div>
+</div>
+<!--<div class="filtro-marca">
+<input type="radio" class="categ c-Degas" name="vehicle1" tag="Degas" value="Bike" onclick="checkNombre('Degas')">
+<div class="fil h-Degas" onclick="checkNombre('Degas')">Degas </div>
+<i class="fa fa-check-square ch-Degas hidden" aria-hidden="true" onclick="uncheck('Degas')"></i>
+</div>-->
+<div class="filtro-marca">
+<input type="radio" class="categ c-Marca_Manzini" name="marca" tag="Marca_Manzini" value2="Manzini">
+<div class="fil h-Manzini" onclick="checkNombre('Manzini', 'Manzini')">Manzini</div>
+</div>
+<!--<div class="filtro-marca">
+<input type="radio" class="categ c-Lola_Canales" name="marca" tag="Lola_Canales" value="Car" onclick="checkNombre('Lola_Canales', 'Lola Canales')">
+<div class="fil h-Lola_Canales" onclick="checkNombre('Lola_Canales', 'Lola Canales')">Lola Canales</div>
+<i class="fa fa-check-square ch-Lola_Canales hidden" aria-hidden="true" onclick="uncheck('Lola_Canales', 'Lola Canales')"></i>
+</div>
+<div class="filtro-marca">
+<input type="radio" class="categ c-Pasoli" name="marca" tag="Pasoli" value="Car" onclick="checkNombre('Pasoli')">
+<div class="fil h-Pasoli" onclick="checkNombre('Pasoli')">Pasoli</div>
+<i class="fa fa-check-square ch-Pasoli hidden" aria-hidden="true" onclick="uncheck('Pasoli')"></i>
+</div> -->
+<div class="filtro-marca">
+<input type="radio" class="categ c-Marca_Tarragona" name="marca" tag="Marca_Tarragona" value2="Tarragona">
+<div class="fil h-Tarragona" onclick="checkNombre('Tarragona')">Tarragona</div>
+</div>
+</form>
+<div class="clearfix"></div>
+<!-- <div class="text-fil"> OCASIÓN</div>
+<form action="/action_page.php" class="chek">
+<div class="filtro-categorias">
+<input type="radio" class="categ c-Categoria4_Casuales" name="ocasion" tag="Categoria4_Casuales" value2="Casuales">
+<div class="fil h-Categoria4_Casuales" onclick="checkNombre('Categoria4_Casuales','Casuales')">Casuales</div>
+</div>
+<div class="filtro-categorias">
+<input type="radio" class="categ c-Categoria4_Vestir" value2="Vestir" name="ocasion" tag="Categoria4_Vestir">
+<div class="fil h-Categoria4_Vestir" onclick="checkNombre('Categoria4_Vestir','Vestir')">Vestir</div>
+</div>
+</form> -->
+<div class="clearfix"></div>
+<!-- <div class="text-fil"> TIPO DE CIERRE </div>
+<form action="/action_page.php" class="chek">
+<div class="filtro-talla">
+<input type="radio" class="categ c-Cierre_Abierto" name="cierre" value2="Abierto" tag="Cierre_Abierto">
+<div class="fil h-Cierre_Abierto" onclick="checkNombre('Cierre_Abierto','Abierto')"> Abierto </div>
+</div>
+<div class="filtro-talla">
+<input type="radio" class="categ c-Cierre-Cerrado" name="cierre" value2="Cerrado" tag="Cierre_Cerrado">
+<div class="fil h-Cierre_Cerrado" onclick="checkNombre('Cierre_Cerrado','Cerrado')"> Cerrado </div>
+</div>
+</form> -->
+<div class="clearfix"></div>
+<!-- <div class="text-fil"> MATERIAL SUELA </div>
+<form action="/action_page.php" class="chek">
+<div class="filtro-talla">
+<input type="radio" class="categ c-Mat_Suela_Goma_Eva" name="vehicle1" value="Eva" tag="Mat_Suela_Goma_Eva" value="Bike" onclick="checkNombre('Mat_Suela_Goma_Eva','Goma_Eva')">
+<div class="fil h-Mat_Suela_Goma_Eva" onclick="checkNombre('Mat_Suela_Goma_Eva','Goma_Eva')"> Eva </div>
+<i class="fa fa-check-square ch-Mat_Suela_Goma_Eva hidden" aria-hidden="true" onclick="uncheck('Mat_Suela_Goma_Eva','Goma_Eva')"></i>
+</div>
+<div class="filtro-talla">
+<input type="radio" class="categ c-Mat_Suela_Kratón" name="suela" value2="Kratón" tag="Mat_Suela_Kratón">
+<div class="fil h-Mat_Suela_Kratón" onclick="checkNombre('Mat_Suela_Kratón','Kratón')"> Kratón </div>
+</div>
+<div class="filtro-talla">
+<input type="radio" class="categ c-Mat_Suela_Crepe" value2="Crepe" name="suela" tag="Mat_Suela_Crepe">
+<div class="fil h-Mat_Suela_Crepe" onclick="checkNombre('Mat_Suela_Crepe','Crepe')"> Crepe </div>
+</div>
+</form> -->
+<div class="clearfix"></div>
+<!-- <div class="text-fil"> MATERIAL FORRO </div>
+<form action="/action_page.php" class="chek">
+<div class="filtro-talla">
+<input type="radio" class="categ c-Mat_Forro_Eco_Cuero" name="forro" tag="Mat_Forro_Eco_Cuero" value2="Eco Cuero">
+<div class="fil h-Mat_Forro_Eco_Cuero" onclick="checkNombre('Mat_Forro_Eco_Cuero','Forro Eco Cuero')"> Eco Cuero </div>
+</div>
+<div class="filtro-talla">
+<input type="radio" class="categ c-Mat_Forro_Textil" name="forro" tag="Mat_Forro_Textil" value2="Textil">
+<div class="fil h-Mat_Forro_Textil" onclick="checkNombre('Mat_Forro_Textil','Forro Textil')"> Textil </div>
+</div>
+</form> -->
+</div>
+</div>
+</section>
+</div>
+<section>
+<div class="col-md-8 col-sm-8 col-xs-12 muu">
+<div class="col-md-12 col-sm-12 col-xs-12 mii">
+<div class="texto-header-pro-2 tag-header">botines</div><div class="texto-header-pro-3 tag-header2"></div>
+</div>
+<div class="col-md-12 col-sm-12 col-xs-12 hidden-xs visible-md visible-sm visible-lg">
+<div class="dropdown">
+<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Ordenar por:
+<span class="caret"></span></button>
+<ul class="dropdown-menu">
+<li><a href="#!" class="mayor">Precio: Mayor a menor</a></li>
+<li><a href="#!" class="menor">Precio: Menor a mayor</a></li>
+<li><a href="#!" class="nombre">Nombre</a></li>
+</ul>
+</div>
+</div>
+<div class="">
+<div class=" filtrosRec hidden-xs">
+<!-- <div class="ordenar-precio"> Menos de $50.000 <i class="fa fa-times" aria-hidden="true" onclick="uncheck('billeteras')"></i></div> -->
+</div>
+</div>
+<div class="col-md-12 col-sm-12 col-xs-12">
+<div class="limpiar hidden-xs hidden-sm">LIMPIAR TODO </div>
+</div>
+<div class="col-md-12 col-sm-12 col-xs-12 kinti">
+<a href="#!" class="variables1" tag="variable_1">Tallas Disponibles </a>
+<a class=""> &nbsp &nbsp &nbsp</a>
+<!--<a href="#!" class="variables3" tag="variable_3">Tipo de Taco</a>
+<a class=""> &nbsp &nbsp &nbsp</a>
+<a href="#!" class="variables4" tag="variable_4">Altura Taco</a>
+<a class=""> &nbsp &nbsp &nbsp</a>
+<a href="#!" class="variables2" tag="variable_2">Altura Plataforma </a>-->
+</div>
+<form action="http://www.placare.com/action_page.php" class="chek">
+<div class="col-md-3 col-sm-3 col-xs-12 vari" style="margin-bottom: 0%;">
+<div class="filtro-talla c-variable_1">
+<label class="hidden c-variable_1">
+<input class="hidden categ c-variable_1 c-Talla_38" type="radio" name="checkbox" tag="Talla_38" value2="38">38
+</label>
+</div>
+<div class="filtro-talla c-variable_1">
+<label class="hidden c-variable_1">
+<input class="hidden categ c-variable_1 c-Talla_39" type="radio" name="checkbox" tag="Talla_39" value2="39">39
+</label>
+</div>
+<div class="filtro-talla c-variable_1">
+<label class="hidden c-variable_1">
+<input class="hidden categ c-variable_1 c-Talla_40" type="radio" name="checkbox" tag="Talla_40" value2="40">40
+</label>
+</div>
+<div class="filtro-talla c-variable_1">
+<label class="hidden c-variable_1">
+<input class="hidden categ c-variable_1 c-Talla_41" type="radio" name="checkbox" tag="Talla_41" value2="41">41
+</label>
+</div>
+<div class="filtro-talla c-variable_1">
+<label class="hidden c-variable_1">
+<input class="hidden categ c-variable_1 c-Talla_42" type="radio" name="checkbox" tag="Talla_42" value2="42">42
+</label>
+</div>
+<div class="filtro-talla c-variable_1">
+<label class="hidden c-variable_1">
+<input class="hidden categ c-variable_1 c-Talla_43" type="radio" name="checkbox" tag="Talla_43" value2="43">43
+</label>
+</div>
+<div class="filtro-talla c-variable_1">
+<label class="hidden c-variable_1">
+<input class="hidden categ c-variable_1 c-Talla_44" type="radio" name="checkbox" tag="Talla_44" value2="44">44
+</label>
+</div>
+<div class="filtro-talla c-variable_1">
+<label class="hidden c-variable_1">
+<input class="hidden categ c-variable_1 c-Talla_45" type="radio" name="checkbox" tag="Talla_45" value2="45">45
+</label>
+</div>
+<div class="filtro-talla c-variable_1">
+<label class="hidden c-variable_1">
+<input class="hidden categ c-variable_1 c-Talla_46" type="radio" name="checkbox" tag="Talla_46" value2="46">46
+</label>
+</div>
+<!--<div class="filtro-talla c-variable_2">
+<label class="hidden c-variable_2">
+<input class="hidden categ c-variable_2 c-Plataform_03" type="checkbox" name="checkbox" tag="Platform03" value="0.3" onclick="checkNombre('Plataform_03','0.3')">0.3cms
+</label>
+<i class="fa fa-check-square c-variable_dos ch-Plataform_03 other hidden" aria-hidden="true" onclick="uncheck('Plataform_03','0.3')"></i>
+</div>
+<div class="filtro-talla c-variable_2">
+<label class="hidden c-variable_2">
+<input class="hidden categ c-variable_2 c-Plataform_05" type="checkbox" name="checkbox" tag="Platform05" value="0.5" onclick="checkNombre('Plataform_05','0.5')">0.5cms
+</label>
+<i class="fa fa-check-square c-variable_dos ch-Plataform_05 other hidden" aria-hidden="true" onclick="uncheck('Plataform_05','0.5')"></i>
+</div>
+<div class="filtro-talla c-variable_2">
+<label class="hidden c-variable_2">
+<input class="hidden categ c-variable_2 c-Plataform_07" type="checkbox" name="checkbox" tag="Platform07" value="0.7" onclick="checkNombre('Plataform_07','0.7')">0.7cms
+</label>
+<i class="fa fa-check-square c-variable_dos ch-Plataform_07 other hidden" aria-hidden="true" onclick="uncheck('Plataform_07','0.7')"></i>
+</div>
+<div class="filtro-talla c-variable_2">
+<label class="hidden c-variable_2">
+<input class="hidden categ c-variable_2 c-Plataform_1" type="checkbox" name="checkbox" tag="Platform1" value="1" onclick="checkNombre('Plataform_1','1')">1cms
+</label>
+<i class="fa fa-check-square c-variable_dos ch-Plataform_1 other hidden" aria-hidden="true" onclick="uncheck('Plataform_1','1')"></i>
+</div>
+<div class="filtro-talla c-variable_2">
+<label class="hidden c-variable_2">
+<input class="hidden categ c-variable_2 c-Plataform_12" type="checkbox" name="checkbox" tag="Platform12" value="1.2" onclick="checkNombre('Plataform_12','1.2')">1.2cms
+</label>
+<i class="fa fa-check-square c-variable_dos ch-Plataform_12 other hidden" aria-hidden="true" onclick="uncheck('Plataform_12','1.2')"></i>
+</div>
+<div class="filtro-talla c-variable_2">
+<label class="hidden c-variable_2">
+<input class="hidden categ c-variable_2 c-Plataform_15" type="checkbox" name="checkbox" tag="Platform15" value="1.5" onclick="checkNombre('Plataform_15','1.5')">1.5cms
+</label>
+<i class="fa fa-check-square c-variable_dos ch-Plataform_15 other hidden" aria-hidden="true" onclick="uncheck('Plataform_15','1.5')"></i>
+</div>
+<div class="filtro-talla c-variable_2">
+<label class="hidden c-variable_2">
+<input class="hidden categ c-variable_2 c-Plataform_2" type="checkbox" name="checkbox" tag="Platform2" value="2" onclick="checkNombre('Plataform_2','2')">2cms
+</label>
+<i class="fa fa-check-square c-variable_dos ch-Plataform_2 other hidden" aria-hidden="true" onclick="uncheck('Plataform_2','2')"></i>
+</div>
+<div class="filtro-talla c-variable_2">
+<label class="hidden c-variable_2">
+<input class="hidden categ c-variable_2 c-Plataform_25" type="checkbox" name="checkbox" tag="Platform25" value="2.5" onclick="checkNombre('Plataform_25','2.5')">2.5cms
+</label>
+<i class="fa fa-check-square c-variable_dos ch-Plataform_25 other hidden" aria-hidden="true" onclick="uncheck('Plataform_2.5','2.5')"></i>
+</div>
+<div class="filtro-talla c-variable_2">
+<label class="hidden c-variable_2">
+<input class="hidden categ c-variable_2 c-Plataform_3" type="checkbox" name="checkbox" tag="Platform3" value="3" onclick="checkNombre('Plataform_3','3')">3cms
+</label>
+<i class="fa fa-check-square c-variable_dos ch-Plataform_3 other hidden" aria-hidden="true" onclick="uncheck('Plataform_3','3')"></i>
+</div>
+<div class="filtro-talla c-variable_2">
+<label class="hidden c-variable_2">
+<input class="hidden categ c-variable_2 c-Plataform_35" type="checkbox" name="checkbox" tag="Platform35" value="3.5" onclick="checkNombre('Plataform_35','3.5')">3.5cms
+</label>
+<i class="fa fa-check-square c-variable_dos ch-Plataform_35 other hidden" aria-hidden="true" onclick="uncheck('Plataform_35','3.5')"></i>
+</div>
+<div class="filtro-talla c-variable_2">
+<label class="hidden c-variable_2">
+<input class="hidden categ c-variable_2 c-Plataform_4" type="checkbox" name="checkbox" tag="Platform4" value="4" onclick="checkNombre('Plataform_4','4')">4cms
+</label>
+<i class="fa fa-check-square c-variable_dos ch-Plataform_4 other hidden" aria-hidden="true" onclick="uncheck('Plataform_4','4')"></i>
+</div>
+<div class="filtro-talla c-variable_2">
+<label class="hidden c-variable_2">
+<input class="hidden categ c-variable_2 c-Plataform_45" type="checkbox" name="checkbox" tag="Platform4.5" value="4.5" onclick="checkNombre('Plataform_45','4.5')">4.5cms
+</label>
+<i class="fa fa-check-square c-variable_dos ch-Plataform_45 other hidden" aria-hidden="true" onclick="uncheck('Plataform_45','4.5')"></i>
+</div>
+<div class="filtro-talla c-variable_3">
+<label class="hidden c-variable_3">
+<input class="hidden categ c-variable_3 c-Forma_Taco_Alto" value="alto" type="checkbox" name="checkbox" tag="Forma_Taco_Alto" value="Forma_Taco_Alto" onclick="checkNombre('Forma_Taco_Alto','Alto')">Alto
+</label>
+<i class="fa fa-check-square c-variable_tres ch-Forma_Taco_Alto other hidden" aria-hidden="true" onclick="uncheck('Forma_Taco_Alto','Alto')"></i>
+</div>
+<div class="filtro-talla c-variable_3">
+<label class="hidden c-variable_3">
+<input class="hidden categ c-variable_3 c-Forma_Taco_Bajo" value="bajo" type="checkbox" name="checkbox" tag="Forma_Taco_Bajo" value="Forma_Taco_Bajo" onclick="checkNombre('Forma_Taco_Bajo','Bajo')">Bajo
+</label>
+<i class="fa fa-check-square c-variable_tres other ch-Forma_Taco_Bajo hidden" aria-hidden="true" onclick="uncheck('Forma_Taco_Bajo','Bajo')"></i>
+</div>
+<div class="filtro-talla c-variable_3">
+<label class="hidden c-variable_3">
+<input class="hidden categ c-variable_3 c-Forma_Taco_Chino" value="Chino" type="checkbox" name="checkbox" tag="Forma_Taco_Chino" value="Forma_Taco_Chino" onclick="checkNombre('Forma_Taco_Chino','Chino')">Chino
+</label>
+<i class="fa fa-check-square c-variable_tres ch-Forma_Taco_Chino other hidden" aria-hidden="true" onclick="uncheck('Forma_Taco_Chino','Chino')"></i>
+</div>
+<div class="filtro-talla c-variable_3">
+<label class="hidden c-variable_3">
+<input class="hidden categ c-variable_3 c-Forma_Taco_Medio" value="Medio" type="checkbox" name="checkbox" tag="Forma_Taco_Medio" value="Forma_Taco_Medio" onclick="checkNombre('Forma_Taco_Medio','Medio')">Medio
+</label>
+<i class="fa fa-check-square c-variable_tres ch-Forma_Taco_Medio other hidden" aria-hidden="true" onclick="uncheck('Forma_Taco_Medio','Medio')"></i>
+</div>
+<div class="filtro-talla c-variable_3">
+<label class="hidden c-variable_3">
+<input class="hidden categ c-variable_3 c-Forma_Taco_Plano" value="Plano" type="checkbox" name="checkbox" tag="Forma_Taco_Plano" value="Forma_Taco_Plano" onclick="checkNombre('Forma_Taco_Plano','Plano')">Plano
+</label>
+<i class="fa fa-check-square c-variable_tres ch-Forma_Taco_Plano other hidden" aria-hidden="true" onclick="uncheck('Forma_Taco_Plano','Plano')"></i>
+</div>
+<div class="filtro-talla c-variable_3">
+<label class="hidden c-variable_3">
+<input class="hidden categ c-variable_3 c-Forma_Taco_Tacon" value="Tacon" type="checkbox" name="checkbox" tag="Forma_Taco_Tacon" value="Forma_Taco_Tacon" onclick="checkNombre('Forma_Taco_Tacon','Tacon')">Tacón
+</label>
+<i class="fa fa-check-square c-variable_tres ch-Forma_Taco_Tacon other hidden" aria-hidden="true" onclick="uncheck('Forma_Taco_Tacon','Tacon')"></i>
+</div>
+<div class="filtro-talla c-variable_3">
+<label class="hidden c-variable_3">
+<input class="hidden categ c-variable_3 c-Forma_Taco_Terraplen" type="checkbox" name="checkbox" tag="Forma_Taco_Terraplen" value="Forma_Taco_Terraplen" value="Terraplen" onclick="checkNombre('Forma_Taco_Terraplen','Terraplen')">Terraplén
+</label>
+<i class="fa fa-check-square c-variable_tres ch-Forma_Taco_Terraplen other hidden" aria-hidden="true" onclick="uncheck('Forma_Taco_Terraplen','Terraplen')"></i>
+</div>
+<div class="filtro-talla c-variable_4">
+<label class="hidden c-variable_4">
+<input class="hidden categ c-variable_4 c-Taco_15" type="checkbox" tag="Taco_15" value="1.5" onclick="checkNombre('Taco_15','1.5')">1.5cms
+</label>
+<i class="fa fa-check-square c-variable_cuatro ch-Taco_15 other hidden" aria-hidden="true" onclick="uncheck('Taco_15','1.5')"></i>
+</div>
+<div class="filtro-talla c-variable_4">
+<label class="hidden c-variable_4">
+<input class="hidden categ c-variable_4 c-Taco_2" type="checkbox" tag="Taco_2" value="2" onclick="checkNombre('Taco_2','2')">2cms
+</label>
+<i class="fa fa-check-square c-variable_cuatro ch-Taco_2 other hidden" aria-hidden="true" onclick="uncheck('Taco_2','2')"></i>
+</div>
+<div class="filtro-talla c-variable_4">
+<label class="hidden c-variable_4">
+<input class="hidden categ c-variable_4 c-Taco_25" type="checkbox" tag="Taco_25" value="2.5" onclick="checkNombre('Taco_25','2.5')">2.5cms
+</label>
+<i class="fa fa-check-square c-variable_cuatro ch-Taco_25 other hidden" aria-hidden="true" onclick="uncheck('Taco_25','2.5')"></i>
+</div>
+<div class="filtro-talla c-variable_4">
+<label class="hidden c-variable_4">
+<input class="hidden categ c-variable_4 c-Taco_3" type="checkbox" tag="Taco_3" value="3" onclick="checkNombre('Taco_3','3')">3cms
+</label>
+<i class="fa fa-check-square c-variable_cuatro ch-Taco_3 other hidden" aria-hidden="true" onclick="uncheck('Taco_3','3')"></i>
+</div>
+<div class="filtro-talla c-variable_4">
+<label class="hidden c-variable_4">
+<input class="hidden categ c-variable_4 c-Taco_35" type="checkbox" tag="Taco_35" value="3.5" onclick="checkNombre('Taco_35','3.5')">3.5cms
+</label>
+<i class="fa fa-check-square c-variable_cuatro ch-Taco_35 other hidden" aria-hidden="true" onclick="uncheck('Taco_35','3.5')"></i>
+</div>
+<div class="filtro-talla c-variable_4">
+<label class="hidden c-variable_4">
+<input class="hidden categ c-variable_4 c-Taco_4" type="checkbox" tag="Taco_4" value="4" onclick="checkNombre('Taco_4','4')">4cms
+</label>
+<i class="fa fa-check-square c-variable_cuatro ch-Taco_4 other hidden" aria-hidden="true" onclick="uncheck('Taco_4','4')"></i>
+</div>
+<div class="filtro-talla c-variable_4">
+<label class="hidden c-variable_4">
+<input class="hidden categ c-variable_4 c-Taco_45" type="checkbox" tag="Taco_45" value="4.5" onclick="checkNombre('Taco_45','4.5')">4.5cms
+</label>
+<i class="fa fa-check-square c-variable_cuatro ch-Taco_45 other hidden" aria-hidden="true" onclick="uncheck('Taco_45','4.5')"></i>
+</div>
+<div class="filtro-talla c-variable_4">
+<label class="hidden c-variable_4">
+<input class="hidden categ c-variable_4 c-Taco_5" type="checkbox" tag="Taco_5" value="5" onclick="checkNombre('Taco_5','5')">5cms
+</label>
+<i class="fa fa-check-square c-variable_cuatro ch-Taco_5 other hidden" aria-hidden="true" onclick="uncheck('Taco_5','5')"></i>
+</div>
+<div class="filtro-talla c-variable_4">
+<label class="hidden c-variable_4">
+<input class="hidden categ c-variable_4 c-Taco_55" type="checkbox" tag="Taco_55" value="5.5" onclick="checkNombre('Taco_55','5.5')">5.5cms
+</label>
+<i class="fa fa-check-square c-variable_cuatro ch-Taco_55 other hidden" aria-hidden="true" onclick="uncheck('Taco_55','5.5')"></i>
+</div>
+<div class="filtro-talla c-variable_4">
+<label class="hidden c-variable_4">
+<input class="hidden categ c-variable_4 c-Taco_6" type="checkbox" tag="Taco_6" value="6" onclick="checkNombre('Taco_6','6')">6cms
+</label>
+<i class="fa fa-check-square c-variable_cuatro ch-Taco_6 other hidden" aria-hidden="true" onclick="uncheck('Taco_6','6')"></i>
+</div>
+<div class="filtro-talla c-variable_4">
+<label class="hidden c-variable_4">
+<input class="hidden categ c-variable_4 c-Taco_65" type="checkbox" tag="Taco_65" value="6.5" onclick="checkNombre('Taco_65','6.5')">6.5cms
+</label>
+<i class="fa fa-check-square c-variable_cuatro ch-Taco_65 other hidden" aria-hidden="true" onclick="uncheck('Taco_65','6.5')"></i>
+</div>
+<div class="filtro-talla c-variable_4">
+<label class="hidden c-variable_4">
+<input class="hidden categ c-variable_4 c-Taco_7" type="checkbox" tag="taco_7" value="7" onclick="checkNombre('Taco_7','7')">7cms
+</label>
+<i class="fa fa-check-square c-variable_cuatro ch-Taco_7 other hidden" aria-hidden="true" onclick="uncheck('Taco_7','7')"></i>
+</div>
+<div class="filtro-talla c-variable_4">
+<label class="hidden c-variable_4">
+<input class="hidden categ c-variable_4 c-Taco_75" type="checkbox" tag="Taco_75" value="7.5" onclick="checkNombre('Taco_75','7.5')">7.5cms
+</label>
+<i class="fa fa-check-square c-variable_cuatro ch-Taco_75 other hidden" aria-hidden="true" onclick="uncheck('Taco_75','7.5')"></i>
+</div>
+<div class="filtro-talla c-variable_4">
+<label class="hidden c-variable_4">
+<input class="hidden categ c-variable_4 c-Taco_8" type="checkbox" tag="Taco_8" value="8" onclick="checkNombre('Taco_8','8')">8cms
+</label>
+<i class="fa fa-check-square c-variable_cuatro ch-Taco_8 other hidden" aria-hidden="true" onclick="uncheck('Taco_8','8')"></i>
+</div>
+<div class="filtro-talla c-variable_4">
+<label class="hidden c-variable_4">
+<input class="hidden categ c-variable_4 c-Taco_85" type="checkbox" tag="Taco_8.5" value="8.5" onclick="checkNombre('Taco_85','8.5')">8.5cms
+</label>
+<i class="fa fa-check-square c-variable_cuatro ch-Taco_85 other hidden" aria-hidden="true" onclick="uncheck('Taco_85','8.5')"></i>
+</div>
+<div class="filtro-talla c-variable_4">
+<label class="hidden c-variable_4">
+<input class="hidden categ c-variable_4 c-Taco_9" type="checkbox" tag="Taco_9" value="9" onclick="checkNombre('Taco_9','9')">9cms
+</label>
+<i class="fa fa-check-square c-variable_cuatro ch-Taco_9 other hidden" aria-hidden="true" onclick="uncheck('Taco_9','9')"></i>
+</div>
+<div class="filtro-talla c-variable_4">
+<label class="hidden c-variable_4">
+<input class="hidden categ c-variable_4 c-Taco_9.5" type="checkbox" tag="Taco_95" value="9.5" onclick="checkNombre('Taco_9.5','9.5')">9.5cms
+</label>
+<i class="fa fa-check-square c-variable_cuatro ch-Taco_9.5 other hidden" aria-hidden="true" onclick="uncheck('Taco_9.5','9.5')"></i>
+</div>
+<div class="filtro-talla c-variable_4">
+<label class="hidden c-variable_4">
+<input class="hidden categ c-variable_4 c-Taco_10" type="checkbox" tag="Taco_10" value="10" onclick="checkNombre('Taco_10','10')">10cms
+</label>
+<i class="fa fa-check-square c-variable_cuatro ch-Taco_10 other hidden" aria-hidden="true" onclick="uncheck('Taco_10','10')"></i>
+</div>
+<div class="filtro-talla c-variable_4">
+<label class="hidden c-variable_4">
+<input class="hidden categ c-variable_4 c-Taco_105" type="checkbox" tag="Taco_105" value="10.5" onclick="checkNombre('Taco_105','10.5')">10.5cms
+</label>
+<i class="fa fa-check-square c-variable_cuatro ch-Taco_105 other hidden" aria-hidden="true" onclick="uncheck('Taco_105','10.5')"></i>
+</div>
+<div class="filtro-talla c-variable_4">
+<label class="hidden c-variable_4">
+<input class="hidden categ c-variable_4 c-Taco_11" type="checkbox" tag="Taco_11" value="11" onclick="checkNombre('Taco_11','11')">11cms
+</label>
+<i class="fa fa-check-square c-variable_cuatro ch-Taco_11 other hidden" aria-hidden="true" onclick="uncheck('Taco_11','11')"></i>
+</div>
+<div class="filtro-talla c-variable_4">
+<label class="hidden c-variable_4">
+<input class="hidden categ c-variable_4 c-Taco_115" type="checkbox" tag="Taco_115" value="11.5" onclick="checkNombre('Taco_115','11.5')">11.5cms
+</label>
+<i class="fa fa-check-square c-variable_cuatro ch-Taco_115 other hidden" aria-hidden="true" onclick="uncheck('Taco_115','11.5')"></i>
+</div>
+<div class="filtro-talla c-variable_4">
+<label class="hidden c-variable_4">
+<input class="hidden categ c-variable_4 c-Taco_12" type="checkbox" tag="Taco_12" value="12" onclick="checkNombre('Taco_12','12')">12cms
+</label>
+<i class="fa fa-check-square c-variable_cuatro ch-Taco_12 other hidden" aria-hidden="true" onclick="uncheck('Taco_12','12')"></i>
+</div>
+<div class="filtro-talla c-variable_4">
+<label class="hidden c-variable_4">
+<input class="hidden categ c-variable_4 c-Taco_125" type="checkbox" tag="Taco_125" value="12.5" onclick="checkNombre('Taco_125','12.5')">12.5cms
+</label>
+<i class="fa fa-check-square c-variable_cuatro ch-Taco_125 other hidden" aria-hidden="true" onclick="uncheck('Taco_125','12.5')"></i>
+</div>
+<div class="filtro-talla c-variable_4">
+<label class="hidden c-variable_4">
+<input class="hidden categ c-variable_4 c-Taco_13" type="checkbox" tag="Taco_13" value="13" onclick="checkNombre('Taco_13','13')">13cms
+</label>
+<i class="fa fa-check-square c-variable_cuatro ch-Taco_13 other hidden" aria-hidden="true" onclick="uncheck('Taco_13','13')"></i>
+</div>
+-->
+</div>
+</form>
+</div>
+</section>
+<!-- *****fin filtros DESKTOP**** -->
+<!-- ******principio filtros MOVIL**** -->
+<div class="col-xs-12 hidden-md hidden-lg hidden-sm visible-xs">
+<div class="fixx">
+<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="modal" data-target="#myModal-orde">Ordenar por:
+<span class="caret"></span></button>
+<!--<div class="palito"> </div> -->
+<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="modal" data-target="#myModal-fil-men">Filtrar por:
+<span class="caret"></span></button>
+</div>
+</div>
+<div class="col-md-8 col-sm-8 col-xs-12">
+<div class="" style=""></div>
+<hr class="listado">
+</div>
+<div class="visible-xs hidden-md hidden-sm hidden-lg" style="height:450px;display:block;margin:auto auto 0 auto;"></div>
+<div class="col-md-8 col-sm-8 col-xs-12 pinki">
+<div class="products" style="min-height: 130px"></div>
+<div class="col-xs-12">
+<div align="center">
+<a class="link-recargar hidden limpiar">Reanudar Busqueda</a>
+<button type="button" class="btn btn-default more-products" style="display: none">CARGAR MÁS PRODUCTOS</button>
+</div>
+</div>
+</div>
+</section>
+</body>
+<div id="footer" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<div class="container min-2" style="">
+<div class="col-md-2 col-sm-2 col-xs-12 y-1">
+<div class="text-left fot">
+<div class="clearfix"></div>
+<ul class="no-doti">
+<div class="ul-1 " text-id="placare_footer_0"> <p>Tienda</p>
+</div>
+<div class="pas " text-id="placare_footer_1"> <p><a href="mules-slippers-mujer.html">Mules / Slippers</a>&nbsp;Mujer</p>
+</div>
+<div class="pas " text-id="placare_footer_2"> <p><a href="botines-mujer.html">Botines Mujer</a><br></p>
+</div>
+<div class="pas " text-id="placare_footer_3"> <p><a href="sandalias-mujer.html">Sandalias Mujer</a><br></p>
+</div>
+<div class="pas " text-id="placare_footer_4_0"> <p><a href="plataformas-mujer.html">Plataformas Mujer</a><br></p>
+</div>
+<div class="pas " text-id="placare_footer_5"> <p><a href="playeras-mujer.html">Playeras Mujer</a><br></p>
+</div>
+<div class="pas " text-id="placare_footer_6"> <p><a href="hombres.html">Hombres</a><br></p>
+</div>
+<div class="pas " text-id="placare_footer_66"> <br>
+</div>
+</ul>
+</div>
+</div>
+<div class="col-md-2 col-sm-2 col-xs-12 y-2">
+<div class="text-left fot">
+<div class="clearfix"></div>
+<ul class="no-doti">
+<div class="ul-1 " text-id="placare_footer_0_30_333"> <p> Servicio al cliente</p>
+</div>
+<div class="pas " text-id="placare_footer_31"> <p><a href="cambios-y-devoluciones.html">Cambios y devoluciones</a></p>
+</div>
+<div class="pas " text-id="placare_footer_2_32"> <p><a href="condiciones-de-envio.html">Condiciones de Envío</a></p>
+</div>
+<div class="pas " text-id="placare_footer_3_33"> <p><a href="terminos-de-servicio.html">TOS</a></p>
+</div>
+<div class="pas " text-id="placare_footer_4_0_34"> <p><a href="politicas-de-privacidad.html">Politicas de privacidad</a></p><p><a href="tiempo-de-envios.html">Tiempo de envíos</a><br></p><p><a href="#" style="background-color: rgba(245, 248, 250, 0.59);">Blog</a></p>
+</div>
+<div class="pas " text-id="placare_footer_5_35"> <p>&nbsp;</p>
+</div>
+<div class="pas " text-id="placare_footer_6_36"> <p>&nbsp;</p>
+</div>
+<div class="pas " text-id="placare_footer_66_37"> <p>&nbsp;</p>
+</div>
+</ul>
+</div>
+</div>
+<div class="col-md-2 col-sm-2 col-xs-12 visible-lg visible-md visible-sm hidden-xs y-3">
+<div class="inform-comerc text-left">
+<div class="clearfix"></div>
+<ul class="no-dot">
+<div class="ul-2 " text-id="placare_footer_son"> <p>SIGUENOS EN NUESTRAS REDES SOCIALES</p>
+</div>
+<div class="col-md-2">
+<div class="caja-fo-red">
+
+<a id="placare_footer_1_blue" href="https://www.instagram.com/placarechile/" target="_blank">
+<img id="placare_footer_1_blue" src="https://7static.loadingplay.com/static/images/1_b6847c0997ad9883659824ab17b54ae8_instragram_iconpng.png" onload="this.onload='';this.src='https://7static.loadingplay.com/static/images/200_b6847c0997ad9883659824ab17b54ae8_instragram_iconpng.png'" class="img-foot-red" alt="item">
+</a>
+
+</div>
+</div>
+<div class="col-md-2">
+<div class="caja-fo-red">
+
+<a id="placare_footer_2_blue" href="#" target="_blank">
+<img id="placare_footer_2_blue" src="https://84static.loadingplay.com/static/images/1_6db7c45faf6995a163ce5ab4181ed91f_pinterestpng.png" onload="this.onload='';this.src='https://84static.loadingplay.com/static/images/200_6db7c45faf6995a163ce5ab4181ed91f_pinterestpng.png'" class="img-foot-red" alt="item">
+</a>
+
+</div>
+</div>
+<div class="col-md-2">
+<div class="caja-fo-red">
+
+<a id="placare_footer_3_blue" href="#" target="_blank">
+<img id="placare_footer_3_blue" src="https://7static.loadingplay.com/static/images/1_2193f737c41bb3c0420dd03cb54a4463_you_tubepng.png" onload="this.onload='';this.src='https://7static.loadingplay.com/static/images/200_2193f737c41bb3c0420dd03cb54a4463_you_tubepng.png'" class="img-foot-red" alt="item">
+</a>
+
+</div>
+</div>
+<div class="col-md-2">
+<div class="caja-fo-red">
+
+<a id="placare_footer_4_blue" href="https://www.facebook.com/placarewoman/" target="_blank">
+<img id="placare_footer_4_blue" src="https://84static.loadingplay.com/static/images/1_3e544999a0e5283b5cf74ee42e3e1992_facebookpng.png" onload="this.onload='';this.src='https://84static.loadingplay.com/static/images/200_3e544999a0e5283b5cf74ee42e3e1992_facebookpng.png'" class="img-foot-red" alt="item">
+</a>
+
+</div>
+</div>
+<div class="col-md-2">
+<div class="caja-fo-red">
+
+<a id="placare_footer_5_blue" href="#" target="_blank">
+<img id="placare_footer_5_blue" src="https://7static.loadingplay.com/static/images/1_9268d36b180da7500157e2f611eb74bd_twitterpng.png" onload="this.onload='';this.src='https://7static.loadingplay.com/static/images/200_9268d36b180da7500157e2f611eb74bd_twitterpng.png'" class="img-foot-red" alt="item">
+</a>
+
+</div>
+</div>
+</ul>
+</div>
+</div>
+<!-- *****movil*** -->
+<div align="center">
+<div class="col-md-2 col-sm-2 col-xs-12 hidden-lg hidden-md hidden-sm visible-xs mi">
+<div class="inform-comerc text-left">
+<div class="clearfix"></div>
+<ul class="no-dot">
+<div class="ul-2 " text-id="placare_footer_son"> <p>SIGUENOS EN NUESTRAS REDES SOCIALES</p>
+</div>
+<div class="col-md-2 col-xs-2">
+<div class="caja-fo-red">
+
+<a id="placare_footer_1_blue" href="https://www.instagram.com/placarechile/" target="_blank">
+<img id="placare_footer_1_blue" src="https://7static.loadingplay.com/static/images/1_b6847c0997ad9883659824ab17b54ae8_instragram_iconpng.png" onload="this.onload='';this.src='https://7static.loadingplay.com/static/images/200_b6847c0997ad9883659824ab17b54ae8_instragram_iconpng.png'" class="img-foot-red" alt="item">
+</a>
+
+</div>
+</div>
+<div class="col-md-2 col-xs-2">
+<div class="caja-fo-red">
+
+<a id="placare_footer_2_blue" href="#" target="_blank">
+<img id="placare_footer_2_blue" src="https://84static.loadingplay.com/static/images/1_6db7c45faf6995a163ce5ab4181ed91f_pinterestpng.png" onload="this.onload='';this.src='https://84static.loadingplay.com/static/images/200_6db7c45faf6995a163ce5ab4181ed91f_pinterestpng.png'" class="img-foot-red" alt="item">
+</a>
+
+</div>
+</div>
+<div class="col-md-2 col-xs-2">
+<div class="caja-fo-red">
+
+<a id="placare_footer_3_blue" href="#" target="_blank">
+<img id="placare_footer_3_blue" src="https://7static.loadingplay.com/static/images/1_2193f737c41bb3c0420dd03cb54a4463_you_tubepng.png" onload="this.onload='';this.src='https://7static.loadingplay.com/static/images/200_2193f737c41bb3c0420dd03cb54a4463_you_tubepng.png'" class="img-foot-red" alt="item">
+</a>
+
+</div>
+</div>
+<div class="col-md-2 col-xs-2">
+<div class="caja-fo-red">
+
+<a id="placare_footer_4_blue" href="https://www.facebook.com/placarewoman/" target="_blank">
+<img id="placare_footer_4_blue" src="https://84static.loadingplay.com/static/images/1_3e544999a0e5283b5cf74ee42e3e1992_facebookpng.png" onload="this.onload='';this.src='https://84static.loadingplay.com/static/images/200_3e544999a0e5283b5cf74ee42e3e1992_facebookpng.png'" class="img-foot-red" alt="item">
+</a>
+
+</div>
+</div>
+<div class="col-md-2 col-xs-2">
+<div class="caja-fo-red">
+
+<a id="placare_footer_5_blue" href="#" target="_blank">
+<img id="placare_footer_5_blue" src="https://7static.loadingplay.com/static/images/1_9268d36b180da7500157e2f611eb74bd_twitterpng.png" onload="this.onload='';this.src='https://7static.loadingplay.com/static/images/200_9268d36b180da7500157e2f611eb74bd_twitterpng.png'" class="img-foot-red" alt="item">
+</a>
+
+</div>
+</div>
+</ul>
+</div>
+</div>
+</div>
+<!-- ****fin movil**** -->
+<!-- *******otras imagenes****** -->
+<div class="col-md-2 col-sm-2 col-xs-12 visible-md visible-lg visible-sm hidden-xs y-4">
+<div class="inform-comerc-2 text-left">
+<div class="clearfix"></div>
+<ul class="no-dot opi">
+<div class="ul-2 " text-id="placare_footer_son_ko"> <p> Despacho y pago</p>
+</div>
+<div class="col-md-8">
+<div class="caja-fo-red">
+
+<a id="placare_footer_des_1" href="#" target="_blank">
+<img id="placare_footer_des_1" src="https://84static.loadingplay.com/static/images/1_223f25c998e43ce7e6d328b3794b2708_webpayplpng.png" onload="this.onload='';this.src='https://84static.loadingplay.com/static/images/200_223f25c998e43ce7e6d328b3794b2708_webpayplpng.png'" class="img-foot-red-pa" alt="item">
+</a>
+
+</div>
+</div>
+<div class="col-md-8">
+<div class="caja-fo-red">
+
+<a id="placare_footer_des_2" href="#" target="_blank">
+<img id="placare_footer_des_2" src="https://84static.loadingplay.com/static/images/1_9cc9438184586979ba805a1463d159aa_chilexpressplacarepng.png" onload="this.onload='';this.src='https://84static.loadingplay.com/static/images/200_9cc9438184586979ba805a1463d159aa_chilexpressplacarepng.png'" class="img-foot-red-pa espe" alt="item">
+</a>
+
+</div>
+</div>
+<div class="col-md-8">
+<div class="caja-fo-red">
+
+<a id="placare_footer_des_3" href="#" target="_blank">
+<img id="placare_footer_des_3" src="https://7static.loadingplay.com/static/images/1_1980e0aa5bf87e3012ed984a5cde4a53_correosplacarepng.png" onload="this.onload='';this.src='https://7static.loadingplay.com/static/images/200_1980e0aa5bf87e3012ed984a5cde4a53_correosplacarepng.png'" class="img-foot-red-pa" alt="item">
+</a>
+
+</div>
+</div>
+</ul>
+</div>
+</div>
+<!-- *******otras imagenes MOOOOOOOVIL****** -->
+<div align="center">
+<div class="col-md-2 col-sm-2 col-xs-12 hidden-lg hidden-md hidden-sm visible-xs mi">
+<div class="inform-comerc-2 text-left">
+<div class="clearfix"></div>
+<ul class="no-dot op">
+<div class="ul-2 " text-id="placare_footer_son_ko"> <p> Despacho y pago</p>
+</div>
+<div class="col-md-2 col-xs-12">
+<div class="caja-fo-red">
+
+<a id="placare_footer_des_1" href="#" target="_blank">
+<img id="placare_footer_des_1" src="https://84static.loadingplay.com/static/images/1_223f25c998e43ce7e6d328b3794b2708_webpayplpng.png" onload="this.onload='';this.src='https://84static.loadingplay.com/static/images/200_223f25c998e43ce7e6d328b3794b2708_webpayplpng.png'" class="img-foot-red-pa" alt="item">
+</a>
+
+</div>
+</div>
+<div class="col-md-2 col-xs-12">
+<div class="caja-fo-red">
+
+<a id="placare_footer_des_2" href="#" target="_blank">
+<img id="placare_footer_des_2" src="https://84static.loadingplay.com/static/images/1_9cc9438184586979ba805a1463d159aa_chilexpressplacarepng.png" onload="this.onload='';this.src='https://84static.loadingplay.com/static/images/200_9cc9438184586979ba805a1463d159aa_chilexpressplacarepng.png'" class="img-foot-red-pa ch" alt="item">
+</a>
+
+</div>
+</div>
+<div class="col-md-2 col-xs-12">
+<div class="caja-fo-red">
+
+<a id="placare_footer_des_3" href="#" target="_blank">
+<img id="placare_footer_des_3" src="https://7static.loadingplay.com/static/images/1_1980e0aa5bf87e3012ed984a5cde4a53_correosplacarepng.png" onload="this.onload='';this.src='https://7static.loadingplay.com/static/images/200_1980e0aa5bf87e3012ed984a5cde4a53_correosplacarepng.png'" class="img-foot-red-pa co" alt="item">
+</a>
+
+</div>
+</div>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-2 col-sm-2 col-xs-12 y-5">
+<div class=" text-left">
+<div class="clearfix"></div>
+<ul class="d-o">
+<!-- <div class="ul-2 " text-id="placare_footer_30"> <p>Placare.com<br></p>
+</div>
+<div class="pas-4 " text-id="placare_footer_31"> <p><a href="/cambios-y-devoluciones">Cambios y devoluciones</a></p>
+</div>
+<div class="pas-4 " text-id="placare_footer_32"> <p>Seguridad en tu compra</p>
+</div>
+<div class="pas-4 " text-id="placare_footer_33"> <p>Calidad de los productos<br></p>
+</div>
+<div class="pas-4 " text-id="placare_footer_34"> <p><br></p>
+</div>
+<div class="pas-4 " text-id="placare_footer_35"> <p><br></p>
+</div> -->
+<div class="ul-2 " align="left" text-id="placare_footer_son_valores"> <p> placare.com</p>
+</div>
+<img class="img-cam" src="https://7static.loadingplay.com/static/images/a0af57bff2c90e1a3409636836a91502_ValoresPlacare.com">
+</ul>
+</div>
+</div>
+<div class="col-xs-12 hidden-md hidden-sm hidden-lg visible-xs">
+<hr>
+</div>
+<!-- ****imagenes*** -->
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 alme" style="">
+<div class="col-md-12 col-sm-12 col-xs-12 f-min">
+<div align="center">
+<div class="col-md-6 col-sm-6 col-xs-12">
+<div class="susi " text-id="placare_footer_ex_1"> <p>Suscribete a nuestro Placare.com para mantenerte al tanto de lanzamientos de productos, descuentos, novedades!</p> </div>
+<div class="ul-22-0 " text-id="placare_footer_ex_11"> <p>Escribe tu correo y elige tu preferencia.</p> </div>
+</div>
+<div class="col-md-6 col-sm-6 col-xs-12">
+<div class="form-group footer">
+<form id="formid" action='https://forms.zohopublic.com/sytes/form/suscripcionmailplacare/formperma/j1E5JE0fa70e4G5_G_fGg6CAG/htmlRecords/submit' name='form' method='POST'>
+<label class="control-label"></label>
+<div class=" controls">
+<input name="Email" placeholder="Tu correo electronico" class="form-control fot input-lg requiredField" type="email" id="itMail" data-error-invalid="Invalid email address" data-error-empty="Ingrese email" required>
+<input type="hidden" name="subject" value="contactanos" />
+</div>
+<span id="helpBlock3" class="hidden help-block help-mail">Tu correo electronico</span>
+<div class="hidden">
+<input type="text" name="SingleLine" value="" maxlength="255" invlovedinsalesiq=false />
+</div>
+<button type="submit" class="btn boton-news btn-default sus">Soy Mujer </button>
+<button type="submit" class="btn boton-news btn-default sus-h">Soy Hombre </button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="container min">
+<!-- <div class="col-md-12 col-sm-12 col-xs-12 alme">
+<div class="col-md-2 col-sm-2 col-xs-12">
+<div class="kop " text-id="placare_footer_ex_11_0"> <p>POPULAR &nbsp;SHOES</p> </div>
+</div>
+<div class="col-md-10 col-sm-10 col-xs-12">
+<hr class="new-f">
+</div>
+<div class="col-md-12 col-sm-12 col-xs-12 alme">
+<ol class="breadcrumb">
+<li class="breadcrumb-item " text-id="placare_mon_1"> Ballerinas</li> <li class="wer"> | </li>
+<li class="breadcrumb-item " text-id="placare_mon_2"> Botines</li> <li class="wer"> | </li>
+<li class="breadcrumb-item " text-id="placare_mon_33"> Mocasines</li> <li class="wer"> | </li>
+<li class="breadcrumb-item " text-id="placare_mon_4"> Plataformas<br></li> <li class="wer"> | </li>
+<li class="breadcrumb-item " text-id="placare_mon_5"> Playeras</li> <li class="wer"> | </li>
+<li class="breadcrumb-item " text-id="placare_mon_6"> Sandalias</li> <li class="wer"> | </li>
+<li class="breadcrumb-item " text-id="placare_mon_61"> Zapatos</li> <li class="wer"> | </li>
+<li class="breadcrumb-item " text-id="placare_mon_62"> Zapatillas</li> <li class="wer"> | </li>
+<li class="breadcrumb-item " text-id="placare_mon_63"> Formales</li>
+</ol>
+</div>
+</div> -->
+<div class="col-md-12 col-sm-12 col-xs-12 alme">
+<div class="col-md-2 col-sm-2 col-xs-12">
+<div class="kop " text-id="placare_footer_ex_111"> <p>BÚSQUEDAS Populares</p> </div>
+</div>
+<div class="col-md-10 col-sm-10 col-xs-12">
+<hr class="new-f">
+</div>
+<div class="col-md-12 col-sm-12 col-xs-12 alme">
+<div class="bre " text-id="placare_footer_ber"> <p><a href="zapatos-mujer.html"> Zapatos de Mujer</a> | <a href="sandalias-mujer.html">Sandalias de Mujer</a> | <a href="botines-mujer.html">Botines Mujer</a> | <a href="listado_productos22e1.html?tag=Categoria3_Zapatos,Marca_Degas">Zapatillas Mujer</a> | <a href="listado_productosb29b.html?tag=Categoria2_Calzado_Mujer,-Categoria2_Calzado_Hombre,+Categoria4_Fiesta">Zapatos de Fiesta</a> | <a href="botines-hombre.html">Botines Hombre</a> | <a href="zapatos-hombre.html">Zapatos Hombre</a> | <a href="zapatos-hombre.html">Zapatos de Hombre</a> | <a href="mocasines-mujer.html">Mocasines</a> | <a href="mocasines-mujer.html">Mocasines Mujer</a> | <a href="ballerinas-mujer.html">Ballerinas</a> | <a href="mujeres.html">Calzado Mujer</a> | <a href="listado_productosb29b.html?tag=Categoria2_Calzado_Mujer,-Categoria2_Calzado_Hombre,+Categoria4_Fiesta">Zapatos de vestir Mujer</a> | <a href="mujeres.html">Zapatos de Moda</a> | <a href="listado_productos82ee.html?tag=Color_Rojo">Zapatos Rojos</a> | <a href="formales-hombre.html">Zapatos de vestir Hombre</a> | <a href="index.html">Zapatos Online</a> | <a href="botines-hombre.html">Botas Hombre</a> | <a href="listado_productosb29b.html?tag=Categoria2_Calzado_Mujer,-Categoria2_Calzado_Hombre,+Categoria4_Fiesta">Zapatos Fiesta</a> | <a href="plataformas-mujer.html">Zapatos con Plataforma</a> | <a href="sandalias-mujer.html">Sandalias Mujer</a> | <a href="botines-mujerc6f3.html?tag=Color_Negro">Botines Negros</a> | <a href="botines-mujer.html">Botines de Mujer</a> | <a href="botines-mujer.html">Botas y Botines</a>&nbsp;| <a href="plataformas-mujer.html">Zapatos Plataforma</a> | <a href="listado_productosc6f3.html?tag=Color_Negro">Zapatos Negros</a> | <a href="mujeres.html">Zapatos Mujer Online</a> | <a href="sandalias-hombre.html">Sandalias Hombre</a> | <a href="hombres.html">Calzado Hombre</a>&nbsp;| <a href="listado_productos2479.html?tag=Color_Dorado">Zapatos Dorados</a> | <a href="mujeres.html">Zapatos para Mujer</a> | <a href="botines-mujer.html">Botines Plataforma</a>&nbsp;| <a href="listado_productosf49c.html?tag=Color_Azul">Zapatos Azules</a> | <a href="botines-mujer.html">Botines de Cuero</a> | <a href="botines-hombre.html">Botines para Hombre</a> | <a href="hombres.html">Zapatos para Hombre</a> | <a href="botines-mujer.html">Botines para Mujer</a> | <a href="sandalias-mujer6a0b.html?tag=Forma_Taco_Plano">Sandalias Planas</a> | <a href="plataformas-mujer.html">Sandalias con Plataformas</a> | <a href="listado_productos0ac9.html?tag=Mat_Capellada_Cuero">Zapatos Cuero</a></p> </div>
+</div>
+</div>
+<div class="col-md-12 col-sm-12 col-xs-12 alme">
+<div class="col-md-4 col-sm-4 col-xs-10 dori">
+<div class="firma " text-id="placare_in_1"> <p>Dudas? Contactanos | sac@placare.com</p> </div>
+</div>
+<div class="col-md-4 col-sm-4 col-xs-10 dori">
+<div class="firma-2 " text-id="placare_in_2"> <p>Placare.com - 2017. <br>Marca registrada de San Marcos SPA</p></div>
+</div>
+<div class="col-md-4 col-sm-4 col-xs-12 dori">
+<div class="firma-3 " text-id="placare_in_3"> <p> LoadingPlay</p></div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- Modal -->
+<div align="center">
+<div class="modal fade" id="myModal" role="dialog">
+<div class="modal-dialog">
+<!-- Modal content-->
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+<h4 class="modal-title ">Resumen de tu compra</h4>
+</div>
+<div class="modal-body mlb-btn">
+<div class="container-fluid cart-list" ng-controller="">
+<div class="row">
+<div class="col-sm-12">
+<table class="table">
+<thead>
+<tr>
+<th>Nombre</th>
+<th>Talla</th>
+<th class="text-center">Cant</th>
+<th class="text-center2">Precio</th>
+<th class="text-center">Eliminar</th>
+</tr>
+</thead>
+<tbody class="shopping-cart">
+</tbody>
+</table>
+<div class="checkout-form"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ********Modal filtros ordenar******** -->
+<!-- Modal -->
+<div id="myModal-orde" class="modal fade" role="dialog">
+<div class="modal-dialog filtrosmovil">
+<!-- Modal content-->
+<div class="modal-content filtros">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+<h4 class="modal-title text-center"><br> ORDENAR POR:</h4>
+</div>
+<div class="modal-body text-center">
+<ul class="">
+<li><a href="#!" class="mayor">Precio: Mayor a menor</a></li>
+<li><a href="#!" class="menor">Precio: Menor a mayor</a></li>
+<li><a href="#!" class="nombre">Nombre</a></li>
+</ul>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+</div>
+</div>
+</div>
+</div>
+<div id="myModal-fil" class="modal fade" role="dialog">
+<div class="modal-dialog filtrosmovil">
+<!-- Modal content-->
+<div class="modal-content filtros">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+<h4 class="modal-title text-center"><br> FILTRAR POR:</h4>
+</div>
+<div class="modal-body fili text-center">
+<section class="h_submenu hidden-md hidden-lg hidden-sm visible-xs">
+<div class="col-md-12 col-sm-12 col-xs-12 mtl text-center" style="margin-bottom: 50px;border-right: 1px solid #E9E9ED; width: 92%;left: 13%; margin-top: 13px;">
+<div class="text-fil-2"> TIPO DE CALZADO </div>
+<form action="http://www.placare.com/action_page.php" class="chek">
+<div class="filtro-filtros">
+<input type="radio" class="categ c-Categoria3_Ballerinas" name="vehicle" tag="Categoria3_Ballerinas" value="Bike" value2="Ballerinas">
+<div class="fil h-Categoria3_Ballerinas" onclick="checkNombre('Categoria3_Ballerinas','Ballerinas')">Ballerinas</div>
+</div>
+<div class="filtro-filtros">
+<input type="radio" class="categ c-Categoria3_Botines" name="vehicle" tag="Categoria3_Botines" value="Car" value2="Botines">
+<div class="fil h-Categoria3_Botines" onclick="checkNombre('Categoria3_Botines','Botines')">Botines</div>
+</div>
+<div class="filtro-filtros">
+<input type="radio" class="categ c-Categoria3_Mocasines" name="vehicle" tag="Categoria3_Mocasines" value="Boat" value2="Mocasines">
+<div class="fil h-Categoria3_Mocasines" onclick="checkNombre('Categoria3_Mocasines','Mocasines')">Mocasines</div>
+</div>
+<div class="filtro-filtros">
+<input type="radio" class="categ c-Categoria3_Mules" name="vehicle" tag="Categoria3_Mules" value="Boat" value="Mules" value2="Mules">
+<div class="fil h-Categoria3_Mules" onclick="checkNombre('Categoria3_Mules','Mules')">Mules</div>
+</div>
+<div class="filtro-filtros">
+<input type="radio" class="categ c-Categoria3_Plataformas" name="vehicle" tag="Categoria3_Plataformas" value="Boat" value2="Plataformas">
+<div class="fil h-Categoria3_Plataformas" onclick="checkNombre('Categoria3_Plataformas','Plataforma')">Plataformas</div>
+</div>
+<div class="filtro-filtros">
+<input type="radio" class="categ c-Categoria3_Playeras" name="vehicle" tag="Categoria3_Playeras" value="Boat" value2="Playeras">
+<div class="fil h-Categoria3_Playeras" onclick="checkNombre('Categoria3_Playeras','Playeras')">Playeras</div>
+</div>
+<div class="filtro-filtros">
+<input type="radio" class="categ c-Categoria3_Sandalias" name="vehicle" tag="Categoria3_Sandalias" value="Boat" value2="Sandalias">
+<div class="fil h-Categoria3_Sandalias" onclick="checkNombre('Categoria3_Sandalias','Sandalias')">Sandalias</div>
+</div>
+<div class="filtro-filtros">
+<input type="radio" class="categ c-Categoria3_Zapatos" name="vehicle" tag="Categoria3_Zapatos" value="Boat" value2="Zapatos">
+<div class="fil h-Categoria3_Zapatos" onclick="checkNombre('Categoria3_Zapatos','Zapatos')">Zapatos</div>
+</div>
+</form>
+<div class="clearfix"></div>
+<div class="text-fil"> COLOR PRINCIPAL </div>
+<div>
+<form action="http://www.placare.com/action_page.php" class="chek">
+<div class="filtro-color">
+<input type="radio" name="color" class="categ c-Color_Azul" tag="Color_Azul" value2="Azul">
+<div class="fil h-Color_Azul" onclick="checkNombre('Color_Azul','Azul')">Azul</div>
+</div>
+<div class="filtro-color">
+<input type="radio" name="color" class="categ c-Color_Beige" tag="Color_Beige" value2="Beige">
+<div class="fil h-Color_Beige" onclick="checkNombre('Color_Beige','Beige')">Beige</div>
+</div>
+<div class="filtro-color">
+<input type="radio" name="color" class="categ c-Color_Blanco" tag="Color_Blanco" value2="Blanco">
+<div class="fil h-Color_Blanco" onclick="checkNombre('Color_Blanco','Blanco')">Blanco</div>
+</div>
+<div class="filtro-color">
+<input type="radio" name="color" class="categ c-Color_Burdeo" tag="Color_Burdeo" value2="Burdeo">
+<div class="fil h-Color_Burdeo" onclick="checkNombre('Color_Burdeo','Burdeo')">Burdeo</div>
+</div>
+<div class="filtro-color">
+<input type="radio" name="color" class="categ c-Color_Cafe" value2="Café" tag="Color_Cafe">
+<div class="fil h-Color_Cafe" onclick="checkNombre('Color_Cafe', 'Café')">Cafe</div>
+</div>
+<div class="filtro-color">
+<input type="radio" name="color" class="categ c-Color_Dorado" tag="Color_Dorado" value2="Dorado">
+<div class="fil h-Color_Dorado" onclick="checkNombre('Color_Dorado','Dorado')">Dorado</div>
+</div>
+<div class="filtro-color">
+<input type="radio" name="color" class="categ c-Color_Gris" tag="Color_Gris" value2="Gris">
+<div class="fil h-Color_Gris" onclick="checkNombre('Color_Gris', 'Gris')">Gris</div>
+</div>
+<div class="filtro-color">
+<input type="radio" name="color" class="categ c-Color_Metalico" tag="Color_Metalico" value2="Metálico">
+<div class="fil h-Color_Metalico" onclick="checkNombre('Color_Metalico','Metalico')">Metalico</div>
+</div>
+<div class="filtro-color">
+<input type="radio" name="color" class="categ c-Color_Negro" tag="Color_Negro" value2="Negro">
+<div class="fil h-Color_Negro" onclick="checkNombre('Color_Negro','Negro')">Negro</div>
+</div>
+<div class="filtro-color">
+<input type="radio" name="color" class="categ c-Color_Rojo" tag="Color_Rojo" value2="Rojo">
+<div class="fil h-Color_Rojo" onclick="checkNombre('Color_Rojo','Rojo')">Rojo</div>
+</div>
+</form>
+<div class="clearfix"></div>
+<div class="text-fil"> MATERIAL DEL ZAPATO </div>
+<form action="http://www.placare.com/action_page.php" class="chek">
+<div class="filtro-talla">
+<input type="radio" name="material" class="categ c-Mat_Capellada_Cuero" tag="Mat_Capellada_Cuero" value2="Cuero" value="Bike">
+<div class="fil h-Mat_Capellada_Cuero" onclick="checkNombre('Mat_Capellada_Cuero','Cuero')"> Cuero </div>
+</div>
+<div class="filtro-talla">
+<input type="radio" name="material" class="categ c-Mat_Capellada_Eco_Cuero" tag="Mat_Capellada_Eco_Cuero" value2="Eco Cuero" value="Cara">
+<div class="fil h-Mat_Capellada_Eco_Cuero" onclick="checkNombre('Mat_Capellada_Eco_Cuero','Eco')"> Eco Cuero </div>
+</div>
+</form>
+<div class="clearfix"></div>
+<div class="text-fil"> MARCA </div>
+<form action="http://www.placare.com/action_page.php" class="chek">
+<div class="filtro-marca">
+<input type="radio" name="marca" class="categ c-Marca_Degas" tag="Marca_Degas" value2="Degas">
+<div class="fil h-Marca_Degas" onclick="checkNombre('Marca_Degas','Degas')">Degas </div>
+</div>
+<div class="filtro-marca">
+<input type="radio" name="marca" class="categ c-Marca_Eda_Manzini" tag="Marca_Eda_Manzini" value2="Eda Manzini">
+<div class="fil h-Marca_Eda_Manzini" onclick="checkNombre('Marca_Eda_Manzini', 'Eda Manzini')">Eda Manzini</div>
+</div>
+<div class="filtro-marca">
+<input type="radio" name="marca" class="categ c-Marca_Lola_Canales" tag="Marca_Lola_Canales" value2="Lola Canales">
+<div class="fil h-Lola_Canales" onclick="checkNombre('Marca_Lola_Canales','Lola Canales')">Lola Canales</div>
+</div>
+</form>
+<div class="clearfix"></div>
+<!-- <div class="text-fil"> OCASIÓN</div>
+<form action="/action_page.php" class="chek">
+<div class="filtro-categorias">
+<input type="radio" name="ocasion" class="categ c-Categoria4_Casuales" tag="Categoria4_Casuales" value2="Casuales" value="Bike">
+<div class="fil h-Categoria4_Casuales" onclick="checkNombre('Categoria4_Casuales','Casuales')">Casuales</div>
+</div>
+<div class="filtro-categorias">
+<input type="radio" name="ocasion" class="categ c-Categoria4_Confort" value2="Confort" tag="Categoria4_Confort" value="Car">
+<div class="fil h-Categoria4_Confort" onclick="checkNombre('Categoria4_Confort','Confort')">Confort </div>
+</div>
+<div class="filtro-categorias">
+<input type="radio" name="ocasion" class="categ c-Categoria4_Fiesta" value2="Fiesta" tag="Categoria4_Fiesta" value="Boat">
+<div class="fil h-Categoria4_Fiesta" onclick="checkNombre('Categoria4_Fiesta','Fiesta')">Fiesta</div>
+</div>
+<div class="filtro-categorias">
+<input type="radio" name="ocasion" class="categ c-Categoria4_Vestir" value2="Vestir" tag="Categoria4_Vestir" value="Boat">
+<div class="fil h-Categoria4_Vestir" onclick="checkNombre('Categoria4_Vestir','Vestir')">Vestir</div>
+</div>
+</form> -->
+<div class="clearfix"></div>
+<!-- <div class="text-fil"> TIPO DE CIERRE </div>
+<form action="/action_page.php" class="chek">
+<div class="filtro-talla">
+<input type="radio" name="cierre" class="categ c-Cierre_Abierto" value2="Abierto" tag="Cierre_Abierto" value="Bike">
+<div class="fil h-Cierre_Abierto" onclick="checkNombre('Cierre_Abierto','Abierto')"> Abierto </div>
+</div>
+<div class="filtro-talla">
+<input type="radio" name="cierre" class="categ c-Cierre_Cerrado" value2="Cerrado" tag="Cierre_Cerrado" value="Cara">
+<div class="fil h-Cierre_Cerrado" onclick="checkNombre('Cierre_Cerrado','Cerrado')"> Cerrado </div>
+</div>
+</form> -->
+<div class="clearfix"></div>
+<!-- <div class="text-fil"> MATERIAL SUELA </div>
+<form action="/action_page.php" class="chek">
+<div class="filtro-talla">
+<input type="radio" name="suela" class="categ c-Mat_Suela_Goma_Eva" value2="Eva" tag="Mat_Suela_Goma_Eva" value="Bike">
+<div class="fil h-Mat_Suela_Goma_Eva" onclick="checkNombre('Mat_Suela_Goma_Eva','Goma_Eva')"> Eva </div>
+</div>
+<div class="filtro-talla">
+<input type="radio" name="suela" class="categ c-Mat_Suela_Kratón" value2="Kratón" tag="Mat_Suela_Kratón" value="Cara">
+<div class="fil h-Mat_Suela_Kratón" onclick="checkNombre('Mat_Suela_Kratón','Kratón')"> Kratón </div>
+</div>
+<div class="filtro-talla">
+<input type="radio" name="suela" class="categ c-Mat_Suela_Poliuretano" value2="Poliuretano" tag="Mat_Suela_Poliuretano" value="Cara">
+<div class="fil h-Mat_Suela_Poliuretano" onclick="checkNombre('Mat_Suela_Poliuretano','Poliuretano')"> Poliuretano </div>
+</div>
+</form> -->
+<div class="clearfix"></div>
+<!-- <div class="text-fil"> MATERIAL FORRO </div>
+<form action="/action_page.php" class="chek">
+<div class="filtro-talla">
+<input type="radio" name="forro" class="categ c-Mat_Forro_Cuero" tag="Mat_Forro_Cuero" value2="Cuero" value="Bike">
+<div class="fil h-Mat_Forro_Cuero" onclick="checkNombre('Mat_Forro_Cuero','Forro Cuero')"> Cuero </div>
+</div>
+<div class="filtro-talla">
+<input type="radio" name="forro" class="categ c-Mat_Forro_Eco_Cuero" tag="Mat_Forro_Eco_Cuero" value2="Eco Cuero" value="Cara">
+<div class="fil h-Mat_Forro_Eco_Cuero" onclick="checkNombre('Mat_Forro_Eco_Cuero','Forro Eco Cuero')"> Eco Cuero </div>
+</div>
+</form> -->
+</div>
+</div>
+</section>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">Aplicar Filtro</button>
+<button class="limpiar limpiar_modal">Limpiar Todo </button>
+</div>
+</div>
+</div>
+</div>
+<!-- ******MODAL HOMBRES****** -->
+<div id="myModal-fil-men" class="modal fade" role="dialog">
+<div class="modal-dialog filtrosmovil">
+<!-- Modal content-->
+<div class="modal-content filtros">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+<h4 class="modal-title text-center"><br> FILTRAR POR:</h>
+</div>
+<div class="modal-body fili text-center">
+<section class="h_submenu visible-xs hidden-md hidden-sm hidden-lg">
+<div class="col-md-12 col-sm-12 col-xs-12 mtl text-center" style="margin-bottom: 50px;border-right: 1px solid #E9E9ED; width: 92%;left: 8%; margin-top: 13px;">
+<div class="text-fil-2"> TIPO DE CALZADO </div>
+<form action="http://www.placare.com/action_page.php" class="chek">
+<div class="filtro-filtros">
+<input type="radio" class="categ c-Categoria3_Botines" name="vehicle" tag="Categoria3_Botines" value="Car" value2="Botines">
+<div class="fil h-Categoria3_Botines" onclick="checkNombre('Categoria3_Botines','Botines')">Botines</div>
+</div>
+<div class="filtro-filtros">
+<input type="radio" class="categ c-Categoria3_Formales" name="vehicle" tag="Categoria3_Formales" value="Boat" value2="Formales">
+<div class="fil h-Categoria3_Formales" onclick="checkNombre('Categoria3_Formales','Formales')">Formales</div>
+</div>
+<div class="filtro-filtros">
+<input type="radio" class="categ c-Categoria3_Sandalias" name="vehicle" tag="Categoria3_Sandalias" value="Boat" value2="Sandalias">
+<div class="fil h-Categoria3_Sandalias" onclick="checkNombre('Categoria3_Sandalias','Sandalias')">Sandalias</div>
+</div>
+<div class="filtro-filtros">
+<input type="radio" class="categ c-Categoria3_Zapatos" name="vehicle" tag="Categoria3_Zapatos" value="Boat" value2="Zapatos">
+<div class="fil h-Categoria3_Zapatos" onclick="checkNombre('Categoria3_Zapatos','Zapatos')">Zapatos</div>
+</div>
+</form>
+<div class="clearfix"></div>
+<div class="text-fil"> COLOR PRINCIPAL </div>
+<div>
+<form action="http://www.placare.com/action_page.php" class="chek">
+<div class="filtro-color">
+<input type="radio" name="color" class="categ c-Color_Azul" tag="Color_Azul" value2="Azul">
+<div class="fil h-Color_Azul" onclick="checkNombre('Color_Azul','Azul')">Azul</div>
+</div>
+<div class="filtro-color">
+<input type="radio" name="color" class="categ c-Color_Beige" tag="Color_Beige" value2="Beige">
+<div class="fil h-Color_Beige" onclick="checkNombre('Color_Beige','Beige')">Beige</div>
+</div>
+<div class="filtro-color">
+<input type="radio" name="color" class="categ c-Color_Cafe" value2="Café" tag="Color_Cafe">
+<div class="fil h-Color_Cafe" onclick="checkNombre('Color_Cafe', 'Café')">Cafe</div>
+</div>
+<div class="filtro-color">
+<input type="radio" name="color" class="categ c-Color_Negro" tag="Color_Negro" value2="Negro">
+<div class="fil h-Color_Negro" onclick="checkNombre('Color_Negro','Negro')">Negro</div>
+</div>
+<div class="filtro-color">
+<input type="radio" name="color" class="categ c-Color_Burdeo" tag="Color_Burdeo" value2="Burdeo">
+<div class="fil h-Color_Burdeo" onclick="checkNombre('Color_Burdeo','Burdeo')">Burdeo</div>
+</div>
+<div class="filtro-color">
+<input type="radio" name="color" class="categ c-Color_Verde" tag="Color_Verde" value2="Verde">
+<div class="fil h-Color_Verde" onclick="checkNombre('Color_Verde','Verde')">Verde</div>
+</div>
+</form>
+<div class="clearfix"></div>
+<div class="text-fil"> MATERIAL DEL ZAPATO </div>
+<form action="http://www.placare.com/action_page.php" class="chek">
+<div class="filtro-talla">
+<input type="radio" class="categ c-Mat_Capellada_Cuero" name="material" tag="Mat_Capellada_Cuero" value2="Cuero" value="Bike">
+<div class="fil h-Mat_Capellada_Cuero" onclick="checkNombre('Mat_Capellada_Cuero','Cuero')"> Cuero </div>
+</div>
+<!-- <div class="filtro-talla">
+<input type="radio" class="categ c-Mat_Capellada_Eco_Cuero" name="vehicle2" tag="Mat_Capellada_Eco_Cuero" value="Eco Cuero" value="Cara" onclick="checkNombre('Mat_Capellada_Eco_Cuero','Eco')">
+<div class="fil h-Mat_Capellada_Eco_Cuero" onclick="checkNombre('Mat_Capellada_Eco_Cuero','Eco')"> Eco Cuero </div>
+<i class="fa fa-check-square ch-Mat_Capellada_Eco_Cuero hidden" aria-hidden="true" onclick="uncheck('Mat_Capellada_Eco_Cuero','Eco')"></i>
+</div>-->
+</form>
+<div class="clearfix"></div>
+<div class="text-fil"> MARCA </div>
+<form action="http://www.placare.com/action_page.php" class="chek">
+<!-- <div class="filtro-marca">
+<input type="radio" class="categ c-Belle" name="vehicle2" tag="Belle" value="Car" onclick="checkNombre('Belle')">
+<div class="fil h-Belle" onclick="checkNombre('Belle')">Belle</div>
+<i class="fa fa-check-square ch-Belle hidden" aria-hidden="true" onclick="uncheck('Belle')"></i>
+</div> -->
+<div class="filtro-marca">
+<input type="radio" class="categ c-Caffeine" name="vehicle2" tag="Caffeine" value2="Caffeine">
+<div class="fil h-Caffeine" onclick="checkNombre('Caffeine')">Caffeine</div>
+<i class="fa fa-check-square ch-Caffeine hidden" aria-hidden="true" onclick="uncheck('Caffeine')"></i>
+</div>
+<div class="filtro-marca">
+<input type="radio" class="categ c-Cocomate" name="vehicle2" tag="Cocomate" value2="Cocomate">
+<div class="fil h-Cocomate" onclick="checkNombre('Cocomate')">Cocomate</div>
+</div>
+<!--<div class="filtro-marca">
+<input type="radio" class="categ c-Degas" name="vehicle1" tag="Degas" value="Bike" onclick="checkNombre('Degas')">
+<div class="fil h-Degas" onclick="checkNombre('Degas')">Degas </div>
+<i class="fa fa-check-square ch-Degas hidden" aria-hidden="true" onclick="uncheck('Degas')"></i>
+</div>-->
+<div class="filtro-marca">
+<input type="radio" class="categ c-Manzini" name="vehicle2" tag="Manzini" value2="Manzini">
+<div class="fil h-Manzini" onclick="checkNombre('Manzini', 'Manzini')">Manzini</div>
+</div>
+<!--<div class="filtro-marca">
+<input type="radio" class="categ c-Lola_Canales" name="vehicle2" tag="Lola_Canales" value="Car" onclick="checkNombre('Lola_Canales', 'Lola Canales')">
+<div class="fil h-Lola_Canales" onclick="checkNombre('Lola_Canales', 'Lola Canales')">Lola Canales</div>
+<i class="fa fa-check-square ch-Lola_Canales hidden" aria-hidden="true" onclick="uncheck('Lola_Canales', 'Lola Canales')"></i>
+</div>
+<div class="filtro-marca">
+<input type="radio" class="categ c-Pasoli" name="vehicle2" tag="Pasoli" value="Car" onclick="checkNombre('Pasoli')">
+<div class="fil h-Pasoli" onclick="checkNombre('Pasoli')">Pasoli</div>
+<i class="fa fa-check-square ch-Pasoli hidden" aria-hidden="true" onclick="uncheck('Pasoli')"></i>
+</div> -->
+<div class="filtro-marca">
+<input type="radio" class="categ c-Tarragona" name="vehicle2" tag="Tarragona" value2="Tarragona">
+<div class="fil h-Tarragona" onclick="checkNombre('Tarragona')">Tarragona</div>
+</div>
+</form>
+<div class="clearfix"></div>
+<!-- <div class="text-fil"> OCASIÓN</div>
+<form action="/action_page.php" class="chek">
+<div class="filtro-categorias">
+<input type="radio" class="categ c-Categoria4_Casuales" name="ocasion" tag="Categoria4_Casuales" value2="Casuales">
+<div class="fil h-Categoria4_Casuales" onclick="checkNombre('Categoria4_Casuales','Casuales')">Casuales</div>
+</div>
+<div class="filtro-categorias">
+<input type="radio" class="categ c-Categoria4_Vestir" value2="Vestir" name="ocasion" tag="Categoria4_Vestir">
+<div class="fil h-Categoria4_Vestir" onclick="checkNombre('Categoria4_Vestir','Vestir')">Vestir</div>
+</div>
+</form> -->
+<div class="clearfix"></div>
+<!-- <div class="text-fil"> TIPO DE CIERRE </div>
+<form action="/action_page.php" class="chek">
+<div class="filtro-talla">
+<input type="radio" class="categ c-Cierre_Abierto" name="cierre" value2="Abierto" tag="Cierre_Abierto">
+<div class="fil h-Cierre_Abierto" onclick="checkNombre('Cierre_Abierto','Abierto')"> Abierto </div>
+</div>
+<div class="filtro-talla">
+<input type="radio" class="categ c-Cierre-Cerrado" name="cierre" value2="Cerrado" tag="Cierre_Cerrado">
+<div class="fil h-Cierre_Cerrado" onclick="checkNombre('Cierre_Cerrado','Cerrado')"> Cerrado </div>
+</div>
+</form> -->
+<div class="clearfix"></div>
+<!-- <div class="text-fil"> MATERIAL SUELA </div>
+<form action="/action_page.php" class="chek">
+<div class="filtro-talla">
+<input type="radio" class="categ c-Mat_Suela_Goma_Eva" name="vehicle1" value="Eva" tag="Mat_Suela_Goma_Eva" value="Bike" onclick="checkNombre('Mat_Suela_Goma_Eva','Goma_Eva')">
+<div class="fil h-Mat_Suela_Goma_Eva" onclick="checkNombre('Mat_Suela_Goma_Eva','Goma_Eva')"> Eva </div>
+<i class="fa fa-check-square ch-Mat_Suela_Goma_Eva hidden" aria-hidden="true" onclick="uncheck('Mat_Suela_Goma_Eva','Goma_Eva')"></i>
+</div>
+<div class="filtro-talla">
+<input type="radio" class="categ c-Mat_Suela_Kratón" name="suela" value2="Kratón" tag="Mat_Suela_Kratón">
+<div class="fil h-Mat_Suela_Kratón" onclick="checkNombre('Mat_Suela_Kratón','Kratón')"> Kratón </div>
+</div>
+<div class="filtro-talla">
+<input type="radio" class="categ c-Mat_Suela_Crepe" value2="Crepe" name="suela" tag="Mat_Suela_Crepe">
+<div class="fil h-Mat_Suela_Crepe" onclick="checkNombre('Mat_Suela_Crepe','Crepe')"> Crepe </div>
+</div>
+</form> -->
+<div class="clearfix"></div>
+<!-- <div class="text-fil"> MATERIAL FORRO </div>
+<form action="/action_page.php" class="chek">
+<div class="filtro-talla">
+<input type="radio" class="categ c-Mat_Forro_Eco_Cuero" name="forro" tag="Mat_Forro_Eco_Cuero" value2="Eco Cuero">
+<div class="fil h-Mat_Forro_Eco_Cuero" onclick="checkNombre('Mat_Forro_Eco_Cuero','Forro Eco Cuero')"> Eco Cuero </div>
+</div>
+<div class="filtro-talla">
+<input type="radio" class="categ c-Mat_Forro_Textil" name="forro" tag="Mat_Forro_Textil" value2="Textil">
+<div class="fil h-Mat_Forro_Textil" onclick="checkNombre('Mat_Forro_Textil','Forro Textil')"> Textil </div>
+</div>
+</form> -->
+</div>
+</div>
+</section>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">Aplicar Filtro</button>
+<button class="limpiar limpiar_modal">Limpiar Todo </button>
+</div>
+</div>
+</div>
+</div>
+<!-- ******FIN MODAL HOMBRES****** -->
+<!-- ******modal imagen talla****** -->
+<!-- Modal -->
+<div id="myModal-talla" class="modal fade" role="dialog">
+<div class="modal-dialog">
+<!-- Modal content-->
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+<h4 class="modal-title talla">TABLA DE TALLAS</h4>
+</div>
+<div class="modal-body">
+<div align="center">
+<img class="img-talla" src="https://7static.loadingplay.com/static/images/4513a39384b32d21aedf88ebbfb6fd92_TablaTallasPlacare.png">
+</div>
+</div>
+<!-- <div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+</div> -->
+</div>
+</div>
+</div>
+<!-- ***fin modal talla**** -->
+<!-- *******************MODAL INGRESO CODIGO PRINCPAL******************* -->
+<div class="container min btb-warning-remove-me">
+<button type="button" class="btn btn-info btn-lg co hidden" data-toggle="modal" data-target="#myModal-codigo">CÓDIGO</button>
+<!-- Modal -->
+<div class="modal fade" id="myModal-codigo" role="dialog">
+<div class="modal-dialog">
+<!-- Modal content-->
+<div class="modal-content co">
+<div class="modal-header co">
+<!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+<h4 class="modal-title co">LANZAMIENTO PLACARE.COM</h4>
+</div>
+<div class="modal-body">
+<div align="center">
+<div class="lan">!MUCHAS GRACIAS POR VISITARNOS! ESTAMOS LANZANDO NUESTRA NUEVA TIENDA ONLINE ZAPATOS DE HOMBRE Y MUJER.</div>
+<div class="lan-2">Si ya tienes tu código de autorización ingrésalo a continuación y ya estarás dentro! Sino lo tienes, síguenos en facebook o instagram para obtenerlo</div>
+<div class="lan-3">¡Te invitamos a descubrir tus próximos zapatos!</div>
+<form id="welcome-form">
+<input type="text" name="fname" class="cup"><br>
+<button type="submit" class="btn btn-warning en">ENTRAR</button>
+</form>
+</div>
+</div>
+<div class="modal-footer co">
+<!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ******************* FIN MODAL INGRESO CODIGO PRINCPAL******************* -->
+<!-- gif loading editableimage -->
+<img id="imgLOAD" width="50" height="50" src="common/css/loading.gif" />
+<script type="text/javascript">
+var site_base = ""
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js?1"></script>
+<script src="https://code.jquery.com/ui/1.9.2/jquery-ui.js?1"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js?1"></script>
+<script type="text/javascript" src="static/fancybox/source/jquery.fancyboxe568.js?1?v=2.1.5"></script>
+<script type="text/javascript" src="common/js/jquery.editablec4ca.js?1" ></script>
+<script type="text/javascript" src="common/js/editabletextc4ca.js?1"></script>
+<script type="text/javascript" src="common/js/editablelinkc4ca.js?1"></script>
+<script type="text/javascript" src="common/js/page_editablec4ca.js?1"></script>
+<script type="text/javascript" src="common/js/editableimagec4ca.js?1"></script>
+<script type="text/javascript" src="common/js/plugins/loadingplay/fileuploader/dist/fileuploaderc4ca.js?1"></script>
+<!-- carga de productos -->
+<!-- <script type="text/javascript" src="/static/js/plugins/jquery.lazyload.js?1"></script> -->
+<!-- <script type="text/javascript" src="/static/js/imageloader.js?1" ></script> -->
+<script type="text/javascript" src="common/js/jquery.cookiec4ca.js?1"></script>
+<script type="text/javascript" src="common/js/environment.detectionc4ca.js?1"></script>
+<script type="text/javascript" src="common/js/bodegas2/bodegas.clientc20a.js?12"></script>
+<!--
+<script type="text/javascript" src="/static/js/fancybox/jquery.fancybox.pack.js?1"></script>
+<script type="text/javascript" src="/static/js/fancybox/source/jquery.fancybox.js?1?v=2.1.5"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/s/dt/dt-1.10.10/datatables.min.js?1"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.11/js/dataTables.bootstrap.min.js?1"></script>
+<script type="text/javascript" src="/static/js/jquery.ellipsis.js?1"></script>
+-->
+<script type="text/javascript" src="common/js/parallax.minc4ca.js?1"></script>
+<script type="text/javascript" src="common/js/jquery.ellipsisc4ca.js?1"></script>
+<!--
+<div type="template" id="product_loading" style="display:none;" >
+<div class="spinner">
+<div class="rect1"></div>
+<div class="rect2"></div>
+<div class="rect3"></div>
+<div class="rect4"></div>
+<div class="rect5"></div>
+</div>
+</div>
+-->
+<script type="text/javascript">
+$(document).ready(function () {
+$(".fancybox").fancybox({
+'width':800,
+'height':630,
+'autoSize' : false,
+'autoScale': false,
+'padding': 0,
+'helpers': {
+overlay: {
+locked: false
+}
+}
+});
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+$(document).on("click", ".lupita", function(ev){
+$(".buscar-movil").toggle(1000);
+});
+});
+</script>
+<!-- este es el script para unidades -->
+<!-- <script type="text/x-template" id="shopping-cart-product">
+<tr>
+<td class="vert-align text-left">{{ name }}</td>
+<td class="vert-align">{{ combination }}</td>
+<td class="vert-align money">{{ price }}</td>
+<td class="text-center vert-align" style="border-bottom: 1px solid #ddd;">
+<a href="#!" class="remove-one" product-id="{{ id }}">-</a>
+{{ quantity }}
+<a href="#!" class="add-one" product-id="{{ id }}">+</a>
+</td>
+<td class="remove-from-cart text-center" style="border-bottom: 1px solid #ddd;" product-id="{{ id }}" aria-hidden="true"> X </td>
+<td class="text-center vert-align" style="border-bottom: 1px solid #ddd;"><a class="borrarproducto" cart-id=""><i class="icon-close"></i></a></td>
+</tr>
+</script> -->
+<script type="text/x-template" id="shopping-cart-product">
+<tr>
+<td class="vert-align text-left">{{ name }}</td>
+<td class="vert-align">{{ combination }}</td>
+<td class="text-center vert-align fri" style="border-bottom: 1px solid #ddd;">
+<a href="#!" class="remove-one" lp-cart-remove-one="{{ id }}">-</a>
+{{ quantity }}
+<a href="#!" class="add-one" lp-cart-add-one="{{ id }}" >+</a>
+</td>
+<td class="text-center2 vert-align">{{ price|money }}</td>
+<td class="remove-from-cart text-center fri" lp-cart-remove="{{ id }}" aria-hidden="true"> X </td>
+<td class="text-center vert-align fri">
+<a class="borrarproducto" cart-id="">
+<i class="icon-close"></i>
+</a>
+</td>
+</tr>
+</script>
+<script type="text/x-template" id="shopping-cart-total" >
+<tr>
+</tr>
+<tr>
+<td style="font-weight: 600;">Total:</td>
+<td id="total" colspan="3" class="text-left total-modal lib">{{ total|money }}</td>
+</tr>
+</script>
+<script type="text/x-template" id="shopping-cart-units-total" >
+<span> {{ units_total }}</span>
+</script>
+<script type="text/x-template" id="shopping-cart-checkout-form" >
+<form action="{{ checkout_url}}" method="get" novalidate id="shipping-form" class="myform" onclick="return Validate()">
+<input name="site_id" class="form-control required" type="hidden" value="53">
+<input name="cart_id" class="form-control required" type="hidden" value="{{ cart_id}}">
+<input name="origin" class="form-control required" type="hidden" value="placare">
+<div class="form-group text-center">
+<button type="submit" class="btn bn" style="background-color: #FF9D36;color: white;width: 31%;border-radius: 0px;height: 43px;float: right;">
+PAGAR
+</button>
+</div>
+<div class="">
+<a class="modal-close pin" data-dismiss="modal" aria-hidden="true">VOLVER</a>
+</div>
+</form>
+</script>
+<!-- termino carrito de compra -->
+
+<script type="text/javascript" src="static/js/cart.config.js"></script>
+<script type="text/javascript" src="static/js/filter.js"></script>
+<script type="text/javascript" src="static/js/spec_filter_h.js"></script>
+<!--
+<script type="text/javascript">
+$(document).ready(function()
+{
+$(".mobile2").css("display", "none");
+$(document).on("click", ".bars", function()
+{
+$(".mobile2").toggle("slow");
+});
+});
+</script> -->
+<script type="text/javascript">
+$(window).load(function () {
+// Una vez se cargue al completo la página desaparecerá el div "cargando"
+$('#cargando').hide();
+});
+1
+2
+3
+4
+5
+6
+7
+$(window).load(function () {
+// Una vez se cargue al completo la página desaparecerá el div "cargando"
+$('#cargando').hide();
+});
+$(document).ready(function()
+{
+// EXCLUSIVO PARA PLACARE
+$("title").html("Placare - Listado de productos");
+$("meta[name=description]").attr("content", "Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño.");
+$(document).on("click", ".background-color-producto", function()
+{
+$(this).css("border", "black solid 2px");
+});
+$(document).on("click", ".categ", function(ev)
+{
+$(".subcateg").removeClass('active');
+$(this).addClass('active');
+});
+var hyper2 = Utils.getUrlParameter('search_query');
+if(hyper2 != undefined)
+{
+$(".tag-header").html("Resultados");
+}
+var hyper = Utils.getUrlParameter('tag').split(',');
+if(hyper[0] == "Categoria2_Calzado_Mujer")
+{
+$(".tag-header").html("Mujeres");
+}
+if(hyper[0] == "Categoria2_Calzado_Hombre")
+{
+$(".tag-header").html("Hombres");
+}
+if(hyper[0] == "nino")
+{
+$(".tag-header").html("Niños");
+}
+if(hyper[0] == "oferta")
+{
+$(".tag-header").html("Oferta");
+}
+});
+</script>
+<script type="text/javascript">
+$("#testButton").live("touchstart", function()
+{
+$(this).addClass("active");
+}).live("touchend", function() {
+$(this).removeClass("active");
+});
+</script>
+<script>
+$("#menu-toggle").click(function(e) {
+e.preventDefault();
+$("#wrapper").toggleClass("toggled");
+});
+</script>
+
+<script>
+window.fbAsyncInit = function() {
+FB.init({
+appId: '348231912006000',
+xfbml: true,
+version: 'v2.1'
+});
+};
+(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) {
+return;
+}
+js = d.createElement(s);
+js.id = id;
+js.src = "http://connect.facebook.net/en_US/sdk.js?1";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<script type="text/javascript" src"https://clouddelivery.textbox.io/1/getEditor?apiKey=1wugguwjiatkm69xmt7w1den1mpvqkxi75mwfmb49lz89o4r">
+</script>
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','http://www.google-analytics.com/analytics.js?1','ga');
+ga('create', 'UA-108225189-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script type="text/javascript">
+$('ul.nav div.dropdown').hover(function()
+{
+$(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+}, function()
+{
+$(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function()
+{
+$(document).on("click", ".boton-news", function()
+{
+if($(this).hasClass("sus"))
+{
+$("input[name=SingleLine]").val("Mujer");
+}
+if($(this).hasClass("sus-h"))
+{
+$("input[name=SingleLine]").val("Hombre");
+}
+});
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function()
+{
+$('#formid').on('keyup keypress', function(e) {
+var keyCode = e.keyCode || e.which;
+if (keyCode === 13)
+{
+e.preventDefault();
+return false;
+}
+});
+});
+</script>
+</body>
+
+<!-- Mirrored from www.placare.com/botines-hombre by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Nov 2017 23:14:12 GMT -->
+</html>
