@@ -1165,9 +1165,9 @@ button:focus {
   justify-content: flex-start;
 }
 
-.investments-item-info-item:last-child {
+/*.investments-item-info-item:last-child {
   margin-top: 2.5rem;
-}
+}*/
 
 .investments-item-info-item-key {
   width: 40%;
