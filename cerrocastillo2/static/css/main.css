@@ -1202,7 +1202,11 @@ button:focus {
 .team {
   padding: 5rem 15px 6.667rem 15px;
 }
-
+.team-item-bg {
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+}
 @media screen and (min-width: 768px) {
   .team {
     padding: 7.5rem 15px 10rem 15px;
