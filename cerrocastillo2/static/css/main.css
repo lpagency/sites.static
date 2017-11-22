@@ -222,7 +222,7 @@ button:focus {
 
 @media screen and (min-width: 768px) {
   .text-small {
-    font-size: 0.55rem;
+    font-size: 0.85rem;
     line-height: 0.875rem;
   }
 }
@@ -591,13 +591,13 @@ button:focus {
 
 @media screen and (min-width: 768px) {
   .header-item {
-    font-size: 0.825rem;
+    font-size: 1.25rem;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .header-item {
-    font-size: 1.05rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -1090,7 +1090,9 @@ button:focus {
   .investments {
     padding: 5.625rem 15px;
   }
-}
+  .text-big {
+    font-size: 2.133rem;
+  }
 
 .investments-title {
   text-align: center;
