@@ -1038,6 +1038,13 @@ button:focus {
   width: 100%;
 }
 
+.focus-item:nth-child(4) {
+  background-color: #808285;
+}
+.focus-item:nth-child(5) {
+  background-color: #8a8c8e;
+}
+
 @media screen and (min-width: 768px) {
   .focus-item {
     width: 33.33%;
