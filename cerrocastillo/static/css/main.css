@@ -90,7 +90,7 @@ button:focus {
 
 @media screen and (min-width: 768px) {
   .text {
-    font-size: 1.875rem;
+    font-size: 1.7rem;
     line-height: 2.8125rem;
   }
 }
@@ -359,7 +359,7 @@ button:focus {
 
 @media screen and (min-width: 768px) {
   .intro-copy {
-    padding-bottom: 16.25rem;
+    padding-bottom: 20.25rem;
   }
 }
 
@@ -1165,9 +1165,9 @@ button:focus {
   justify-content: flex-start;
 }
 
-.investments-item-info-item:last-child {
+/*.investments-item-info-item:last-child {
   margin-top: 2.5rem;
-}
+}*/
 
 .investments-item-info-item-key {
   width: 40%;
