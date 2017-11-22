@@ -1198,43 +1198,43 @@ button:focus {
 }
 
 
+
 /*------------- 10. TEAM -------------*/
 .team {
   padding: 5rem 15px 6.667rem 15px;
 }
-.team-item-bg {
-  width: 100%;
-  height: auto;
-  pointer-events: none;
-}
+
 @media screen and (min-width: 768px) {
   .team {
     padding: 7.5rem 15px 10rem 15px;
   }
-  .team-item {
-    cursor: pointer;
-    position: relative;
-  }
+}
 
-  .team-item + .team-item {
-    margin-top: 3.5rem;
-  }
+.team-item {
+  cursor: pointer;
+  position: relative;
+}
+
+.team-item + .team-item {
+  margin-top: 3.5rem;
 }
 
 @media screen and (min-width: 768px) {
   .team-item + .team-item {
     margin-top: 7.0625rem;
   }
-    .team-item-bg {
-      width: 100%;
-      height: auto;
-      pointer-events: none;
-  }
-
-  .team-item-copy {
-    margin-top: 2rem;
-  }
 }
+
+.team-item-bg {
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+}
+
+.team-item-copy {
+  margin-top: 2rem;
+}
+
 @media screen and (min-width: 768px) {
   .team-item-copy {
     margin-top: 0;
@@ -1256,13 +1256,13 @@ button:focus {
     top: 5rem;
     right: 6rem;
   }
+}
 
-  .team-item-role, .team-item-name {
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-  }
+.team-item-role, .team-item-name {
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
 
-  .team-popup-text + .team-popup-text {
-    margin-top: 1.333rem;
-  }
+.team-popup-text + .team-popup-text {
+  margin-top: 1.333rem;
 }
