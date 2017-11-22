@@ -54,21 +54,21 @@ button:focus {
 @media screen and (min-width: 768px) {
   html,
   body {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
 @media screen and (min-width: 992px) {
   html,
   body {
-    font-size: 13px;
+    font-size: 15px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   html,
   body {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
@@ -84,13 +84,13 @@ button:focus {
 .text {
   color: #6d6e71;
   font-family: "HelveticaNeueCon", "Helvetica", Arial, sans-serif;
-  font-size: 2rem;
-  line-height: 3.55rem;
+  font-size: 2.5rem;
+  line-height: 3.75rem;
 }
 
 @media screen and (min-width: 768px) {
   .text {
-    font-size: 1.675rem;
+    font-size: 1.7rem;
     line-height: 2.8125rem;
   }
 }
@@ -145,84 +145,84 @@ button:focus {
 }
 
 .text-big {
-  font-size: 3.133rem;
+  font-size: 3.333rem;
   line-height: 3.75rem;
 }
 
 @media screen and (min-width: 768px) {
   .text-big {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     line-height: 2.8125rem;
   }
 }
 
 .text-big-med {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   line-height: 3.333rem;
 }
 
 @media screen and (min-width: 768px) {
   .text-big-med {
-    font-size: 1.675rem;
+    font-size: 1.875rem;
     line-height: 2.5rem;
   }
 }
 
 .text-big-small {
-  font-size: 1.78333rem;
+  font-size: 2.08333rem;
 }
 
 @media screen and (min-width: 768px) {
   .text-big-small {
-    font-size: 1.3625rem;
+    font-size: 1.5625rem;
   }
 }
 
 .text-med {
-  font-size: 1.467rem;
+  font-size: 1.667rem;
   line-height: 2rem;
   letter-spacing: 0.03em;
 }
 
 @media screen and (min-width: 768px) {
   .text-med {
-    font-size: 1.05rem;
+    font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 .text-med-big {
-  font-size: 1.8rem;
+  font-size: 2rem;
   line-height: 2.5rem;
 }
 
 @media screen and (min-width: 768px) {
   .text-med-big {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     line-height: 1.875rem;
   }
 }
 
 .text-med-small {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   line-height: 1.833rem;
 }
 
 @media screen and (min-width: 768px) {
   .text-med-small {
-    font-size: 0.925rem;
+    font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 .text-small {
-  font-size: 0.8rem;
+  font-size: 1rem;
   line-height: 1.167rem;
 }
 
 @media screen and (min-width: 768px) {
   .text-small {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     line-height: 0.875rem;
   }
 }
@@ -332,7 +332,7 @@ button:focus {
 
 .banner-title {
   font-family: "HelveticaNeueCon", "Helvetica", Arial, sans-serif;
-  font-size: 3.175rem;
+  font-size: 3.375rem;
   line-height: 4.25rem;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -359,7 +359,7 @@ button:focus {
 
 @media screen and (min-width: 768px) {
   .intro-copy {
-    padding-bottom: 16.25rem;
+    padding-bottom: 20.25rem;
   }
 }
 
@@ -585,19 +585,19 @@ button:focus {
 
 @media screen and (min-width: 768px) {
   .header-item {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 
 @media screen and (min-width: 768px) {
   .header-item {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .header-item {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -815,7 +815,7 @@ button:focus {
   background-color: #95a1c6;
   height: 2.9167rem;
   padding: 0 10px;
-  font-size: 0.8rem;
+  font-size: 1rem;
   line-height: 1.167rem;
   color: #ffffff;
   font-family: "HelveticaNeueCon", "Helvetica", Arial, sans-serif;
@@ -831,7 +831,7 @@ button:focus {
 @media screen and (min-width: 768px) {
   .contact-form-input {
     height: 2.1875rem;
-    font-size: 0.55rem;
+    font-size: 0.75rem;
     line-height: 0.875rem;
   }
 }
@@ -1021,9 +1021,10 @@ button:focus {
     -ms-flex-pack: justify;
     justify-content: space-between;
   }
-  .focus-group + .focus-group {
-    margin-top: 1.167rem;
-  }
+}
+
+.focus-group + .focus-group {
+  margin-top: 1.167rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -1064,7 +1065,7 @@ button:focus {
 
 @media screen and (min-width: 1200px) {
   .focus-item {
-    max-height: 550px;
+    max-height: 800px;
   }
 }
 
@@ -1089,9 +1090,7 @@ button:focus {
   .investments {
     padding: 5.625rem 15px;
   }
-  .text-big {
-    font-size: 2.133rem;
-  }
+}
 
 .investments-title {
   text-align: center;
@@ -1196,8 +1195,6 @@ button:focus {
     width: 70%;
   }
 }
-
-
 
 /*------------- 10. TEAM -------------*/
 .team {
