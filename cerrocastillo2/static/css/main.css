@@ -1021,10 +1021,9 @@ button:focus {
     -ms-flex-pack: justify;
     justify-content: space-between;
   }
-}
-
-.focus-group + .focus-group {
-  margin-top: 1.167rem;
+  .focus-group + .focus-group {
+    margin-top: 1.167rem;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1197,6 +1196,7 @@ button:focus {
     width: 70%;
   }
 }
+
 
 /*------------- 10. TEAM -------------*/
 .team {
