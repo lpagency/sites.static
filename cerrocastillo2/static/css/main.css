@@ -90,7 +90,7 @@ button:focus {
 
 @media screen and (min-width: 768px) {
   .text {
-    font-size: 1.875rem;
+    font-size: 1.7rem;
     line-height: 2.8125rem;
   }
 }
@@ -359,7 +359,7 @@ button:focus {
 
 @media screen and (min-width: 768px) {
   .intro-copy {
-    padding-bottom: 16.25rem;
+    padding-bottom: 20.25rem;
   }
 }
 
@@ -1038,6 +1038,13 @@ button:focus {
   width: 100%;
 }
 
+.focus-item:nth-child(4) {
+  background-color: #808285;
+}
+.focus-item:nth-child(5) {
+  background-color: #8a8c8e;
+}
+
 @media screen and (min-width: 768px) {
   .focus-item {
     width: 33.33%;
@@ -1058,7 +1065,7 @@ button:focus {
 
 @media screen and (min-width: 1200px) {
   .focus-item {
-    max-height: 550px;
+    max-height: 800px;
   }
 }
 
@@ -1165,9 +1172,9 @@ button:focus {
   justify-content: flex-start;
 }
 
-.investments-item-info-item:last-child {
+/*.investments-item-info-item:last-child {
   margin-top: 2.5rem;
-}
+}*/
 
 .investments-item-info-item-key {
   width: 40%;
@@ -1256,3 +1263,4 @@ button:focus {
 .team-popup-text + .team-popup-text {
   margin-top: 1.333rem;
 }
+ 
