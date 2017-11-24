@@ -636,6 +636,11 @@ button:focus {
     -ms-flex-positive: 1;
     flex-grow: 1;
   }
+  .header-item-arrow {
+    max-width: 25px;
+    position: initial;
+  }
+  
 }
 
 .header-item-col {
@@ -658,11 +663,7 @@ button:focus {
   -ms-flex-direction: column;
   flex-direction: column;
 }
-.header-item-arrow {
-    max-width: 25px;
-    position: initial;
-  }
-  
+
 .header-item-icon {
   width: 25px;
   cursor: pointer;
