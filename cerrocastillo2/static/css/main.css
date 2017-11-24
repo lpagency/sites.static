@@ -659,14 +659,13 @@ button:focus {
   -ms-flex-direction: column;
   flex-direction: column;
 }
-
-.header-item-icon {
-  width: 25px;
-  cursor: pointer;
-}
 .header-item-arrow {
   max-width: 25px;
   position: initial;
+}
+.header-item-icon {
+  width: 25px;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 992px) {
