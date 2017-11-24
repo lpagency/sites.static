@@ -520,10 +520,6 @@ button:focus {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
-    .header-item-arrow {
-    max-width: 25px;
-    position: initial;
-  }
 }
 
 @media screen and (min-width: 992px) {
@@ -667,6 +663,10 @@ button:focus {
 .header-item-icon {
   width: 25px;
   cursor: pointer;
+}
+.header-item-arrow {
+  max-width: 25px;
+  position: initial;
 }
 
 @media screen and (min-width: 992px) {
