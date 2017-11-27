@@ -274,7 +274,9 @@ button:focus {
   min-height: 100%;
   pointer-events: none;
 }
-
+.mg-menu-esp{
+  margin-left: -2%;
+}
 .banner-copy {
   position: absolute;
   top: 0;
