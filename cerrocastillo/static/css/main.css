@@ -274,7 +274,9 @@ button:focus {
   min-height: 100%;
   pointer-events: none;
 }
-
+.mg-menu-esp{
+  margin-left: -2%;
+}
 .banner-copy {
   position: absolute;
   top: 0;
@@ -658,7 +660,10 @@ button:focus {
   -ms-flex-direction: column;
   flex-direction: column;
 }
-
+.header-item-arrow {
+  max-width: 25px;
+  position: initial;
+}
 .header-item-icon {
   width: 25px;
   cursor: pointer;
@@ -668,6 +673,7 @@ button:focus {
   .header-item-icon {
     width: 35px;
   }
+
 }
 
 @media screen and (min-width: 1200px) {
@@ -677,7 +683,10 @@ button:focus {
 }
 
 .header-item-arrow {
-  max-width: 10px;
+    max-width: 45px;
+    position: absolute;
+    top: 18px;
+    right: 50px;
 }
 
 .header-link {
