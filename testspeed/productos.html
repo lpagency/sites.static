@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placare - Listado de productos</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="u-padding-vertical-smaller header__sub">
+            <div class="container header__sub-content">
+                <p class="text text--smaller text--color-light">Descubre y Elige! Despachos a todo Chile y Devoluciones GRATIS.</p>
+                <ul class="header__sub-actions">
+                    <li class="header__sub-actions-item">
+                        <a href="#" class="header__sub-actions-link text text--smallest text--color-light text--light">CAMBIOS Y DEVOLUCIONES</a>
+                    </li>
+                    <li class="header__sub-actions-item">
+                        <a href="#" class="header__sub-actions-link text text--smallest text--color-light text--light">TIEMPO DE ENVIOS</a>
+                    </li>
+                    <li class="header__sub-actions-item">
+                        <a href="#" class="header__sub-actions-link text text--smallest text--color-light text--light">CONTÁCTANOS</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header__main">
+            <div class="container">
+                <div class="menu">
+                    <div class="menu__main">
+                        <i class="fa fa-bars menu__btn"></i>
+                        <a href="#" class="menu__logo">
+                            <img src="images/logo.png" alt="Logo" class="menu__logo-img">
+                        </a>
+                        <nav class="menu__nav">
+                            <div class="menu__nav-content">
+                                <h3 class="u-padding-vertical-small u-visible-xs text text--light text--color-dark">COMPRAR POR</h3>
+                                <ul class="menu__list">
+                                    <li class="menu__list-item">
+                                        <a href="#" class="menu__list-link text text--med text--title">MUJERES
+                                            <i class="fa fa-chevron-right menu__list-link__icon"></i>
+                                        </a>
+                                        <ul class="menu-inner">
+                                            <li class="menu-inner__item">
+                                                <a href="#" class="text text--light text--color-light menu-inner__link">BALLERINAS</a>
+                                            </li>
+                                            <li class="menu-inner__item">
+                                                <a href="#" class="text text--light text--color-light menu-inner__link">BOTINES</a>
+                                            </li>
+                                            <li class="menu-inner__item">
+                                                <a href="#" class="text text--light text--color-light menu-inner__link">MOCASINES</a>
+                                            </li>
+                                            <li class="menu-inner__item">
+                                                <a href="#" class="text text--light text--color-light menu-inner__link">MULES / SLIPPERS</a>
+                                            </li>
+                                            <li class="menu-inner__item">
+                                                <a href="#" class="text text--light text--color-light menu-inner__link">PLATAFORMAS</a>
+                                            </li>
+                                            <li class="menu-inner__item">
+                                                <a href="#" class="text text--light text--color-light menu-inner__link">PLAYERAS</a>
+                                            </li>
+                                            <li class="menu-inner__item">
+                                                <a href="#" class="text text--light text--color-light menu-inner__link">SANDALIAS</a>
+                                            </li>
+                                            <li class="menu-inner__item">
+                                                <a href="#" class="text text--light text--color-light menu-inner__link">ZAPATOS</a>
+                                            </li>
+                                            <li class="menu-inner__item">
+                                                <a href="#" class="text text--light text--color-light menu-inner__link">TODOS</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu__list-item">
+                                        <a href="#" class="menu__list-link text text--med text--title">HOMBRES
+                                            <i class="fa fa-chevron-right menu__list-link__icon"></i>
+                                        </a>
+                                        <ul class="menu-inner">
+                                            <li class="menu-inner__item">
+                                                <a href="#" class="text text--light text--color-light menu-inner__link">BOTINES</a>
+                                            </li>
+                                            <li class="menu-inner__item">
+                                                <a href="#" class="text text--light text--color-light menu-inner__link">FORMALES</a>
+                                            </li>
+                                            <li class="menu-inner__item">
+                                                <a href="#" class="text text--light text--color-light menu-inner__link">SANDALIAS</a>
+                                            </li>
+                                            <li class="menu-inner__item">
+                                                <a href="#" class="text text--light text--color-light menu-inner__link">ZAPATOS</a>
+                                            </li>
+                                            <li class="menu-inner__item">
+                                                <a href="#" class="text text--light text--color-light menu-inner__link">TODOS</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="u-visible-xs menu__list-item">
+                                        <p class="menu__list-link text text--color-dark">Envios Gratis a todo Chile</p>
+                                        <a href="#" class="menu__list-link menu__list-link--clickable text text--color-dark text--light">Tiempo de envios</a>
+                                        <a href="#" class="menu__list-link menu__list-link--clickable text text--color-dark text--light">Cambios y Devoluciones</a>
+                                        <a href="#" class="menu__list-link menu__list-link--clickable text text--color-dark text--light">Preguntas? Contáctanos</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="menu__actions">
+                        <div class="menu__actions-item menu__searchbar">
+                            <form action="#" class="searchbar">
+                                <input type="text" class="searchbar__input" placeholder="Buscar">
+                                <button class="searchbar__btn">
+                                    <div class="text text--med searchbar__btn-label">Buscar</div>
+                                    <i class="fa fa-search searchbar__btn-icon"></i>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="menu__actions-item menu__bag">
+                            <div class="shopping-bag">
+                                <img src="images/buscar.png" alt="Buscar" class="menu__actions-item menu__searchbar-trigger">
+                                <p class="text text--light text--color-light shopping-bag__copy open-popup" data-popup="shopping-bag">Tu Compra 0</p>
+                                <img src="images/bolsa.png" alt="Bolsa de compras" class="shopping-bag__icon open-popup" data-popup="shopping-bag">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <ul class="u-padding-top-smaller u-hidden-xs breadcrumbs">
+                <li class="breadcrumbs__item">
+                    <a href="#" class="text text--color-light text--extralight text--smaller breadcrumbs__link">Home</a>
+                </li>
+            </ul>
+            <div class="section-products">
+                <aside class="u-hidden-xs section-products__sidebar">
+                    <div class="filters">
+                        <div class="u-padding-vertical-small filters__group">
+                            <h4 class="u-margin-bottom-small text text--small text--weight-med text--color-dark">TIPO DE CALZADO</h4>
+                            <div class="filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="Ballerinas">
+                                <label for="Ballerinas" class="filters__label text text--light text--color-dark">Ballerinas</label>
+                            </div>
+                            <div class="filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="Botines">
+                                <label for="Botines" class="filters__label text text--light text--color-dark">Botines</label>
+                            </div>
+                            <div class="filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="Mocasines">
+                                <label for="Mocasines" class="filters__label text text--light text--color-dark">Mocasines</label>
+                            </div>
+                            <div class="filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="Mules / Slippers">
+                                <label for="Mules / Slippers" class="filters__label text text--light text--color-dark">Mules / Slippers</label>
+                            </div>
+                            <div class="filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="Plataformas">
+                                <label for="Plataformas" class="filters__label text text--light text--color-dark">Plataformas</label>
+                            </div>
+                            <div class="filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="Playeras">
+                                <label for="Playeras" class="filters__label text text--light text--color-dark">Playeras</label>
+                            </div>
+                            <div class="filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="Sandalias">
+                                <label for="Sandalias" class="filters__label text text--light text--color-dark">Sandalias</label>
+                            </div>
+                            <div class="filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="Zapatos">
+                                <label for="Zapatos" class="filters__label text text--light text--color-dark">Zapatos</label>
+                            </div>
+                        </div>
+                        <div class="u-padding-vertical-small filters__group">
+                            <h4 class="u-margin-bottom-small text text--small text--weight-med text--color-dark">COLOR PRINCIPAL</h4>
+                            <div class="filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="Azul">
+                                <label for="Azul" class="filters__label text text--light text--color-dark">Azul</label>
+                            </div>
+                            <div class="filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="Beige">
+                                <label for="Beige" class="filters__label text text--light text--color-dark">Beige</label>
+                            </div>
+                            <div class="filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="Blanco">
+                                <label for="Blanco" class="filters__label text text--light text--color-dark">Blanco</label>
+                            </div>
+                            <div class="filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="Burdeo">
+                                <label for="Burdeo" class="filters__label text text--light text--color-dark">Burdeo</label>
+                            </div>
+                            <div class="filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="Café">
+                                <label for="Café" class="filters__label text text--light text--color-dark">Café</label>
+                            </div>
+                            <div class="filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="Dorado">
+                                <label for="Dorado" class="filters__label text text--light text--color-dark">Dorado</label>
+                            </div>
+                            <div class="filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="Gris">
+                                <label for="Gris" class="filters__label text text--light text--color-dark">Gris</label>
+                            </div>
+                            <div class="filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="Metálico">
+                                <label for="Metálico" class="filters__label text text--light text--color-dark">Metálico</label>
+                            </div>
+                            <div class="filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="Negro">
+                                <label for="Negro" class="filters__label text text--light text--color-dark">Negro</label>
+                            </div>
+                            <div class="filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="Rojo">
+                                <label for="Rojo" class="filters__label text text--light text--color-dark">Rojo</label>
+                            </div>
+                        </div>
+                        <div class="u-padding-vertical-small filters__group">
+                            <h4 class="u-margin-bottom-small text text--small text--weight-med text--color-dark">MATERIAL DEL ZAPATO</h4>
+                            <div class="filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="Cuero">
+                                <label for="Cuero" class="filters__label text text--light text--color-dark">Cuero</label>
+                            </div>
+                            <div class="filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="Eco Cuero">
+                                <label for="Eco Cuero" class="filters__label text text--light text--color-dark">Eco Cuero</label>
+                            </div>
+                        </div>
+                        <div class="u-padding-vertical-small filters__group">
+                            <h4 class="u-margin-bottom-small text text--small text--weight-med text--color-dark">MARCA</h4>
+                            <div class="filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="Degas">
+                                <label for="Degas" class="filters__label text text--light text--color-dark">Degas</label>
+                            </div>
+                            <div class="filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="Eda Manzini">
+                                <label for="Eda Manzini" class="filters__label text text--light text--color-dark">Eda Manzini</label>
+                            </div>
+                            <div class="filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="Lola Canales">
+                                <label for="Lola Canales" class="filters__label text text--light text--color-dark">Lola Canales</label>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                <div class="section-products__main">
+                    <div class="section-products__main-header">
+                        <div class="section-products__main-filters-trigger">
+                            <p class="open-popup text text--light text--color-light" data-popup="sort">Ordenar por:
+                                <i class="fa fa-caret-down"></i>
+                            </p>
+                            <p class="open-popup text text--light text--color-light" data-popup="filter">Filtrar por:
+                                <i class="fa fa-caret-down"></i>
+                            </p>
+                        </div>
+                        <div class="section-products__title">
+                            <h1 class="text text--big text--weight-med text--color-dark">MUJERES
+                                <span class="text text--color-light text--light text--big">- 12 Items</span>
+                            </h1>
+                        </div>
+                        <div class="u-hidden-xs-flex dropdown">
+                            <h4 class="dropdown__label text text--light">Ordenar por:</h4>
+                            <i class="fa fa-caret-down dropdown__arrow"></i>
+                            <ul class="dropdown__list">
+                                <li class="dropdown__list-item">Precio: Mayor a menor</li>
+                                <li class="dropdown__list-item">Precio: Menor a mayor</li>
+                                <li class="dropdown__list-item">Nombre</li>
+                                <li class="dropdown__list-item">Aleatorio</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="u-hidden-xs-flex u-padding-vertical-small section-products__main-filters">
+                        <input name="inner-filters" type="radio" class="section-products__main-filters__input" id="tallas-disponibles">
+                        <label class="section-products__main-filters__label text text--extralight text--color-light text--small" for="tallas-disponibles">Tallas Disponibles</label>
+                        <ul class="section-products__main-filters__list">
+                            <li class="section-products__main-filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="35">
+                                <label for="35" class="filters__label text text--color-dark text--smaller">35</label>
+                            </li>
+                            <li class="section-products__main-filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="36">
+                                <label for="36" class="filters__label text text--color-dark text--smaller">36</label>
+                            </li>
+                            <li class="section-products__main-filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="37">
+                                <label for="37" class="filters__label text text--color-dark text--smaller">37</label>
+                            </li>
+                        </ul>
+
+                        <input name="inner-filters" type="radio" class="section-products__main-filters__input" id="tipo-taco">
+                        <label class="section-products__main-filters__label text text--extralight text--color-light text--small" for="tipo-taco">Tipo de Taco</label>
+                        <ul class="section-products__main-filters__list">
+                            <li class="section-products__main-filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="Alto">
+                                <label for="Alto" class="filters__label text text--color-dark text--smaller">Alto</label>
+                            </li>
+                            <li class="section-products__main-filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="Bajo">
+                                <label for="Bajo" class="filters__label text text--color-dark text--smaller">Bajo</label>
+                            </li>
+                            <li class="section-products__main-filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="Chino">
+                                <label for="Chino" class="filters__label text text--color-dark text--smaller">Chino</label>
+                            </li>
+                            <li class="section-products__main-filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="Medio">
+                                <label for="Medio" class="filters__label text text--color-dark text--smaller">Medio</label>
+                            </li>
+                            <li class="section-products__main-filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="Plano">
+                                <label for="Plano" class="filters__label text text--color-dark text--smaller">Plano</label>
+                            </li>
+                            <li class="section-products__main-filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="Tacón">
+                                <label for="Tacón" class="filters__label text text--color-dark text--smaller">Tacón</label>
+                            </li>
+                            <li class="section-products__main-filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="Terraplén">
+                                <label for="Terraplén" class="filters__label text text--color-dark text--smaller">Terraplén</label>
+                            </li>
+                        </ul>
+
+                        <input name="inner-filters" type="radio" class="section-products__main-filters__input" id="altura-taco">
+                        <label class="section-products__main-filters__label text text--extralight text--color-light text--small" for="altura-taco">Altura Taco</label>
+                        <ul class="section-products__main-filters__list">
+                            <li class="section-products__main-filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="1.5cms">
+                                <label for="1.5cms" class="filters__label text text--color-dark text--smaller">1.5cms</label>
+                            </li>
+                            <li class="section-products__main-filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="2.5cms">
+                                <label for="2.5cms" class="filters__label text text--color-dark text--smaller">2.5cms</label>
+                            </li>
+                            <li class="section-products__main-filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="3.5cms">
+                                <label for="3.5cms" class="filters__label text text--color-dark text--smaller">3.5cms</label>
+                            </li>
+                            <li class="section-products__main-filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="4.5cms">
+                                <label for="4.5cms" class="filters__label text text--color-dark text--smaller">4.5cms</label>
+                            </li>
+                        </ul>
+
+                        <input name="inner-filters" type="radio" class="section-products__main-filters__input" id="altura-plataforma">
+                        <label class="section-products__main-filters__label text text--extralight text--color-light text--small" for="altura-plataforma">Altura Plataforma</label>
+                        <ul class="section-products__main-filters__list">
+                            <li class="section-products__main-filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="plat-1.5cms">
+                                <label for="plat-1.5cms" class="filters__label text text--color-dark text--smaller">1.5cms</label>
+                            </li>
+                            <li class="section-products__main-filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="plat-2.5cms">
+                                <label for="plat-2.5cms" class="filters__label text text--color-dark text--smaller">2.5cms</label>
+                            </li>
+                            <li class="section-products__main-filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="plat-3.5cms">
+                                <label for="plat-3.5cms" class="filters__label text text--color-dark text--smaller">3.5cms</label>
+                            </li>
+                            <li class="section-products__main-filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="plat-4.5cms">
+                                <label for="plat-4.5cms" class="filters__label text text--color-dark text--smaller">4.5cms</label>
+                            </li>
+                            <li class="section-products__main-filters__item">
+                                <input type="checkbox" class="filters__checkbox" id="plat-5.5cms">
+                                <label for="plat-5.5cms" class="filters__label text text--color-dark text--smaller">5.5cms</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="section-products__content">
+                        <div class="section-products__content-row">
+                            <article class="product-box section-products__item">
+                                <a href="#" class="product-box__content">
+                                    <div class="product-box__tag text text--color-white text--weight-med">Sale</div>
+                                    <img src="images/producto.png" alt="Imagen del producto" class="product-box__img">
+                                    <div class="product-box__copy">
+                                        <h3 class="text text--small text--color-dark text--weight-med">Eda Manzani</h3>
+                                        <h3 class="text text--smaller text--color-dark text--nobreak">Sandalia Plateada Baubo</h3>
+                                        <div class="product-box__prices">
+                                            <p class="text text--smaller text--color-dark text--weight-med">$9.990</p>
+                                            <p class="text text--crossline text--smaller">$12.990</p>
+                                            <p class="text text--color-red text--smaller text--color-dark">(23%)</p>
+                                        </div>
+                                    </div>
+                                    <div class="product-box__btn text text--weight-med text--color-tertiary text--small">COMPRAR</div>
+                                </a>
+                            </article>
+                            <article class="product-box section-products__item">
+                                <a href="#" class="product-box__content">
+                                    <div class="product-box__tag text text--color-white text--weight-med">Sale</div>
+                                    <img src="images/producto.png" alt="Imagen del producto" class="product-box__img">
+                                    <div class="product-box__copy">
+                                        <h3 class="text text--small text--color-dark text--weight-med">Eda Manzani</h3>
+                                        <h3 class="text text--smaller text--color-dark text--nobreak">Sandalia Plateada Baubo</h3>
+                                        <div class="product-box__prices">
+                                            <p class="text text--smaller text--color-dark text--weight-med">$9.990</p>
+                                            <p class="text text--crossline text--smaller">$12.990</p>
+                                            <p class="text text--color-red text--smaller text--color-dark">(23%)</p>
+                                        </div>
+                                    </div>
+                                    <div class="product-box__btn text text--weight-med text--color-tertiary text--small">COMPRAR</div>
+                                </a>
+                            </article>
+                            <article class="product-box section-products__item">
+                                <a href="#" class="product-box__content">
+                                    <img src="images/producto.png" alt="Imagen del producto" class="product-box__img">
+                                    <div class="product-box__copy">
+                                        <h3 class="text text--small text--color-dark text--weight-med">Eda Manzani</h3>
+                                        <h3 class="text text--smaller text--color-dark text--nobreak">Sandalia Plateada Baubo</h3>
+                                        <div class="product-box__prices">
+                                            <p class="text text--smaller text--color-dark text--weight-med">$9.990</p>
+                                            <p class="text text--crossline text--smaller">$12.990</p>
+                                            <p class="text text--color-red text--smaller text--color-dark">(23%)</p>
+                                        </div>
+                                    </div>
+                                    <div class="product-box__btn text text--weight-med text--color-tertiary text--small">COMPRAR</div>
+                                </a>
+                            </article>
+                            <article class="product-box section-products__item">
+                                <a href="#" class="product-box__content">
+                                    <img src="images/producto.png" alt="Imagen del producto" class="product-box__img">
+                                    <div class="product-box__copy">
+                                        <h3 class="text text--small text--color-dark text--weight-med">Eda Manzani</h3>
+                                        <h3 class="text text--smaller text--color-dark text--nobreak">Sandalia Plateada Baubo</h3>
+                                        <div class="product-box__prices">
+                                            <p class="text text--smaller text--color-dark text--weight-med">$9.990</p>
+                                            <p class="text text--crossline text--smaller">$12.990</p>
+                                            <p class="text text--color-red text--smaller text--color-dark">(23%)</p>
+                                        </div>
+                                    </div>
+                                    <div class="product-box__btn text text--weight-med text--color-tertiary text--small">COMPRAR</div>
+                                </a>
+                            </article>
+                        </div>
+                        <div class="section-products__content-row">
+                            <article class="product-box section-products__item">
+                                <a href="#" class="product-box__content">
+                                    <img src="images/producto.png" alt="Imagen del producto" class="product-box__img">
+                                    <div class="product-box__copy">
+                                        <h3 class="text text--small text--color-dark text--weight-med">Eda Manzani</h3>
+                                        <h3 class="text text--smaller text--color-dark text--nobreak">Sandalia Plateada Baubo</h3>
+                                        <div class="product-box__prices">
+                                            <p class="text text--smaller text--color-dark text--weight-med">$9.990</p>
+                                            <p class="text text--crossline text--smaller">$12.990</p>
+                                            <p class="text text--color-red text--smaller text--color-dark">(23%)</p>
+                                        </div>
+                                    </div>
+                                    <div class="product-box__btn text text--weight-med text--color-tertiary text--small">COMPRAR</div>
+                                </a>
+                            </article>
+                            <article class="product-box section-products__item">
+                                <a href="#" class="product-box__content">
+                                    <img src="images/producto.png" alt="Imagen del producto" class="product-box__img">
+                                    <div class="product-box__copy">
+                                        <h3 class="text text--small text--color-dark text--weight-med">Eda Manzani</h3>
+                                        <h3 class="text text--smaller text--color-dark text--nobreak">Sandalia Plateada Baubo</h3>
+                                        <div class="product-box__prices">
+                                            <p class="text text--smaller text--color-dark text--weight-med">$9.990</p>
+                                            <p class="text text--crossline text--smaller">$12.990</p>
+                                            <p class="text text--color-red text--smaller text--color-dark">(23%)</p>
+                                        </div>
+                                    </div>
+                                    <div class="product-box__btn text text--weight-med text--color-tertiary text--small">COMPRAR</div>
+                                </a>
+                            </article>
+                            <article class="product-box section-products__item">
+                                <a href="#" class="product-box__content">
+                                    <img src="images/producto.png" alt="Imagen del producto" class="product-box__img">
+                                    <div class="product-box__copy">
+                                        <h3 class="text text--small text--color-dark text--weight-med">Eda Manzani</h3>
+                                        <h3 class="text text--smaller text--color-dark text--nobreak">Sandalia Plateada Baubo</h3>
+                                        <div class="product-box__prices">
+                                            <p class="text text--smaller text--color-dark text--weight-med">$9.990</p>
+                                            <p class="text text--crossline text--smaller">$12.990</p>
+                                            <p class="text text--color-red text--smaller text--color-dark">(23%)</p>
+                                        </div>
+                                    </div>
+                                    <div class="product-box__btn text text--weight-med text--color-tertiary text--small">COMPRAR</div>
+                                </a>
+                            </article>
+                            <article class="product-box section-products__item">
+                                <a href="#" class="product-box__content">
+                                    <img src="images/producto.png" alt="Imagen del producto" class="product-box__img">
+                                    <div class="product-box__copy">
+                                        <h3 class="text text--small text--color-dark text--weight-med">Eda Manzani</h3>
+                                        <h3 class="text text--smaller text--color-dark text--nobreak">Sandalia Plateada Baubo</h3>
+                                        <div class="product-box__prices">
+                                            <p class="text text--smaller text--color-dark text--weight-med">$9.990</p>
+                                            <p class="text text--crossline text--smaller">$12.990</p>
+                                            <p class="text text--color-red text--smaller text--color-dark">(23%)</p>
+                                        </div>
+                                    </div>
+                                    <div class="product-box__btn text text--weight-med text--color-tertiary text--small">COMPRAR</div>
+                                </a>
+                            </article>
+                        </div>
+                        <div class="section-products__content-row">
+                            <article class="product-box section-products__item">
+                                <a href="#" class="product-box__content">
+                                    <div class="product-box__tag text text--color-white text--weight-med">Sale</div>
+                                    <img src="images/producto.png" alt="Imagen del producto" class="product-box__img">
+                                    <div class="product-box__copy">
+                                        <h3 class="text text--small text--color-dark text--weight-med">Eda Manzani</h3>
+                                        <h3 class="text text--smaller text--color-dark text--nobreak">Sandalia Plateada Baubo</h3>
+                                        <div class="product-box__prices">
+                                            <p class="text text--smaller text--color-dark text--weight-med">$9.990</p>
+                                            <p class="text text--crossline text--smaller">$12.990</p>
+                                            <p class="text text--color-red text--smaller text--color-dark">(23%)</p>
+                                        </div>
+                                    </div>
+                                    <div class="product-box__btn text text--weight-med text--color-tertiary text--small">COMPRAR</div>
+                                </a>
+                            </article>
+                            <article class="product-box section-products__item">
+                                <a href="#" class="product-box__content">
+                                    <div class="product-box__tag text text--color-white text--weight-med">Sale</div>
+                                    <img src="images/producto.png" alt="Imagen del producto" class="product-box__img">
+                                    <div class="product-box__copy">
+                                        <h3 class="text text--small text--color-dark text--weight-med">Eda Manzani</h3>
+                                        <h3 class="text text--smaller text--color-dark text--nobreak">Sandalia Plateada Baubo</h3>
+                                        <div class="product-box__prices">
+                                            <p class="text text--smaller text--color-dark text--weight-med">$9.990</p>
+                                            <p class="text text--crossline text--smaller">$12.990</p>
+                                            <p class="text text--color-red text--smaller text--color-dark">(23%)</p>
+                                        </div>
+                                    </div>
+                                    <div class="product-box__btn text text--weight-med text--color-tertiary text--small">COMPRAR</div>
+                                </a>
+                            </article>
+                            <article class="product-box section-products__item">
+                                <a href="#" class="product-box__content">
+                                    <img src="images/producto.png" alt="Imagen del producto" class="product-box__img">
+                                    <div class="product-box__copy">
+                                        <h3 class="text text--small text--color-dark text--weight-med">Eda Manzani</h3>
+                                        <h3 class="text text--smaller text--color-dark text--nobreak">Sandalia Plateada Baubo</h3>
+                                        <div class="product-box__prices">
+                                            <p class="text text--smaller text--color-dark text--weight-med">$9.990</p>
+                                            <p class="text text--crossline text--smaller">$12.990</p>
+                                            <p class="text text--color-red text--smaller text--color-dark">(23%)</p>
+                                        </div>
+                                    </div>
+                                    <div class="product-box__btn text text--weight-med text--color-tertiary text--small">COMPRAR</div>
+                                </a>
+                            </article>
+                            <article class="product-box section-products__item">
+                                <a href="#" class="product-box__content">
+                                    <img src="images/producto.png" alt="Imagen del producto" class="product-box__img">
+                                    <div class="product-box__copy">
+                                        <h3 class="text text--small text--color-dark text--weight-med">Eda Manzani</h3>
+                                        <h3 class="text text--smaller text--color-dark text--nobreak">Sandalia Plateada Baubo</h3>
+                                        <div class="product-box__prices">
+                                            <p class="text text--smaller text--color-dark text--weight-med">$9.990</p>
+                                            <p class="text text--crossline text--smaller">$12.990</p>
+                                            <p class="text text--color-red text--smaller text--color-dark">(23%)</p>
+                                        </div>
+                                    </div>
+                                    <div class="product-box__btn text text--weight-med text--color-tertiary text--small">COMPRAR</div>
+                                </a>
+                            </article>
+                        </div>
+                        <button class="btn btn--centered btn--half text text--weight-med text--title text--color-tertiary btn--small btn--tertiary">CARGAR MÁS PRODUCTOS</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container container--big">
+            <section class="u-padding-bottom-med u-padding-top-med section-intro">
+                <div class="u-padding-top-med section-intro__header">
+                    <div class="u-margin-bottom-smaller section-intro__header-text-wrapper">
+                        <h3 class="text text--color-dark text--uppercase section-intro__header-text">PLACARE.COM - UNA NUEVA EXPERIENCIA ONLINE EN COMPRA DE ZAPATOS</h3>
+                    </div>
+                    <div class="section-intro__content">
+                        <p class="text text--light section-intro__content-text">Placare.com llega con una nueva propuesta cuyo fin es entregar una nueva y única experiencia en compra
+                            de zapatos por Internet de forma fácil, rápida y en cualquier momento. Placare.com se basa en
+                            el descubrimiento inteligente de productos nuevos, tendencias, texturas y colores a través de
+                            su plataforma que entrega respuestas rápidas y precisas a las consultas realizadas por nuestros
+                            clientes. La oferta de Placare abarca todo tipo de zapatos para mujer, hombre, y también accesorios,
+                            entregando una propuesta variada que se ajusta a todos nuestros clientes. Invitamos a todas y
+                            todos, a descubrir en Placare.com las colecciones de Eda Manzini, Lola Canales, Degas, Cocomate,
+                            Manzini entre otras, ya que “lo que te falta” puede estar solo a un par de clicks.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <nav class="footer__nav">
+                <div class="footer__column">
+                    <h4 class="text text--title text--color-dark footer__column-title">TIENDA</h4>
+                    <ul class="footer__menu">
+                        <li class="footer__menu-item">
+                            <a href="#" class="text text--light text--color-light text--small footer__menu-link">Mules / Slippers Mujer</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="text text--light text--color-light text--small footer__menu-link">Botines Mujer</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="text text--light text--color-light text--small footer__menu-link">Sandalias Mujer</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="text text--light text--color-light text--small footer__menu-link">Plataformas Mujer</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="text text--light text--color-light text--small footer__menu-link">Playeras Mujer</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="text text--light text--color-light text--small footer__menu-link">Hombres</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h4 class="text text--title text--color-dark footer__column-title">SERVICIO AL CLIENTE</h4>
+                    <ul class="footer__menu">
+                        <li class="footer__menu-item">
+                            <a href="#" class="text text--light text--color-light text--small footer__menu-link">Cambios Y Devoluciones</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="text text--light text--color-light text--small footer__menu-link">Condiciones De Envío</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="text text--light text--color-light text--small footer__menu-link">TOS</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="text text--light text--color-light text--small footer__menu-link">Politicas De Privacidad</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="text text--light text--color-light text--small footer__menu-link">Tiempo De Envíos</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="text text--light text--color-light text--small footer__menu-link">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h4 class="text text--title text--color-dark footer__column-title">SIGUENOS EN NUESTRAS REDES SOCIALES</h4>
+                    <ul class="footer__menu footer__menu--inline">
+                        <li class="footer__menu-item">
+                            <a href="#" class="footer__menu-link">
+                                <img src="images/instagram.png" alt="Instagram" class="u-responsive-img footer__menu-img">
+                            </a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="footer__menu-link">
+                                <img src="images/pinterest.png" alt="Pinterest" class="u-responsive-img footer__menu-img">
+                            </a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="footer__menu-link">
+                                <img src="images/youtube.png" alt="YouTube" class="u-responsive-img footer__menu-img">
+                            </a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="footer__menu-link">
+                                <img src="images/facebook.png" alt="Facebook" class="u-responsive-img footer__menu-img">
+                            </a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="footer__menu-link">
+                                <img src="images/twitter.png" alt="Twitter" class="u-responsive-img footer__menu-img">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h4 class="text text--title text--color-dark footer__column-title">DESPACHO Y PAGO</h4>
+                    <img src="images/metodosdepago.png" alt="Métodos de pago" class="u-img-responsive footer__img">
+                    <img src="images/chilexpress.png" alt="Chilexpress" class="u-img-responsive footer__img">
+                    <img src="images/correoschile.png" alt="Correos Chile" class="u-img-responsive footer__img">
+                </div>
+                <div class="footer__column">
+                    <h4 class="text text--title text--color-dark footer__column-title">PLACARE.COM</h4>
+                    <img src="images/info.jpg" alt="Información" class="u-img-responsive footer__img">
+                </div>
+            </nav>
+            <div class="u-padding-top-small u-padding-bottom-med-2 footer__subscribe">
+                <div class="footer__subscribe-copy">
+                    <p class="text text--color-dark">Suscribete a nuestro Placare.com para mantenerte al tanto de lanzamientos de productos, descuentos, novedades!</p>
+                    <p class="text text--light">Escribe tu correo y elige tu preferencia.</p>
+                </div>
+                <form action="#" class="form form--inline footer__subscribe-form">
+                    <input type="email" class="form__input" placeholder="Tu correo electrónico">
+                    <button class="form__btn">Soy Mujer</button>
+                    <button class="form__btn">Soy Hombre</button>
+                </form>
+            </div>
+            <div class="footer__searches">
+                <div class="u-margin-bottom-smaller footer__searches-header__text-wrapper">
+                    <h3 class="text text--color-dark text--uppercase footer__searches-header__text">
+                        <span>BÚSQUEDAS POPULARES</span>
+                    </h3>
+                </div>
+                <p class="footer__searches-list">
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                    <a href="#" class="footer__searches-item text text--light">Item</a>
+                </p>
+            </div>
+            <div class="u-padding-vertical-small footer__copyright">
+                <p class="text text--light text--smaller">Dudas? Contactanos | sac@placare.com</p>
+                <p class="text text--light text--smaller">Placare.com - 2017.
+                    <br>Marca registrada de San Marcos SPA</p>
+                <p class="text text--light text--smaller">LoadingPlay</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="close-popup popup" data-popup="shopping-bag">
+        <div class="popup__content">
+            <div class="popup__header">
+                <h2 class="text text--light text--bigger text--color-dark">Resumen de tu compra</h2>
+                <span class="close-popup popup__close" data-popup="shopping-bag">&times;</span>
+            </div>
+            <div class="popup__main">
+                <table class="table">
+                    <tr class="table__row">
+                        <th class="text text--color-dark text--bold table__cell">Nombre</th>
+                        <th class="text text--color-dark text--bold table__cell">Talla</th>
+                        <th class="text text--color-dark text--bold table__cell table__cell--center">Cant</th>
+                        <th class="text text--color-dark text--bold table__cell table__cell--center">Precio</th>
+                        <th class="text text--color-dark text--bold table__cell table__cell--center">Eliminar</th>
+                    </tr>
+                    <tr class="table__row">
+                        <th class="text text--color-dark table__cell">Sandalia Dorada Baubo</th>
+                        <th class="text text--color-dark table__cell">37</th>
+                        <th class="text text--color-dark table__cell table__cell--center">
+                            <span class="remove-one">-</span>1
+                            <span class="add-one">+</span>
+                        </th>
+                        <th class="text text--color-dark table__cell table__cell--center">$9.990</th>
+                        <th class="text text--color-dark table__cell table__cell--center remove-item">X</th>
+                    </tr>
+                    <tr class="table__row">
+                        <td class="text text--color-dark text--bold table__cell">Total:</td>
+                        <td class="table__cell"></td>
+                        <td class="table__cell"></td>
+                        <td class="text text--color-dark text--bold table__cell table__cell--center">$9.990</td>
+                        <td class="table__cell"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="popup__footer">
+                <div class="popup__btns">
+                    <a href="#" class="close-popup btn" data-popup="shopping-bag">VOLVER</a>
+                    <a href="#" class="btn">PAGAR</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="close-popup popup" data-popup="filter">
+        <div class="popup__content">
+            <div class="popup__header">
+                <h2 class="text text--light text--bigger text--color-dark">FILTRAR POR</h2>
+                <span class="close-popup popup__close" data-popup="filter">&times;</span>
+            </div>
+            <div class="popup__main">
+                <div class="filters">
+                    <div class="u-padding-vertical-small filters__group">
+                        <h4 class="u-margin-bottom-small text text--small text--weight-med text--color-dark">TIPO DE CALZADO</h4>
+                        <div class="filters__item">
+                            <input type="checkbox" class="filters__checkbox" id="Ballerinas">
+                            <label for="Ballerinas" class="filters__label text text--light text--color-dark">Ballerinas</label>
+                        </div>
+                        <div class="filters__item">
+                            <input type="checkbox" class="filters__checkbox" id="Botines">
+                            <label for="Botines" class="filters__label text text--light text--color-dark">Botines</label>
+                        </div>
+                        <div class="filters__item">
+                            <input type="checkbox" class="filters__checkbox" id="Mocasines">
+                            <label for="Mocasines" class="filters__label text text--light text--color-dark">Mocasines</label>
+                        </div>
+                        <div class="filters__item">
+                            <input type="checkbox" class="filters__checkbox" id="Mules / Slippers">
+                            <label for="Mules / Slippers" class="filters__label text text--light text--color-dark">Mules / Slippers</label>
+                        </div>
+                        <div class="filters__item">
+                            <input type="checkbox" class="filters__checkbox" id="Plataformas">
+                            <label for="Plataformas" class="filters__label text text--light text--color-dark">Plataformas</label>
+                        </div>
+                        <div class="filters__item">
+                            <input type="checkbox" class="filters__checkbox" id="Playeras">
+                            <label for="Playeras" class="filters__label text text--light text--color-dark">Playeras</label>
+                        </div>
+                        <div class="filters__item">
+                            <input type="checkbox" class="filters__checkbox" id="Sandalias">
+                            <label for="Sandalias" class="filters__label text text--light text--color-dark">Sandalias</label>
+                        </div>
+                        <div class="filters__item">
+                            <input type="checkbox" class="filters__checkbox" id="Zapatos">
+                            <label for="Zapatos" class="filters__label text text--light text--color-dark">Zapatos</label>
+                        </div>
+                    </div>
+                    <div class="u-padding-vertical-small filters__group">
+                        <h4 class="u-margin-bottom-small text text--small text--weight-med text--color-dark">COLOR PRINCIPAL</h4>
+                        <div class="filters__item">
+                            <input type="checkbox" class="filters__checkbox" id="Azul">
+                            <label for="Azul" class="filters__label text text--light text--color-dark">Azul</label>
+                        </div>
+                        <div class="filters__item">
+                            <input type="checkbox" class="filters__checkbox" id="Beige">
+                            <label for="Beige" class="filters__label text text--light text--color-dark">Beige</label>
+                        </div>
+                        <div class="filters__item">
+                            <input type="checkbox" class="filters__checkbox" id="Blanco">
+                            <label for="Blanco" class="filters__label text text--light text--color-dark">Blanco</label>
+                        </div>
+                        <div class="filters__item">
+                            <input type="checkbox" class="filters__checkbox" id="Burdeo">
+                            <label for="Burdeo" class="filters__label text text--light text--color-dark">Burdeo</label>
+                        </div>
+                        <div class="filters__item">
+                            <input type="checkbox" class="filters__checkbox" id="Café">
+                            <label for="Café" class="filters__label text text--light text--color-dark">Café</label>
+                        </div>
+                        <div class="filters__item">
+                            <input type="checkbox" class="filters__checkbox" id="Dorado">
+                            <label for="Dorado" class="filters__label text text--light text--color-dark">Dorado</label>
+                        </div>
+                        <div class="filters__item">
+                            <input type="checkbox" class="filters__checkbox" id="Gris">
+                            <label for="Gris" class="filters__label text text--light text--color-dark">Gris</label>
+                        </div>
+                        <div class="filters__item">
+                            <input type="checkbox" class="filters__checkbox" id="Metálico">
+                            <label for="Metálico" class="filters__label text text--light text--color-dark">Metálico</label>
+                        </div>
+                        <div class="filters__item">
+                            <input type="checkbox" class="filters__checkbox" id="Negro">
+                            <label for="Negro" class="filters__label text text--light text--color-dark">Negro</label>
+                        </div>
+                        <div class="filters__item">
+                            <input type="checkbox" class="filters__checkbox" id="Rojo">
+                            <label for="Rojo" class="filters__label text text--light text--color-dark">Rojo</label>
+                        </div>
+                    </div>
+                    <div class="u-padding-vertical-small filters__group">
+                        <h4 class="u-margin-bottom-small text text--small text--weight-med text--color-dark">MATERIAL DEL ZAPATO</h4>
+                        <div class="filters__item">
+                            <input type="checkbox" class="filters__checkbox" id="Cuero">
+                            <label for="Cuero" class="filters__label text text--light text--color-dark">Cuero</label>
+                        </div>
+                        <div class="filters__item">
+                            <input type="checkbox" class="filters__checkbox" id="Eco Cuero">
+                            <label for="Eco Cuero" class="filters__label text text--light text--color-dark">Eco Cuero</label>
+                        </div>
+                    </div>
+                    <div class="u-padding-vertical-small filters__group">
+                        <h4 class="u-margin-bottom-small text text--small text--weight-med text--color-dark">MARCA</h4>
+                        <div class="filters__item">
+                            <input type="checkbox" class="filters__checkbox" id="Degas">
+                            <label for="Degas" class="filters__label text text--light text--color-dark">Degas</label>
+                        </div>
+                        <div class="filters__item">
+                            <input type="checkbox" class="filters__checkbox" id="Eda Manzini">
+                            <label for="Eda Manzini" class="filters__label text text--light text--color-dark">Eda Manzini</label>
+                        </div>
+                        <div class="filters__item">
+                            <input type="checkbox" class="filters__checkbox" id="Lola Canales">
+                            <label for="Lola Canales" class="filters__label text text--light text--color-dark">Lola Canales</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="close-popup popup" data-popup="sort">
+        <div class="popup__content">
+            <div class="popup__header">
+                <h2 class="text text--light text--bigger text--color-dark">ORDENAR POR</h2>
+                <span class="close-popup popup__close" data-popup="sort">&times;</span>
+            </div>
+            <div class="popup__main">
+                <ul class="dropdown__list dropdown__list--visible">
+                    <li class="dropdown__list-item">Precio: Mayor a menor</li>
+                    <li class="dropdown__list-item">Precio: Menor a mayor</li>
+                    <li class="dropdown__list-item">Nombre</li>
+                    <li class="dropdown__list-item">Aleatorio</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
