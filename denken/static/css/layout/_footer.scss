@@ -1,0 +1,25 @@
+.footer {
+    background-color: $color-primary;
+    padding: 1.333rem 15px 2.9167rem 15px;
+    @include atSmall {
+        padding: 1rem 15px 2.1875rem 15px;
+    }
+
+    &-content {
+        @include atSmall {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+    }
+
+    &-logo {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        @include atSmall {
+            justify-content: flex-start;
+            margin: 0;
+        }
+    }
+}

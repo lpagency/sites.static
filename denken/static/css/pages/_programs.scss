@@ -1,0 +1,50 @@
+.section-programs {
+    &-item {
+        display: block;
+        border-bottom: 4px solid $color-gray;
+        padding-bottom: 3.333rem;
+        @include linkStates(inherit, none);
+        @include atSmall {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &-icon {
+            max-width: 70px;
+        }
+
+        &-triangle {
+            max-width: 2.5rem;
+            margin-right: 2.0833rem;
+            @include atSmall {
+                max-width: 1.875rem;
+                margin-right: 1.5625rem;
+            }
+        }
+
+        &-left {
+            margin-bottom: 2.5rem;
+            text-align: center;
+            @include atSmall {
+                text-align: left;
+                margin-bottom: 0;
+                margin-right: 1.875rem;
+                width: 15%;
+            }
+        }
+
+        &-right {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            @include atSmall {
+                flex: 1;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 3.333rem;
+        }
+    }
+}

@@ -1,0 +1,58 @@
+.figure {
+    @include atSmall {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    &-img {
+        margin-bottom: 4.375rem;
+        @include atSmall {
+            width: 60%;
+            margin-right: 4.375rem;
+            margin-bottom: 0;
+        }
+
+        &-small {
+            @include atSmall {
+                width: 30%;
+                margin-right: 2.5rem;
+            }
+        }
+    }
+
+    &-caption {
+        position: relative;
+        @include atSmall {
+            width: 40%;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 0;
+            transform: translateY(-100%);
+            width: 4.167rem;
+            height: 10px;
+            background-color: $color-secondary-dark;
+            @include atSmall {
+                width: 3.125rem;
+            }
+        }
+    }
+
+    &-center {
+        @include atSmall {
+            align-items: center;
+            justify-content: center;
+        }
+
+        .figure-caption {
+            @include atSmall {
+                width: 35%;
+                margin-top: 20px;
+            }
+        }
+    }
+}

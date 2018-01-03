@@ -1,0 +1,18 @@
+.title {
+    text-align: center;
+    background-image: url("../../static/img/bubble-bg-primary.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding-top: 16px;
+    padding-bottom: 28px;
+    width: 175px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -40%);
+
+    &-secondary {
+        background-image: url("../../static/img/bubble-bg-secondary.svg");
+    }
+}

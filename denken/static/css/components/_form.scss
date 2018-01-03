@@ -1,0 +1,59 @@
+.form {
+    &-input {
+        height: 4.167rem;
+        border: 1px solid $color-text;
+        padding: 0 1.333rem;
+        width: 100%;
+        font-family: $font-accent;
+        font-weight: 400;
+        font-size: 1.5rem;
+        color: $color-text;
+        @include atSmall {
+            height: 3.125rem;
+            padding: 0 1rem;
+            font-size: 1.125rem;
+        }
+
+        &::placeholder {
+            color: $color-text;
+        }
+
+        & + & {
+            margin-top: 2.0833rem;
+            @include atSmall {
+                margin-top: 1.5625rem;
+            }
+        }
+
+        &-textarea {
+            height: 20rem;
+            padding: 2.0833rem 1.333rem;
+            resize: none;
+            @include atSmall {
+                padding: 1.5625rem 1rem;
+            }
+
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+        }
+    }
+
+    &-btn {
+        margin-top: 2.0833rem;
+        border: 1px solid $color-text;
+        height: 4.167rem;
+        padding: 0 3.333rem;
+        color: $color-text;
+        font-family: $font-main-reg;
+        font-size: 1.583rem;
+        float: right;
+        @include atSmall {
+            margin-top: 1.5625rem;
+            height: 3.125rem;
+            padding: 0 2.5rem;
+            font-size: 1.1875rem;
+        }
+    }
+}

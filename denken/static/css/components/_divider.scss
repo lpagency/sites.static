@@ -1,0 +1,30 @@
+.divider {
+    width: 6.667rem;
+    height: 10px;
+    background-color: $color-primary;
+    @include atSmall {
+        width: 5rem;
+    }
+
+    &-big {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &-short {
+        height: 4px;
+    }
+
+    &-secondary {
+        background-color: $color-secondary;
+    }
+
+    &-gray {
+        background-color: $color-gray-dark;
+
+        &-light {
+            background-color: $color-gray;
+        }
+    }
+}

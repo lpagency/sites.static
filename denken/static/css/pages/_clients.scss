@@ -1,0 +1,30 @@
+.section-clients {
+    &-group {
+        & + & {
+            margin-top: 3.333rem;
+            @include atSmall {
+                margin-top: 3.75rem;
+            }
+        }
+    }
+
+    &-item {
+        text-align: center;
+
+        &-logo {
+            @include atSmall {
+                height: 5rem;
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+            }
+        }
+
+        & + & {
+            margin-top: 3.333rem;
+            @include atSmall {
+                margin-top: 0;
+            }
+        }
+    }
+}

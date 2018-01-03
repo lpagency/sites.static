@@ -1,0 +1,35 @@
+// Colors
+
+$color-primary: #00ADAE;
+$color-secondary: #585AA4;
+$color-secondary-dark: #283583;
+
+$color-gray: #E9E9E9;
+$color-gray-dark: #C6C6C6;
+$color-white: #fff;
+
+$color-text: #575756;
+
+// Fonts
+
+@font-face {
+    font-family: "GillSans-Regular";
+    src: url("../fonts/GillSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: "GillSans-Light";
+    src: url("../fonts/GillSans-Light.ttf");
+}
+
+@font-face {
+    font-family: "MuseoSans-Light";
+    src: url("../fonts/MuseoSans-Thin.ttf");
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+
+$font-main-reg: "GillSans-Regular", "Helvetica", "Arial", sans-serif;
+$font-main-lgt: "GillSans-Light", "Helvetica", "Arial", sans-serif;
+$font-accent: "Lato", "Helvetica", "Arial", sans-serif;
+$font-alt: "MuseoSans-Light", "Helvetica", "Arial", sans-serif;

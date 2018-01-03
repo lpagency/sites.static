@@ -1,0 +1,134 @@
+.section-services {
+    &-group {
+        @include atSmall {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        & + & {
+            margin-top: 2.5rem;
+            @include atSmall {
+                margin-top: 1.875rem;
+            }
+
+            .section-services-item:first-child {
+                border-top: 4px solid $color-gray;
+                padding-top: 1.875rem;
+                @include atSmall {
+                    padding-top: 0;
+                    border-top: 0;
+                }
+            }
+        }
+    }
+
+    &-item {
+        text-align: center;
+        display: block;
+        @include linkStates(inherit, none);
+        @include atSmall {
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &-icon {
+            width: 5rem;
+            height: auto;
+            @include atSmall {
+                width: 3.75rem;
+            }
+
+            &-big {
+                width: 8.333rem;
+                @include atSmall {
+                    width: 6.25rem;
+                }
+            }
+        }
+
+        & + & {
+            margin-top: 2.5rem;
+            padding-top: 2.5rem;
+            border-top: 5px solid $color-gray;
+            @include atSmall {
+                margin-top: 0;
+                padding-top: 0;
+                padding-left: 1.875rem;
+                margin-left: 1.875rem;
+                border-top: 0;
+                border-left: 5px solid $color-gray;
+            }
+        }
+    }
+}
+
+.section-cases {
+    &-group {
+        @include atSmall {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        & + & {
+            .section-cases-item {
+                @include atSmall {
+                    padding-top: 3.75rem;
+                    position: relative;
+                }
+
+                &:before {
+                    @include atSmall {
+                        content: "";
+                        position: absolute;
+                        top: 1.875rem;
+                        right: -1.75rem;
+                        height: 2px;
+                        width: 15rem;
+                        background-color: $color-gray;
+                    }
+                }
+
+                &:first-child {
+                    border-top: 5px solid $color-gray;
+                    padding-top: 4.375rem;
+                    margin-top: 4.375rem;
+                    @include atSmall {
+                        border-top: 0;
+                        padding-top: 3.75rem;
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &-item {
+        display: block;
+        @include linkStates(inherit, none);
+        @include atSmall {
+            flex: 1 1 0;
+        }
+
+        &-icon {
+            width: 25%;
+            max-width: 40px;
+        }
+
+        & + & {
+            margin-top: 4.375rem;
+            padding-top: 4.375rem;
+            border-top: 4px solid $color-gray;
+            @include atSmall {
+                border-top: 0;
+                border-left: 4px solid $color-gray;
+                margin-top: 0;
+                padding-top: 0;
+                margin-left: 4.375rem;
+                padding-left: 4.375rem;
+            }
+        }
+    }
+}

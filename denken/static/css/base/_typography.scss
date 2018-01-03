@@ -1,0 +1,85 @@
+.heading {
+    font-family: $font-accent;
+    color: $color-white;
+    font-size: 1.667rem;
+    @include atSmall {
+        font-size: 1.25rem;
+    }
+
+    &-font-main-reg {
+        font-family: $font-main-reg;
+    }
+
+    &-font-alt {
+        font-family: $font-alt;
+    }
+
+    &-med {
+        font-size: 1.5rem;
+        line-break: 1.667rem;
+        @include atSmall {
+            font-size: 1.125rem;
+            line-break: 1.25rem;
+        }
+    }
+
+    &-small {
+        font-size: 1.167rem;
+        line-height: 1.333rem;
+        @include atSmall {
+            font-size: 0.875rem;
+            line-break: 1rem;
+        }
+    }
+
+    &-small-2 {
+        font-size: 1.667rem;
+        @include atSmall {
+            font-size: 1.25rem;
+        }
+    }
+
+    &-big {
+        font-size: 2.167rem;
+        @include atSmall {
+            font-size: 1.625rem;
+        }
+    }
+}
+
+.paragraph {
+    font-family: $font-main-reg;
+    color: $color-text;
+    font-size: 1.583rem;
+    line-height: 2rem;
+    @include atSmall {
+        font-size: 1.1875rem;
+        line-height: 1.5rem;
+    }
+
+    &-small {
+        font-size: 1.333rem;
+        line-height: 1.5rem;
+        @include atSmall {
+            font-size: 1rem;
+            line-height: 1.25rem;
+        }
+    }
+
+    &-med {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        @include atSmall {
+            font-size: 0.9375rem;
+            line-height: 1.25rem;
+        }
+    }
+
+    &-light {
+        font-family: $font-main-lgt;
+    }
+
+    &-font-accent {
+        font-family: $font-accent;
+    }
+}
