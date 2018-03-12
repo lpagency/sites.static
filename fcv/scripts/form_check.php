@@ -17,7 +17,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET')
 		exit;
 	}
 	
-	echo('<!DOCTYPE html><html><head><title>Muse PHP Diagnostics</title>');
+	echo('<!DOCTYPE html><html><head><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-103597887-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-103597887-1');
+</script>
+<title>Muse PHP Diagnostics</title>');
 	echo('<style type="text/css">body { font: 14pt Myriad Pro, Arial, Helvetica;}ul { list-style-type: none; }');
 	echo(' h1 { background-color: #CCCCCC; padding: 2px;} label {display: inline-block; width: 100px; vertical-align: top;}');
 	echo('.good:before { color: green; content:\'\2713\0020\';} .bad:before {color: red; content: \'X\0020\';}');

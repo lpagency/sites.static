@@ -180,7 +180,16 @@ function get_email_headers($to_email, $form_email) {
 function get_email_body($subject, $heading, $fields, $resources) {
 	$message = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">';
 	$message .= '<html xmlns="http://www.w3.org/1999/xhtml">';
-	$message .= '<head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><title>' . encode_for_form($subject) . '</title></head>';
+	$message .= '<head><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-103597887-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-103597887-1');
+</script>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><title>' . encode_for_form($subject) . '</title></head>';
 	$message .= '<body style="background-color: #ffffff; color: #000000; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: 18px; font-family: helvetica, arial, verdana, sans-serif;">';
 	$message .= '<h2 style="background-color: #eeeeee;">' . $heading . '</h2>';
 	$message .= '<table cellspacing="0" cellpadding="0" width="100%" style="background-color: #ffffff;">'; 
