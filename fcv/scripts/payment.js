@@ -13,20 +13,20 @@ $(document).ready(function()
 		// add the current product
 		// id, sku, combination, price, name, upp, bullet1, bullet2, bullet3, img, callback
 		facade.ecommerce.cart.addProduct(
-			5688, // product.id, 
+			5688, // product.id,
 			"DONACION",
 			"",
-			price,// product.price, 
-			"donacion", // product.name, 
-			1, // product.upp, 
-			"", // product.bullet1, 
-			"", // product.bullet2, 
+			price,// product.price,
+			"donacion", // product.name,
+			1, // product.upp,
+			"", // product.bullet1,
+			"", // product.bullet2,
 			"", // product.bullet3,
-			"", // product.images, 
+			"", // product.images,
 			function()
 			{
 				setTimeout(function() {
-					document.location.href = facade.ecommerce.cart.getCheckoutUrl() + 
+					document.location.href = facade.ecommerce.cart.getCheckoutUrl() +
 						'?' +
 						'site_id=' + facade.ecommerce.cart.getSiteId() +
 						'&cart_id=' + facade.ecommerce.cart.getGUID();
@@ -37,7 +37,7 @@ $(document).ready(function()
 
 	var ecommerce = $('.products').ecommerce({
 		app_public: 40,
-		base_url: 'https://betaapi.loadingplay.com',
+		base_url: 'https://apibodegas.loadingplay.com',
 		checkout_url: 'https://betapay.loadingplay.com'
 	});
 
