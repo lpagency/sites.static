@@ -262,7 +262,7 @@
             <a href="#customers" class="toc-h1 toc-link" data-title="Customers">Customers</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#add-a-customer" class="toc-h2 toc-link" data-title="Customers">Add a Customer</a>
+                    <a href="#create-a-customer" class="toc-h2 toc-link" data-title="Customers">Create a Customer</a>
                   </li>
                   <li>
                     <a href="#get-a-customer" class="toc-h2 toc-link" data-title="Customers">Get a Customer</a>
@@ -271,7 +271,7 @@
                     <a href="#edit-a-customer" class="toc-h2 toc-link" data-title="Customers">Edit a Customer</a>
                   </li>
                   <li>
-                    <a href="#remove-a-customer" class="toc-h2 toc-link" data-title="Customers">Remove a Customer</a>
+                    <a href="#delete-a-customer" class="toc-h2 toc-link" data-title="Customers">Delete a Customer</a>
                   </li>
                   <li>
                     <a href="#get-a-customer-list" class="toc-h2 toc-link" data-title="Customers">Get a Customer list</a>
@@ -359,13 +359,13 @@
             <a href="#variants" class="toc-h1 toc-link" data-title="Variants">Variants</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-variants-for-a-product" class="toc-h2 toc-link" data-title="Variants">Get variants for a product</a>
-                  </li>
-                  <li>
                     <a href="#create-a-variant" class="toc-h2 toc-link" data-title="Variants">Create a Variant</a>
                   </li>
                   <li>
                     <a href="#delete-a-variant" class="toc-h2 toc-link" data-title="Variants">Delete a Variant</a>
+                  </li>
+                  <li>
+                    <a href="#get-variants-for-a-product" class="toc-h2 toc-link" data-title="Variants">Get variants for a product</a>
                   </li>
                   <li>
                     <a href="#create-a-value-for-a-variant" class="toc-h2 toc-link" data-title="Variants">Create a Value for a variant</a>
@@ -754,15 +754,15 @@ curl -XPOST https://apibodegas.loadingplay.com/v1/config <span class="se">\</spa
 <td>(required) cart unique global identifier</td>
 </tr>
 </tbody></table>
-<h1 id='customers'>Customers</h1><h2 id='add-a-customer'>Add a Customer</h2><pre class="highlight shell tab-shell"><code>curl -XPOST https://apibodegas.loadingplay.com/v1/customer <span class="se">\</span>
-    -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span> <span class="se">\</span>
-    -d <span class="s2">"rut=rut"</span> <span class="se">\</span>
-    -d <span class="s2">"name=nombre"</span> <span class="se">\</span>
-    -d <span class="s2">"last_name=apellido"</span> <span class="se">\</span>
-    -d <span class="s2">"telephone=123456789"</span> <span class="se">\</span>
-    -d <span class="s2">"email=test@loadingplay.com"</span> <span class="se">\</span>
-    -d <span class="s2">"customer_type=persona"</span> <span class="se">\</span>
-    -d <span class="s2">"site_name=test"</span>
+<h1 id='customers'>Customers</h1><h2 id='create-a-customer'>Create a Customer</h2><pre class="highlight shell tab-shell"><code>curl -XPOST https://apibodegas.loadingplay.com/v1/customer <span class="se">\</span>
+     -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span> <span class="se">\</span>
+     -d <span class="s2">"rut=rut"</span> <span class="se">\</span>
+     -d <span class="s2">"name=nombre"</span> <span class="se">\</span>
+     -d <span class="s2">"last_name=apellido"</span> <span class="se">\</span>
+     -d <span class="s2">"telephone=123456789"</span> <span class="se">\</span>
+     -d <span class="s2">"email=test@loadingplay.com"</span> <span class="se">\</span>
+     -d <span class="s2">"customer_type=persona"</span> <span class="se">\</span>
+     -d <span class="s2">"site_name=test"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -771,7 +771,7 @@ curl -XPOST https://apibodegas.loadingplay.com/v1/config <span class="se">\</spa
     </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"customer"</span><span class="p">:</span><span class="w">
     </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">ID</span><span class="p">],</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[id]"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"rut"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rut"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nombre"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"apellido"</span><span class="p">,</span><span class="w">
@@ -840,8 +840,8 @@ curl -XPOST https://apibodegas.loadingplay.com/v1/config <span class="se">\</spa
 <td>nombre de sitio del cual pertenece customer</td>
 </tr>
 </tbody></table>
-<h2 id='get-a-customer'>Get a Customer</h2><pre class="highlight shell tab-shell"><code>curl -XGET https://apibodegas.loadingplay.com/v1/customer/[ID] <span class="se">\</span>
-    -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span>
+<h2 id='get-a-customer'>Get a Customer</h2><pre class="highlight shell tab-shell"><code>curl -XGET https://apibodegas.loadingplay.com/v1/customer/[id] <span class="se">\</span>
+     -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -850,7 +850,7 @@ curl -XPOST https://apibodegas.loadingplay.com/v1/config <span class="se">\</spa
     </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"customer"</span><span class="p">:</span><span class="w">
     </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">ID</span><span class="p">],</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[id]"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"rut"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rut"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nombre"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"apellido"</span><span class="p">,</span><span class="w">
@@ -859,15 +859,15 @@ curl -XPOST https://apibodegas.loadingplay.com/v1/config <span class="se">\</spa
         </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"persona"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"deleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
         </span><span class="s2">"site_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"registration_date"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">REGISTRATION_DATE</span><span class="p">],</span><span class="w">
-        </span><span class="s2">"first_view"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">FIRST_VIEW</span><span class="p">],</span><span class="w">
-        </span><span class="s2">"last_view"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">LAST_VIEW</span><span class="p">]</span><span class="w">
+        </span><span class="s2">"registration_date"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">registration_date</span><span class="p">],</span><span class="w">
+        </span><span class="s2">"first_view"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">first_view</span><span class="p">],</span><span class="w">
+        </span><span class="s2">"last_view"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">last_view</span><span class="p">]</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves a Customer.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET https://apibodegas.loadingplay.com/v1/customer/CUSTOMER_ID</code></p>
+<p><code>GET https://apibodegas.loadingplay.com/v1/customer/[id]</code></p>
 <h3 id='url-parameters-2'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -877,19 +877,19 @@ curl -XPOST https://apibodegas.loadingplay.com/v1/config <span class="se">\</spa
 </tr>
 </thead><tbody>
 <tr>
-<td>CUSTOMER_ID</td>
+<td>id</td>
 <td>(required)</td>
-<td>identificador unico para customer</td>
+<td>identificador numerico unico para customer</td>
 </tr>
 </tbody></table>
-<h2 id='edit-a-customer'>Edit a Customer</h2><pre class="highlight shell tab-shell"><code>curl -XPUT https://apibodegas.loadingplay.com/v1/customer/CUSTOMER_ID <span class="se">\</span>
-    -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span> <span class="se">\</span>
-    -d <span class="s2">"name=nombre1"</span> <span class="se">\</span>
-    -d <span class="s2">"last_name=apeliido1"</span> <span class="se">\</span>
-    -d <span class="s2">"telephone=987654321"</span> <span class="se">\</span>
-    -d <span class="s2">"email=test1@loadingplay.com"</span> <span class="se">\</span>
-    -d <span class="s2">"first_view=2010-03-15T16:52:43.662397"</span> <span class="se">\</span>
-    -d <span class="s2">"last_view=2011-03-15T16:52:43.662397"</span>
+<h2 id='edit-a-customer'>Edit a Customer</h2><pre class="highlight shell tab-shell"><code>curl -XPUT https://apibodegas.loadingplay.com/v1/customer/[id] <span class="se">\</span>
+     -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span> <span class="se">\</span>
+     -d <span class="s2">"name=nombre1"</span> <span class="se">\</span>
+     -d <span class="s2">"last_name=apeliido1"</span> <span class="se">\</span>
+     -d <span class="s2">"telephone=987654321"</span> <span class="se">\</span>
+     -d <span class="s2">"email=test1@loadingplay.com"</span> <span class="se">\</span>
+     -d <span class="s2">"first_view=2010-03-15T16:52:43.662397"</span> <span class="se">\</span>
+     -d <span class="s2">"last_view=2011-03-15T16:52:43.662397"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -898,7 +898,7 @@ curl -XPOST https://apibodegas.loadingplay.com/v1/config <span class="se">\</spa
     </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"customer"</span><span class="p">:</span><span class="w"> 
     </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">ID</span><span class="p">],</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[id]"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nombre1"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"apeliido1"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"telephone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
@@ -911,7 +911,7 @@ curl -XPOST https://apibodegas.loadingplay.com/v1/config <span class="se">\</spa
 </span></code></pre>
 <p>This endpoint edit a Customer.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
-<p><code>PUT https://apibodegas.loadingplay.com/v1/customer/CUSTOMER_ID</code></p>
+<p><code>PUT https://apibodegas.loadingplay.com/v1/customer/[id]</code></p>
 <h3 id='url-parameters-3'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -921,9 +921,9 @@ curl -XPOST https://apibodegas.loadingplay.com/v1/config <span class="se">\</spa
 </tr>
 </thead><tbody>
 <tr>
-<td>CUSTOMER_ID</td>
+<td>id</td>
 <td>(required)</td>
-<td>identificador unico para customer</td>
+<td>identificador numerico unico para customer</td>
 </tr>
 <tr>
 <td>name</td>
@@ -946,11 +946,6 @@ curl -XPOST https://apibodegas.loadingplay.com/v1/config <span class="se">\</spa
 <td>email del customer</td>
 </tr>
 <tr>
-<td>site_name</td>
-<td>(optional)</td>
-<td>nombre de sitio del cual pertenece customer</td>
-</tr>
-<tr>
 <td>first_view</td>
 <td>(optional)</td>
 <td>fecha en que realiza la primera compra</td>
@@ -961,8 +956,8 @@ curl -XPOST https://apibodegas.loadingplay.com/v1/config <span class="se">\</spa
 <td>fecha en que se realiza la ultima compra</td>
 </tr>
 </tbody></table>
-<h2 id='remove-a-customer'>Remove a Customer</h2><pre class="highlight shell tab-shell"><code>curl -XDELETE https://apibodegas.loadingplay.com/v1/customer/CUSTOMER_ID <span class="se">\</span>
-    -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span>
+<h2 id='delete-a-customer'>Delete a Customer</h2><pre class="highlight shell tab-shell"><code>curl -XDELETE https://apibodegas.loadingplay.com/v1/customer/[id] <span class="se">\</span>
+     -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -971,7 +966,7 @@ curl -XPOST https://apibodegas.loadingplay.com/v1/config <span class="se">\</spa
     </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"customer"</span><span class="p">:</span><span class="w">
     </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">ID</span><span class="p">],</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[id]"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nombre1"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"apellido1"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"telephone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
@@ -984,7 +979,7 @@ curl -XPOST https://apibodegas.loadingplay.com/v1/config <span class="se">\</spa
 </span></code></pre>
 <p>This endpoint delete a Customer.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
-<p><code>DELETE https://apibodegas.loadingplay.com/v1/customer/CUSTOMER_ID</code></p>
+<p><code>DELETE https://apibodegas.loadingplay.com/v1/customer/[id]</code></p>
 <h3 id='url-parameters-4'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -994,14 +989,14 @@ curl -XPOST https://apibodegas.loadingplay.com/v1/config <span class="se">\</spa
 </tr>
 </thead><tbody>
 <tr>
-<td>CUSTOMER_ID</td>
+<td>id</td>
 <td>(required)</td>
-<td>identificador unico para customer</td>
+<td>identificador numerico unico para customer</td>
 </tr>
 </tbody></table>
 <h2 id='get-a-customer-list'>Get a Customer list</h2><pre class="highlight shell tab-shell"><code>curl -XGET https://apibodegas.loadingplay.com/v1/customer <span class="se">\</span>
-    -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span> <span class="se">\</span>
-    -d <span class="s2">"site_name=test"</span>
+     -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span> <span class="se">\</span>
+     -d <span class="s2">"site_name=test"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -1010,7 +1005,7 @@ curl -XPOST https://apibodegas.loadingplay.com/v1/config <span class="se">\</spa
     </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"customers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">ID</span><span class="p">],</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[id]"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"rut"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rut"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nombre"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"apellido"</span><span class="p">,</span><span class="w">
@@ -1019,12 +1014,12 @@ curl -XPOST https://apibodegas.loadingplay.com/v1/config <span class="se">\</spa
             </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"persona"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"deleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
             </span><span class="s2">"site_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"registration_date"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">REGISTRATION_DATE</span><span class="p">],</span><span class="w">
-            </span><span class="s2">"first_view"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">FIRST_VIEW</span><span class="p">],</span><span class="w">
-            </span><span class="s2">"last_view"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">LAST_VIEW</span><span class="p">]</span><span class="w">
+            </span><span class="s2">"registration_date"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">registration_date</span><span class="p">],</span><span class="w">
+            </span><span class="s2">"first_view"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">first_view</span><span class="p">],</span><span class="w">
+            </span><span class="s2">"last_view"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">last_view</span><span class="p">]</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">ID</span><span class="p">],</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[id]"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"rut"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rut2"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nombre2"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"apellido2"</span><span class="p">,</span><span class="w">
@@ -1033,9 +1028,9 @@ curl -XPOST https://apibodegas.loadingplay.com/v1/config <span class="se">\</spa
             </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"persona"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"deleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
             </span><span class="s2">"site_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"registration_date"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">REGISTRATION_DATE</span><span class="p">],</span><span class="w">
-            </span><span class="s2">"first_view"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">FIRST_VIEW</span><span class="p">],</span><span class="w">
-            </span><span class="s2">"last_view"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">LAST_VIEW</span><span class="p">]</span><span class="w">
+            </span><span class="s2">"registration_date"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">registration_date</span><span class="p">],</span><span class="w">
+            </span><span class="s2">"first_view"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">first_view</span><span class="p">],</span><span class="w">
+            </span><span class="s2">"last_view"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">last_view</span><span class="p">]</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="err">...</span><span class="w">
     </span><span class="p">]</span><span class="w">
@@ -2120,8 +2115,96 @@ curl -XPOST https://apibodegas.loadingplay.com/v1/config <span class="se">\</spa
 <td>unique identifier for product it can be a comma separated list, and return a comma separated list of products</td>
 </tr>
 </tbody></table>
-<h2 id='edit-a-product-2'>Edit a Product</h2><h1 id='variants'>Variants</h1><h2 id='get-variants-for-a-product'>Get variants for a product</h2><pre class="highlight shell tab-shell"><code>curl -XGET <span class="s2">"https://apibodegas.loadingplay.com/v1/variant"</span> <span class="se">\</span>
-  -d <span class="s2">"namespace=[site_name]_[product_sku]"</span>
+<h2 id='edit-a-product-2'>Edit a Product</h2><h1 id='variants'>Variants</h1><h2 id='create-a-variant'>Create a Variant</h2><pre class="highlight shell tab-shell"><code>curl -XPOST <span class="s2">"https://apibodegas.loadingplay.com/v1/variant"</span> <span class="se">\</span>
+     -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
+     -d <span class="s2">"variant_name=size"</span> <span class="se">\</span>
+     -d <span class="s2">"site_name=test"</span> <span class="se">\</span>
+     -d <span class="s2">"sku=sku-test"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns json with variant info, including id:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"variant"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[id]"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"size"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"site_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sku-test"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request'>HTTP Request</h3>
+<p><code>POST https://apibodegas.loadingplay.com/v1/variant</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>variant_name</td>
+<td>(required)</td>
+<td>name of the variant i.e: size, color</td>
+</tr>
+<tr>
+<td>site_name</td>
+<td>(required)</td>
+<td>name of the site where variant</td>
+</tr>
+<tr>
+<td>sku</td>
+<td>(required)</td>
+<td>product sku</td>
+</tr>
+</tbody></table>
+<h2 id='delete-a-variant'>Delete a Variant</h2><pre class="highlight shell tab-shell"><code>curl -XDELETE <span class="s2">"https://apibodegas.loadingplay.com/v1/variant/[variant_name]"</span> <span class="se">\</span>
+     -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
+     -d <span class="s2">"site_name=test"</span> <span class="se">\</span>
+     -d <span class="s2">"sku=sku-test"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns json:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"variant"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[id]"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[variant_name]"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"site_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sku-test"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-2'>HTTP Request</h3>
+<p><code>DELETE https://apibodegas.loadingplay.com/v1/variant/[variant_name]</code></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>variant_name</td>
+<td>(required)</td>
+<td>name of the variant i.e: size, color</td>
+</tr>
+<tr>
+<td>site_name</td>
+<td>(required)</td>
+<td>name of the site where variant</td>
+</tr>
+<tr>
+<td>sku</td>
+<td>(required)</td>
+<td>product sku</td>
+</tr>
+</tbody></table>
+<h2 id='get-variants-for-a-product'>Get variants for a product</h2><pre class="highlight shell tab-shell"><code>curl -XGET <span class="s2">"https://apibodegas.loadingplay.com/v1/variant"</span> <span class="se">\</span>
+     -d <span class="s2">"site_name=test"</span> <span class="se">\</span>
+     -d <span class="s2">"sku=sku-test"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -2129,88 +2212,49 @@ curl -XPOST https://apibodegas.loadingplay.com/v1/config <span class="se">\</spa
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"variants"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"size"</span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"color"</span><span class="p">}</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[id]"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"size"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"site_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sku-test"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[id]"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[variant_name]"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"site_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sku-test"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="err">...</span><span class="w">
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves a list of variants for a specific namespace([site_name]_[product_sku]).</p>
-<h3 id='http-request'>HTTP Request</h3>
+<p>This endpoint retrieves a list of variants for Site and SKU.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
 <p><code>GET https://apibodegas.loadingplay.com/v1/variant</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>namespace</td>
-<td>(required) string identifier of the variant group</td>
-</tr>
-</tbody></table>
-<h2 id='create-a-variant'>Create a Variant</h2><pre class="highlight shell tab-shell"><code>curl -XPOST <span class="s2">"https://apibodegas.loadingplay.com/v1/variant"</span> <span class="se">\</span>
-  -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
-    -d <span class="s2">"namespace=[site_name]_[product_sku]"</span> <span class="se">\</span>
-    -d <span class="s2">"name=talla"</span>
-</code></pre>
-<blockquote>
-<p>The above command returns json with variant info, including id:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"variant"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[variant_id]"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='http-request-2'>HTTP Request</h3>
-<p><code>POST https://apibodegas.loadingplay.com/v1/variant</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>namespace</td>
-<td>a namespace should be compound by [site_name]_[product_sku]</td>
-</tr>
-<tr>
-<td>name</td>
-<td>name of the variant i.e: size, color</td>
-</tr>
-</tbody></table>
-<h2 id='delete-a-variant'>Delete a Variant</h2><pre class="highlight shell tab-shell"><code>curl -XDELETE <span class="s2">"https://apibodegas.loadingplay.com/v1/variant/[variant_name]"</span> <span class="se">\</span>
-  -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
-    -d <span class="s2">"namespace=[site_name]_[product_sku]"</span>
-</code></pre>
-<blockquote>
-<p>The above command returns json:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"statuts"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE https://apibodegas.loadingplay.com/v1/variant/[variant_name]</code></p>
 <h3 id='url-parameters-3'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
+<th>Default</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>namespace</td>
-<td>[site_name]_[product_sku]</td>
+<td>site_name</td>
+<td>(required)</td>
+<td>name of the site where variant</td>
 </tr>
 <tr>
-<td>variant_name</td>
-<td>the variant whichi will be deleted</td>
+<td>sku</td>
+<td>(required)</td>
+<td>product sku</td>
 </tr>
 </tbody></table>
 <h2 id='create-a-value-for-a-variant'>Create a Value for a variant</h2><pre class="highlight shell tab-shell"><code>curl -XPOST <span class="s2">"https://apibodegas.loadingplay.com/v1/variant/[variant_name]/value"</span> <span class="se">\</span>
-  -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
-    -d <span class="s2">"namespace=[site_name]_[product_sku]"</span> <span class="se">\</span>
-    -d <span class="s2">"value=[new_value]"</span>
+     -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
+     -d <span class="s2">"value=rojo"</span> <span class="se">\</span>
+     -d <span class="s2">"site_name=test"</span> <span class="se">\</span>
+     -d <span class="s2">"sku=sku-test"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns json with variant info, including id:</p>
@@ -2219,9 +2263,10 @@ curl -XPOST https://apibodegas.loadingplay.com/v1/config <span class="se">\</spa
     </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[id]"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"value"</span><span class="p">:</span><span class="w">  </span><span class="s2">"[value]"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"variant_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[variant]"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"namespace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[namespace]"</span><span class="w">
+        </span><span class="s2">"variant_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[variant_name]"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="err">rojo</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"site_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sku-test"</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-4'>HTTP Request</h3>
@@ -2230,48 +2275,83 @@ curl -XPOST https://apibodegas.loadingplay.com/v1/config <span class="se">\</spa
 <table><thead>
 <tr>
 <th>Parameter</th>
+<th>Default</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>namespace</td>
-<td>a namespace should be compound by [site_name]_[product_sku]</td>
-</tr>
-<tr>
 <td>variant_name</td>
+<td>(required)</td>
 <td>name of the variant i.e: size, color</td>
 </tr>
 <tr>
 <td>value</td>
+<td>(required)</td>
 <td>value name i.e (s, m, l)</td>
 </tr>
+<tr>
+<td>site_name</td>
+<td>(required)</td>
+<td>name of the site where variant</td>
+</tr>
+<tr>
+<td>sku</td>
+<td>(required)</td>
+<td>product sku</td>
+</tr>
 </tbody></table>
-<h2 id='delete-a-value-for-a-variant'>Delete a Value for a Variant</h2><pre class="highlight shell tab-shell"><code>curl -XDELETE <span class="s2">"https://apibodegas.loadingplay.com/v1/variant/[variant_name]/value/[value_name]"</span> <span class="se">\</span>
-  -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
-    -d <span class="s2">"namespace=[site_name]_[product_sku]"</span>
+<h2 id='delete-a-value-for-a-variant'>Delete a Value for a Variant</h2><pre class="highlight shell tab-shell"><code>curl -XDELETE <span class="s2">"https://apibodegas.loadingplay.com/v1/variant/[variant_name]/value/[value]"</span> <span class="se">\</span>
+     -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
+     -d <span class="s2">"site_name=test"</span> <span class="se">\</span>
+     -d <span class="s2">"sku=sku-test"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns json:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"statuts"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
+    </span><span class="s2">"status"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
+    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[id]"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"variant_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[variant_name]"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[value]"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"site_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sku-test"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-5'>HTTP Request</h3>
-<p><code>DELETE https://apibodegas.loadingplay.com/v1/variant/[variant_name]/value/[value_name]</code></p>
+<p><code>DELETE https://apibodegas.loadingplay.com/v1/variant/[variant_name]/value/[value]</code></p>
 <h3 id='url-parameters-5'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
+<th>Default</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>namespace</td>
-<td>[site_name]_[product_sku]</td>
+<td>variant_name</td>
+<td>(required)</td>
+<td>name of the variant i.e: size, color</td>
+</tr>
+<tr>
+<td>value</td>
+<td>(required)</td>
+<td>value name i.e (s, m, l)</td>
+</tr>
+<tr>
+<td>site_name</td>
+<td>(required)</td>
+<td>name of the site where variant</td>
+</tr>
+<tr>
+<td>sku</td>
+<td>(required)</td>
+<td>product sku</td>
 </tr>
 </tbody></table>
 <h2 id='get-value-list'>Get Value list</h2><pre class="highlight shell tab-shell"><code>curl -XGET <span class="s2">"https://apibodegas.loadingplay.com/v1/variant/[variant_name]/value"</span> <span class="se">\</span>
-  -d <span class="s2">"namespace=[site_name]_[product_sku]"</span>
+     -d <span class="s2">"site_name=test"</span> <span class="se">\</span>
+     -d <span class="s2">"sku=sku-test"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -2280,36 +2360,43 @@ curl -XPOST https://apibodegas.loadingplay.com/v1/config <span class="se">\</spa
     </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"variant_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[variant_name]"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
-            </span><span class="s2">"site_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"me_NBK-SACO-NEGRA-C168"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"variant_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"talla"</span><span class="w">
-        </span><span class="p">}]</span><span class="w">
+        </span><span class="s2">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"[value_1]"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"[value_2]"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"[value_3]"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves a list of values for a specific namespace([site_name]_[product_sku]).</p>
+<p>This endpoint retrieves a list of values for site and sku.</p>
 <h3 id='http-request-6'>HTTP Request</h3>
 <p><code>GET https://apibodegas.loadingplay.com/v1/variant/[variant_name]/value</code></p>
 <h3 id='url-parameters-6'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
+<th>Default</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>namespace</td>
-<td>[site_name]_[product_sku]</td>
+<td>variant_name</td>
+<td>(required)</td>
+<td>selected variant</td>
 </tr>
 <tr>
-<td>variant_name</td>
-<td>selected variant</td>
+<td>site_name</td>
+<td>(required)</td>
+<td>name of the site where variant</td>
+</tr>
+<tr>
+<td>sku</td>
+<td>(required)</td>
+<td>product sku</td>
 </tr>
 </tbody></table>
 <h2 id='get-combination-list'>Get Combination list</h2><pre class="highlight shell tab-shell"><code>curl -XGET <span class="s2">"https://apibodegas.loadingplay.com/v1/variant/[sku]/combination"</span> <span class="se">\</span>
-  -d <span class="s2">"namespace=[site_name]"</span>
+     -d <span class="s2">"site_name=test"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -2317,28 +2404,38 @@ curl -XPOST https://apibodegas.loadingplay.com/v1/config <span class="se">\</spa
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"combination"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test-m-azul"</span><span class="p">,</span><span class="w"> </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">}</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test-m-azul"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test-m-azul"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="err">...</span><span class="w">
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves a list of combinatios for a specific namespace([site_name]) and
-sku ([product_sku]).</p>
+<p>This endpoint retrieves a list of combinations for site and sku.</p>
 <h3 id='http-request-7'>HTTP Request</h3>
 <p><code>GET https://apibodegas.loadingplay.com/v1/variant/[sku]/combination</code></p>
 <h3 id='url-parameters-7'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
+<th>Default</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>namespace</td>
-<td>[site_name]</td>
+<td>sku</td>
+<td>(required)</td>
+<td>product sku</td>
 </tr>
 <tr>
-<td>sku</td>
-<td>the product sku</td>
+<td>site_name</td>
+<td>(required)</td>
+<td>name of the site where variant</td>
 </tr>
 </tbody></table>
 <h1 id='errors'>Errors</h1>
