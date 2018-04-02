@@ -350,9 +350,6 @@
                   <li>
                     <a href="#edit-a-product" class="toc-h2 toc-link" data-title="Products">Edit a Product</a>
                   </li>
-                  <li>
-                    <a href="#edit-a-product-2" class="toc-h2 toc-link" data-title="Products">Edit a Product</a>
-                  </li>
               </ul>
           </li>
           <li>
@@ -2115,7 +2112,7 @@ curl -XPOST https://apibodegas.loadingplay.com/v1/config <span class="se">\</spa
 <td>unique identifier for product it can be a comma separated list, and return a comma separated list of products</td>
 </tr>
 </tbody></table>
-<h2 id='edit-a-product-2'>Edit a Product</h2><h1 id='variants'>Variants</h1><h2 id='create-a-variant'>Create a Variant</h2><pre class="highlight shell tab-shell"><code>curl -XPOST <span class="s2">"https://apibodegas.loadingplay.com/v1/variant"</span> <span class="se">\</span>
+<h1 id='variants'>Variants</h1><h2 id='create-a-variant'>Create a Variant</h2><pre class="highlight shell tab-shell"><code>curl -XPOST <span class="s2">"https://apibodegas.loadingplay.com/v1/variant"</span> <span class="se">\</span>
      -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
      -d <span class="s2">"variant_name=size"</span> <span class="se">\</span>
      -d <span class="s2">"site_name=test"</span> <span class="se">\</span>
@@ -2220,7 +2217,7 @@ curl -XPOST https://apibodegas.loadingplay.com/v1/config <span class="se">\</spa
         </span><span class="p">},</span><span class="w">
         </span><span class="p">{</span><span class="w">
             </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[id]"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[variant_name]"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"color"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"site_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sku-test"</span><span class="w">
         </span><span class="p">},</span><span class="w">
@@ -2264,7 +2261,7 @@ curl -XPOST https://apibodegas.loadingplay.com/v1/config <span class="se">\</spa
     </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[id]"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"variant_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[variant_name]"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="err">rojo</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rojo"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"site_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sku-test"</span><span class="w">
     </span><span class="p">}</span><span class="w">
@@ -2361,9 +2358,9 @@ curl -XPOST https://apibodegas.loadingplay.com/v1/config <span class="se">\</spa
     </span><span class="s2">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"variant_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[variant_name]"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-            </span><span class="s2">"[value_1]"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"[value_2]"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"[value_3]"</span><span class="w">
+            </span><span class="s2">"35"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"36"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"37"</span><span class="w">
         </span><span class="p">]</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
