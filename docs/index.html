@@ -353,6 +353,32 @@
               </ul>
           </li>
           <li>
+            <a href="#shippings" class="toc-h1 toc-link" data-title="Shippings">Shippings</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#create-a-shipping-data" class="toc-h2 toc-link" data-title="Shippings">Create a Shipping data</a>
+                  </li>
+                  <li>
+                    <a href="#edit-shipping-data" class="toc-h2 toc-link" data-title="Shippings">Edit Shipping data</a>
+                  </li>
+                  <li>
+                    <a href="#delete-shipping-data" class="toc-h2 toc-link" data-title="Shippings">Delete Shipping data</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-provider-list" class="toc-h2 toc-link" data-title="Shippings">Get a Provider list</a>
+                  </li>
+                  <li>
+                    <a href="#get-shipping-data-by-provider" class="toc-h2 toc-link" data-title="Shippings">Get Shipping data by provider</a>
+                  </li>
+                  <li>
+                    <a href="#get-shipping-data-by-destination" class="toc-h2 toc-link" data-title="Shippings">Get Shipping data by destination</a>
+                  </li>
+                  <li>
+                    <a href="#get-price-by-weight" class="toc-h2 toc-link" data-title="Shippings">Get Price by weight</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#variants" class="toc-h1 toc-link" data-title="Variants">Variants</a>
               <ul class="toc-list-h2">
                   <li>
@@ -375,6 +401,17 @@
                   </li>
                   <li>
                     <a href="#get-combination-list" class="toc-h2 toc-link" data-title="Variants">Get Combination list</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#key-value-data" class="toc-h1 toc-link" data-title="Key Value Data">Key Value Data</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-key-value" class="toc-h2 toc-link" data-title="Key Value Data">Post Key Value</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-key-value-data" class="toc-h2 toc-link" data-title="Key Value Data">Get a Specific Key Value Data</a>
                   </li>
               </ul>
           </li>
@@ -830,11 +867,6 @@ curl -XPOST https://apibodegas.loadingplay.com/v1/config <span class="se">\</spa
 <td>customer_type</td>
 <td>(optional)</td>
 <td>tipo de customer, por ejemplo: &quot;persona&quot;, &quot;empresa&quot;, etc</td>
-</tr>
-<tr>
-<td>site_name</td>
-<td>(optional)</td>
-<td>nombre de sitio del cual pertenece customer</td>
 </tr>
 </tbody></table>
 <h2 id='get-a-customer'>Get a Customer</h2><pre class="highlight shell tab-shell"><code>curl -XGET https://apibodegas.loadingplay.com/v1/customer/[id] <span class="se">\</span>
@@ -2112,6 +2144,336 @@ curl -XPOST https://apibodegas.loadingplay.com/v1/config <span class="se">\</spa
 <td>unique identifier for product it can be a comma separated list, and return a comma separated list of products</td>
 </tr>
 </tbody></table>
+<h1 id='shippings'>Shippings</h1><h2 id='create-a-shipping-data'>Create a Shipping data</h2><pre class="highlight shell tab-shell"><code>curl -XPOST https://apibodegas.loadingplay.com/v1/shipping <span class="se">\</span>
+     -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span> <span class="se">\</span>
+     -d <span class="s2">"price=10"</span> <span class="se">\</span>
+     -d <span class="s2">"weight=3"</span> <span class="se">\</span>
+     -d <span class="s2">"site_name=site_name"</span> <span class="se">\</span>
+     -d <span class="s2">"provider=provider"</span> <span class="se">\</span>
+     -d <span class="s2">"destination=destination"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"shipping"</span><span class="p">:</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[id]"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mf">3.0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"site_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"site_name"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"provider"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"destination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"destination"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint create Shipping data.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>POST https://apibodegas.loadingplay.com/v1/shipping</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>weight</td>
+<td>(required)</td>
+<td>limite superior del rango</td>
+</tr>
+<tr>
+<td>site_name</td>
+<td>(required)</td>
+<td>nombre del sitio a la cual pertenece</td>
+</tr>
+<tr>
+<td>provider</td>
+<td>(required)</td>
+<td>nombre del proveedor de servicio</td>
+</tr>
+<tr>
+<td>destination</td>
+<td>(required)</td>
+<td>nombre de la comuna a despachar</td>
+</tr>
+<tr>
+<td>price</td>
+<td>(optional)</td>
+<td>precio del despacho</td>
+</tr>
+</tbody></table>
+<h2 id='edit-shipping-data'>Edit Shipping data</h2><pre class="highlight shell tab-shell"><code>curl -XPUT https://apibodegas.loadingplay.com/v1/shipping/[id] <span class="se">\</span>
+     -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span> <span class="se">\</span>
+     -d <span class="s2">"price=100"</span> <span class="se">\</span>
+     -d <span class="s2">"weight=6"</span> <span class="se">\</span>
+     -d <span class="s2">"provider=provider_A"</span> <span class="se">\</span>
+     -d <span class="s2">"destination=destination_A"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"shipping"</span><span class="p">:</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[id]"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mf">6.0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"provider_A"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"destination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"destination_A"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint edit Shipping data.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>PUT https://apibodegas.loadingplay.com/v1/shipping/[id]</code></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>(required)</td>
+<td>identificador numerico unico para despacho</td>
+</tr>
+<tr>
+<td>price</td>
+<td>(optional)</td>
+<td>precio del despacho</td>
+</tr>
+<tr>
+<td>weight</td>
+<td>(optional)</td>
+<td>limite superior del rango</td>
+</tr>
+<tr>
+<td>provider</td>
+<td>(optional)</td>
+<td>nombre del proveedor de servicio</td>
+</tr>
+<tr>
+<td>destination</td>
+<td>(optional)</td>
+<td>nombre de la comuna a despachar</td>
+</tr>
+</tbody></table>
+<h2 id='delete-shipping-data'>Delete Shipping data</h2><pre class="highlight shell tab-shell"><code>curl -XDELETE https://apibodegas.loadingplay.com/v1/shipping/[id] <span class="se">\</span>
+     -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"shipping"</span><span class="p">:</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[id]"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mf">6.0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"provider_A"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"destination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"destination_A"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint delete a Customer.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>DELETE https://apibodegas.loadingplay.com/v1/shipping/[id]</code></p>
+<h3 id='url-parameters-3'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>(required)</td>
+<td>identificador numerico unico para despacho</td>
+</tr>
+</tbody></table>
+<h2 id='get-a-provider-list'>Get a Provider list</h2><pre class="highlight shell tab-shell"><code>curl -XGET https://apibodegas.loadingplay.com/v1/shipping/provider <span class="se">\</span>
+     -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span> <span class="se">\</span>
+     -d <span class="s2">"site_name=site_name"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"shippings"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="s2">"provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"provider"</span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="s2">"provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"provider_A"</span><span class="p">},</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint get a provider list.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>GET https://apibodegas.loadingplay.com/v1/shipping/provider</code></p>
+<h3 id='url-parameters-4'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>site_name</td>
+<td>(required)</td>
+<td>nombre del sitio a la cual pertenece</td>
+</tr>
+</tbody></table>
+<h2 id='get-shipping-data-by-provider'>Get Shipping data by provider</h2><pre class="highlight shell tab-shell"><code>curl -XGET https://apibodegas.loadingplay.com/v1/shipping/provider/[name] <span class="se">\</span>
+     -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span> <span class="se">\</span>
+     -d <span class="s2">"site_name=site_name"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"shippings"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[id]"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mf">3.0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"site_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"site_name"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[name]"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"destination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"destination"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint get shipping data by provider.</p>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>GET https://apibodegas.loadingplay.com/v1/shipping/provider/[name]</code></p>
+<h3 id='url-parameters-5'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>(required)</td>
+<td>nombre del proveedor</td>
+</tr>
+<tr>
+<td>site_name</td>
+<td>(required)</td>
+<td>nombre del sitio a la cual pertenece</td>
+</tr>
+</tbody></table>
+<h2 id='get-shipping-data-by-destination'>Get Shipping data by destination</h2><pre class="highlight shell tab-shell"><code>curl -XGET https://apibodegas.loadingplay.com/v1/shipping/provider/[name]/destination/[destination_name] <span class="se">\</span>
+     -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span> <span class="se">\</span>
+     -d <span class="s2">"site_name=site_name"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"shippings"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[id]"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mf">3.0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"site_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"site_name"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[name]"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"destination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[destination_name]"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint get shipping data by destination.</p>
+<h3 id='http-request-6'>HTTP Request</h3>
+<p><code>GET https://apibodegas.loadingplay.com/v1/shipping/provider/[name]/destination/[name]</code></p>
+<h3 id='url-parameters-6'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>(required)</td>
+<td>nombre del proveedor</td>
+</tr>
+<tr>
+<td>destination_name</td>
+<td>(required)</td>
+<td>nombre del destino</td>
+</tr>
+<tr>
+<td>site_name</td>
+<td>(required)</td>
+<td>nombre del sitio a la cual pertenece</td>
+</tr>
+</tbody></table>
+<h2 id='get-price-by-weight'>Get Price by weight</h2><pre class="highlight shell tab-shell"><code>curl -XGET https://apibodegas.loadingplay.com/v1/shipping/price <span class="se">\</span>
+     -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span> <span class="se">\</span>
+     -d <span class="s2">"weight=2"</span> <span class="se">\</span>
+     -d <span class="s2">"site_name=site_name"</span> <span class="se">\</span>
+     -d <span class="s2">"provider=provider"</span> <span class="se">\</span>
+     -d <span class="s2">"destination=destination"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"shipping"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint get shipping data by destination.</p>
+<h3 id='http-request-7'>HTTP Request</h3>
+<p><code>GET https://apibodegas.loadingplay.com/v1/shipping/price</code></p>
+<h3 id='url-parameters-7'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>weight</td>
+<td>(required)</td>
+<td>limite superior del rango</td>
+</tr>
+<tr>
+<td>site_name</td>
+<td>(required)</td>
+<td>nombre del sitio a la cual pertenece</td>
+</tr>
+<tr>
+<td>provider</td>
+<td>(required)</td>
+<td>nombre del proveedor de servicio</td>
+</tr>
+<tr>
+<td>destination</td>
+<td>(required)</td>
+<td>nombre de la comuna a despachar</td>
+</tr>
+</tbody></table>
 <h1 id='variants'>Variants</h1><h2 id='create-a-variant'>Create a Variant</h2><pre class="highlight shell tab-shell"><code>curl -XPOST <span class="s2">"https://apibodegas.loadingplay.com/v1/variant"</span> <span class="se">\</span>
      -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
      -d <span class="s2">"variant_name=size"</span> <span class="se">\</span>
@@ -2435,6 +2797,85 @@ curl -XPOST https://apibodegas.loadingplay.com/v1/config <span class="se">\</spa
 <td>name of the site where variant</td>
 </tr>
 </tbody></table>
+<h1 id='key-value-data'>Key Value Data</h1><h2 id='post-key-value'>Post Key Value</h2><pre class="highlight shell tab-shell"><code>curl -XPOST <span class="s1">'https://apibodegas.loadingplay.com/v1/keyvaluedata'</span> <span class="se">\</span>
+    -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span> <span class="se">\</span>
+    -d <span class="s1">'key=key'</span> <span class="se">\</span>
+    -d <span class="s1">'value=value'</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"keyvaluedata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[type]"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[id]"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[{value} or  'value']"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[key]"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves info about Key Value Data added</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://apibodegas.loadingplay.com/v1/keyvaluedata</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>key</td>
+<td>(requerido)</td>
+<td>key name for the value added</td>
+</tr>
+<tr>
+<td>value</td>
+<td>string</td>
+<td>this field can be a string or a dictionary structure</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+Remember — ACCESS_TOKEN is mandatory for this action
+</aside>
+<h2 id='get-a-specific-key-value-data'>Get a Specific Key Value Data</h2><pre class="highlight shell tab-shell"><code>curl -XGET <span class="s2">"https://apibodegas.loadingplay.com/v1/keyvaluedata/llave"</span>
+  -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span> <span class="se">\</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"keyvaluedata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[{value} or  'value']"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[key]"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific kitten.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://apibodegas.loadingplay.com/v1/keyvaluedata/&lt;key&gt;</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>key</td>
+<td>The Key of the key value data requiered</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+Remember — ACCESS_TOKEN is mandatory for this action
+</aside>
 <h1 id='errors'>Errors</h1>
 <aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter. Files are included in the order listed.</aside>
 
