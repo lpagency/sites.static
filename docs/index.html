@@ -300,7 +300,7 @@
                     <a href="#get-variant-stock-in-a-cellar" class="toc-h2 toc-link" data-title="Cellars">Get Variant Stock in a Cellar</a>
                   </li>
                   <li>
-                    <a href="#post-variant-stock-in-a-cellar" class="toc-h2 toc-link" data-title="Cellars">Post Variant Stock in a Cellar</a>
+                    <a href="#put-variant-stock-in-a-cellar" class="toc-h2 toc-link" data-title="Cellars">PUT Variant Stock in a Cellar</a>
                   </li>
               </ul>
           </li>
@@ -1592,7 +1592,7 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 <td>unique ididentifier for variant</td>
 </tr>
 </tbody></table>
-<h2 id='post-variant-stock-in-a-cellar'>Post Variant Stock in a Cellar</h2><pre class="highlight shell tab-shell"><code>curl -XPOST https://apibodegas.loadingplay.com/v1/cellar/[cellar_id]/stock <span class="se">\</span>
+<h2 id='put-variant-stock-in-a-cellar'>PUT Variant Stock in a Cellar</h2><pre class="highlight shell tab-shell"><code>curl -XPUT https://apibodegas.loadingplay.com/v1/cellar/[cellar_id]/stock <span class="se">\</span>
             -d <span class="s1">'sku=producto_3'</span> <span class="se">\</span>
             -d <span class="s1">'quantity=1'</span> <span class="se">\</span>
             -d <span class="s1">'user_description=example_sistem'</span><span class="se">\</span>
@@ -1612,7 +1612,7 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 </span></code></pre>
 <p>This endpoint retrieves the respective result of adding stock to sendend vairant in cellar.</p>
 <h3 id='http-request-5'>HTTP Request</h3>
-<p><code>POST https://apibodegas.loadingplay.com/v1/cellar/[cellar_id]/stock</code></p>
+<p><code>PUT https://apibodegas.loadingplay.com/v1/cellar/[cellar_id]/stock</code></p>
 <h3 id='query-parameters-2'>Query Parameters</h3>
 <table><thead>
 <tr>
