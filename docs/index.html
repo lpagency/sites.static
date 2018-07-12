@@ -242,6 +242,17 @@
               </ul>
           </li>
           <li>
+            <a href="#product-images" class="toc-h1 toc-link" data-title="Product images">Product images</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#add-images-to-a-product" class="toc-h2 toc-link" data-title="Product images">Add images to a product</a>
+                  </li>
+                  <li>
+                    <a href="#remove-images-from-a-product" class="toc-h2 toc-link" data-title="Product images">Remove images from a product</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#variants" class="toc-h1 toc-link" data-title="Variants">Variants</a>
               <ul class="toc-list-h2">
                   <li>
@@ -577,7 +588,7 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 <tr>
 <td>order</td>
 <td>&#39;ASC&#39;</td>
-<td>type of orden DESC</td>
+<td>type of orden DESC or ASC</td>
 </tr>
 </tbody></table>
 <h2 id='get-a-specific-product'>Get a Specific Product</h2><pre class="highlight shell tab-shell"><code>curl -XGET <span class="s2">"https://apibodegas.loadingplay.com/v1/product"</span> <span class="se">\</span>
@@ -665,11 +676,11 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 <p>The above command returns json with product info, including id:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"statuts"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"product"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">product_id</span><span class="p">],</span><span class="w">
-        </span><span class="s2">"sku"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">product_sku</span><span class="p">]</span><span class="w">
-    </span><span class="p">}</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"product"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">product_id</span><span class="p">],</span><span class="w">
+    </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">product_sku</span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-3'>HTTP Request</h3>
 <p><code>POST https://apibodegas.loadingplay.com/v1/product</code></p>
@@ -709,11 +720,11 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 <p>The above command returns json with product info, including id:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"statuts"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"product"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">product_id</span><span class="p">],</span><span class="w">
-        </span><span class="s2">"sku"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">product_sku</span><span class="p">]</span><span class="w">
-    </span><span class="p">}</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"product"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">product_id</span><span class="p">],</span><span class="w">
+    </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">product_sku</span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-4'>HTTP Request</h3>
 <p><code>PUT https://apibodegas.loadingplay.com/v1/product</code></p>
@@ -731,6 +742,97 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 <tr>
 <td>sku</td>
 <td>unique identifier for product it can be a comma separated list, and return a comma separated list of products</td>
+</tr>
+</tbody></table>
+<h1 id='product-images'>Product images</h1><h2 id='add-images-to-a-product'>Add images to a product</h2>
+<p>to generate image and thumbnails see https://static.loadingplay.com</p>
+<pre class="highlight shell tab-shell"><code>curl -XPOST https://apibodegas.loadingplay.com/v1/product/[SKU]/images <span class="se">\</span>
+    -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span> <span class="se">\</span>
+    -d <span class="s2">"site_name=fm"</span> <span class="se">\</span>
+    -d <span class="s2">"url=original image url"</span> <span class="se">\</span>
+    -d <span class="s2">"thumb_1=smallest possible thumbnail url"</span> <span class="se">\</span>
+    -d <span class="s2">"thumb_200=200px thumbnail url"</span> <span class="se">\</span>
+    -d <span class="s2">"thumb_500=500px thumbnail url"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"original image url"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"thumb_1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"smallest possible thumbnail url"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"thumb_200"</span><span class="p">:</span><span class="w"> </span><span class="s2">"200px thumbnail url"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"thumb_500"</span><span class="p">:</span><span class="w"> </span><span class="s2">"500px thumbnail url"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a list of images.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://apibodegas.loadingplay.com/v1/product/[SKU]/images</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>site_name</td>
+<td>(required)</td>
+<td>filter by site</td>
+</tr>
+<tr>
+<td>url</td>
+<td>(required)</td>
+<td>original picture thumbnail url</td>
+</tr>
+<tr>
+<td>thumb_1</td>
+<td>(required)</td>
+<td>smallest possible thumbnail url</td>
+</tr>
+<tr>
+<td>thumb_200</td>
+<td>(required)</td>
+<td>200px thumbnail url</td>
+</tr>
+<tr>
+<td>thumb_500</td>
+<td>(required)</td>
+<td>500px thumbnail url</td>
+</tr>
+</tbody></table>
+<h2 id='remove-images-from-a-product'>Remove images from a product</h2><pre class="highlight shell tab-shell"><code>curl -XDELETE https://apibodegas.loadingplay.com/v1/product/[SKU]/images <span class="se">\</span>
+    -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span> <span class="se">\</span>
+    -d <span class="s2">"site_name=fm"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint remove images from product.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>DELETE https://apibodegas.loadingplay.com/v1/product/[SKU]/images</code></p>
+<h3 id='query-parameters-2'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>site_name</td>
+<td>(required)</td>
+<td>filter by site</td>
 </tr>
 </tbody></table>
 <h1 id='variants'>Variants</h1><h2 id='create-a-variant'>Create a Variant</h2><pre class="highlight shell tab-shell"><code>curl -XPOST <span class="s2">"https://apibodegas.loadingplay.com/v1/variant"</span> <span class="se">\</span>
@@ -1961,7 +2063,7 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 <p>The above command returns json with cart info, including id:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"statuts"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"status"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"cart"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
         </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
