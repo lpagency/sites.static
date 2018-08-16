@@ -29,7 +29,7 @@ $(document).ready(function()
         setTimeout(function() {
             document.location.href = facade.ecommerce.cart.getCheckoutUrl() +
                 '?' +
-                'site_id=' + facade.ecommerce.cart.getSiteId() +
+                'site_name=fcv' +
                 '&cart_id=' + facade.ecommerce.cart.getGUID();
         }, 2000);
     };
