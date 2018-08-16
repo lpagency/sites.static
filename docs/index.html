@@ -311,6 +311,12 @@
                     <a href="#edit-a-cellar" class="toc-h2 toc-link" data-title="Cellars">Edit a cellar</a>
                   </li>
                   <li>
+                    <a href="#list-cellars" class="toc-h2 toc-link" data-title="Cellars">List cellars</a>
+                  </li>
+                  <li>
+                    <a href="#list-products-in-a-cellar" class="toc-h2 toc-link" data-title="Cellars">List products in a cellar</a>
+                  </li>
+                  <li>
                     <a href="#get-variant-stock-in-a-cellar" class="toc-h2 toc-link" data-title="Cellars">Get Variant Stock in a Cellar</a>
                   </li>
                   <li>
@@ -1738,6 +1744,112 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 <td>true if this cellar is enabled for reservation, the system will allow only one cellar as reservation</td>
 </tr>
 </tbody></table>
+<h2 id='list-cellars'>List cellars</h2><pre class="highlight shell tab-shell"><code>curl -XGET <span class="s2">"https://apibodegas.loadingplay.com/v1/cellar"</span> <span class="se">\</span>
+     -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span>
+     -d <span class="s2">"page=1"</span> <span class="se">\</span>
+     -d <span class="s2">"items=10"</span> <span class="se">\</span>
+     -d <span class="s2">"search="</span>
+</code></pre>
+<blockquote>
+<p>The above command returns json with a list of cellars, including id:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"cellar"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[cellar_id]"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[cellar_name]"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"site_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[site_name]"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-4'>HTTP Request</h3>
+<p><code>GET https://apibodegas.loadingplay.com/v1/cellar</code></p>
+<h3 id='url-parameters-4'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>page</td>
+<td>(int)</td>
+<td>page number</td>
+</tr>
+<tr>
+<td>items</td>
+<td>(int)</td>
+<td>items per page</td>
+</tr>
+<tr>
+<td>search</td>
+<td>(str)</td>
+<td>use this if you want to search in cellar</td>
+</tr>
+<tr>
+<td>metadata</td>
+<td>(bool)</td>
+<td>true if you want to get metadata for the bdd query</td>
+</tr>
+</tbody></table>
+<h2 id='list-products-in-a-cellar'>List products in a cellar</h2><pre class="highlight shell tab-shell"><code>curl -XGET <span class="s2">"https://apibodegas.loadingplay.com/v1/cellar/[ID]/products"</span> <span class="se">\</span>
+     -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span>
+     -d <span class="s2">"page=1"</span> <span class="se">\</span>
+     -d <span class="s2">"items=10"</span> <span class="se">\</span>
+     -d <span class="s2">"search="</span> <span class="se">\</span>
+     -d <span class="s2">"metadata=true"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns json with a list of products inside a cellar:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"records_filtered"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"total_records_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"products"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"product_sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"the sku"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"balance_units"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-5'>HTTP Request</h3>
+<p><code>GET https://apibodegas.loadingplay.com/v1/cellar/[ID]/products</code></p>
+<h3 id='url-parameters-5'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>page</td>
+<td>(int)</td>
+<td>page number</td>
+</tr>
+<tr>
+<td>items</td>
+<td>(int)</td>
+<td>items per page</td>
+</tr>
+<tr>
+<td>search</td>
+<td>(str)</td>
+<td>use this if you want to filter by sku</td>
+</tr>
+<tr>
+<td>metadata</td>
+<td>(bool)</td>
+<td>true if you want to get metadata for the bdd query</td>
+</tr>
+</tbody></table>
 <h2 id='get-variant-stock-in-a-cellar'>Get Variant Stock in a Cellar</h2><pre class="highlight shell tab-shell"><code>curl -XGET https://apibodegas.loadingplay.com/v1/cellar/[cellar_id]/stock <span class="se">\</span>
             -d <span class="s1">'sku=producto_3'</span> <span class="se">\</span>
             -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span>
@@ -1754,7 +1866,7 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves the respective stock in cellar of sended variant.</p>
-<h3 id='http-request-4'>HTTP Request</h3>
+<h3 id='http-request-6'>HTTP Request</h3>
 <p><code>GET https://apibodegas.loadingplay.com/v1/cellar/[cellar_id]/stock</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
@@ -1776,11 +1888,11 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 </tr>
 </tbody></table>
 <h2 id='put-variant-stock-in-a-cellar'>PUT Variant Stock in a Cellar</h2><pre class="highlight shell tab-shell"><code>curl -XPUT https://apibodegas.loadingplay.com/v1/cellar/[cellar_id]/stock <span class="se">\</span>
-            -d <span class="s1">'sku=producto_3'</span> <span class="se">\</span>
-            -d <span class="s1">'quantity=1'</span> <span class="se">\</span>
-            -d <span class="s1">'user_description=example_sistem'</span><span class="se">\</span>
-            -d <span class="s1">'operation=move_in'</span><span class="se">\</span>
-            -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span>
+    -d <span class="s1">'sku=producto_3'</span> <span class="se">\</span>
+    -d <span class="s1">'quantity=1'</span> <span class="se">\</span>
+    -d <span class="s1">'user_description=example_sistem'</span><span class="se">\</span>
+    -d <span class="s1">'operation=move_in'</span><span class="se">\</span>
+    -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -1796,7 +1908,7 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves the respective result of adding stock to sendend vairant in cellar.</p>
-<h3 id='http-request-5'>HTTP Request</h3>
+<h3 id='http-request-7'>HTTP Request</h3>
 <p><code>PUT https://apibodegas.loadingplay.com/v1/cellar/[cellar_id]/stock</code></p>
 <h3 id='query-parameters-2'>Query Parameters</h3>
 <table><thead>
