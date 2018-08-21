@@ -228,16 +228,19 @@
             <a href="#products" class="toc-h1 toc-link" data-title="Products">Products</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-products" class="toc-h2 toc-link" data-title="Products">Get all Products</a>
-                  </li>
-                  <li>
-                    <a href="#get-a-specific-product" class="toc-h2 toc-link" data-title="Products">Get a Specific Product</a>
-                  </li>
-                  <li>
                     <a href="#create-a-product" class="toc-h2 toc-link" data-title="Products">Create a Product</a>
                   </li>
                   <li>
                     <a href="#edit-a-product" class="toc-h2 toc-link" data-title="Products">Edit a Product</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-single-product" class="toc-h2 toc-link" data-title="Products">Get a single Product</a>
+                  </li>
+                  <li>
+                    <a href="#get-all-products" class="toc-h2 toc-link" data-title="Products">Get all Products</a>
+                  </li>
+                  <li>
+                    <a href="#create-a-tag-in-a-product" class="toc-h2 toc-link" data-title="Products">Create a Tag in a product</a>
                   </li>
               </ul>
           </li>
@@ -507,100 +510,95 @@ curl <span class="s2">"api_endpoint_here"</span>
 <aside class="notice">
 You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 </aside>
-<h1 id='products'>Products</h1><h2 id='get-all-products'>Get all Products</h2><pre class="highlight shell tab-shell"><code>curl -XGET https://apibodegas.loadingplay.com/v1/product/list <span class="se">\</span>
-    -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span> <span class="se">\</span>
-    -d <span class="s2">"site_name=fm"</span>
+<h1 id='products'>Products</h1><h2 id='create-a-product'>Create a Product</h2><pre class="highlight shell tab-shell"><code>curl -XPOST <span class="s2">"https://apibodegas.loadingplay.com/v1/product"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
+    -d <span class="s2">"sku=2212110"</span> <span class="se">\</span>
+    -d <span class="s2">"site_name=fm"</span> <span class="se">\</span>
+    -d <span class="s2">"name="</span> <span class="se">\</span>
+    -d <span class="s2">"description="</span> <span class="se">\</span>
+    -d <span class="s2">"main_price="</span> <span class="se">\</span>
+    -d <span class="s2">"cost_price="</span> <span class="se">\</span>
+    -d <span class="s2">"promotion_price="</span> <span class="se">\</span>
+    -d <span class="s2">"bulk_price="</span> <span class="se">\</span>
+    -d <span class="s2">"brand="</span> <span class="se">\</span>
+    -d <span class="s2">"manufacturer="</span> <span class="se">\</span>
+    -d <span class="s2">"bullet_1="</span> <span class="se">\</span>
+    -d <span class="s2">"bullet_2="</span> <span class="se">\</span>
+    -d <span class="s2">"bullet_3="</span>
 </code></pre>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>The above command returns json with product info, including id:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"total_records"</span><span class="p">:</span><span class="w"> </span><span class="mi">169</span><span class="p">,</span><span class="w"> </span><span class="s2">"records_filtered"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="p">},</span><span class="w">  </span><span class="err">//</span><span class="w"> </span><span class="err">only</span><span class="w"> </span><span class="err">if</span><span class="w"> </span><span class="err">enabled</span><span class="w">
-    </span><span class="s2">"products"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"balance_units"</span><span class="p">:</span><span class="w"> </span><span class="mi">44</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CAT CHOW"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"bulk_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"bullet_1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Alimento para gato adulto, Pescado y Mariscos"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"bullet_2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15k"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"bullet_3"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"cost_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">29277</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"critical_stock"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"product description"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"for_sale"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1237</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-                </span><span class="s2">"https://7static.loadingplay.com/static/images/4799bd4dd9fdc1599355e6743ed9580c_PESCADO2.png.png"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"https://84static.loadingplay.com/static/images/1_4799bd4dd9fdc1599355e6743ed9580c_PESCADO2.png.png"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"https://7static.loadingplay.com/static/images/200_4799bd4dd9fdc1599355e6743ed9580c_PESCADO2.png.png"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"https://7static.loadingplay.com/static/images/500_4799bd4dd9fdc1599355e6743ed9580c_PESCADO2.png.png"</span><span class="w">
-            </span><span class="p">],</span><span class="w">
-            </span><span class="s2">"main_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">29277</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"manufacturer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nestle"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cat Chow Adultos"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"profit_margin"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"promotion_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2212110"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gato"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"upp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="err">....</span><span class="w">
-    </span><span class="p">]</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"product"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">product_id</span><span class="p">],</span><span class="w">
+    </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">product_sku</span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves a Products list.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET https://apibodegas.loadingplay.com/v1/product/list</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
+</span></code></pre><h3 id='http-request'>HTTP Request</h3>
+<p><code>POST https://apibodegas.loadingplay.com/v1/product</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>Default</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>site_name</td>
-<td>(required)</td>
-<td>filter by site</td>
+<td>(required) filter by site</td>
 </tr>
 <tr>
-<td>page</td>
-<td>1</td>
-<td>startig page</td>
-</tr>
-<tr>
-<td>items</td>
-<td>10</td>
-<td>items to show per page</td>
-</tr>
-<tr>
-<td>metadata</td>
-<td>false</td>
-<td>true if you need to return total rows</td>
-</tr>
-<tr>
-<td>search</td>
-<td>&#39;&#39;</td>
-<td>perform a search in products</td>
-</tr>
-<tr>
-<td>column</td>
-<td>&#39;main_price&#39;</td>
-<td>column for sorting items</td>
-</tr>
-<tr>
-<td>order</td>
-<td>&#39;ASC&#39;</td>
-<td>type of orden DESC or ASC</td>
+<td>sku</td>
+<td>unique identifier for product it can be a comma separated list, and return a comma separated list of products</td>
 </tr>
 </tbody></table>
-<h2 id='get-a-specific-product'>Get a Specific Product</h2><pre class="highlight shell tab-shell"><code>curl -XGET <span class="s2">"https://apibodegas.loadingplay.com/v1/product"</span> <span class="se">\</span>
+<h2 id='edit-a-product'>Edit a Product</h2><pre class="highlight shell tab-shell"><code>curl -XPUT <span class="s2">"https://apibodegas.loadingplay.com/v1/product"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
+    -d <span class="s2">"sku=2212110"</span> <span class="se">\</span>
+    -d <span class="s2">"site_name=fm"</span> <span class="se">\</span>
+    -d <span class="s2">"name="</span> <span class="se">\</span>
+    -d <span class="s2">"description="</span> <span class="se">\</span>
+    -d <span class="s2">"main_price="</span> <span class="se">\</span>
+    -d <span class="s2">"cost_price="</span> <span class="se">\</span>
+    -d <span class="s2">"promotion_price="</span> <span class="se">\</span>
+    -d <span class="s2">"bulk_price="</span> <span class="se">\</span>
+    -d <span class="s2">"brand="</span> <span class="se">\</span>
+    -d <span class="s2">"manufacturer="</span> <span class="se">\</span>
+    -d <span class="s2">"bullet_1="</span> <span class="se">\</span>
+    -d <span class="s2">"bullet_2="</span> <span class="se">\</span>
+    -d <span class="s2">"bullet_3="</span>
+</code></pre>
+<blockquote>
+<p>The above command returns json with product info, including id:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"product"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">product_id</span><span class="p">],</span><span class="w">
+    </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">product_sku</span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-2'>HTTP Request</h3>
+<p><code>PUT https://apibodegas.loadingplay.com/v1/product</code></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>site_name</td>
+<td>(required) filter by site</td>
+</tr>
+<tr>
+<td>sku</td>
+<td>unique identifier for product it can be a comma separated list, and return a comma separated list of products</td>
+</tr>
+</tbody></table>
+<h2 id='get-a-single-product'>Get a single Product</h2><pre class="highlight shell tab-shell"><code>curl -XGET <span class="s2">"https://apibodegas.loadingplay.com/v1/product"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
   -d <span class="s2">"site_name=fm"</span> <span class="se">\</span>
   -d <span class="s2">"sku=2212110"</span>
@@ -647,96 +645,8 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves a specific product.</p>
-<h3 id='http-request-2'>HTTP Request</h3>
+<h3 id='http-request-3'>HTTP Request</h3>
 <p><code>GET https://apibodegas.loadingplay.com/v1/product</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>site_name</td>
-<td>(required) filter by site</td>
-</tr>
-<tr>
-<td>sku</td>
-<td>unique identifier for product it can be a comma separated list, and return a comma separated list of products</td>
-</tr>
-</tbody></table>
-<h2 id='create-a-product'>Create a Product</h2><pre class="highlight shell tab-shell"><code>curl -XPOST <span class="s2">"https://apibodegas.loadingplay.com/v1/product"</span> <span class="se">\</span>
-  -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
-    -d <span class="s2">"sku=2212110"</span> <span class="se">\</span>
-    -d <span class="s2">"site_name=fm"</span> <span class="se">\</span>
-    -d <span class="s2">"name="</span> <span class="se">\</span>
-    -d <span class="s2">"description="</span> <span class="se">\</span>
-    -d <span class="s2">"main_price="</span> <span class="se">\</span>
-    -d <span class="s2">"cost_price="</span> <span class="se">\</span>
-    -d <span class="s2">"promotion_price="</span> <span class="se">\</span>
-    -d <span class="s2">"bulk_price="</span> <span class="se">\</span>
-    -d <span class="s2">"brand="</span> <span class="se">\</span>
-    -d <span class="s2">"manufacturer="</span> <span class="se">\</span>
-    -d <span class="s2">"bullet_1="</span> <span class="se">\</span>
-    -d <span class="s2">"bullet_2="</span> <span class="se">\</span>
-    -d <span class="s2">"bullet_3="</span>
-</code></pre>
-<blockquote>
-<p>The above command returns json with product info, including id:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"product"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">product_id</span><span class="p">],</span><span class="w">
-    </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">product_sku</span><span class="p">]</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='http-request-3'>HTTP Request</h3>
-<p><code>POST https://apibodegas.loadingplay.com/v1/product</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>site_name</td>
-<td>(required) filter by site</td>
-</tr>
-<tr>
-<td>sku</td>
-<td>unique identifier for product it can be a comma separated list, and return a comma separated list of products</td>
-</tr>
-</tbody></table>
-<h2 id='edit-a-product'>Edit a Product</h2><pre class="highlight shell tab-shell"><code>curl -XPUT <span class="s2">"https://apibodegas.loadingplay.com/v1/product"</span> <span class="se">\</span>
-  -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
-    -d <span class="s2">"sku=2212110"</span> <span class="se">\</span>
-    -d <span class="s2">"site_name=fm"</span> <span class="se">\</span>
-    -d <span class="s2">"name="</span> <span class="se">\</span>
-    -d <span class="s2">"description="</span> <span class="se">\</span>
-    -d <span class="s2">"main_price="</span> <span class="se">\</span>
-    -d <span class="s2">"cost_price="</span> <span class="se">\</span>
-    -d <span class="s2">"promotion_price="</span> <span class="se">\</span>
-    -d <span class="s2">"bulk_price="</span> <span class="se">\</span>
-    -d <span class="s2">"brand="</span> <span class="se">\</span>
-    -d <span class="s2">"manufacturer="</span> <span class="se">\</span>
-    -d <span class="s2">"bullet_1="</span> <span class="se">\</span>
-    -d <span class="s2">"bullet_2="</span> <span class="se">\</span>
-    -d <span class="s2">"bullet_3="</span>
-</code></pre>
-<blockquote>
-<p>The above command returns json with product info, including id:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"product"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">product_id</span><span class="p">],</span><span class="w">
-    </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">product_sku</span><span class="p">]</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='http-request-4'>HTTP Request</h3>
-<p><code>PUT https://apibodegas.loadingplay.com/v1/product</code></p>
 <h3 id='url-parameters-3'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -751,6 +661,136 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 <tr>
 <td>sku</td>
 <td>unique identifier for product it can be a comma separated list, and return a comma separated list of products</td>
+</tr>
+</tbody></table>
+<h2 id='get-all-products'>Get all Products</h2><pre class="highlight shell tab-shell"><code>curl -XGET https://apibodegas.loadingplay.com/v1/product/list <span class="se">\</span>
+    -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span> <span class="se">\</span>
+    -d <span class="s2">"site_name=fm"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"total_records"</span><span class="p">:</span><span class="w"> </span><span class="mi">169</span><span class="p">,</span><span class="w"> </span><span class="s2">"records_filtered"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="p">},</span><span class="w">  </span><span class="err">//</span><span class="w"> </span><span class="err">only</span><span class="w"> </span><span class="err">if</span><span class="w"> </span><span class="err">enabled</span><span class="w">
+    </span><span class="s2">"products"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"balance_units"</span><span class="p">:</span><span class="w"> </span><span class="mi">44</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CAT CHOW"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"bulk_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"bullet_1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Alimento para gato adulto, Pescado y Mariscos"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"bullet_2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15k"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"bullet_3"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"cost_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">29277</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"critical_stock"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"product description"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"for_sale"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1237</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"https://7static.loadingplay.com/static/images/4799bd4dd9fdc1599355e6743ed9580c_PESCADO2.png.png"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"https://84static.loadingplay.com/static/images/1_4799bd4dd9fdc1599355e6743ed9580c_PESCADO2.png.png"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"https://7static.loadingplay.com/static/images/200_4799bd4dd9fdc1599355e6743ed9580c_PESCADO2.png.png"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"https://7static.loadingplay.com/static/images/500_4799bd4dd9fdc1599355e6743ed9580c_PESCADO2.png.png"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"main_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">29277</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"manufacturer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nestle"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cat Chow Adultos"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"profit_margin"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"promotion_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2212110"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gato"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"upp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="err">....</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a Products list.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>GET https://apibodegas.loadingplay.com/v1/product/list</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>site_name</td>
+<td>(required)</td>
+<td>filter by site</td>
+</tr>
+<tr>
+<td>page</td>
+<td>1</td>
+<td>startig page</td>
+</tr>
+<tr>
+<td>items</td>
+<td>10</td>
+<td>items to show per page</td>
+</tr>
+<tr>
+<td>metadata</td>
+<td>false</td>
+<td>true if you need to return total rows</td>
+</tr>
+<tr>
+<td>search</td>
+<td>&#39;&#39;</td>
+<td>perform a search in products</td>
+</tr>
+<tr>
+<td>column</td>
+<td>&#39;main_price&#39;</td>
+<td>column for sorting items</td>
+</tr>
+<tr>
+<td>order</td>
+<td>&#39;ASC&#39;</td>
+<td>type of orden DESC or ASC</td>
+</tr>
+</tbody></table>
+<h2 id='create-a-tag-in-a-product'>Create a Tag in a product</h2>
+<p>this method will add a tag if doesn&#39;t exists, and do nothing if exists.</p>
+<pre class="highlight shell tab-shell"><code>curl -XPOST <span class="s2">"https://apibodegas.loadingplay.com/v1/product/[SKU]/tags"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
+    -d <span class="s2">"tag=new_tag"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns json with tags info, including id:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">tag_id</span><span class="p">],</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">tag_name</span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-5'>HTTP Request</h3>
+<p><code>POST https://apibodegas.loadingplay.com/v1/product/[SKU]/tags</code></p>
+<h3 id='url-parameters-4'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>product_sku (str)</td>
+<td>product unique identifier</td>
+</tr>
+<tr>
+<td>tag (str)</td>
+<td>tag that will be added</td>
 </tr>
 </tbody></table>
 <h1 id='product-images'>Product images</h1><h2 id='add-images-to-a-product'>Add images to a product</h2>
