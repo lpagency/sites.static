@@ -239,8 +239,19 @@
                   <li>
                     <a href="#get-all-products" class="toc-h2 toc-link" data-title="Products">Get all Products</a>
                   </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#product-tags" class="toc-h1 toc-link" data-title="Product tags">Product tags</a>
+              <ul class="toc-list-h2">
                   <li>
-                    <a href="#create-a-tag-in-a-product" class="toc-h2 toc-link" data-title="Products">Create a Tag in a product</a>
+                    <a href="#add-a-tag-to-a-product" class="toc-h2 toc-link" data-title="Product tags">Add a Tag to a product</a>
+                  </li>
+                  <li>
+                    <a href="#get-tags-from-a-product" class="toc-h2 toc-link" data-title="Product tags">Get tags from a product</a>
+                  </li>
+                  <li>
+                    <a href="#remove-a-list-of-tag-from-a-product" class="toc-h2 toc-link" data-title="Product tags">Remove a list of tag from a product</a>
                   </li>
               </ul>
           </li>
@@ -513,7 +524,6 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 <h1 id='products'>Products</h1><h2 id='create-a-product'>Create a Product</h2><pre class="highlight shell tab-shell"><code>curl -XPOST <span class="s2">"https://apibodegas.loadingplay.com/v1/product"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
     -d <span class="s2">"sku=2212110"</span> <span class="se">\</span>
-    -d <span class="s2">"site_name=fm"</span> <span class="se">\</span>
     -d <span class="s2">"name="</span> <span class="se">\</span>
     -d <span class="s2">"description="</span> <span class="se">\</span>
     -d <span class="s2">"main_price="</span> <span class="se">\</span>
@@ -538,7 +548,7 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request'>HTTP Request</h3>
 <p><code>POST https://apibodegas.loadingplay.com/v1/product</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
+<h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -546,18 +556,13 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 </tr>
 </thead><tbody>
 <tr>
-<td>site_name</td>
-<td>(required) filter by site</td>
-</tr>
-<tr>
 <td>sku</td>
-<td>unique identifier for product it can be a comma separated list, and return a comma separated list of products</td>
+<td>(required) unique identifier for product it can be a comma separated list, and return a comma separated list of products</td>
 </tr>
 </tbody></table>
 <h2 id='edit-a-product'>Edit a Product</h2><pre class="highlight shell tab-shell"><code>curl -XPUT <span class="s2">"https://apibodegas.loadingplay.com/v1/product"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
     -d <span class="s2">"sku=2212110"</span> <span class="se">\</span>
-    -d <span class="s2">"site_name=fm"</span> <span class="se">\</span>
     -d <span class="s2">"name="</span> <span class="se">\</span>
     -d <span class="s2">"description="</span> <span class="se">\</span>
     -d <span class="s2">"main_price="</span> <span class="se">\</span>
@@ -573,16 +578,28 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 <blockquote>
 <p>The above command returns json with product info, including id:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"product"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">product_id</span><span class="p">],</span><span class="w">
-    </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">product_sku</span><span class="p">]</span><span class="w">
-  </span><span class="p">}</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">  
+   </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+   </span><span class="s2">"product"</span><span class="p">:{</span><span class="w">  
+      </span><span class="s2">"bullet_1"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">bullet_</span><span class="mi">1</span><span class="p">],</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">description</span><span class="p">],</span><span class="w">
+      </span><span class="s2">"bullet_3"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">bullet_</span><span class="mi">3</span><span class="p">],</span><span class="w">
+      </span><span class="s2">"bullet_2"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">bullet_</span><span class="mi">2</span><span class="p">],</span><span class="w">
+      </span><span class="s2">"brand"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">brand</span><span class="p">],</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">id</span><span class="p">],</span><span class="w">
+      </span><span class="s2">"manufacturer"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">manufacturer</span><span class="p">],</span><span class="w">
+      </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">sku</span><span class="p">],</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">name</span><span class="p">],</span><span class="w">
+      </span><span class="s2">"for_sale"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">for_sale</span><span class="p">],</span><span class="w">
+      </span><span class="s2">"main_price"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">main_price</span><span class="p">],</span><span class="w">
+      </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">position</span><span class="p">],</span><span class="w">
+      </span><span class="s2">"promotion_price"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">promotion_price</span><span class="p">],</span><span class="w">
+      </span><span class="s2">"cost_price"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">cost_price</span><span class="p">]</span><span class="w">
+   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-2'>HTTP Request</h3>
 <p><code>PUT https://apibodegas.loadingplay.com/v1/product</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
+<h3 id='query-parameters-2'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -590,64 +607,61 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 </tr>
 </thead><tbody>
 <tr>
-<td>site_name</td>
-<td>(required) filter by site</td>
-</tr>
-<tr>
 <td>sku</td>
-<td>unique identifier for product it can be a comma separated list, and return a comma separated list of products</td>
+<td>(required) unique identifier for product it can be a comma separated list, and return a comma separated list of products</td>
 </tr>
 </tbody></table>
 <h2 id='get-a-single-product'>Get a single Product</h2><pre class="highlight shell tab-shell"><code>curl -XGET <span class="s2">"https://apibodegas.loadingplay.com/v1/product"</span> <span class="se">\</span>
-  -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
   -d <span class="s2">"site_name=fm"</span> <span class="se">\</span>
   -d <span class="s2">"sku=2212110"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"product"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">  
+   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+   </span><span class="s2">"product"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">  
         </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"balance_units"</span><span class="p">:</span><span class="w"> </span><span class="mi">44</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CAT CHOW"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"bulk_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"bullet_1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Alimento para gato adulto, Pescado y Mariscos"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"bullet_2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15k"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cat Chow"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"bulk_price"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"bullet_1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Alimento Para Gato Adulto Sabor Pescado"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"bullet_2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15 Kilos"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"bullet_3"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"cost_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">29277</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"cost_price"</span><span class="p">:</span><span class="w"> </span><span class="mf">30484.0</span><span class="p">,</span><span class="w">
             </span><span class="s2">"critical_stock"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"product description"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PURINA CAT CHOW Adultos te ofrece un alimento 100% completo y balanceado desarrollado especialmente para los gatos de 1-7 a</span><span class="se">\u</span><span class="s2">00f1os de edad que le podr</span><span class="se">\u</span><span class="s2">00e1 ayudar a mantener un desarrollo sano de su coraz</span><span class="se">\u</span><span class="s2">00f3n y un sistema inmunol</span><span class="se">\u</span><span class="s2">00f3gico m</span><span class="se">\u</span><span class="s2">00e1s fuerte gracias a su contenido de: Grasas, Minerales, Vitaminas y Antioxidantes.&lt;br/&gt;&lt;br/&gt;Formato de Venta: Bolsa&lt;br/&gt;&lt;br/&gt; Delivery: Entre 24 y 72 horas&lt;br/&gt;&lt;br/&gt;*Foto de producto referencial&lt;br/&gt;"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
             </span><span class="s2">"for_sale"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
             </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1237</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-                </span><span class="s2">"https://7static.loadingplay.com/static/images/4799bd4dd9fdc1599355e6743ed9580c_PESCADO2.png.png"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"https://84static.loadingplay.com/static/images/1_4799bd4dd9fdc1599355e6743ed9580c_PESCADO2.png.png"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"https://7static.loadingplay.com/static/images/200_4799bd4dd9fdc1599355e6743ed9580c_PESCADO2.png.png"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"https://7static.loadingplay.com/static/images/500_4799bd4dd9fdc1599355e6743ed9580c_PESCADO2.png.png"</span><span class="w">
+            </span><span class="s2">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">  
+                </span><span class="p">{</span><span class="w">  
+                   </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://7static.loadingplay.com/static/images/4799bd4dd9fdc1599355e6743ed9580c_PESCADO2.png.png"</span><span class="p">,</span><span class="w">
+                   </span><span class="s2">"thumb_500"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://7static.loadingplay.com/static/images/500_4799bd4dd9fdc1599355e6743ed9580c_PESCADO2.png.png"</span><span class="p">,</span><span class="w">
+                   </span><span class="s2">"thumb_1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://84static.loadingplay.com/static/images/1_4799bd4dd9fdc1599355e6743ed9580c_PESCADO2.png.png"</span><span class="p">,</span><span class="w">
+                   </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">29</span><span class="p">,</span><span class="w">
+                   </span><span class="s2">"thumb_200"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://7static.loadingplay.com/static/images/200_4799bd4dd9fdc1599355e6743ed9580c_PESCADO2.png.png"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
             </span><span class="p">],</span><span class="w">
-            </span><span class="s2">"main_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">29277</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"manufacturer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nestle"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cat Chow Adultos"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"main_price"</span><span class="p">:</span><span class="w"> </span><span class="mf">39903.0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"manufacturer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Purina"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cat Chow Adulto | Alimento Para Gato Adulto Sabor Pescado"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"profit_margin"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"promotion_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"profit_margin"</span><span class="p">:</span><span class="w"> </span><span class="mf">9419.0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"promotion_price"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"site_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fm"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2212110"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gato"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15_kilos,15_kilos,15_kilos,15_kilos,15_kilos,15_kilos,15_kilos,15_kilos,15_kilos,15_kilos,15_kilos,15_kilos,15_kilos,15_kilos,15_kilos,15_kilos,15_kilos,15_kilos,cat_chow,cat_chow,cat_chow,cat_chow,cat_chow"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"upp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="err">...</span><span class="w">
-    </span><span class="p">]</span><span class="w">
+            </span><span class="s2">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"in_stock"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves a specific product.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
 <p><code>GET https://apibodegas.loadingplay.com/v1/product</code></p>
-<h3 id='url-parameters-3'>URL Parameters</h3>
+<h3 id='query-parameters-3'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -665,54 +679,97 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 </tbody></table>
 <h2 id='get-all-products'>Get all Products</h2><pre class="highlight shell tab-shell"><code>curl -XGET https://apibodegas.loadingplay.com/v1/product/list <span class="se">\</span>
     -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span> <span class="se">\</span>
-    -d <span class="s2">"site_name=fm"</span>
+    -d <span class="s2">"metadata=true"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"total_records"</span><span class="p">:</span><span class="w"> </span><span class="mi">169</span><span class="p">,</span><span class="w"> </span><span class="s2">"records_filtered"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="p">},</span><span class="w">  </span><span class="err">//</span><span class="w"> </span><span class="err">only</span><span class="w"> </span><span class="err">if</span><span class="w"> </span><span class="err">enabled</span><span class="w">
-    </span><span class="s2">"products"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"balance_units"</span><span class="p">:</span><span class="w"> </span><span class="mi">44</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CAT CHOW"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"bulk_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"bullet_1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Alimento para gato adulto, Pescado y Mariscos"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"bullet_2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15k"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"bullet_3"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"cost_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">29277</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"critical_stock"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"product description"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"for_sale"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1237</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-                </span><span class="s2">"https://7static.loadingplay.com/static/images/4799bd4dd9fdc1599355e6743ed9580c_PESCADO2.png.png"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"https://84static.loadingplay.com/static/images/1_4799bd4dd9fdc1599355e6743ed9580c_PESCADO2.png.png"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"https://7static.loadingplay.com/static/images/200_4799bd4dd9fdc1599355e6743ed9580c_PESCADO2.png.png"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"https://7static.loadingplay.com/static/images/500_4799bd4dd9fdc1599355e6743ed9580c_PESCADO2.png.png"</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">  
+   </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+   </span><span class="s2">"metadata"</span><span class="p">:{</span><span class="w">  
+      </span><span class="s2">"total_records"</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"records_filtered"</span><span class="p">:</span><span class="mi">5</span><span class="w">
+   </span><span class="p">}</span><span class="w">
+   </span><span class="s2">"products"</span><span class="p">:[</span><span class="w">  
+        </span><span class="p">{</span><span class="w">  
+            </span><span class="s2">"bulk_price"</span><span class="p">:</span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"site_name"</span><span class="p">:</span><span class="s2">"test4"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"weight"</span><span class="p">:</span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"bullet_2"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"images"</span><span class="p">:[</span><span class="w">  
+                </span><span class="p">{</span><span class="w">  
+                   </span><span class="s2">"sort"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="w">
+                   </span><span class="s2">"thumb_500"</span><span class="p">:</span><span class="s2">"https://84static.loadingplay.com/static/images/500_a679babb48aebafabb636d7d3e1e8485_Complementa_jpg.png"</span><span class="p">,</span><span class="w">
+                   </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+                   </span><span class="s2">"url"</span><span class="p">:</span><span class="s2">"https://84static.loadingplay.com/static/images/a679babb48aebafabb636d7d3e1e8485_Complementa_jpg.png"</span><span class="p">,</span><span class="w">
+                   </span><span class="s2">"image"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+                   </span><span class="s2">"thumb_1"</span><span class="p">:</span><span class="s2">"https://84static.loadingplay.com/static/images/1_a679babb48aebafabb636d7d3e1e8485_Complementa_jpg.png"</span><span class="p">,</span><span class="w">
+                   </span><span class="s2">"thumb_200"</span><span class="p">:</span><span class="s2">"https://84static.loadingplay.com/static/images/200_a679babb48aebafabb636d7d3e1e8485_Complementa_jpg.png"</span><span class="p">,</span><span class="w">
+                   </span><span class="s2">"id"</span><span class="p">:</span><span class="mi">46247</span><span class="p">,</span><span class="w">
+                   </span><span class="s2">"product_id"</span><span class="p">:</span><span class="mi">5394</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">  
+                   </span><span class="s2">"sort"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+                   </span><span class="s2">"thumb_500"</span><span class="p">:</span><span class="s2">"https://7static.loadingplay.com/static/images/500_14b9c0991214015b96cca1c6769bb3d5_Complementa_40.jpg.png"</span><span class="p">,</span><span class="w">
+                   </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+                   </span><span class="s2">"url"</span><span class="p">:</span><span class="s2">"https://7static.loadingplay.com/static/images/14b9c0991214015b96cca1c6769bb3d5_Complementa_40.jpg.png"</span><span class="p">,</span><span class="w">
+                   </span><span class="s2">"image"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+                   </span><span class="s2">"thumb_1"</span><span class="p">:</span><span class="s2">"https://7static.loadingplay.com/static/images/1_14b9c0991214015b96cca1c6769bb3d5_Complementa_40.jpg.png"</span><span class="p">,</span><span class="w">
+                   </span><span class="s2">"thumb_200"</span><span class="p">:</span><span class="s2">"https://7static.loadingplay.com/static/images/200_14b9c0991214015b96cca1c6769bb3d5_Complementa_40.jpg.png"</span><span class="p">,</span><span class="w">
+                   </span><span class="s2">"id"</span><span class="p">:</span><span class="mi">46248</span><span class="p">,</span><span class="w">
+                   </span><span class="s2">"product_id"</span><span class="p">:</span><span class="mi">5394</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">  
+                   </span><span class="s2">"sort"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="w">
+                   </span><span class="s2">"thumb_500"</span><span class="p">:</span><span class="s2">"https://7static.loadingplay.com/static/images/500_f1d8fc53401ea65ab59046d4d482cbc5_Complementa_41.jpg.png"</span><span class="p">,</span><span class="w">
+                   </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+                   </span><span class="s2">"url"</span><span class="p">:</span><span class="s2">"https://7static.loadingplay.com/static/images/f1d8fc53401ea65ab59046d4d482cbc5_Complementa_41.jpg.png"</span><span class="p">,</span><span class="w">
+                   </span><span class="s2">"image"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+                   </span><span class="s2">"thumb_1"</span><span class="p">:</span><span class="s2">"https://7static.loadingplay.com/static/images/1_f1d8fc53401ea65ab59046d4d482cbc5_Complementa_41.jpg.png"</span><span class="p">,</span><span class="w">
+                   </span><span class="s2">"thumb_200"</span><span class="p">:</span><span class="s2">"https://7static.loadingplay.com/static/images/200_f1d8fc53401ea65ab59046d4d482cbc5_Complementa_41.jpg.png"</span><span class="p">,</span><span class="w">
+                   </span><span class="s2">"id"</span><span class="p">:</span><span class="mi">46249</span><span class="p">,</span><span class="w">
+                   </span><span class="s2">"product_id"</span><span class="p">:</span><span class="mi">5394</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">  
+                   </span><span class="s2">"sort"</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="w">
+                   </span><span class="s2">"thumb_500"</span><span class="p">:</span><span class="s2">"https://84static.loadingplay.com/static/images/500_141da80a3ad557b1d5d9bb590f7c5d0a_Complementa_jpg.png"</span><span class="p">,</span><span class="w">
+                   </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+                   </span><span class="s2">"url"</span><span class="p">:</span><span class="s2">"https://84static.loadingplay.com/static/images/141da80a3ad557b1d5d9bb590f7c5d0a_Complementa_jpg.png"</span><span class="p">,</span><span class="w">
+                   </span><span class="s2">"image"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+                   </span><span class="s2">"thumb_1"</span><span class="p">:</span><span class="s2">"https://84static.loadingplay.com/static/images/1_141da80a3ad557b1d5d9bb590f7c5d0a_Complementa_jpg.png"</span><span class="p">,</span><span class="w">
+                   </span><span class="s2">"thumb_200"</span><span class="p">:</span><span class="s2">"https://84static.loadingplay.com/static/images/200_141da80a3ad557b1d5d9bb590f7c5d0a_Complementa_jpg.png"</span><span class="p">,</span><span class="w">
+                   </span><span class="s2">"id"</span><span class="p">:</span><span class="mi">46250</span><span class="p">,</span><span class="w">
+                   </span><span class="s2">"product_id"</span><span class="p">:</span><span class="mi">5394</span><span class="w">
+                </span><span class="p">}</span><span class="w">
             </span><span class="p">],</span><span class="w">
-            </span><span class="s2">"main_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">29277</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"manufacturer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nestle"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cat Chow Adultos"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"profit_margin"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"promotion_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2212110"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gato"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"upp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+            </span><span class="s2">"bullet_1"</span><span class="p">:</span><span class="s2">"Coj</span><span class="se">\u</span><span class="s2">00edn ideal para la sala de estar de tu casa, donde puedes sentarte a leer un libro y compartir con tu familia"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="mi">5394</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"sku"</span><span class="p">:</span><span class="s2">"CO-1113"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"bullet_3"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"profit_margin"</span><span class="p">:</span><span class="mf">35000.0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"main_price"</span><span class="p">:</span><span class="mf">35000.0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"cost_price"</span><span class="p">:</span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="s2">"Este es un coj</span><span class="se">\u</span><span class="s2">00edn ideal para las tardes de la semana donde tus hijos compartiran en la sala de estar mientras hacen las tareas, comparten com amigos o simplemente disfrutan en familia."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"tags"</span><span class="p">:</span><span class="s2">"terraza,terraza"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"brand"</span><span class="p">:</span><span class="s2">"Complementa"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"in_stock"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"manufacturer"</span><span class="p">:</span><span class="s2">"Complementa"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"Cojin Sala de estar"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"enabled"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"for_sale"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"promotion_price"</span><span class="p">:</span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"position"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"critical_stock"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"upp"</span><span class="p">:</span><span class="mi">1</span><span class="w">
         </span><span class="p">},</span><span class="w">
-        </span><span class="err">....</span><span class="w">
+        </span><span class="err">...</span><span class="w">
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves a Products list.</p>
+<p>This endpoint retrieves all Products from a site.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
 <p><code>GET https://apibodegas.loadingplay.com/v1/product/list</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
+<h3 id='query-parameters-4'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -721,13 +778,8 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 </tr>
 </thead><tbody>
 <tr>
-<td>site_name</td>
-<td>(required)</td>
-<td>filter by site</td>
-</tr>
-<tr>
 <td>page</td>
-<td>1</td>
+<td>0</td>
 <td>startig page</td>
 </tr>
 <tr>
@@ -736,9 +788,14 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 <td>items to show per page</td>
 </tr>
 <tr>
-<td>metadata</td>
-<td>false</td>
-<td>true if you need to return total rows</td>
+<td>column</td>
+<td>&#39;name&#39;</td>
+<td>column for sorting items</td>
+</tr>
+<tr>
+<td>order</td>
+<td>&#39;asc&#39;</td>
+<td>type of orden DESC or ASC</td>
 </tr>
 <tr>
 <td>search</td>
@@ -746,38 +803,37 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 <td>perform a search in products</td>
 </tr>
 <tr>
-<td>column</td>
-<td>&#39;main_price&#39;</td>
-<td>column for sorting items</td>
+<td>tags</td>
+<td>&#39;&#39;</td>
+<td>tags to search for</td>
 </tr>
 <tr>
-<td>order</td>
-<td>&#39;ASC&#39;</td>
-<td>type of orden DESC or ASC</td>
+<td>for_sale_only</td>
+<td>&#39;false&#39;</td>
+<td>true if you want return only for sale</td>
+</tr>
+<tr>
+<td>metadata</td>
+<td>False</td>
+<td>true if you need to return total rows</td>
 </tr>
 </tbody></table>
-<h2 id='create-a-tag-in-a-product'>Create a Tag in a product</h2>
+<h1 id='product-tags'>Product tags</h1><h2 id='add-a-tag-to-a-product'>Add a Tag to a product</h2>
 <p>this method will add a tag if doesn&#39;t exists, and do nothing if exists.</p>
 <pre class="highlight shell tab-shell"><code>curl -XPOST <span class="s2">"https://apibodegas.loadingplay.com/v1/product/[SKU]/tags"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
-    -d <span class="s2">"tag=new_tag"</span>
+    -d <span class="s2">"tag=tag1,tag2"</span>
 </code></pre>
 <blockquote>
-<p>The above command returns json with tags info, including id:</p>
+<p>The above command returns json with tags info:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">tag_id</span><span class="p">],</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">tag_name</span><span class="p">]</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="err">...</span><span class="w">
-  </span><span class="p">]</span><span class="w">
+  </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tag1,tag2"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='http-request-5'>HTTP Request</h3>
+</span></code></pre><h3 id='http-request'>HTTP Request</h3>
 <p><code>POST https://apibodegas.loadingplay.com/v1/product/[SKU]/tags</code></p>
-<h3 id='url-parameters-4'>URL Parameters</h3>
+<h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -785,12 +841,49 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 </tr>
 </thead><tbody>
 <tr>
-<td>product_sku (str)</td>
-<td>product unique identifier</td>
+<td>tag (str)</td>
+<td>a list of tag separated by comma</td>
 </tr>
+</tbody></table>
+<h2 id='get-tags-from-a-product'>Get tags from a product</h2>
+<p>this method will get all tag from a product.</p>
+<pre class="highlight shell tab-shell"><code>curl -XGET <span class="s2">"https://apibodegas.loadingplay.com/v1/product/[SKU]/tags"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns json with tags info:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tag1,tag2"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://apibodegas.loadingplay.com/v1/product/[SKU]/tags</code></p>
+<h2 id='remove-a-list-of-tag-from-a-product'>Remove a list of tag from a product</h2>
+<p>this method will remove a list of tag from a product.</p>
+<pre class="highlight shell tab-shell"><code>curl -XDELETE <span class="s2">"https://apibodegas.loadingplay.com/v1/product/[SKU]/tags"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
+  -d <span class="s2">"tag=tag1,tag2"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns json with tags info:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-3'>HTTP Request</h3>
+<p><code>DELETE https://apibodegas.loadingplay.com/v1/product/[SKU]/tags</code></p>
+<h3 id='query-parameters-2'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
 <tr>
 <td>tag (str)</td>
-<td>tag that will be added</td>
+<td>a list of tag that will be removed separated by comma</td>
 </tr>
 </tbody></table>
 <h1 id='product-images'>Product images</h1><h2 id='add-images-to-a-product'>Add images to a product</h2>
