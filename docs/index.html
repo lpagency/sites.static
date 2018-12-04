@@ -833,6 +833,20 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request'>HTTP Request</h3>
 <p><code>POST https://apibodegas.loadingplay.com/v1/product/[SKU]/tags</code></p>
+<h3 id='url-arguments'>Url Arguments</h3>
+<table><thead>
+<tr>
+<th>Argument</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>SKU</td>
+<td>(required)</td>
+<td>unique identifier for product</td>
+</tr>
+</tbody></table>
 <h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -859,6 +873,20 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-2'>HTTP Request</h3>
 <p><code>GET https://apibodegas.loadingplay.com/v1/product/[SKU]/tags</code></p>
+<h3 id='url-arguments-2'>Url Arguments</h3>
+<table><thead>
+<tr>
+<th>Argument</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>SKU</td>
+<td>(required)</td>
+<td>unique identifier for product</td>
+</tr>
+</tbody></table>
 <h2 id='remove-a-list-of-tag-from-a-product'>Remove a list of tag from a product</h2>
 <p>this method will remove a list of tag from a product.</p>
 <pre class="highlight shell tab-shell"><code>curl -XDELETE <span class="s2">"https://apibodegas.loadingplay.com/v1/product/[SKU]/tags"</span> <span class="se">\</span>
@@ -874,6 +902,20 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-3'>HTTP Request</h3>
 <p><code>DELETE https://apibodegas.loadingplay.com/v1/product/[SKU]/tags</code></p>
+<h3 id='url-arguments-3'>Url Arguments</h3>
+<table><thead>
+<tr>
+<th>Argument</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>SKU</td>
+<td>(required)</td>
+<td>unique identifier for product</td>
+</tr>
+</tbody></table>
 <h3 id='query-parameters-2'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -890,7 +932,6 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 <p>to generate image and thumbnails see https://static.loadingplay.com</p>
 <pre class="highlight shell tab-shell"><code>curl -XPOST https://apibodegas.loadingplay.com/v1/product/[SKU]/images <span class="se">\</span>
     -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span> <span class="se">\</span>
-    -d <span class="s2">"site_name=fm"</span> <span class="se">\</span>
     -d <span class="s2">"url=original image url"</span> <span class="se">\</span>
     -d <span class="s2">"thumb_1=smallest possible thumbnail url"</span> <span class="se">\</span>
     -d <span class="s2">"thumb_200=200px thumbnail url"</span> <span class="se">\</span>
@@ -914,6 +955,20 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 <p>This endpoint retrieves a list of images.</p>
 <h3 id='http-request'>HTTP Request</h3>
 <p><code>GET https://apibodegas.loadingplay.com/v1/product/[SKU]/images</code></p>
+<h3 id='url-arguments'>Url Arguments</h3>
+<table><thead>
+<tr>
+<th>Argument</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>SKU</td>
+<td>(required)</td>
+<td>unique identifier for product</td>
+</tr>
+</tbody></table>
 <h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -923,34 +978,28 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 </tr>
 </thead><tbody>
 <tr>
-<td>site_name</td>
-<td>(required)</td>
-<td>filter by site</td>
-</tr>
-<tr>
 <td>url</td>
 <td>(required)</td>
 <td>original picture thumbnail url</td>
 </tr>
 <tr>
 <td>thumb_1</td>
-<td>(required)</td>
+<td>&quot;&quot;</td>
 <td>smallest possible thumbnail url</td>
 </tr>
 <tr>
 <td>thumb_200</td>
-<td>(required)</td>
+<td>&quot;&quot;</td>
 <td>200px thumbnail url</td>
 </tr>
 <tr>
 <td>thumb_500</td>
-<td>(required)</td>
+<td>&quot;&quot;</td>
 <td>500px thumbnail url</td>
 </tr>
 </tbody></table>
-<h2 id='remove-images-from-a-product'>Remove images from a product</h2><pre class="highlight shell tab-shell"><code>curl -XDELETE https://apibodegas.loadingplay.com/v1/product/[SKU]/images <span class="se">\</span>
-    -H <span class="s1">'Authorization: Bearer ACCESS_TOKEN'</span> <span class="se">\</span>
-    -d <span class="s2">"site_name=fm"</span>
+<h2 id='remove-images-from-a-product'>Remove images from a product</h2><pre class="highlight shell tab-shell"><code>curl -XDELETE <span class="s2">"https://apibodegas.loadingplay.com/v1/product/[SKU]/images"</span> <span class="se">\</span>
+    -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -963,25 +1012,25 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 <p>This endpoint remove images from product.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
 <p><code>DELETE https://apibodegas.loadingplay.com/v1/product/[SKU]/images</code></p>
-<h3 id='query-parameters-2'>Query Parameters</h3>
+<h3 id='url-arguments-2'>Url Arguments</h3>
 <table><thead>
 <tr>
-<th>Parameter</th>
+<th>Argument</th>
 <th>Default</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>site_name</td>
+<td>SKU</td>
 <td>(required)</td>
-<td>filter by site</td>
+<td>unique identifier for product</td>
 </tr>
 </tbody></table>
 <h1 id='variants'>Variants</h1><h2 id='create-a-variant'>Create a Variant</h2><pre class="highlight shell tab-shell"><code>curl -XPOST <span class="s2">"https://apibodegas.loadingplay.com/v1/variant"</span> <span class="se">\</span>
      -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
      -d <span class="s2">"variant_name=size"</span> <span class="se">\</span>
-     -d <span class="s2">"site_name=test"</span> <span class="se">\</span>
-     -d <span class="s2">"sku=sku-test"</span>
+     -d <span class="s2">"sku=sku-test"</span> <span class="se">\</span>
+     -d <span class="s2">"separator=-"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns json with variant info, including id:</p>
@@ -991,13 +1040,14 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
     </span><span class="s2">"variant"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[id]"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"size"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"separator"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"site_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sku-test"</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request'>HTTP Request</h3>
 <p><code>POST https://apibodegas.loadingplay.com/v1/variant</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
+<h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1011,19 +1061,18 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 <td>name of the variant i.e: size, color</td>
 </tr>
 <tr>
-<td>site_name</td>
-<td>(required)</td>
-<td>name of the site where variant</td>
-</tr>
-<tr>
 <td>sku</td>
 <td>(required)</td>
 <td>product sku</td>
 </tr>
+<tr>
+<td>separator</td>
+<td>&quot;-&quot;</td>
+<td>string simbol between sku and variant</td>
+</tr>
 </tbody></table>
 <h2 id='delete-a-variant'>Delete a Variant</h2><pre class="highlight shell tab-shell"><code>curl -XDELETE <span class="s2">"https://apibodegas.loadingplay.com/v1/variant/[variant_name]"</span> <span class="se">\</span>
      -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
-     -d <span class="s2">"site_name=test"</span> <span class="se">\</span>
      -d <span class="s2">"sku=sku-test"</span>
 </code></pre>
 <blockquote>
@@ -1040,10 +1089,10 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-2'>HTTP Request</h3>
 <p><code>DELETE https://apibodegas.loadingplay.com/v1/variant/[variant_name]</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
+<h3 id='url-arguments'>Url Arguments</h3>
 <table><thead>
 <tr>
-<th>Parameter</th>
+<th>Argument</th>
 <th>Default</th>
 <th>Description</th>
 </tr>
@@ -1053,11 +1102,15 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 <td>(required)</td>
 <td>name of the variant i.e: size, color</td>
 </tr>
+</tbody></table>
+<h3 id='query-parameters-2'>Query Parameters</h3>
+<table><thead>
 <tr>
-<td>site_name</td>
-<td>(required)</td>
-<td>name of the site where variant</td>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
 </tr>
+</thead><tbody>
 <tr>
 <td>sku</td>
 <td>(required)</td>
@@ -1077,12 +1130,14 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
         </span><span class="p">{</span><span class="w">
             </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[id]"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"size"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"separator"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"site_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sku-test"</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="p">{</span><span class="w">
             </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[id]"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"color"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"separator"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"site_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sku-test"</span><span class="w">
         </span><span class="p">},</span><span class="w">
@@ -1093,7 +1148,7 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 <p>This endpoint retrieves a list of variants for Site and SKU.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
 <p><code>GET https://apibodegas.loadingplay.com/v1/variant</code></p>
-<h3 id='url-parameters-3'>URL Parameters</h3>
+<h3 id='query-parameters-3'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1115,7 +1170,6 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 <h2 id='create-a-value-for-a-variant'>Create a Value for a variant</h2><pre class="highlight shell tab-shell"><code>curl -XPOST <span class="s2">"https://apibodegas.loadingplay.com/v1/variant/[variant_name]/value"</span> <span class="se">\</span>
      -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
      -d <span class="s2">"value=rojo"</span> <span class="se">\</span>
-     -d <span class="s2">"site_name=test"</span> <span class="se">\</span>
      -d <span class="s2">"sku=sku-test"</span>
 </code></pre>
 <blockquote>
@@ -1133,10 +1187,10 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-4'>HTTP Request</h3>
 <p><code>POST https://apibodegas.loadingplay.com/v1/variant/[variant_name]/value</code></p>
-<h3 id='url-parameters-4'>URL Parameters</h3>
+<h3 id='url-arguments-2'>Url Arguments</h3>
 <table><thead>
 <tr>
-<th>Parameter</th>
+<th>Argument</th>
 <th>Default</th>
 <th>Description</th>
 </tr>
@@ -1146,15 +1200,19 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 <td>(required)</td>
 <td>name of the variant i.e: size, color</td>
 </tr>
+</tbody></table>
+<h3 id='query-parameters-4'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
 <tr>
 <td>value</td>
 <td>(required)</td>
 <td>value name i.e (s, m, l)</td>
-</tr>
-<tr>
-<td>site_name</td>
-<td>(required)</td>
-<td>name of the site where variant</td>
 </tr>
 <tr>
 <td>sku</td>
@@ -1164,7 +1222,6 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 </tbody></table>
 <h2 id='delete-a-value-for-a-variant'>Delete a Value for a Variant</h2><pre class="highlight shell tab-shell"><code>curl -XDELETE <span class="s2">"https://apibodegas.loadingplay.com/v1/variant/[variant_name]/value/[value]"</span> <span class="se">\</span>
      -H <span class="s2">"Authorization: Bearer ACCESS_TOKEN"</span> <span class="se">\</span>
-     -d <span class="s2">"site_name=test"</span> <span class="se">\</span>
      -d <span class="s2">"sku=sku-test"</span>
 </code></pre>
 <blockquote>
@@ -1182,10 +1239,10 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-5'>HTTP Request</h3>
 <p><code>DELETE https://apibodegas.loadingplay.com/v1/variant/[variant_name]/value/[value]</code></p>
-<h3 id='url-parameters-5'>URL Parameters</h3>
+<h3 id='url-arguments-3'>Url Arguments</h3>
 <table><thead>
 <tr>
-<th>Parameter</th>
+<th>Argument</th>
 <th>Default</th>
 <th>Description</th>
 </tr>
@@ -1200,11 +1257,15 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 <td>(required)</td>
 <td>value name i.e (s, m, l)</td>
 </tr>
+</tbody></table>
+<h3 id='query-parameters-5'>Query Parameters</h3>
+<table><thead>
 <tr>
-<td>site_name</td>
-<td>(required)</td>
-<td>name of the site where variant</td>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
 </tr>
+</thead><tbody>
 <tr>
 <td>sku</td>
 <td>(required)</td>
@@ -1220,23 +1281,26 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"variant_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[variant_name]"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-            </span><span class="s2">"35"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"36"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"37"</span><span class="w">
-        </span><span class="p">]</span><span class="w">
-    </span><span class="p">}</span><span class="w">
+    </span><span class="s2">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"variant_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[variant_name]"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"35"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"36"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"37"</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+    </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves a list of values for site and sku.</p>
 <h3 id='http-request-6'>HTTP Request</h3>
 <p><code>GET https://apibodegas.loadingplay.com/v1/variant/[variant_name]/value</code></p>
-<h3 id='url-parameters-6'>URL Parameters</h3>
+<h3 id='url-arguments-4'>Url Arguments</h3>
 <table><thead>
 <tr>
-<th>Parameter</th>
+<th>Argument</th>
 <th>Default</th>
 <th>Description</th>
 </tr>
@@ -1244,8 +1308,17 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 <tr>
 <td>variant_name</td>
 <td>(required)</td>
-<td>selected variant</td>
+<td>a list of variant separate by comma</td>
 </tr>
+</tbody></table>
+<h3 id='query-parameters-6'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
 <tr>
 <td>site_name</td>
 <td>(required)</td>
@@ -1271,7 +1344,7 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
             </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test-m-azul"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test-m-rojo"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="err">...</span><span class="w">
@@ -1281,10 +1354,10 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 <p>This endpoint retrieves a list of combinations for site and sku.</p>
 <h3 id='http-request-7'>HTTP Request</h3>
 <p><code>GET https://apibodegas.loadingplay.com/v1/variant/[sku]/combination</code></p>
-<h3 id='url-parameters-7'>URL Parameters</h3>
+<h3 id='url-arguments-5'>Url Arguments</h3>
 <table><thead>
 <tr>
-<th>Parameter</th>
+<th>Argument</th>
 <th>Default</th>
 <th>Description</th>
 </tr>
@@ -1294,6 +1367,15 @@ You must replace <code>YOUR_ACCESS_TOKEN</code> with your personal API key.
 <td>(required)</td>
 <td>product sku</td>
 </tr>
+</tbody></table>
+<h3 id='query-parameters-7'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
 <tr>
 <td>site_name</td>
 <td>(required)</td>
